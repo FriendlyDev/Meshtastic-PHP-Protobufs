@@ -1,8 +1,8 @@
 # PHP Meshtastic Protobuf Definitions
 
-[![Latest Stable Version](https://poser.pugx.org/friendlydev/meshtastic-php-protobufs/v/stable)](https://packagist.org/packages/friendlydev/meshtastic-php-protobufs)
-[![License](https://poser.pugx.org/friendlydev/meshtastic-php-protobufs/license)](https://packagist.org/packages/friendlydev/meshtastic-php-protobufs)
-[![Total Downloads](https://poser.pugx.org/friendlydev/meshtastic-php-protobufs/downloads)](https://packagist.org/packages/friendlydev/meshtastic-php-protobufs)
+[![Latest Stable Version](https://poser.pugx.org/friendlydev/meshtastic-protobufs/v/stable)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
+[![License](https://poser.pugx.org/friendlydev/meshtastic-protobufs/license)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
+[![Total Downloads](https://poser.pugx.org/friendlydev/meshtastic-protobufs/downloads)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
 
 
 ## Overview
@@ -18,7 +18,7 @@ These are the PHP Files generated from the offical repository [meshtastic/protob
 
 ## Installation
 
-    composer require friendlydev/meshtastic-php-protobufs
+    composer require friendlydev/meshtastic-protobufs
 
 
 ## License
