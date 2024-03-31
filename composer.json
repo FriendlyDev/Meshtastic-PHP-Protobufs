@@ -11,8 +11,8 @@
         }
     ],
     "require": {
-        "google/protobuf": ">4.0.*",
-        "protobuf-php/protobuf": ">0.1.*"
+        "google/protobuf": "*",
+        "protobuf-php/protobuf": "*"
     },
     "require-dev": {},
     "autoload": {
