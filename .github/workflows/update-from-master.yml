@@ -24,9 +24,11 @@ jobs:
         run: |
           cd ./protobufs
           git reset --hard HEAD
-          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+          LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
           git checkout $LATEST_TAG
           cd ..
+          echo "LATEST_TAG=${LATEST_TAG}" >> "$GITHUB_ENV"
+          echo "LATEST_TAG_NUMBER=${LATEST_TAG:1}" >> "$GITHUB_ENV"
 
       - name: Checkout current code
         uses: actions/checkout@v4
@@ -37,38 +39,40 @@ jobs:
       - name: Get latest tag of this repository
         run: |
           cd ./php-code
-          CURRENT_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+          CURRENT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
           cd ..
+          echo "CURRENT_TAG=${CURRENT_TAG}" >> "$GITHUB_ENV"
+          echo "CURRENT_TAG_NUMBER=${CURRENT_TAG:1}" >> "$GITHUB_ENV"
 
       - name: Show working directory
-        if: ${LATEST_TAG:1} > ${CURRENT_TAG:1}
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: ls -lash ./*
 
       - name: Install Protoc
-        if: ${LATEST_TAG:1} > ${CURRENT_TAG:1}
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         uses: arduino/setup-protoc@v3
 
       - name: Check protoc is installed
-        if: ${LATEST_TAG:1} > ${CURRENT_TAG:1}
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: which protoc
 
       - name: Create output directory
-        if: ${LATEST_TAG:1} > ${CURRENT_TAG:1}
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: mkdir -p ./protobufs-output
 
       - name: Show working directory
-        if: ${LATEST_TAG:1} > ${CURRENT_TAG:1}
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: ls -lash ./*
 
       - name: Show working directory
-        if: ${LATEST_TAG:1} > ${CURRENT_TAG:1}
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: |
           cd ./protobufs
           find . -type f -iname '*.proto' -exec protoc --proto_path= --php_out=../protobufs-output {} \;
           cd ..
 
       - name: Replace the current protobuf PHP files with the ones we just generated
-        if: ${LATEST_TAG:1} > ${CURRENT_TAG:1}
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: |
           rm -rf ./php-code/src/GPBMetadata
           rm -rf ./php-code/src/Meshtastic
@@ -76,7 +80,7 @@ jobs:
           mv ./protobufs-output/Meshtastic ./php-code/src/
 
       - name: Commit and push changes
-        if: ${LATEST_TAG:1} > ${CURRENT_TAG:1}
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: |
           cd ./php-code
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
