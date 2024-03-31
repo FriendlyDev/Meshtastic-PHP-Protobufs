@@ -1,0 +1,31 @@
+{
+    "name": "friendlydev/meshtastic-protobufs",
+    "type": "library",
+    "description": "PHP Compiles Protobufs from the Official Meshtastic Protobufs repository",
+    "keywords": ["meshtastic", "protobuf", "friendlydev"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Wynn",
+            "email": "alan.wynn@friendlydev.com"
+        }
+    ],
+    "require": {
+        "google/protobuf": ">4.0.*",
+        "protobuf-php/protobuf": ">0.1.*"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Meshtastic\\": "src/Meshtastic/",
+            "GPBMetadata\\": "src/GPBMetadata/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
