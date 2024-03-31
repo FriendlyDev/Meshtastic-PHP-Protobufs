@@ -33,7 +33,7 @@ jobs:
       - name: Checkout current code
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          ref: master
           token: ${{ github.token }}
           path: ./php-code
           fetch-depth: 0
@@ -42,6 +42,8 @@ jobs:
       - name: Get latest tag of this repository
         run: |
           cd ./php-code
+          git checkout origin/master
+          git reset --hard HEAD
           CURRENT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
           cd ..
           echo "CURRENT_TAG=${CURRENT_TAG}" >> "$GITHUB_ENV"
@@ -91,4 +93,4 @@ jobs:
           git add .
           git commit -m "Update protobufs to latest version"
           git tag -a $LATEST_TAG -m "Update protobufs to latest version"
-          git push --tags origin ${{ github.head_ref }}
+          git push --tags origin master
