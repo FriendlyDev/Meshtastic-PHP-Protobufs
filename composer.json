@@ -1,7 +1,7 @@
 {
     "name": "friendlydev/meshtastic-protobufs",
     "type": "library",
-    "description": "PHP Compiles Protobufs from the Official Meshtastic Protobufs repository",
+    "description": "PHP Compiled Protobufs from the Official Meshtastic Protobufs repository",
     "keywords": ["meshtastic", "protobuf", "friendlydev"],
     "license": "MIT",
     "authors": [
