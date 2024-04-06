@@ -45,7 +45,7 @@ class Telemetry extends \Google\Protobuf\Internal\Message
      *           Air quality metrics
      *     @type \Meshtastic\PowerMetrics $power_metrics
      *          
-     *           Power Metrics 
+     *           Power Metrics
      * }
      */
     public function __construct($data = NULL) {
@@ -182,7 +182,7 @@ class Telemetry extends \Google\Protobuf\Internal\Message
 
     /**
      *
-     * Power Metrics 
+     * Power Metrics
      *
      * Generated from protobuf field <code>.meshtastic.PowerMetrics power_metrics = 5;</code>
      * @return \Meshtastic\PowerMetrics|null
@@ -199,7 +199,7 @@ class Telemetry extends \Google\Protobuf\Internal\Message
 
     /**
      *
-     * Power Metrics 
+     * Power Metrics
      *
      * Generated from protobuf field <code>.meshtastic.PowerMetrics power_metrics = 5;</code>
      * @param \Meshtastic\PowerMetrics $var

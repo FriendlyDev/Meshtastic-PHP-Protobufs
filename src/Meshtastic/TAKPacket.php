@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Packets for the official ATAK Plugin 
+ * Packets for the official ATAK Plugin
  *
  * Generated from protobuf message <code>meshtastic.TAKPacket</code>
  */

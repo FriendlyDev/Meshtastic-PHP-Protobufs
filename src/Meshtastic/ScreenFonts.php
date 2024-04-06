@@ -7,7 +7,7 @@ namespace Meshtastic;
 use UnexpectedValueException;
 
 /**
- * TODO: REPLACE
+ * Font sizes for the device screen
  *
  * Protobuf type <code>meshtastic.ScreenFonts</code>
  */

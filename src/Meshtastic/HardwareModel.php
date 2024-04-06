@@ -353,6 +353,19 @@ class HardwareModel
      */
     const HELTEC_WIRELESS_TRACKER_V1_0 = 58;
     /**
+     * unPhone with ESP32-S3, TFT touchscreen,  LSM6DS3TR-C accelerometer and gyroscope
+     *
+     * Generated from protobuf enum <code>UNPHONE = 59;</code>
+     */
+    const UNPHONE = 59;
+    /**
+     * Teledatics TD-LORAC NRF52840 based M.2 LoRA module
+     * Compatible with the TD-WRLS development board
+     *
+     * Generated from protobuf enum <code>TD_LORAC = 60;</code>
+     */
+    const TD_LORAC = 60;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -416,6 +429,8 @@ class HardwareModel
         self::CHATTER_2 => 'CHATTER_2',
         self::HELTEC_WIRELESS_PAPER_V1_0 => 'HELTEC_WIRELESS_PAPER_V1_0',
         self::HELTEC_WIRELESS_TRACKER_V1_0 => 'HELTEC_WIRELESS_TRACKER_V1_0',
+        self::UNPHONE => 'UNPHONE',
+        self::TD_LORAC => 'TD_LORAC',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

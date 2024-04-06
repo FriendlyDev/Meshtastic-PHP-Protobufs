@@ -94,7 +94,7 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *     @type \Meshtastic\Position $set_fixed_position
      *           Set fixed position data on the node and then set the position.fixed_position = true
      *     @type bool $remove_fixed_position
-     *           Clear fixed position coordinates and then set position.fixed_position = false 
+     *           Clear fixed position coordinates and then set position.fixed_position = false
      *     @type bool $begin_edit_settings
      *           Begins an edit transaction for config, module config, owner, and channel settings changes
      *           This will delay the standard *implicit* save to the file system and subsequent reboot behavior until committed (commit_edit_settings)
@@ -1095,7 +1095,7 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Clear fixed position coordinates and then set position.fixed_position = false 
+     * Clear fixed position coordinates and then set position.fixed_position = false
      *
      * Generated from protobuf field <code>bool remove_fixed_position = 42;</code>
      * @return bool
@@ -1111,7 +1111,7 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Clear fixed position coordinates and then set position.fixed_position = false 
+     * Clear fixed position coordinates and then set position.fixed_position = false
      *
      * Generated from protobuf field <code>bool remove_fixed_position = 42;</code>
      * @param bool $var

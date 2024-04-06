@@ -123,8 +123,7 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      */
     protected $via_mqtt = false;
     /**
-     * 
-     * Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header. 
+     * Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header.
      * When receiving a packet, the difference between hop_start and hop_limit gives how many hops it traveled.
      *
      * Generated from protobuf field <code>uint32 hop_start = 15;</code>
@@ -199,8 +198,7 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      *     @type bool $via_mqtt
      *           Describes whether this packet passed via MQTT somewhere along the path it currently took.
      *     @type int $hop_start
-     *           
-     *           Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header. 
+     *           Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header.
      *           When receiving a packet, the difference between hop_start and hop_limit gives how many hops it traveled.
      * }
      */
@@ -652,8 +650,7 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 
-     * Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header. 
+     * Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header.
      * When receiving a packet, the difference between hop_start and hop_limit gives how many hops it traveled.
      *
      * Generated from protobuf field <code>uint32 hop_start = 15;</code>
@@ -665,8 +662,7 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 
-     * Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header. 
+     * Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header.
      * When receiving a packet, the difference between hop_start and hop_limit gives how many hops it traveled.
      *
      * Generated from protobuf field <code>uint32 hop_start = 15;</code>

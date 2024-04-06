@@ -52,7 +52,7 @@ class Role
     /**
      * Description: Broadcasts GPS position packets as priority.
      * Technical Details: Position Mesh packets will be prioritized higher and sent more frequently by default.
-     *   When used in conjunction with power.is_power_saving = true, nodes will wake up, 
+     *   When used in conjunction with power.is_power_saving = true, nodes will wake up,
      *   send position, and then sleep for position.position_broadcast_secs seconds.
      *
      * Generated from protobuf enum <code>TRACKER = 5;</code>
@@ -61,7 +61,7 @@ class Role
     /**
      * Description: Broadcasts telemetry packets as priority.
      * Technical Details: Telemetry Mesh packets will be prioritized higher and sent more frequently by default.
-     *   When used in conjunction with power.is_power_saving = true, nodes will wake up, 
+     *   When used in conjunction with power.is_power_saving = true, nodes will wake up,
      *   send environment telemetry, and then sleep for telemetry.environment_update_interval seconds.
      *
      * Generated from protobuf enum <code>SENSOR = 6;</code>
@@ -81,14 +81,14 @@ class Role
      * Technical Details: Used for nodes that "only speak when spoken to"
      *    Turns all of the routine broadcasts but allows for ad-hoc communication
      *    Still rebroadcasts, but with local only rebroadcast mode (known meshes only)
-     *    Can be used for clandestine operation or to dramatically reduce airtime / power consumption 
+     *    Can be used for clandestine operation or to dramatically reduce airtime / power consumption
      *
      * Generated from protobuf enum <code>CLIENT_HIDDEN = 8;</code>
      */
     const CLIENT_HIDDEN = 8;
     /**
      * Description: Broadcasts location as message to default channel regularly for to assist with device recovery.
-     * Technical Details: Used to automatically send a text message to the mesh 
+     * Technical Details: Used to automatically send a text message to the mesh
      *    with the current position of the device on a frequent interval:
      *    "I'm lost! Position: lat / long"
      *

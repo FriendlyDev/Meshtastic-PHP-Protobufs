@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * 
  * A heartbeat message is sent to the node from the client to keep the connection alive.
  * This is currently only needed to keep serial connections alive, but can be used by any PhoneAPI.
  *
