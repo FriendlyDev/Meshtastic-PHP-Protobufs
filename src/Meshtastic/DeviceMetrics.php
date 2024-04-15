@@ -44,6 +44,13 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>float air_util_tx = 4;</code>
      */
     protected $air_util_tx = 0.0;
+    /**
+     *
+     * How long the device has been running since the last reboot (in seconds)
+     *
+     * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>
+     */
+    protected $uptime_seconds = 0;
 
     /**
      * Constructor.
@@ -63,6 +70,9 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
      *     @type float $air_util_tx
      *          
      *           Percent of airtime for transmission used within the last hour.
+     *     @type int $uptime_seconds
+     *          
+     *           How long the device has been running since the last reboot (in seconds)
      * }
      */
     public function __construct($data = NULL) {
@@ -178,6 +188,34 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->air_util_tx = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * How long the device has been running since the last reboot (in seconds)
+     *
+     * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>
+     * @return int
+     */
+    public function getUptimeSeconds()
+    {
+        return $this->uptime_seconds;
+    }
+
+    /**
+     *
+     * How long the device has been running since the last reboot (in seconds)
+     *
+     * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setUptimeSeconds($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->uptime_seconds = $var;
 
         return $this;
     }

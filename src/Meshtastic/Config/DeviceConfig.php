@@ -80,6 +80,12 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool disable_triple_click = 10;</code>
      */
     protected $disable_triple_click = false;
+    /**
+     * POSIX Timezone definition string from https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv.
+     *
+     * Generated from protobuf field <code>string tzdef = 11;</code>
+     */
+    protected $tzdef = '';
 
     /**
      * Constructor.
@@ -112,6 +118,8 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
      *           Clients should then limit available configuration and administrative options inside the user interface
      *     @type bool $disable_triple_click
      *           Disables the triple-press of user button to enable or disable GPS
+     *     @type string $tzdef
+     *           POSIX Timezone definition string from https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv.
      * }
      */
     public function __construct($data = NULL) {
@@ -385,6 +393,32 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->disable_triple_click = $var;
+
+        return $this;
+    }
+
+    /**
+     * POSIX Timezone definition string from https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv.
+     *
+     * Generated from protobuf field <code>string tzdef = 11;</code>
+     * @return string
+     */
+    public function getTzdef()
+    {
+        return $this->tzdef;
+    }
+
+    /**
+     * POSIX Timezone definition string from https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv.
+     *
+     * Generated from protobuf field <code>string tzdef = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTzdef($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->tzdef = $var;
 
         return $this;
     }

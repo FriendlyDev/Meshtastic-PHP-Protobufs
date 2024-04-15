@@ -58,6 +58,14 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>float current = 6;</code>
      */
     protected $current = 0.0;
+    /**
+     * 
+     * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
+     * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
+     *
+     * Generated from protobuf field <code>uint32 iaq = 7;</code>
+     */
+    protected $iaq = 0;
 
     /**
      * Constructor.
@@ -83,6 +91,10 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *     @type float $current
      *          
      *           Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
+     *     @type int $iaq
+     *           
+     *           relative scale IAQ value as measured by Bosch BME680 . value 0-500.
+     *           Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      * }
      */
     public function __construct($data = NULL) {
@@ -254,6 +266,36 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->current = $var;
+
+        return $this;
+    }
+
+    /**
+     * 
+     * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
+     * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
+     *
+     * Generated from protobuf field <code>uint32 iaq = 7;</code>
+     * @return int
+     */
+    public function getIaq()
+    {
+        return $this->iaq;
+    }
+
+    /**
+     * 
+     * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
+     * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
+     *
+     * Generated from protobuf field <code>uint32 iaq = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setIaq($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->iaq = $var;
 
         return $this;
     }
