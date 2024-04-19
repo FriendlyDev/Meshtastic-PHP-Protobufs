@@ -366,6 +366,12 @@ class HardwareModel
      */
     const TD_LORAC = 60;
     /**
+     * CDEBYTE EoRa-S3 board using their own MM modules, clone of LILYGO T3S3
+     *
+     * Generated from protobuf enum <code>CDEBYTE_EORA_S3 = 61;</code>
+     */
+    const CDEBYTE_EORA_S3 = 61;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -431,6 +437,7 @@ class HardwareModel
         self::HELTEC_WIRELESS_TRACKER_V1_0 => 'HELTEC_WIRELESS_TRACKER_V1_0',
         self::UNPHONE => 'UNPHONE',
         self::TD_LORAC => 'TD_LORAC',
+        self::CDEBYTE_EORA_S3 => 'CDEBYTE_EORA_S3',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
