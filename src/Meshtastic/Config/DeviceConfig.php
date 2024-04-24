@@ -86,6 +86,12 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string tzdef = 11;</code>
      */
     protected $tzdef = '';
+    /**
+     * If true, disable the default blinking LED (LED_PIN) behavior on the device 
+     *
+     * Generated from protobuf field <code>bool led_heartbeat_disabled = 12;</code>
+     */
+    protected $led_heartbeat_disabled = false;
 
     /**
      * Constructor.
@@ -120,6 +126,8 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
      *           Disables the triple-press of user button to enable or disable GPS
      *     @type string $tzdef
      *           POSIX Timezone definition string from https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv.
+     *     @type bool $led_heartbeat_disabled
+     *           If true, disable the default blinking LED (LED_PIN) behavior on the device 
      * }
      */
     public function __construct($data = NULL) {
@@ -419,6 +427,32 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->tzdef = $var;
+
+        return $this;
+    }
+
+    /**
+     * If true, disable the default blinking LED (LED_PIN) behavior on the device 
+     *
+     * Generated from protobuf field <code>bool led_heartbeat_disabled = 12;</code>
+     * @return bool
+     */
+    public function getLedHeartbeatDisabled()
+    {
+        return $this->led_heartbeat_disabled;
+    }
+
+    /**
+     * If true, disable the default blinking LED (LED_PIN) behavior on the device 
+     *
+     * Generated from protobuf field <code>bool led_heartbeat_disabled = 12;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setLedHeartbeatDisabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->led_heartbeat_disabled = $var;
 
         return $this;
     }

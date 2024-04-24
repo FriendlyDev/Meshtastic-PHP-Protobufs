@@ -372,6 +372,13 @@ class HardwareModel
      */
     const CDEBYTE_EORA_S3 = 61;
     /**
+     * TWC_MESH_V4 
+     * Adafruit NRF52840 feather express with SX1262, SSD1306 OLED and NEO6M GPS
+     *
+     * Generated from protobuf enum <code>TWC_MESH_V4 = 62;</code>
+     */
+    const TWC_MESH_V4 = 62;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -438,6 +445,7 @@ class HardwareModel
         self::UNPHONE => 'UNPHONE',
         self::TD_LORAC => 'TD_LORAC',
         self::CDEBYTE_EORA_S3 => 'CDEBYTE_EORA_S3',
+        self::TWC_MESH_V4 => 'TWC_MESH_V4',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

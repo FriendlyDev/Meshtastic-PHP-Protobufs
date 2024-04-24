@@ -126,6 +126,13 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>BMP085 = 15;</code>
      */
     const BMP085 = 15;
+    /**
+     *
+     * RCWL-9620 Doppler Radar Distance Sensor, used for water level detection
+     *
+     * Generated from protobuf enum <code>RCWL9620 = 16;</code>
+     */
+    const RCWL9620 = 16;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -144,6 +151,7 @@ class TelemetrySensorType
         self::PMSA003I => 'PMSA003I',
         self::INA3221 => 'INA3221',
         self::BMP085 => 'BMP085',
+        self::RCWL9620 => 'RCWL9620',
     ];
 
     public static function name($value)

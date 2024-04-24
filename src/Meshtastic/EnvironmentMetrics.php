@@ -66,6 +66,13 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 iaq = 7;</code>
      */
     protected $iaq = 0;
+    /**
+     *
+     * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
+     *
+     * Generated from protobuf field <code>float distance = 8;</code>
+     */
+    protected $distance = 0.0;
 
     /**
      * Constructor.
@@ -95,6 +102,9 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *           
      *           relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      *           Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
+     *     @type float $distance
+     *          
+     *           RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
      * }
      */
     public function __construct($data = NULL) {
@@ -296,6 +306,34 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->iaq = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
+     *
+     * Generated from protobuf field <code>float distance = 8;</code>
+     * @return float
+     */
+    public function getDistance()
+    {
+        return $this->distance;
+    }
+
+    /**
+     *
+     * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
+     *
+     * Generated from protobuf field <code>float distance = 8;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setDistance($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->distance = $var;
 
         return $this;
     }
