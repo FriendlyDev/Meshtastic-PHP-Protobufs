@@ -69,7 +69,16 @@ jobs:
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: ls -lash ./*
 
-      - name: Show working directory
+      - name: Convert the nanopb.proto file to proto3
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        run: |
+          cd ./protobufs
+          sed -i 's/proto2/proto3/g' ./nanopb.proto
+          sed -i 's/ \[default = [^;]*//g' ./nanopb.proto
+          sed -i 's/optional google.protobuf.FieldDescriptorProto/\/\/ optional google.protobuf.FieldDescriptorProto/g' ./nanopb.proto
+          cd ..
+
+      - name: Generate the PHP files from the protobufs
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: |
           cd ./protobufs
