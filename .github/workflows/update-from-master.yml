@@ -1,7 +1,9 @@
 on:
   schedule:
-    - cron:  "5 4 * * *"
+    - cron:  "0 */3 * * *"
   workflow_dispatch:
+
+name: Create PHP protobufs from latest Meshtastic Protobufs
 
 jobs:
   update-from-master:
