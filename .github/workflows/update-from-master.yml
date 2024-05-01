@@ -7,6 +7,7 @@ name: Create PHP protobufs from latest Meshtastic Protobufs
 
 jobs:
   update-from-master:
+    name: Update from master
     runs-on: ubuntu-latest
 
     permissions:
@@ -106,3 +107,44 @@ jobs:
           git push origin master
           git tag -a $LATEST_TAG -m "Update protobufs to latest version"
           git push --tags origin master
+
+  create-release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+
+      - name: get the latest release tag
+        run: |
+          LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+          echo "LATEST_TAG=${LATEST_TAG}" >> "$GITHUB_ENV"
+
+      - name: get the latest release tag
+        run: |
+          echo "Current TAG = ${{ env.LATEST_TAG }}"
+          set +e
+          if [[ "$(gh release view $LATEST_TAG 2>&1)" == "release not found" ]]; then
+            echo "Release not found."
+            echo "release-exists=false" >> $GITHUB_OUTPUT
+          else
+            echo "Release found."
+            echo "release-exists=true" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
+      - name: Create Release
+        id: create_release
+        if: ! env.release-exists
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ env.LATEST_TAG }}
+          release_name: Release ${{ env.LATEST_TAG }}
+          body: |
+            You can read the full changelog [here](https://github.com/meshtastic/protobufs/releases).
+
+            Changelog for this version tag is [here](https://github.com/meshtastic/protobufs/releases/tag/${{ env.LATEST_TAG }})
+          draft: false
+          prerelease: false
