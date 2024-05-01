@@ -21,6 +21,13 @@ class ModuleSettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 position_precision = 1;</code>
      */
     protected $position_precision = 0;
+    /**
+     * Controls whether or not the phone / clients should mute the current channel
+     * Useful for noisy public channels you don't necessarily want to disable
+     *
+     * Generated from protobuf field <code>bool is_client_muted = 2;</code>
+     */
+    protected $is_client_muted = false;
 
     /**
      * Constructor.
@@ -30,6 +37,9 @@ class ModuleSettings extends \Google\Protobuf\Internal\Message
      *
      *     @type int $position_precision
      *           Bits of precision for the location sent in position packets.
+     *     @type bool $is_client_muted
+     *           Controls whether or not the phone / clients should mute the current channel
+     *           Useful for noisy public channels you don't necessarily want to disable
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +69,34 @@ class ModuleSettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->position_precision = $var;
+
+        return $this;
+    }
+
+    /**
+     * Controls whether or not the phone / clients should mute the current channel
+     * Useful for noisy public channels you don't necessarily want to disable
+     *
+     * Generated from protobuf field <code>bool is_client_muted = 2;</code>
+     * @return bool
+     */
+    public function getIsClientMuted()
+    {
+        return $this->is_client_muted;
+    }
+
+    /**
+     * Controls whether or not the phone / clients should mute the current channel
+     * Useful for noisy public channels you don't necessarily want to disable
+     *
+     * Generated from protobuf field <code>bool is_client_muted = 2;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsClientMuted($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_client_muted = $var;
 
         return $this;
     }
