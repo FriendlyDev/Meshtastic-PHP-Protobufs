@@ -116,38 +116,11 @@ jobs:
           git push origin master
           git tag -a $LATEST_TAG -m "Update protobufs to latest version"
           git push --tags origin master
-
-  create-release:
-    name: Create Release
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - name: Checkout current code
-        uses: actions/checkout@v4
-        with:
-          ref: master
-          token: ${{ github.token }}
-          path: ./meshtastic-php-protobufs
-          fetch-depth: 0
-          fetch-tags: true
-
-      - name: Get latest tag of this repository
-        run: |
-          cd ./meshtastic-php-protobufs
-          git checkout master
-          git reset --hard HEAD
-          CURRENT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
-          cd ..
-          echo "CURRENT_TAG=${CURRENT_TAG}" >> "$GITHUB_ENV"
-          echo "CURRENT_TAG_NUMBER=${CURRENT_TAG:1}" >> "$GITHUB_ENV"
         shell: bash
 
       - name: get the latest release tag
         run: |
-          cd ./meshtastic-php-protobufs
+          cd ./php-code
           echo "Current TAG = ${{ env.LATEST_TAG }}"
           set +e
           if [[ "$(gh release view $LATEST_TAG 2>&1)" == "release not found" ]]; then
