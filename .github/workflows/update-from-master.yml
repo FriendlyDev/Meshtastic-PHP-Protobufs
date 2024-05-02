@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  "0 6 * * *"
+    - cron:  "0 */3 * * *"
   workflow_dispatch:
 
 name: Create PHP protobufs from latest Meshtastic Protobufs
@@ -32,6 +32,7 @@ jobs:
           cd ..
           echo "LATEST_TAG=${LATEST_TAG}" >> "$GITHUB_ENV"
           echo "LATEST_TAG_NUMBER=${LATEST_TAG:1}" >> "$GITHUB_ENV"
+        shell: bash
 
       - name: Checkout current code
         uses: actions/checkout@v4
@@ -51,10 +52,12 @@ jobs:
           cd ..
           echo "CURRENT_TAG=${CURRENT_TAG}" >> "$GITHUB_ENV"
           echo "CURRENT_TAG_NUMBER=${CURRENT_TAG:1}" >> "$GITHUB_ENV"
+        shell: bash
 
       - name: Show working directory
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: ls -lash ./*
+        shell: bash
 
       - name: Install Protoc
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
@@ -63,14 +66,17 @@ jobs:
       - name: Check protoc is installed
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: which protoc
+        shell: bash
 
       - name: Create output directory
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: mkdir -p ./protobufs-output
+        shell: bash
 
       - name: Show working directory
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
         run: ls -lash ./*
+        shell: bash
 
       - name: Convert the nanopb.proto file to proto3
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
@@ -80,6 +86,7 @@ jobs:
           sed -i 's/ \[default = [^;]*//g' ./nanopb.proto
           sed -i 's/optional google.protobuf.FieldDescriptorProto/\/\/ optional google.protobuf.FieldDescriptorProto/g' ./nanopb.proto
           cd ..
+        shell: bash
 
       - name: Generate the PHP files from the protobufs
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
@@ -87,6 +94,7 @@ jobs:
           cd ./protobufs
           find . -type f -iname '*.proto' -exec protoc --proto_path= --php_out=../protobufs-output {} \;
           cd ..
+        shell: bash
 
       - name: Replace the current protobuf PHP files with the ones we just generated
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
@@ -95,6 +103,7 @@ jobs:
           rm -rf ./php-code/src/Meshtastic
           mv ./protobufs-output/GPBMetadata ./php-code/src/
           mv ./protobufs-output/Meshtastic ./php-code/src/
+        shell: bash
 
       - name: Commit and push changes
         if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
@@ -135,7 +144,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        if: false == env.release-exists
+        if: ${{ 'false' == env.release-exists }}
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
