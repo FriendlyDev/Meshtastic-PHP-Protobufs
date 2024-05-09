@@ -122,19 +122,22 @@ jobs:
         run: |
           cd ./php-code
           echo "Current TAG = ${{ env.LATEST_TAG }}"
+          echo "$(gh release view ${{ env.LATEST_TAG }} 2>&1)"
           set +e
-          if [[ "$(gh release view $LATEST_TAG 2>&1)" == "release not found" ]]; then
+          if [[ "$(gh release view ${{ env.LATEST_TAG }} 2>&1)" == "release not found" ]]; then
             echo "Release not found."
-            echo "release-exists=false" >> $GITHUB_OUTPUT
+            echo "DO_RELEASE=yes" >> $GITHUB_OUTPUT
           else
             echo "Release found."
-            echo "release-exists=true" >> $GITHUB_OUTPUT
+            echo "DO_RELEASE=no" >> $GITHUB_OUTPUT
           fi
         shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         id: create_release
-        if: ${{ 'false' == env.release-exists }}
+        if: "yes" == env.DO_RELEASE
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
