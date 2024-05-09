@@ -133,6 +133,13 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>RCWL9620 = 16;</code>
      */
     const RCWL9620 = 16;
+    /**
+     *
+     * Sensirion High accuracy temperature and humidity
+     *
+     * Generated from protobuf enum <code>SHT4X = 17;</code>
+     */
+    const SHT4X = 17;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -152,6 +159,7 @@ class TelemetrySensorType
         self::INA3221 => 'INA3221',
         self::BMP085 => 'BMP085',
         self::RCWL9620 => 'RCWL9620',
+        self::SHT4X => 'SHT4X',
     ];
 
     public static function name($value)

@@ -139,6 +139,12 @@ class HardwareModel
      */
     const LORA_TYPE = 19;
     /**
+     * wiphone https://www.wiphone.io/
+     *
+     * Generated from protobuf enum <code>WIPHONE = 20;</code>
+     */
+    const WIPHONE = 20;
+    /**
      * B&Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
      *
      * Generated from protobuf enum <code>STATION_G1 = 25;</code>
@@ -379,6 +385,13 @@ class HardwareModel
      */
     const TWC_MESH_V4 = 62;
     /**
+     * NRF52_PROMICRO_DIY
+     * Promicro NRF52840 with SX1262/LLCC68, SSD1306 OLED and NEO6M GPS
+     *
+     * Generated from protobuf enum <code>NRF52_PROMICRO_DIY = 63;</code>
+     */
+    const NRF52_PROMICRO_DIY = 63;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -408,6 +421,7 @@ class HardwareModel
         self::NANO_G1_EXPLORER => 'NANO_G1_EXPLORER',
         self::NANO_G2_ULTRA => 'NANO_G2_ULTRA',
         self::LORA_TYPE => 'LORA_TYPE',
+        self::WIPHONE => 'WIPHONE',
         self::STATION_G1 => 'STATION_G1',
         self::RAK11310 => 'RAK11310',
         self::SENSELORA_RP2040 => 'SENSELORA_RP2040',
@@ -446,6 +460,7 @@ class HardwareModel
         self::TD_LORAC => 'TD_LORAC',
         self::CDEBYTE_EORA_S3 => 'CDEBYTE_EORA_S3',
         self::TWC_MESH_V4 => 'TWC_MESH_V4',
+        self::NRF52_PROMICRO_DIY => 'NRF52_PROMICRO_DIY',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
