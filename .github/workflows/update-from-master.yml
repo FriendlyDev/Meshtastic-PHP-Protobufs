@@ -49,9 +49,14 @@ jobs:
           git checkout master
           git reset --hard HEAD
           CURRENT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+          CURRENT_RELEASE=$(gh release view --json tagName --jq '.tagName')
           cd ..
           echo "CURRENT_TAG=${CURRENT_TAG}" >> "$GITHUB_ENV"
           echo "CURRENT_TAG_NUMBER=${CURRENT_TAG:1}" >> "$GITHUB_ENV"
+          echo "CURRENT_RELEASE=${CURRENT_RELEASE}" >> "$GITHUB_ENV"
+          echo "CURRENT_RELEASE_NUMBER=${CURRENT_RELEASE:1}" >> "$GITHUB_ENV"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
 
       - name: Show working directory
@@ -118,26 +123,9 @@ jobs:
           git push --tags origin master
         shell: bash
 
-      - name: get the latest release tag
-        run: |
-          cd ./php-code
-          echo "Current TAG = ${{ env.LATEST_TAG }}"
-          echo "$(gh release view ${{ env.LATEST_TAG }} 2>&1)"
-          set +e
-          if [[ "$(gh release view ${{ env.LATEST_TAG }} 2>&1)" == "release not found" ]]; then
-            echo "Release not found."
-            echo "DO_RELEASE=1" >> $GITHUB_OUTPUT
-          else
-            echo "Release found."
-            echo "DO_RELEASE=0" >> $GITHUB_OUTPUT
-          fi
-        shell: bash
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Create Release
         id: create_release
-        if: env.DO_RELEASE > 0
+        if: env.LATEST_TAG_NUMBER > env.CURRENT_RELEASE_NUMBER
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
