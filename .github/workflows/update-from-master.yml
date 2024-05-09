@@ -126,10 +126,10 @@ jobs:
           set +e
           if [[ "$(gh release view ${{ env.LATEST_TAG }} 2>&1)" == "release not found" ]]; then
             echo "Release not found."
-            echo "DO_RELEASE=yes" >> $GITHUB_OUTPUT
+            echo "DO_RELEASE=1" >> $GITHUB_OUTPUT
           else
             echo "Release found."
-            echo "DO_RELEASE=no" >> $GITHUB_OUTPUT
+            echo "DO_RELEASE=0" >> $GITHUB_OUTPUT
           fi
         shell: bash
         env:
@@ -137,7 +137,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        if: "yes" == env.DO_RELEASE
+        if: env.DO_RELEASE > 0
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
