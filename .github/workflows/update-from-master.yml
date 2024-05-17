@@ -125,7 +125,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_RELEASE_NUMBER
+        if: env.LATEST_TAG_NUMBER < env.CURRENT_RELEASE_NUMBER
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
