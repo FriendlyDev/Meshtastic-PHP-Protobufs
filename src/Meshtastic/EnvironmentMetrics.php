@@ -73,6 +73,20 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>float distance = 8;</code>
      */
     protected $distance = 0.0;
+    /**
+     *
+     * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
+     *
+     * Generated from protobuf field <code>float lux = 9;</code>
+     */
+    protected $lux = 0.0;
+    /**
+     *
+     * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
+     *
+     * Generated from protobuf field <code>float white_lux = 10;</code>
+     */
+    protected $white_lux = 0.0;
 
     /**
      * Constructor.
@@ -105,6 +119,12 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *     @type float $distance
      *          
      *           RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
+     *     @type float $lux
+     *          
+     *           VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
+     *     @type float $white_lux
+     *          
+     *           VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
      * }
      */
     public function __construct($data = NULL) {
@@ -334,6 +354,62 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->distance = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
+     *
+     * Generated from protobuf field <code>float lux = 9;</code>
+     * @return float
+     */
+    public function getLux()
+    {
+        return $this->lux;
+    }
+
+    /**
+     *
+     * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
+     *
+     * Generated from protobuf field <code>float lux = 9;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setLux($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->lux = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
+     *
+     * Generated from protobuf field <code>float white_lux = 10;</code>
+     * @return float
+     */
+    public function getWhiteLux()
+    {
+        return $this->white_lux;
+    }
+
+    /**
+     *
+     * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
+     *
+     * Generated from protobuf field <code>float white_lux = 10;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setWhiteLux($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->white_lux = $var;
 
         return $this;
     }

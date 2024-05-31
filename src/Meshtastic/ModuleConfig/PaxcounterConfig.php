@@ -25,6 +25,18 @@ class PaxcounterConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 paxcounter_update_interval = 2;</code>
      */
     protected $paxcounter_update_interval = 0;
+    /**
+     * WiFi RSSI threshold. Defaults to -80
+     *
+     * Generated from protobuf field <code>int32 wifi_threshold = 3;</code>
+     */
+    protected $wifi_threshold = 0;
+    /**
+     * BLE RSSI threshold. Defaults to -80
+     *
+     * Generated from protobuf field <code>int32 ble_threshold = 4;</code>
+     */
+    protected $ble_threshold = 0;
 
     /**
      * Constructor.
@@ -35,6 +47,10 @@ class PaxcounterConfig extends \Google\Protobuf\Internal\Message
      *     @type bool $enabled
      *           Enable the Paxcounter Module
      *     @type int $paxcounter_update_interval
+     *     @type int $wifi_threshold
+     *           WiFi RSSI threshold. Defaults to -80
+     *     @type int $ble_threshold
+     *           BLE RSSI threshold. Defaults to -80
      * }
      */
     public function __construct($data = NULL) {
@@ -86,6 +102,58 @@ class PaxcounterConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->paxcounter_update_interval = $var;
+
+        return $this;
+    }
+
+    /**
+     * WiFi RSSI threshold. Defaults to -80
+     *
+     * Generated from protobuf field <code>int32 wifi_threshold = 3;</code>
+     * @return int
+     */
+    public function getWifiThreshold()
+    {
+        return $this->wifi_threshold;
+    }
+
+    /**
+     * WiFi RSSI threshold. Defaults to -80
+     *
+     * Generated from protobuf field <code>int32 wifi_threshold = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setWifiThreshold($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->wifi_threshold = $var;
+
+        return $this;
+    }
+
+    /**
+     * BLE RSSI threshold. Defaults to -80
+     *
+     * Generated from protobuf field <code>int32 ble_threshold = 4;</code>
+     * @return int
+     */
+    public function getBleThreshold()
+    {
+        return $this->ble_threshold;
+    }
+
+    /**
+     * BLE RSSI threshold. Defaults to -80
+     *
+     * Generated from protobuf field <code>int32 ble_threshold = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setBleThreshold($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->ble_threshold = $var;
 
         return $this;
     }

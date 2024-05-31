@@ -140,6 +140,48 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>SHT4X = 17;</code>
      */
     const SHT4X = 17;
+    /**
+     *
+     * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
+     *
+     * Generated from protobuf enum <code>VEML7700 = 18;</code>
+     */
+    const VEML7700 = 18;
+    /**
+     *
+     * MLX90632 non-contact IR temperature sensor.
+     *
+     * Generated from protobuf enum <code>MLX90632 = 19;</code>
+     */
+    const MLX90632 = 19;
+    /**
+     *
+     * TI OPT3001 Ambient Light Sensor
+     *
+     * Generated from protobuf enum <code>OPT3001 = 20;</code>
+     */
+    const OPT3001 = 20;
+    /**
+     *
+     * Lite On LTR-390UV-01 UV Light Sensor
+     *
+     * Generated from protobuf enum <code>LTR390UV = 21;</code>
+     */
+    const LTR390UV = 21;
+    /**
+     *
+     * AMS TSL25911FN RGB Light Sensor
+     *
+     * Generated from protobuf enum <code>TSL25911FN = 22;</code>
+     */
+    const TSL25911FN = 22;
+    /**
+     *
+     * AHT10 Integrated temperature and humidity sensor
+     *
+     * Generated from protobuf enum <code>AHT10 = 23;</code>
+     */
+    const AHT10 = 23;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -160,6 +202,12 @@ class TelemetrySensorType
         self::BMP085 => 'BMP085',
         self::RCWL9620 => 'RCWL9620',
         self::SHT4X => 'SHT4X',
+        self::VEML7700 => 'VEML7700',
+        self::MLX90632 => 'MLX90632',
+        self::OPT3001 => 'OPT3001',
+        self::LTR390UV => 'LTR390UV',
+        self::TSL25911FN => 'TSL25911FN',
+        self::AHT10 => 'AHT10',
     ];
 
     public static function name($value)

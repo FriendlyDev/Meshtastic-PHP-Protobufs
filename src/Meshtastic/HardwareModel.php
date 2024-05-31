@@ -392,6 +392,13 @@ class HardwareModel
      */
     const NRF52_PROMICRO_DIY = 63;
     /**
+     * RadioMaster 900 Bandit Nano, https://www.radiomasterrc.com/products/bandit-nano-expresslrs-rf-module
+     * ESP32-D0WDQ6 With SX1276/SKY66122, SSD1306 OLED and No GPS
+     *
+     * Generated from protobuf enum <code>RADIOMASTER_900_BANDIT_NANO = 64;</code>
+     */
+    const RADIOMASTER_900_BANDIT_NANO = 64;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -461,6 +468,7 @@ class HardwareModel
         self::CDEBYTE_EORA_S3 => 'CDEBYTE_EORA_S3',
         self::TWC_MESH_V4 => 'TWC_MESH_V4',
         self::NRF52_PROMICRO_DIY => 'NRF52_PROMICRO_DIY',
+        self::RADIOMASTER_900_BANDIT_NANO => 'RADIOMASTER_900_BANDIT_NANO',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

@@ -27,6 +27,12 @@ class GeoChat extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string to = 2;</code>
      */
     protected $to = null;
+    /**
+     * Callsign of the recipient for the message
+     *
+     * Generated from protobuf field <code>optional string to_callsign = 3;</code>
+     */
+    protected $to_callsign = null;
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class GeoChat extends \Google\Protobuf\Internal\Message
      *           The text message
      *     @type string $to
      *           Uid recipient of the message
+     *     @type string $to_callsign
+     *           Callsign of the recipient for the message
      * }
      */
     public function __construct($data = NULL) {
@@ -103,6 +111,42 @@ class GeoChat extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->to = $var;
+
+        return $this;
+    }
+
+    /**
+     * Callsign of the recipient for the message
+     *
+     * Generated from protobuf field <code>optional string to_callsign = 3;</code>
+     * @return string
+     */
+    public function getToCallsign()
+    {
+        return isset($this->to_callsign) ? $this->to_callsign : '';
+    }
+
+    public function hasToCallsign()
+    {
+        return isset($this->to_callsign);
+    }
+
+    public function clearToCallsign()
+    {
+        unset($this->to_callsign);
+    }
+
+    /**
+     * Callsign of the recipient for the message
+     *
+     * Generated from protobuf field <code>optional string to_callsign = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setToCallsign($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->to_callsign = $var;
 
         return $this;
     }
