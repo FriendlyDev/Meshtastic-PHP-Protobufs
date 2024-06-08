@@ -145,6 +145,12 @@ class HardwareModel
      */
     const WIPHONE = 20;
     /**
+     * WIO Tracker WM1110 family from Seeed Studio. Includes wio-1110-tracker and wio-1110-sdk
+     *
+     * Generated from protobuf enum <code>WIO_WM1110 = 21;</code>
+     */
+    const WIO_WM1110 = 21;
+    /**
      * B&Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
      *
      * Generated from protobuf enum <code>STATION_G1 = 25;</code>
@@ -429,6 +435,7 @@ class HardwareModel
         self::NANO_G2_ULTRA => 'NANO_G2_ULTRA',
         self::LORA_TYPE => 'LORA_TYPE',
         self::WIPHONE => 'WIPHONE',
+        self::WIO_WM1110 => 'WIO_WM1110',
         self::STATION_G1 => 'STATION_G1',
         self::RAK11310 => 'RAK11310',
         self::SENSELORA_RP2040 => 'SENSELORA_RP2040',

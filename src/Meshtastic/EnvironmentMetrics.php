@@ -87,6 +87,35 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>float white_lux = 10;</code>
      */
     protected $white_lux = 0.0;
+    /**
+     *
+     * Infrared lux
+     *
+     * Generated from protobuf field <code>float ir_lux = 11;</code>
+     */
+    protected $ir_lux = 0.0;
+    /**
+     *
+     * Ultraviolet lux
+     *
+     * Generated from protobuf field <code>float uv_lux = 12;</code>
+     */
+    protected $uv_lux = 0.0;
+    /**
+     *
+     * Wind direction in degrees
+     * 0 degrees = North, 90 = East, etc...
+     *
+     * Generated from protobuf field <code>uint32 wind_direction = 13;</code>
+     */
+    protected $wind_direction = 0;
+    /**
+     *
+     * Wind speed in m/s
+     *
+     * Generated from protobuf field <code>float wind_speed = 14;</code>
+     */
+    protected $wind_speed = 0.0;
 
     /**
      * Constructor.
@@ -125,6 +154,19 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *     @type float $white_lux
      *          
      *           VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
+     *     @type float $ir_lux
+     *          
+     *           Infrared lux
+     *     @type float $uv_lux
+     *          
+     *           Ultraviolet lux
+     *     @type int $wind_direction
+     *          
+     *           Wind direction in degrees
+     *           0 degrees = North, 90 = East, etc...
+     *     @type float $wind_speed
+     *          
+     *           Wind speed in m/s
      * }
      */
     public function __construct($data = NULL) {
@@ -410,6 +452,120 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->white_lux = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * Infrared lux
+     *
+     * Generated from protobuf field <code>float ir_lux = 11;</code>
+     * @return float
+     */
+    public function getIrLux()
+    {
+        return $this->ir_lux;
+    }
+
+    /**
+     *
+     * Infrared lux
+     *
+     * Generated from protobuf field <code>float ir_lux = 11;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setIrLux($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ir_lux = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * Ultraviolet lux
+     *
+     * Generated from protobuf field <code>float uv_lux = 12;</code>
+     * @return float
+     */
+    public function getUvLux()
+    {
+        return $this->uv_lux;
+    }
+
+    /**
+     *
+     * Ultraviolet lux
+     *
+     * Generated from protobuf field <code>float uv_lux = 12;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setUvLux($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->uv_lux = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * Wind direction in degrees
+     * 0 degrees = North, 90 = East, etc...
+     *
+     * Generated from protobuf field <code>uint32 wind_direction = 13;</code>
+     * @return int
+     */
+    public function getWindDirection()
+    {
+        return $this->wind_direction;
+    }
+
+    /**
+     *
+     * Wind direction in degrees
+     * 0 degrees = North, 90 = East, etc...
+     *
+     * Generated from protobuf field <code>uint32 wind_direction = 13;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setWindDirection($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->wind_direction = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * Wind speed in m/s
+     *
+     * Generated from protobuf field <code>float wind_speed = 14;</code>
+     * @return float
+     */
+    public function getWindSpeed()
+    {
+        return $this->wind_speed;
+    }
+
+    /**
+     *
+     * Wind speed in m/s
+     *
+     * Generated from protobuf field <code>float wind_speed = 14;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setWindSpeed($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->wind_speed = $var;
 
         return $this;
     }

@@ -182,6 +182,13 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>AHT10 = 23;</code>
      */
     const AHT10 = 23;
+    /**
+     *
+     * DFRobot Lark Weather station (temperature, humidity, pressure, wind speed and direction) 
+     *
+     * Generated from protobuf enum <code>DFROBOT_LARK = 24;</code>
+     */
+    const DFROBOT_LARK = 24;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -208,6 +215,7 @@ class TelemetrySensorType
         self::LTR390UV => 'LTR390UV',
         self::TSL25911FN => 'TSL25911FN',
         self::AHT10 => 'AHT10',
+        self::DFROBOT_LARK => 'DFROBOT_LARK',
     ];
 
     public static function name($value)
