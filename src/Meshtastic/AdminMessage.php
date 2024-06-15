@@ -69,6 +69,8 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Only implemented on NRF52 currently
      *     @type string $delete_file_request
      *           Delete the file by the specified path from the device
+     *     @type int $set_scale
+     *           Set zero and offset for scale chips
      *     @type \Meshtastic\User $set_owner
      *           Set the owner for this node
      *     @type \Meshtastic\Channel $set_channel
@@ -772,6 +774,37 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->writeOneof(22, $var);
+
+        return $this;
+    }
+
+    /**
+     * Set zero and offset for scale chips
+     *
+     * Generated from protobuf field <code>uint32 set_scale = 23;</code>
+     * @return int
+     */
+    public function getSetScale()
+    {
+        return $this->readOneof(23);
+    }
+
+    public function hasSetScale()
+    {
+        return $this->hasOneof(23);
+    }
+
+    /**
+     * Set zero and offset for scale chips
+     *
+     * Generated from protobuf field <code>uint32 set_scale = 23;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSetScale($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->writeOneof(23, $var);
 
         return $this;
     }

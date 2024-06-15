@@ -189,6 +189,13 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>DFROBOT_LARK = 24;</code>
      */
     const DFROBOT_LARK = 24;
+    /**
+     *
+     * NAU7802 Scale Chip or compatible
+     *
+     * Generated from protobuf enum <code>NAU7802 = 25;</code>
+     */
+    const NAU7802 = 25;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -216,6 +223,7 @@ class TelemetrySensorType
         self::TSL25911FN => 'TSL25911FN',
         self::AHT10 => 'AHT10',
         self::DFROBOT_LARK => 'DFROBOT_LARK',
+        self::NAU7802 => 'NAU7802',
     ];
 
     public static function name($value)

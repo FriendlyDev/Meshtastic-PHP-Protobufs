@@ -405,6 +405,12 @@ class HardwareModel
      */
     const RADIOMASTER_900_BANDIT_NANO = 64;
     /**
+     * Heltec Capsule Sensor V3 with ESP32-S3 CPU, Portable LoRa device that can replace GNSS modules or sensors
+     *
+     * Generated from protobuf enum <code>HELTEC_CAPSULE_SENSOR_V3 = 65;</code>
+     */
+    const HELTEC_CAPSULE_SENSOR_V3 = 65;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -476,6 +482,7 @@ class HardwareModel
         self::TWC_MESH_V4 => 'TWC_MESH_V4',
         self::NRF52_PROMICRO_DIY => 'NRF52_PROMICRO_DIY',
         self::RADIOMASTER_900_BANDIT_NANO => 'RADIOMASTER_900_BANDIT_NANO',
+        self::HELTEC_CAPSULE_SENSOR_V3 => 'HELTEC_CAPSULE_SENSOR_V3',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

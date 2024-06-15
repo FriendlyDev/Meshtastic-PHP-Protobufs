@@ -116,6 +116,13 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>float wind_speed = 14;</code>
      */
     protected $wind_speed = 0.0;
+    /**
+     *
+     * Weight in KG
+     *
+     * Generated from protobuf field <code>float weight = 15;</code>
+     */
+    protected $weight = 0.0;
 
     /**
      * Constructor.
@@ -167,6 +174,9 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *     @type float $wind_speed
      *          
      *           Wind speed in m/s
+     *     @type float $weight
+     *          
+     *           Weight in KG
      * }
      */
     public function __construct($data = NULL) {
@@ -566,6 +576,34 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->wind_speed = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * Weight in KG
+     *
+     * Generated from protobuf field <code>float weight = 15;</code>
+     * @return float
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     *
+     * Weight in KG
+     *
+     * Generated from protobuf field <code>float weight = 15;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setWeight($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->weight = $var;
 
         return $this;
     }

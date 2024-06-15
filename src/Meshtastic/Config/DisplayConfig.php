@@ -78,6 +78,12 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool wake_on_tap_or_motion = 10;</code>
      */
     protected $wake_on_tap_or_motion = false;
+    /**
+     * Indicates how to rotate or invert the compass output to accurate display on the display.
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.CompassOrientation compass_orientation = 11;</code>
+     */
+    protected $compass_orientation = 0;
 
     /**
      * Constructor.
@@ -108,6 +114,8 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      *           Print first line in pseudo-bold? FALSE is original style, TRUE is bold
      *     @type bool $wake_on_tap_or_motion
      *           Should we wake the screen up on accelerometer detected motion or tap
+     *     @type int $compass_orientation
+     *           Indicates how to rotate or invert the compass output to accurate display on the display.
      * }
      */
     public function __construct($data = NULL) {
@@ -377,6 +385,32 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->wake_on_tap_or_motion = $var;
+
+        return $this;
+    }
+
+    /**
+     * Indicates how to rotate or invert the compass output to accurate display on the display.
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.CompassOrientation compass_orientation = 11;</code>
+     * @return int
+     */
+    public function getCompassOrientation()
+    {
+        return $this->compass_orientation;
+    }
+
+    /**
+     * Indicates how to rotate or invert the compass output to accurate display on the display.
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.CompassOrientation compass_orientation = 11;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCompassOrientation($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\Config\DisplayConfig\CompassOrientation::class);
+        $this->compass_orientation = $var;
 
         return $this;
     }
