@@ -151,6 +151,12 @@ class HardwareModel
      */
     const WIO_WM1110 = 21;
     /**
+     * RAK2560 Solar base station based on RAK4630
+     *
+     * Generated from protobuf enum <code>RAK2560 = 22;</code>
+     */
+    const RAK2560 = 22;
+    /**
      * B&Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
      *
      * Generated from protobuf enum <code>STATION_G1 = 25;</code>
@@ -442,6 +448,7 @@ class HardwareModel
         self::LORA_TYPE => 'LORA_TYPE',
         self::WIPHONE => 'WIPHONE',
         self::WIO_WM1110 => 'WIO_WM1110',
+        self::RAK2560 => 'RAK2560',
         self::STATION_G1 => 'STATION_G1',
         self::RAK11310 => 'RAK11310',
         self::SENSELORA_RP2040 => 'SENSELORA_RP2040',
