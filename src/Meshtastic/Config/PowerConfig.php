@@ -75,6 +75,13 @@ class PowerConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 device_battery_ina_address = 9;</code>
      */
     protected $device_battery_ina_address = 0;
+    /**
+     * If non-zero, we want powermon log outputs.  With the particular (bitfield) sources enabled.
+     * Note: we picked an ID of 32 so that lower more efficient IDs can be used for more frequently used options.
+     *
+     * Generated from protobuf field <code>uint64 powermon_enables = 32;</code>
+     */
+    protected $powermon_enables = 0;
 
     /**
      * Constructor.
@@ -109,6 +116,9 @@ class PowerConfig extends \Google\Protobuf\Internal\Message
      *           Technical Details: ESP32 Only 0 for default of 10 seconds
      *     @type int $device_battery_ina_address
      *           I2C address of INA_2XX to use for reading device battery voltage
+     *     @type int|string $powermon_enables
+     *           If non-zero, we want powermon log outputs.  With the particular (bitfield) sources enabled.
+     *           Note: we picked an ID of 32 so that lower more efficient IDs can be used for more frequently used options.
      * }
      */
     public function __construct($data = NULL) {
@@ -342,6 +352,34 @@ class PowerConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->device_battery_ina_address = $var;
+
+        return $this;
+    }
+
+    /**
+     * If non-zero, we want powermon log outputs.  With the particular (bitfield) sources enabled.
+     * Note: we picked an ID of 32 so that lower more efficient IDs can be used for more frequently used options.
+     *
+     * Generated from protobuf field <code>uint64 powermon_enables = 32;</code>
+     * @return int|string
+     */
+    public function getPowermonEnables()
+    {
+        return $this->powermon_enables;
+    }
+
+    /**
+     * If non-zero, we want powermon log outputs.  With the particular (bitfield) sources enabled.
+     * Note: we picked an ID of 32 so that lower more efficient IDs can be used for more frequently used options.
+     *
+     * Generated from protobuf field <code>uint64 powermon_enables = 32;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setPowermonEnables($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->powermon_enables = $var;
 
         return $this;
     }

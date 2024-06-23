@@ -157,6 +157,12 @@ class HardwareModel
      */
     const RAK2560 = 22;
     /**
+     * Heltec HRU-3601: https://heltec.org/project/hru-3601/
+     *
+     * Generated from protobuf enum <code>HELTEC_HRU_3601 = 23;</code>
+     */
+    const HELTEC_HRU_3601 = 23;
+    /**
      * B&Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
      *
      * Generated from protobuf enum <code>STATION_G1 = 25;</code>
@@ -449,6 +455,7 @@ class HardwareModel
         self::WIPHONE => 'WIPHONE',
         self::WIO_WM1110 => 'WIO_WM1110',
         self::RAK2560 => 'RAK2560',
+        self::HELTEC_HRU_3601 => 'HELTEC_HRU_3601',
         self::STATION_G1 => 'STATION_G1',
         self::RAK11310 => 'RAK11310',
         self::SENSELORA_RP2040 => 'SENSELORA_RP2040',
