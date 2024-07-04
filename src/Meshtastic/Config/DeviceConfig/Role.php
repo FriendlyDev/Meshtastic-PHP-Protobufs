@@ -36,9 +36,7 @@ class Role
      */
     const ROUTER = 2;
     /**
-     * Description: Combination of both ROUTER and CLIENT. Not for mobile devices.
-     *
-     * Generated from protobuf enum <code>ROUTER_CLIENT = 3;</code>
+     * Generated from protobuf enum <code>ROUTER_CLIENT = 3 [deprecated = true];</code>
      */
     const ROUTER_CLIENT = 3;
     /**

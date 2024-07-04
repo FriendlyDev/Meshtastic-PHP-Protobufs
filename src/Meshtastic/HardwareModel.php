@@ -423,6 +423,31 @@ class HardwareModel
      */
     const HELTEC_CAPSULE_SENSOR_V3 = 65;
     /**
+     * Heltec Vision Master T190 with ESP32-S3 CPU, and a 1.90 inch TFT display
+     *
+     * Generated from protobuf enum <code>HELTEC_VISION_MASTER_T190 = 66;</code>
+     */
+    const HELTEC_VISION_MASTER_T190 = 66;
+    /**
+     * Heltec Vision Master E213 with ESP32-S3 CPU, and a 2.13 inch E-Ink display
+     *
+     * Generated from protobuf enum <code>HELTEC_VISION_MASTER_E213 = 67;</code>
+     */
+    const HELTEC_VISION_MASTER_E213 = 67;
+    /**
+     * Heltec Vision Master E290 with ESP32-S3 CPU, and a 2.9 inch E-Ink display
+     *
+     * Generated from protobuf enum <code>HELTEC_VISION_MASTER_E290 = 68;</code>
+     */
+    const HELTEC_VISION_MASTER_E290 = 68;
+    /**
+     * Heltec Mesh Node T114 board with nRF52840 CPU, and a 1.14 inch TFT display, Ultimate low-power design,
+     * specifically adapted for the Meshtatic project
+     *
+     * Generated from protobuf enum <code>HELTEC_MESH_NODE_T114 = 69;</code>
+     */
+    const HELTEC_MESH_NODE_T114 = 69;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -497,6 +522,10 @@ class HardwareModel
         self::NRF52_PROMICRO_DIY => 'NRF52_PROMICRO_DIY',
         self::RADIOMASTER_900_BANDIT_NANO => 'RADIOMASTER_900_BANDIT_NANO',
         self::HELTEC_CAPSULE_SENSOR_V3 => 'HELTEC_CAPSULE_SENSOR_V3',
+        self::HELTEC_VISION_MASTER_T190 => 'HELTEC_VISION_MASTER_T190',
+        self::HELTEC_VISION_MASTER_E213 => 'HELTEC_VISION_MASTER_E213',
+        self::HELTEC_VISION_MASTER_E290 => 'HELTEC_VISION_MASTER_E290',
+        self::HELTEC_MESH_NODE_T114 => 'HELTEC_MESH_NODE_T114',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

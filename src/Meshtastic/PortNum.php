@@ -222,6 +222,12 @@ class PortNum
      */
     const MAP_REPORT_APP = 73;
     /**
+     * PowerStress based monitoring support (for automated power consumption testing)
+     *
+     * Generated from protobuf enum <code>POWERSTRESS_APP = 74;</code>
+     */
+    const POWERSTRESS_APP = 74;
+    /**
      * Private applications should use portnums >= 256.
      * To simplify initial development and testing you can use "PRIVATE_APP"
      * in your code without needing to rebuild protobuf files (via [regen-protos.sh](https://github.com/meshtastic/firmware/blob/master/bin/regen-protos.sh))
@@ -268,6 +274,7 @@ class PortNum
         self::NEIGHBORINFO_APP => 'NEIGHBORINFO_APP',
         self::ATAK_PLUGIN => 'ATAK_PLUGIN',
         self::MAP_REPORT_APP => 'MAP_REPORT_APP',
+        self::POWERSTRESS_APP => 'POWERSTRESS_APP',
         self::PRIVATE_APP => 'PRIVATE_APP',
         self::ATAK_FORWARDER => 'ATAK_FORWARDER',
         self::MAX => 'MAX',
