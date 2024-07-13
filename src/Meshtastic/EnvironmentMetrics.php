@@ -123,6 +123,20 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>float weight = 15;</code>
      */
     protected $weight = 0.0;
+    /**
+     *
+     * Wind gust in m/s
+     *
+     * Generated from protobuf field <code>float wind_gust = 16;</code>
+     */
+    protected $wind_gust = 0.0;
+    /**
+     *
+     * Wind lull in m/s
+     *
+     * Generated from protobuf field <code>float wind_lull = 17;</code>
+     */
+    protected $wind_lull = 0.0;
 
     /**
      * Constructor.
@@ -177,6 +191,12 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *     @type float $weight
      *          
      *           Weight in KG
+     *     @type float $wind_gust
+     *          
+     *           Wind gust in m/s
+     *     @type float $wind_lull
+     *          
+     *           Wind lull in m/s
      * }
      */
     public function __construct($data = NULL) {
@@ -604,6 +624,62 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->weight = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * Wind gust in m/s
+     *
+     * Generated from protobuf field <code>float wind_gust = 16;</code>
+     * @return float
+     */
+    public function getWindGust()
+    {
+        return $this->wind_gust;
+    }
+
+    /**
+     *
+     * Wind gust in m/s
+     *
+     * Generated from protobuf field <code>float wind_gust = 16;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setWindGust($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->wind_gust = $var;
+
+        return $this;
+    }
+
+    /**
+     *
+     * Wind lull in m/s
+     *
+     * Generated from protobuf field <code>float wind_lull = 17;</code>
+     * @return float
+     */
+    public function getWindLull()
+    {
+        return $this->wind_lull;
+    }
+
+    /**
+     *
+     * Wind lull in m/s
+     *
+     * Generated from protobuf field <code>float wind_lull = 17;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setWindLull($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->wind_lull = $var;
 
         return $this;
     }

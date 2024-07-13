@@ -39,6 +39,12 @@ class Serial_Mode
      * Generated from protobuf enum <code>CALTOPO = 5;</code>
      */
     const CALTOPO = 5;
+    /**
+     * Ecowitt WS85 weather station
+     *
+     * Generated from protobuf enum <code>WS85 = 6;</code>
+     */
+    const WS85 = 6;
 
     private static $valueToName = [
         self::PBDEFAULT => 'DEFAULT',
@@ -47,6 +53,7 @@ class Serial_Mode
         self::TEXTMSG => 'TEXTMSG',
         self::NMEA => 'NMEA',
         self::CALTOPO => 'CALTOPO',
+        self::WS85 => 'WS85',
     ];
 
     public static function name($value)

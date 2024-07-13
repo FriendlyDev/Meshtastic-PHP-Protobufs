@@ -129,6 +129,12 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
      */
     protected $override_frequency = 0.0;
     /**
+     * If true, disable the build-in PA FAN using pin define in RF95_FAN_EN.
+     *
+     * Generated from protobuf field <code>bool pa_fan_disabled = 15;</code>
+     */
+    protected $pa_fan_disabled = false;
+    /**
      * For testing it is useful sometimes to force a node to never listen to
      * particular other nodes (simulating radio out of range). All nodenums listed
      * in ignore_incoming will have packets they send dropped on receive (by router.cpp)
@@ -206,6 +212,8 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
      *           will still be applied. This will allow you to use out-of-band frequencies.
      *           Please respect your local laws and regulations. If you are a HAM, make sure you
      *           enable HAM mode and turn off encryption.
+     *     @type bool $pa_fan_disabled
+     *           If true, disable the build-in PA FAN using pin define in RF95_FAN_EN.
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $ignore_incoming
      *           For testing it is useful sometimes to force a node to never listen to
      *           particular other nodes (simulating radio out of range). All nodenums listed
@@ -637,6 +645,32 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->override_frequency = $var;
+
+        return $this;
+    }
+
+    /**
+     * If true, disable the build-in PA FAN using pin define in RF95_FAN_EN.
+     *
+     * Generated from protobuf field <code>bool pa_fan_disabled = 15;</code>
+     * @return bool
+     */
+    public function getPaFanDisabled()
+    {
+        return $this->pa_fan_disabled;
+    }
+
+    /**
+     * If true, disable the build-in PA FAN using pin define in RF95_FAN_EN.
+     *
+     * Generated from protobuf field <code>bool pa_fan_disabled = 15;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPaFanDisabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->pa_fan_disabled = $var;
 
         return $this;
     }

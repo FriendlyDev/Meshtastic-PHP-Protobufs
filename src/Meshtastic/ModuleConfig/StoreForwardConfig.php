@@ -45,6 +45,12 @@ class StoreForwardConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 history_return_window = 5;</code>
      */
     protected $history_return_window = 0;
+    /**
+     * Set to true to let this node act as a server that stores received messages and resends them upon request.
+     *
+     * Generated from protobuf field <code>bool is_server = 6;</code>
+     */
+    protected $is_server = false;
 
     /**
      * Constructor.
@@ -62,6 +68,8 @@ class StoreForwardConfig extends \Google\Protobuf\Internal\Message
      *           TODO: REPLACE
      *     @type int $history_return_window
      *           TODO: REPLACE
+     *     @type bool $is_server
+     *           Set to true to let this node act as a server that stores received messages and resends them upon request.
      * }
      */
     public function __construct($data = NULL) {
@@ -195,6 +203,32 @@ class StoreForwardConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->history_return_window = $var;
+
+        return $this;
+    }
+
+    /**
+     * Set to true to let this node act as a server that stores received messages and resends them upon request.
+     *
+     * Generated from protobuf field <code>bool is_server = 6;</code>
+     * @return bool
+     */
+    public function getIsServer()
+    {
+        return $this->is_server;
+    }
+
+    /**
+     * Set to true to let this node act as a server that stores received messages and resends them upon request.
+     *
+     * Generated from protobuf field <code>bool is_server = 6;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsServer($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_server = $var;
 
         return $this;
     }
