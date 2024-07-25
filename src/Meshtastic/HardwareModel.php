@@ -448,6 +448,12 @@ class HardwareModel
      */
     const HELTEC_MESH_NODE_T114 = 69;
     /**
+     * Sensecap Indicator from Seeed Studio. ESP32-S3 device with TFT and RP2040 coprocessor
+     *
+     * Generated from protobuf enum <code>SENSECAP_INDICATOR = 70;</code>
+     */
+    const SENSECAP_INDICATOR = 70;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -526,6 +532,7 @@ class HardwareModel
         self::HELTEC_VISION_MASTER_E213 => 'HELTEC_VISION_MASTER_E213',
         self::HELTEC_VISION_MASTER_E290 => 'HELTEC_VISION_MASTER_E290',
         self::HELTEC_MESH_NODE_T114 => 'HELTEC_MESH_NODE_T114',
+        self::SENSECAP_INDICATOR => 'SENSECAP_INDICATOR',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
