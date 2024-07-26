@@ -1,10 +1,12 @@
 # PHP Meshtastic Protobuf Definitions
 
-[![Latest Stable Version](http://poser.pugx.org/friendlydev/meshtastic-protobufs/v)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
-[![Total Downloads](http://poser.pugx.org/friendlydev/meshtastic-protobufs/downloads)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
-[![Latest Unstable Version](http://poser.pugx.org/friendlydev/meshtastic-protobufs/v/unstable)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
-[![License](http://poser.pugx.org/friendlydev/meshtastic-protobufs/license)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
-[![PHP Version Require](http://poser.pugx.org/friendlydev/meshtastic-protobufs/require/php)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
+[![Latest Stable Version](http://poser.pugx.org/friendlydev/meshtastic-protobufs/v?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
+[![Total Downloads](http://poser.pugx.org/friendlydev/meshtastic-protobufs/downloads?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
+[![Latest Unstable Version](http://poser.pugx.org/friendlydev/meshtastic-protobufs/v/unstable?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
+[![License](http://poser.pugx.org/friendlydev/meshtastic-protobufs/license?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
+[![PHP Version Require](http://poser.pugx.org/friendlydev/meshtastic-protobufs/require/php?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
+[![Version](http://poser.pugx.org/friendlydev/meshtastic-protobufs/version?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
+[![Total Downloads](http://poser.pugx.org/friendlydev/meshtastic-protobufs/downloads?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
 
 
 ## Overview
