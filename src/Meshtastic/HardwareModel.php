@@ -454,6 +454,12 @@ class HardwareModel
      */
     const SENSECAP_INDICATOR = 70;
     /**
+     * Seeed studio T1000-E tracker card. NRF52840 w/ LR1110 radio, GPS, button, buzzer, and sensors.
+     *
+     * Generated from protobuf enum <code>TRACKER_T1000_E = 71;</code>
+     */
+    const TRACKER_T1000_E = 71;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -533,6 +539,7 @@ class HardwareModel
         self::HELTEC_VISION_MASTER_E290 => 'HELTEC_VISION_MASTER_E290',
         self::HELTEC_MESH_NODE_T114 => 'HELTEC_MESH_NODE_T114',
         self::SENSECAP_INDICATOR => 'SENSECAP_INDICATOR',
+        self::TRACKER_T1000_E => 'TRACKER_T1000_E',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
