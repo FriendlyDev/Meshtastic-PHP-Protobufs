@@ -91,6 +91,21 @@ class CriticalErrorCode
      * Generated from protobuf enum <code>RADIO_SPI_BUG = 11;</code>
      */
     const RADIO_SPI_BUG = 11;
+    /**
+     * Corruption was detected on the flash filesystem but we were able to repair things.
+     * If you see this failure in the field please post in the forum because we are interested in seeing if this is occurring in the field.
+     *
+     * Generated from protobuf enum <code>FLASH_CORRUPTION_RECOVERABLE = 12;</code>
+     */
+    const FLASH_CORRUPTION_RECOVERABLE = 12;
+    /**
+     * Corruption was detected on the flash filesystem but we were unable to repair things.
+     * NOTE: Your node will probably need to be reconfigured the next time it reboots (it will lose the region code etc...)
+     * If you see this failure in the field please post in the forum because we are interested in seeing if this is occurring in the field.
+     *
+     * Generated from protobuf enum <code>FLASH_CORRUPTION_UNRECOVERABLE = 13;</code>
+     */
+    const FLASH_CORRUPTION_UNRECOVERABLE = 13;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -105,6 +120,8 @@ class CriticalErrorCode
         self::BROWNOUT => 'BROWNOUT',
         self::SX1262_FAILURE => 'SX1262_FAILURE',
         self::RADIO_SPI_BUG => 'RADIO_SPI_BUG',
+        self::FLASH_CORRUPTION_RECOVERABLE => 'FLASH_CORRUPTION_RECOVERABLE',
+        self::FLASH_CORRUPTION_UNRECOVERABLE => 'FLASH_CORRUPTION_UNRECOVERABLE',
     ];
 
     public static function name($value)
