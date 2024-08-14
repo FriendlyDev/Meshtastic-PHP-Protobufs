@@ -102,6 +102,8 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           This will delay the standard *implicit* save to the file system and subsequent reboot behavior until committed (commit_edit_settings)
      *     @type bool $commit_edit_settings
      *           Commits an open transaction for any edits made to config, module config, owner, and channel settings
+     *     @type int $factory_reset_device
+     *           Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
      *     @type int $reboot_ota_seconds
      *           Tell the node to reboot into the OTA Firmware in this many seconds (or <0 to cancel reboot)
      *           Only Implemented for ESP32 Devices. This needs to be issued to send a new main firmware via bluetooth.
@@ -112,8 +114,8 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Tell the node to reboot in this many seconds (or <0 to cancel reboot)
      *     @type int $shutdown_seconds
      *           Tell the node to shutdown in this many seconds (or <0 to cancel shutdown)
-     *     @type int $factory_reset
-     *           Tell the node to factory reset, all device settings will be returned to factory defaults.
+     *     @type int $factory_reset_config
+     *           Tell the node to factory reset config; all device state and configuration will be returned to factory defaults; BLE bonds will be preserved.
      *     @type int $nodedb_reset
      *           Tell the node to reset the nodedb.
      * }
@@ -1223,6 +1225,37 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
+     *
+     * Generated from protobuf field <code>int32 factory_reset_device = 94;</code>
+     * @return int
+     */
+    public function getFactoryResetDevice()
+    {
+        return $this->readOneof(94);
+    }
+
+    public function hasFactoryResetDevice()
+    {
+        return $this->hasOneof(94);
+    }
+
+    /**
+     * Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
+     *
+     * Generated from protobuf field <code>int32 factory_reset_device = 94;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setFactoryResetDevice($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->writeOneof(94, $var);
+
+        return $this;
+    }
+
+    /**
      * Tell the node to reboot into the OTA Firmware in this many seconds (or <0 to cancel reboot)
      * Only Implemented for ESP32 Devices. This needs to be issued to send a new main firmware via bluetooth.
      *
@@ -1351,29 +1384,29 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Tell the node to factory reset, all device settings will be returned to factory defaults.
+     * Tell the node to factory reset config; all device state and configuration will be returned to factory defaults; BLE bonds will be preserved.
      *
-     * Generated from protobuf field <code>int32 factory_reset = 99;</code>
+     * Generated from protobuf field <code>int32 factory_reset_config = 99;</code>
      * @return int
      */
-    public function getFactoryReset()
+    public function getFactoryResetConfig()
     {
         return $this->readOneof(99);
     }
 
-    public function hasFactoryReset()
+    public function hasFactoryResetConfig()
     {
         return $this->hasOneof(99);
     }
 
     /**
-     * Tell the node to factory reset, all device settings will be returned to factory defaults.
+     * Tell the node to factory reset config; all device state and configuration will be returned to factory defaults; BLE bonds will be preserved.
      *
-     * Generated from protobuf field <code>int32 factory_reset = 99;</code>
+     * Generated from protobuf field <code>int32 factory_reset_config = 99;</code>
      * @param int $var
      * @return $this
      */
-    public function setFactoryReset($var)
+    public function setFactoryResetConfig($var)
     {
         GPBUtil::checkInt32($var);
         $this->writeOneof(99, $var);

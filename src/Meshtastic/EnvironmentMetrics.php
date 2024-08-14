@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *
  * Weather station or other environmental metrics
  *
  * Generated from protobuf message <code>meshtastic.EnvironmentMetrics</code>
@@ -17,42 +16,36 @@ use Google\Protobuf\Internal\GPBUtil;
 class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
 {
     /**
-     *
      * Temperature measured
      *
      * Generated from protobuf field <code>float temperature = 1;</code>
      */
     protected $temperature = 0.0;
     /**
-     *
      * Relative humidity percent measured
      *
      * Generated from protobuf field <code>float relative_humidity = 2;</code>
      */
     protected $relative_humidity = 0.0;
     /**
-     *
      * Barometric pressure in hPA measured
      *
      * Generated from protobuf field <code>float barometric_pressure = 3;</code>
      */
     protected $barometric_pressure = 0.0;
     /**
-     *
      * Gas resistance in MOhm measured
      *
      * Generated from protobuf field <code>float gas_resistance = 4;</code>
      */
     protected $gas_resistance = 0.0;
     /**
-     *
      * Voltage measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
      * Generated from protobuf field <code>float voltage = 5;</code>
      */
     protected $voltage = 0.0;
     /**
-     *
      * Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
      * Generated from protobuf field <code>float current = 6;</code>
@@ -67,42 +60,36 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      */
     protected $iaq = 0;
     /**
-     *
      * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
      *
      * Generated from protobuf field <code>float distance = 8;</code>
      */
     protected $distance = 0.0;
     /**
-     *
      * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
      *
      * Generated from protobuf field <code>float lux = 9;</code>
      */
     protected $lux = 0.0;
     /**
-     *
      * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
      *
      * Generated from protobuf field <code>float white_lux = 10;</code>
      */
     protected $white_lux = 0.0;
     /**
-     *
      * Infrared lux
      *
      * Generated from protobuf field <code>float ir_lux = 11;</code>
      */
     protected $ir_lux = 0.0;
     /**
-     *
      * Ultraviolet lux
      *
      * Generated from protobuf field <code>float uv_lux = 12;</code>
      */
     protected $uv_lux = 0.0;
     /**
-     *
      * Wind direction in degrees
      * 0 degrees = North, 90 = East, etc...
      *
@@ -110,28 +97,24 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      */
     protected $wind_direction = 0;
     /**
-     *
      * Wind speed in m/s
      *
      * Generated from protobuf field <code>float wind_speed = 14;</code>
      */
     protected $wind_speed = 0.0;
     /**
-     *
      * Weight in KG
      *
      * Generated from protobuf field <code>float weight = 15;</code>
      */
     protected $weight = 0.0;
     /**
-     *
      * Wind gust in m/s
      *
      * Generated from protobuf field <code>float wind_gust = 16;</code>
      */
     protected $wind_gust = 0.0;
     /**
-     *
      * Wind lull in m/s
      *
      * Generated from protobuf field <code>float wind_lull = 17;</code>
@@ -145,57 +128,41 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type float $temperature
-     *          
      *           Temperature measured
      *     @type float $relative_humidity
-     *          
      *           Relative humidity percent measured
      *     @type float $barometric_pressure
-     *          
      *           Barometric pressure in hPA measured
      *     @type float $gas_resistance
-     *          
      *           Gas resistance in MOhm measured
      *     @type float $voltage
-     *          
      *           Voltage measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *     @type float $current
-     *          
      *           Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *     @type int $iaq
      *           
      *           relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      *           Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      *     @type float $distance
-     *          
      *           RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
      *     @type float $lux
-     *          
      *           VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
      *     @type float $white_lux
-     *          
      *           VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
      *     @type float $ir_lux
-     *          
      *           Infrared lux
      *     @type float $uv_lux
-     *          
      *           Ultraviolet lux
      *     @type int $wind_direction
-     *          
      *           Wind direction in degrees
      *           0 degrees = North, 90 = East, etc...
      *     @type float $wind_speed
-     *          
      *           Wind speed in m/s
      *     @type float $weight
-     *          
      *           Weight in KG
      *     @type float $wind_gust
-     *          
      *           Wind gust in m/s
      *     @type float $wind_lull
-     *          
      *           Wind lull in m/s
      * }
      */
@@ -205,7 +172,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Temperature measured
      *
      * Generated from protobuf field <code>float temperature = 1;</code>
@@ -217,7 +183,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Temperature measured
      *
      * Generated from protobuf field <code>float temperature = 1;</code>
@@ -233,7 +198,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Relative humidity percent measured
      *
      * Generated from protobuf field <code>float relative_humidity = 2;</code>
@@ -245,7 +209,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Relative humidity percent measured
      *
      * Generated from protobuf field <code>float relative_humidity = 2;</code>
@@ -261,7 +224,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Barometric pressure in hPA measured
      *
      * Generated from protobuf field <code>float barometric_pressure = 3;</code>
@@ -273,7 +235,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Barometric pressure in hPA measured
      *
      * Generated from protobuf field <code>float barometric_pressure = 3;</code>
@@ -289,7 +250,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Gas resistance in MOhm measured
      *
      * Generated from protobuf field <code>float gas_resistance = 4;</code>
@@ -301,7 +261,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Gas resistance in MOhm measured
      *
      * Generated from protobuf field <code>float gas_resistance = 4;</code>
@@ -317,7 +276,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
      * Generated from protobuf field <code>float voltage = 5;</code>
@@ -329,7 +287,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
      * Generated from protobuf field <code>float voltage = 5;</code>
@@ -345,7 +302,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
      * Generated from protobuf field <code>float current = 6;</code>
@@ -357,7 +313,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
      * Generated from protobuf field <code>float current = 6;</code>
@@ -403,7 +358,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
      *
      * Generated from protobuf field <code>float distance = 8;</code>
@@ -415,7 +369,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
      *
      * Generated from protobuf field <code>float distance = 8;</code>
@@ -431,7 +384,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
      *
      * Generated from protobuf field <code>float lux = 9;</code>
@@ -443,7 +395,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
      *
      * Generated from protobuf field <code>float lux = 9;</code>
@@ -459,7 +410,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
      *
      * Generated from protobuf field <code>float white_lux = 10;</code>
@@ -471,7 +421,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
      *
      * Generated from protobuf field <code>float white_lux = 10;</code>
@@ -487,7 +436,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Infrared lux
      *
      * Generated from protobuf field <code>float ir_lux = 11;</code>
@@ -499,7 +447,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Infrared lux
      *
      * Generated from protobuf field <code>float ir_lux = 11;</code>
@@ -515,7 +462,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Ultraviolet lux
      *
      * Generated from protobuf field <code>float uv_lux = 12;</code>
@@ -527,7 +473,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Ultraviolet lux
      *
      * Generated from protobuf field <code>float uv_lux = 12;</code>
@@ -543,7 +488,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Wind direction in degrees
      * 0 degrees = North, 90 = East, etc...
      *
@@ -556,7 +500,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Wind direction in degrees
      * 0 degrees = North, 90 = East, etc...
      *
@@ -573,7 +516,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Wind speed in m/s
      *
      * Generated from protobuf field <code>float wind_speed = 14;</code>
@@ -585,7 +527,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Wind speed in m/s
      *
      * Generated from protobuf field <code>float wind_speed = 14;</code>
@@ -601,7 +542,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Weight in KG
      *
      * Generated from protobuf field <code>float weight = 15;</code>
@@ -613,7 +553,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Weight in KG
      *
      * Generated from protobuf field <code>float weight = 15;</code>
@@ -629,7 +568,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Wind gust in m/s
      *
      * Generated from protobuf field <code>float wind_gust = 16;</code>
@@ -641,7 +579,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Wind gust in m/s
      *
      * Generated from protobuf field <code>float wind_gust = 16;</code>
@@ -657,7 +594,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Wind lull in m/s
      *
      * Generated from protobuf field <code>float wind_lull = 17;</code>
@@ -669,7 +605,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Wind lull in m/s
      *
      * Generated from protobuf field <code>float wind_lull = 17;</code>

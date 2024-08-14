@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *
  * Types of Measurements the telemetry module is equipped to handle
  *
  * Generated from protobuf message <code>meshtastic.Telemetry</code>
@@ -17,7 +16,6 @@ use Google\Protobuf\Internal\GPBUtil;
 class Telemetry extends \Google\Protobuf\Internal\Message
 {
     /**
-     *
      * Seconds since 1970 - or 0 for unknown/unset
      *
      * Generated from protobuf field <code>fixed32 time = 1;</code>
@@ -32,19 +30,14 @@ class Telemetry extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $time
-     *          
      *           Seconds since 1970 - or 0 for unknown/unset
      *     @type \Meshtastic\DeviceMetrics $device_metrics
-     *          
      *           Key native device metrics such as battery level
      *     @type \Meshtastic\EnvironmentMetrics $environment_metrics
-     *          
      *           Weather station or other environmental metrics
      *     @type \Meshtastic\AirQualityMetrics $air_quality_metrics
-     *          
      *           Air quality metrics
      *     @type \Meshtastic\PowerMetrics $power_metrics
-     *          
      *           Power Metrics
      * }
      */
@@ -54,7 +47,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Seconds since 1970 - or 0 for unknown/unset
      *
      * Generated from protobuf field <code>fixed32 time = 1;</code>
@@ -66,7 +58,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Seconds since 1970 - or 0 for unknown/unset
      *
      * Generated from protobuf field <code>fixed32 time = 1;</code>
@@ -82,7 +73,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Key native device metrics such as battery level
      *
      * Generated from protobuf field <code>.meshtastic.DeviceMetrics device_metrics = 2;</code>
@@ -99,7 +89,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Key native device metrics such as battery level
      *
      * Generated from protobuf field <code>.meshtastic.DeviceMetrics device_metrics = 2;</code>
@@ -115,7 +104,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Weather station or other environmental metrics
      *
      * Generated from protobuf field <code>.meshtastic.EnvironmentMetrics environment_metrics = 3;</code>
@@ -132,7 +120,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Weather station or other environmental metrics
      *
      * Generated from protobuf field <code>.meshtastic.EnvironmentMetrics environment_metrics = 3;</code>
@@ -148,7 +135,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Air quality metrics
      *
      * Generated from protobuf field <code>.meshtastic.AirQualityMetrics air_quality_metrics = 4;</code>
@@ -165,7 +151,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Air quality metrics
      *
      * Generated from protobuf field <code>.meshtastic.AirQualityMetrics air_quality_metrics = 4;</code>
@@ -181,7 +166,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Power Metrics
      *
      * Generated from protobuf field <code>.meshtastic.PowerMetrics power_metrics = 5;</code>
@@ -198,7 +182,6 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Power Metrics
      *
      * Generated from protobuf field <code>.meshtastic.PowerMetrics power_metrics = 5;</code>

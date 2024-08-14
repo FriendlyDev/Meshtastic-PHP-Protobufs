@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *
  * NAU7802 Telemetry configuration, for saving to flash
  *
  * Generated from protobuf message <code>meshtastic.Nau7802Config</code>
@@ -17,14 +16,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class Nau7802Config extends \Google\Protobuf\Internal\Message
 {
     /**
-     *
      * The offset setting for the NAU7802
      *
      * Generated from protobuf field <code>int32 zeroOffset = 1;</code>
      */
     protected $zeroOffset = 0;
     /**
-     *
      * The calibration factor for the NAU7802
      *
      * Generated from protobuf field <code>float calibrationFactor = 2;</code>
@@ -38,10 +35,8 @@ class Nau7802Config extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $zeroOffset
-     *          
      *           The offset setting for the NAU7802
      *     @type float $calibrationFactor
-     *          
      *           The calibration factor for the NAU7802
      * }
      */
@@ -51,7 +46,6 @@ class Nau7802Config extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * The offset setting for the NAU7802
      *
      * Generated from protobuf field <code>int32 zeroOffset = 1;</code>
@@ -63,7 +57,6 @@ class Nau7802Config extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * The offset setting for the NAU7802
      *
      * Generated from protobuf field <code>int32 zeroOffset = 1;</code>
@@ -79,7 +72,6 @@ class Nau7802Config extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * The calibration factor for the NAU7802
      *
      * Generated from protobuf field <code>float calibrationFactor = 2;</code>
@@ -91,7 +83,6 @@ class Nau7802Config extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * The calibration factor for the NAU7802
      *
      * Generated from protobuf field <code>float calibrationFactor = 2;</code>

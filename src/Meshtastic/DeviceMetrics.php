@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *
  * Key native device metrics such as battery level
  *
  * Generated from protobuf message <code>meshtastic.DeviceMetrics</code>
@@ -17,35 +16,30 @@ use Google\Protobuf\Internal\GPBUtil;
 class DeviceMetrics extends \Google\Protobuf\Internal\Message
 {
     /**
-     *
      * 0-100 (>100 means powered)
      *
      * Generated from protobuf field <code>uint32 battery_level = 1;</code>
      */
     protected $battery_level = 0;
     /**
-     *
      * Voltage measured
      *
      * Generated from protobuf field <code>float voltage = 2;</code>
      */
     protected $voltage = 0.0;
     /**
-     *
      * Utilization for the current channel, including well formed TX, RX and malformed RX (aka noise).
      *
      * Generated from protobuf field <code>float channel_utilization = 3;</code>
      */
     protected $channel_utilization = 0.0;
     /**
-     *
      * Percent of airtime for transmission used within the last hour.
      *
      * Generated from protobuf field <code>float air_util_tx = 4;</code>
      */
     protected $air_util_tx = 0.0;
     /**
-     *
      * How long the device has been running since the last reboot (in seconds)
      *
      * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>
@@ -59,19 +53,14 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $battery_level
-     *          
      *           0-100 (>100 means powered)
      *     @type float $voltage
-     *          
      *           Voltage measured
      *     @type float $channel_utilization
-     *          
      *           Utilization for the current channel, including well formed TX, RX and malformed RX (aka noise).
      *     @type float $air_util_tx
-     *          
      *           Percent of airtime for transmission used within the last hour.
      *     @type int $uptime_seconds
-     *          
      *           How long the device has been running since the last reboot (in seconds)
      * }
      */
@@ -81,7 +70,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 0-100 (>100 means powered)
      *
      * Generated from protobuf field <code>uint32 battery_level = 1;</code>
@@ -93,7 +81,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 0-100 (>100 means powered)
      *
      * Generated from protobuf field <code>uint32 battery_level = 1;</code>
@@ -109,7 +96,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage measured
      *
      * Generated from protobuf field <code>float voltage = 2;</code>
@@ -121,7 +107,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage measured
      *
      * Generated from protobuf field <code>float voltage = 2;</code>
@@ -137,7 +122,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Utilization for the current channel, including well formed TX, RX and malformed RX (aka noise).
      *
      * Generated from protobuf field <code>float channel_utilization = 3;</code>
@@ -149,7 +133,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Utilization for the current channel, including well formed TX, RX and malformed RX (aka noise).
      *
      * Generated from protobuf field <code>float channel_utilization = 3;</code>
@@ -165,7 +148,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Percent of airtime for transmission used within the last hour.
      *
      * Generated from protobuf field <code>float air_util_tx = 4;</code>
@@ -177,7 +159,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Percent of airtime for transmission used within the last hour.
      *
      * Generated from protobuf field <code>float air_util_tx = 4;</code>
@@ -193,7 +174,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * How long the device has been running since the last reboot (in seconds)
      *
      * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>
@@ -205,7 +185,6 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * How long the device has been running since the last reboot (in seconds)
      *
      * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>

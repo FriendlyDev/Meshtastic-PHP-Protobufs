@@ -460,6 +460,25 @@ class HardwareModel
      */
     const TRACKER_T1000_E = 71;
     /**
+     * RAK3172 STM32WLE5 Module (https://store.rakwireless.com/products/wisduo-lpwan-module-rak3172)
+     *
+     * Generated from protobuf enum <code>RAK3172 = 72;</code>
+     */
+    const RAK3172 = 72;
+    /**
+     * Seeed Studio Wio-E5 (either mini or Dev kit) using STM32WL chip.
+     *
+     * Generated from protobuf enum <code>WIO_E5 = 73;</code>
+     */
+    const WIO_E5 = 73;
+    /**
+     * RadioMaster 900 Bandit, https://www.radiomasterrc.com/products/bandit-expresslrs-rf-module
+     * SSD1306 OLED and No GPS
+     *
+     * Generated from protobuf enum <code>RADIOMASTER_900_BANDIT = 74;</code>
+     */
+    const RADIOMASTER_900_BANDIT = 74;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -540,6 +559,9 @@ class HardwareModel
         self::HELTEC_MESH_NODE_T114 => 'HELTEC_MESH_NODE_T114',
         self::SENSECAP_INDICATOR => 'SENSECAP_INDICATOR',
         self::TRACKER_T1000_E => 'TRACKER_T1000_E',
+        self::RAK3172 => 'RAK3172',
+        self::WIO_E5 => 'WIO_E5',
+        self::RADIOMASTER_900_BANDIT => 'RADIOMASTER_900_BANDIT',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

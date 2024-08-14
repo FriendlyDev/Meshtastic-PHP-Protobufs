@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *
  * Air quality metrics
  *
  * Generated from protobuf message <code>meshtastic.AirQualityMetrics</code>
@@ -17,84 +16,72 @@ use Google\Protobuf\Internal\GPBUtil;
 class AirQualityMetrics extends \Google\Protobuf\Internal\Message
 {
     /**
-     *
      * Concentration Units Standard PM1.0
      *
      * Generated from protobuf field <code>uint32 pm10_standard = 1;</code>
      */
     protected $pm10_standard = 0;
     /**
-     *
      * Concentration Units Standard PM2.5
      *
      * Generated from protobuf field <code>uint32 pm25_standard = 2;</code>
      */
     protected $pm25_standard = 0;
     /**
-     *
      * Concentration Units Standard PM10.0
      *
      * Generated from protobuf field <code>uint32 pm100_standard = 3;</code>
      */
     protected $pm100_standard = 0;
     /**
-     *
      * Concentration Units Environmental PM1.0
      *
      * Generated from protobuf field <code>uint32 pm10_environmental = 4;</code>
      */
     protected $pm10_environmental = 0;
     /**
-     *
      * Concentration Units Environmental PM2.5
      *
      * Generated from protobuf field <code>uint32 pm25_environmental = 5;</code>
      */
     protected $pm25_environmental = 0;
     /**
-     *
      * Concentration Units Environmental PM10.0
      *
      * Generated from protobuf field <code>uint32 pm100_environmental = 6;</code>
      */
     protected $pm100_environmental = 0;
     /**
-     *
      * 0.3um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_03um = 7;</code>
      */
     protected $particles_03um = 0;
     /**
-     *
      * 0.5um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_05um = 8;</code>
      */
     protected $particles_05um = 0;
     /**
-     *
      * 1.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_10um = 9;</code>
      */
     protected $particles_10um = 0;
     /**
-     *
      * 2.5um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_25um = 10;</code>
      */
     protected $particles_25um = 0;
     /**
-     *
      * 5.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_50um = 11;</code>
      */
     protected $particles_50um = 0;
     /**
-     *
      * 10.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_100um = 12;</code>
@@ -108,40 +95,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $pm10_standard
-     *          
      *           Concentration Units Standard PM1.0
      *     @type int $pm25_standard
-     *          
      *           Concentration Units Standard PM2.5
      *     @type int $pm100_standard
-     *          
      *           Concentration Units Standard PM10.0
      *     @type int $pm10_environmental
-     *          
      *           Concentration Units Environmental PM1.0
      *     @type int $pm25_environmental
-     *          
      *           Concentration Units Environmental PM2.5
      *     @type int $pm100_environmental
-     *          
      *           Concentration Units Environmental PM10.0
      *     @type int $particles_03um
-     *          
      *           0.3um Particle Count
      *     @type int $particles_05um
-     *          
      *           0.5um Particle Count
      *     @type int $particles_10um
-     *          
      *           1.0um Particle Count
      *     @type int $particles_25um
-     *          
      *           2.5um Particle Count
      *     @type int $particles_50um
-     *          
      *           5.0um Particle Count
      *     @type int $particles_100um
-     *          
      *           10.0um Particle Count
      * }
      */
@@ -151,7 +126,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Standard PM1.0
      *
      * Generated from protobuf field <code>uint32 pm10_standard = 1;</code>
@@ -163,7 +137,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Standard PM1.0
      *
      * Generated from protobuf field <code>uint32 pm10_standard = 1;</code>
@@ -179,7 +152,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Standard PM2.5
      *
      * Generated from protobuf field <code>uint32 pm25_standard = 2;</code>
@@ -191,7 +163,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Standard PM2.5
      *
      * Generated from protobuf field <code>uint32 pm25_standard = 2;</code>
@@ -207,7 +178,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Standard PM10.0
      *
      * Generated from protobuf field <code>uint32 pm100_standard = 3;</code>
@@ -219,7 +189,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Standard PM10.0
      *
      * Generated from protobuf field <code>uint32 pm100_standard = 3;</code>
@@ -235,7 +204,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Environmental PM1.0
      *
      * Generated from protobuf field <code>uint32 pm10_environmental = 4;</code>
@@ -247,7 +215,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Environmental PM1.0
      *
      * Generated from protobuf field <code>uint32 pm10_environmental = 4;</code>
@@ -263,7 +230,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Environmental PM2.5
      *
      * Generated from protobuf field <code>uint32 pm25_environmental = 5;</code>
@@ -275,7 +241,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Environmental PM2.5
      *
      * Generated from protobuf field <code>uint32 pm25_environmental = 5;</code>
@@ -291,7 +256,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Environmental PM10.0
      *
      * Generated from protobuf field <code>uint32 pm100_environmental = 6;</code>
@@ -303,7 +267,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Concentration Units Environmental PM10.0
      *
      * Generated from protobuf field <code>uint32 pm100_environmental = 6;</code>
@@ -319,7 +282,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 0.3um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_03um = 7;</code>
@@ -331,7 +293,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 0.3um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_03um = 7;</code>
@@ -347,7 +308,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 0.5um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_05um = 8;</code>
@@ -359,7 +319,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 0.5um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_05um = 8;</code>
@@ -375,7 +334,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 1.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_10um = 9;</code>
@@ -387,7 +345,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 1.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_10um = 9;</code>
@@ -403,7 +360,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 2.5um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_25um = 10;</code>
@@ -415,7 +371,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 2.5um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_25um = 10;</code>
@@ -431,7 +386,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 5.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_50um = 11;</code>
@@ -443,7 +397,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 5.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_50um = 11;</code>
@@ -459,7 +412,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 10.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_100um = 12;</code>
@@ -471,7 +423,6 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * 10.0um Particle Count
      *
      * Generated from protobuf field <code>uint32 particles_100um = 12;</code>

@@ -9,7 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *
  * Power Metrics (voltage / current / etc)
  *
  * Generated from protobuf message <code>meshtastic.PowerMetrics</code>
@@ -17,42 +16,36 @@ use Google\Protobuf\Internal\GPBUtil;
 class PowerMetrics extends \Google\Protobuf\Internal\Message
 {
     /**
-     *
      * Voltage (Ch1)
      *
      * Generated from protobuf field <code>float ch1_voltage = 1;</code>
      */
     protected $ch1_voltage = 0.0;
     /**
-     *
      * Current (Ch1)
      *
      * Generated from protobuf field <code>float ch1_current = 2;</code>
      */
     protected $ch1_current = 0.0;
     /**
-     *
      * Voltage (Ch2)
      *
      * Generated from protobuf field <code>float ch2_voltage = 3;</code>
      */
     protected $ch2_voltage = 0.0;
     /**
-     *
      * Current (Ch2)
      *
      * Generated from protobuf field <code>float ch2_current = 4;</code>
      */
     protected $ch2_current = 0.0;
     /**
-     *
      * Voltage (Ch3)
      *
      * Generated from protobuf field <code>float ch3_voltage = 5;</code>
      */
     protected $ch3_voltage = 0.0;
     /**
-     *
      * Current (Ch3)
      *
      * Generated from protobuf field <code>float ch3_current = 6;</code>
@@ -66,22 +59,16 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type float $ch1_voltage
-     *          
      *           Voltage (Ch1)
      *     @type float $ch1_current
-     *          
      *           Current (Ch1)
      *     @type float $ch2_voltage
-     *          
      *           Voltage (Ch2)
      *     @type float $ch2_current
-     *          
      *           Current (Ch2)
      *     @type float $ch3_voltage
-     *          
      *           Voltage (Ch3)
      *     @type float $ch3_current
-     *          
      *           Current (Ch3)
      * }
      */
@@ -91,7 +78,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage (Ch1)
      *
      * Generated from protobuf field <code>float ch1_voltage = 1;</code>
@@ -103,7 +89,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage (Ch1)
      *
      * Generated from protobuf field <code>float ch1_voltage = 1;</code>
@@ -119,7 +104,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Current (Ch1)
      *
      * Generated from protobuf field <code>float ch1_current = 2;</code>
@@ -131,7 +115,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Current (Ch1)
      *
      * Generated from protobuf field <code>float ch1_current = 2;</code>
@@ -147,7 +130,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage (Ch2)
      *
      * Generated from protobuf field <code>float ch2_voltage = 3;</code>
@@ -159,7 +141,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage (Ch2)
      *
      * Generated from protobuf field <code>float ch2_voltage = 3;</code>
@@ -175,7 +156,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Current (Ch2)
      *
      * Generated from protobuf field <code>float ch2_current = 4;</code>
@@ -187,7 +167,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Current (Ch2)
      *
      * Generated from protobuf field <code>float ch2_current = 4;</code>
@@ -203,7 +182,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage (Ch3)
      *
      * Generated from protobuf field <code>float ch3_voltage = 5;</code>
@@ -215,7 +193,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Voltage (Ch3)
      *
      * Generated from protobuf field <code>float ch3_voltage = 5;</code>
@@ -231,7 +208,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Current (Ch3)
      *
      * Generated from protobuf field <code>float ch3_current = 6;</code>
@@ -243,7 +219,6 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *
      * Current (Ch3)
      *
      * Generated from protobuf field <code>float ch3_current = 6;</code>
