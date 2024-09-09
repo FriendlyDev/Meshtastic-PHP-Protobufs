@@ -18,75 +18,75 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Concentration Units Standard PM1.0
      *
-     * Generated from protobuf field <code>uint32 pm10_standard = 1;</code>
+     * Generated from protobuf field <code>optional uint32 pm10_standard = 1;</code>
      */
-    protected $pm10_standard = 0;
+    protected $pm10_standard = null;
     /**
      * Concentration Units Standard PM2.5
      *
-     * Generated from protobuf field <code>uint32 pm25_standard = 2;</code>
+     * Generated from protobuf field <code>optional uint32 pm25_standard = 2;</code>
      */
-    protected $pm25_standard = 0;
+    protected $pm25_standard = null;
     /**
      * Concentration Units Standard PM10.0
      *
-     * Generated from protobuf field <code>uint32 pm100_standard = 3;</code>
+     * Generated from protobuf field <code>optional uint32 pm100_standard = 3;</code>
      */
-    protected $pm100_standard = 0;
+    protected $pm100_standard = null;
     /**
      * Concentration Units Environmental PM1.0
      *
-     * Generated from protobuf field <code>uint32 pm10_environmental = 4;</code>
+     * Generated from protobuf field <code>optional uint32 pm10_environmental = 4;</code>
      */
-    protected $pm10_environmental = 0;
+    protected $pm10_environmental = null;
     /**
      * Concentration Units Environmental PM2.5
      *
-     * Generated from protobuf field <code>uint32 pm25_environmental = 5;</code>
+     * Generated from protobuf field <code>optional uint32 pm25_environmental = 5;</code>
      */
-    protected $pm25_environmental = 0;
+    protected $pm25_environmental = null;
     /**
      * Concentration Units Environmental PM10.0
      *
-     * Generated from protobuf field <code>uint32 pm100_environmental = 6;</code>
+     * Generated from protobuf field <code>optional uint32 pm100_environmental = 6;</code>
      */
-    protected $pm100_environmental = 0;
+    protected $pm100_environmental = null;
     /**
      * 0.3um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_03um = 7;</code>
+     * Generated from protobuf field <code>optional uint32 particles_03um = 7;</code>
      */
-    protected $particles_03um = 0;
+    protected $particles_03um = null;
     /**
      * 0.5um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_05um = 8;</code>
+     * Generated from protobuf field <code>optional uint32 particles_05um = 8;</code>
      */
-    protected $particles_05um = 0;
+    protected $particles_05um = null;
     /**
      * 1.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_10um = 9;</code>
+     * Generated from protobuf field <code>optional uint32 particles_10um = 9;</code>
      */
-    protected $particles_10um = 0;
+    protected $particles_10um = null;
     /**
      * 2.5um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_25um = 10;</code>
+     * Generated from protobuf field <code>optional uint32 particles_25um = 10;</code>
      */
-    protected $particles_25um = 0;
+    protected $particles_25um = null;
     /**
      * 5.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_50um = 11;</code>
+     * Generated from protobuf field <code>optional uint32 particles_50um = 11;</code>
      */
-    protected $particles_50um = 0;
+    protected $particles_50um = null;
     /**
      * 10.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_100um = 12;</code>
+     * Generated from protobuf field <code>optional uint32 particles_100um = 12;</code>
      */
-    protected $particles_100um = 0;
+    protected $particles_100um = null;
 
     /**
      * Constructor.
@@ -128,18 +128,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Concentration Units Standard PM1.0
      *
-     * Generated from protobuf field <code>uint32 pm10_standard = 1;</code>
+     * Generated from protobuf field <code>optional uint32 pm10_standard = 1;</code>
      * @return int
      */
     public function getPm10Standard()
     {
-        return $this->pm10_standard;
+        return isset($this->pm10_standard) ? $this->pm10_standard : 0;
+    }
+
+    public function hasPm10Standard()
+    {
+        return isset($this->pm10_standard);
+    }
+
+    public function clearPm10Standard()
+    {
+        unset($this->pm10_standard);
     }
 
     /**
      * Concentration Units Standard PM1.0
      *
-     * Generated from protobuf field <code>uint32 pm10_standard = 1;</code>
+     * Generated from protobuf field <code>optional uint32 pm10_standard = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -154,18 +164,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Concentration Units Standard PM2.5
      *
-     * Generated from protobuf field <code>uint32 pm25_standard = 2;</code>
+     * Generated from protobuf field <code>optional uint32 pm25_standard = 2;</code>
      * @return int
      */
     public function getPm25Standard()
     {
-        return $this->pm25_standard;
+        return isset($this->pm25_standard) ? $this->pm25_standard : 0;
+    }
+
+    public function hasPm25Standard()
+    {
+        return isset($this->pm25_standard);
+    }
+
+    public function clearPm25Standard()
+    {
+        unset($this->pm25_standard);
     }
 
     /**
      * Concentration Units Standard PM2.5
      *
-     * Generated from protobuf field <code>uint32 pm25_standard = 2;</code>
+     * Generated from protobuf field <code>optional uint32 pm25_standard = 2;</code>
      * @param int $var
      * @return $this
      */
@@ -180,18 +200,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Concentration Units Standard PM10.0
      *
-     * Generated from protobuf field <code>uint32 pm100_standard = 3;</code>
+     * Generated from protobuf field <code>optional uint32 pm100_standard = 3;</code>
      * @return int
      */
     public function getPm100Standard()
     {
-        return $this->pm100_standard;
+        return isset($this->pm100_standard) ? $this->pm100_standard : 0;
+    }
+
+    public function hasPm100Standard()
+    {
+        return isset($this->pm100_standard);
+    }
+
+    public function clearPm100Standard()
+    {
+        unset($this->pm100_standard);
     }
 
     /**
      * Concentration Units Standard PM10.0
      *
-     * Generated from protobuf field <code>uint32 pm100_standard = 3;</code>
+     * Generated from protobuf field <code>optional uint32 pm100_standard = 3;</code>
      * @param int $var
      * @return $this
      */
@@ -206,18 +236,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Concentration Units Environmental PM1.0
      *
-     * Generated from protobuf field <code>uint32 pm10_environmental = 4;</code>
+     * Generated from protobuf field <code>optional uint32 pm10_environmental = 4;</code>
      * @return int
      */
     public function getPm10Environmental()
     {
-        return $this->pm10_environmental;
+        return isset($this->pm10_environmental) ? $this->pm10_environmental : 0;
+    }
+
+    public function hasPm10Environmental()
+    {
+        return isset($this->pm10_environmental);
+    }
+
+    public function clearPm10Environmental()
+    {
+        unset($this->pm10_environmental);
     }
 
     /**
      * Concentration Units Environmental PM1.0
      *
-     * Generated from protobuf field <code>uint32 pm10_environmental = 4;</code>
+     * Generated from protobuf field <code>optional uint32 pm10_environmental = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -232,18 +272,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Concentration Units Environmental PM2.5
      *
-     * Generated from protobuf field <code>uint32 pm25_environmental = 5;</code>
+     * Generated from protobuf field <code>optional uint32 pm25_environmental = 5;</code>
      * @return int
      */
     public function getPm25Environmental()
     {
-        return $this->pm25_environmental;
+        return isset($this->pm25_environmental) ? $this->pm25_environmental : 0;
+    }
+
+    public function hasPm25Environmental()
+    {
+        return isset($this->pm25_environmental);
+    }
+
+    public function clearPm25Environmental()
+    {
+        unset($this->pm25_environmental);
     }
 
     /**
      * Concentration Units Environmental PM2.5
      *
-     * Generated from protobuf field <code>uint32 pm25_environmental = 5;</code>
+     * Generated from protobuf field <code>optional uint32 pm25_environmental = 5;</code>
      * @param int $var
      * @return $this
      */
@@ -258,18 +308,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Concentration Units Environmental PM10.0
      *
-     * Generated from protobuf field <code>uint32 pm100_environmental = 6;</code>
+     * Generated from protobuf field <code>optional uint32 pm100_environmental = 6;</code>
      * @return int
      */
     public function getPm100Environmental()
     {
-        return $this->pm100_environmental;
+        return isset($this->pm100_environmental) ? $this->pm100_environmental : 0;
+    }
+
+    public function hasPm100Environmental()
+    {
+        return isset($this->pm100_environmental);
+    }
+
+    public function clearPm100Environmental()
+    {
+        unset($this->pm100_environmental);
     }
 
     /**
      * Concentration Units Environmental PM10.0
      *
-     * Generated from protobuf field <code>uint32 pm100_environmental = 6;</code>
+     * Generated from protobuf field <code>optional uint32 pm100_environmental = 6;</code>
      * @param int $var
      * @return $this
      */
@@ -284,18 +344,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * 0.3um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_03um = 7;</code>
+     * Generated from protobuf field <code>optional uint32 particles_03um = 7;</code>
      * @return int
      */
     public function getParticles03Um()
     {
-        return $this->particles_03um;
+        return isset($this->particles_03um) ? $this->particles_03um : 0;
+    }
+
+    public function hasParticles03Um()
+    {
+        return isset($this->particles_03um);
+    }
+
+    public function clearParticles03Um()
+    {
+        unset($this->particles_03um);
     }
 
     /**
      * 0.3um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_03um = 7;</code>
+     * Generated from protobuf field <code>optional uint32 particles_03um = 7;</code>
      * @param int $var
      * @return $this
      */
@@ -310,18 +380,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * 0.5um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_05um = 8;</code>
+     * Generated from protobuf field <code>optional uint32 particles_05um = 8;</code>
      * @return int
      */
     public function getParticles05Um()
     {
-        return $this->particles_05um;
+        return isset($this->particles_05um) ? $this->particles_05um : 0;
+    }
+
+    public function hasParticles05Um()
+    {
+        return isset($this->particles_05um);
+    }
+
+    public function clearParticles05Um()
+    {
+        unset($this->particles_05um);
     }
 
     /**
      * 0.5um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_05um = 8;</code>
+     * Generated from protobuf field <code>optional uint32 particles_05um = 8;</code>
      * @param int $var
      * @return $this
      */
@@ -336,18 +416,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * 1.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_10um = 9;</code>
+     * Generated from protobuf field <code>optional uint32 particles_10um = 9;</code>
      * @return int
      */
     public function getParticles10Um()
     {
-        return $this->particles_10um;
+        return isset($this->particles_10um) ? $this->particles_10um : 0;
+    }
+
+    public function hasParticles10Um()
+    {
+        return isset($this->particles_10um);
+    }
+
+    public function clearParticles10Um()
+    {
+        unset($this->particles_10um);
     }
 
     /**
      * 1.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_10um = 9;</code>
+     * Generated from protobuf field <code>optional uint32 particles_10um = 9;</code>
      * @param int $var
      * @return $this
      */
@@ -362,18 +452,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * 2.5um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_25um = 10;</code>
+     * Generated from protobuf field <code>optional uint32 particles_25um = 10;</code>
      * @return int
      */
     public function getParticles25Um()
     {
-        return $this->particles_25um;
+        return isset($this->particles_25um) ? $this->particles_25um : 0;
+    }
+
+    public function hasParticles25Um()
+    {
+        return isset($this->particles_25um);
+    }
+
+    public function clearParticles25Um()
+    {
+        unset($this->particles_25um);
     }
 
     /**
      * 2.5um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_25um = 10;</code>
+     * Generated from protobuf field <code>optional uint32 particles_25um = 10;</code>
      * @param int $var
      * @return $this
      */
@@ -388,18 +488,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * 5.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_50um = 11;</code>
+     * Generated from protobuf field <code>optional uint32 particles_50um = 11;</code>
      * @return int
      */
     public function getParticles50Um()
     {
-        return $this->particles_50um;
+        return isset($this->particles_50um) ? $this->particles_50um : 0;
+    }
+
+    public function hasParticles50Um()
+    {
+        return isset($this->particles_50um);
+    }
+
+    public function clearParticles50Um()
+    {
+        unset($this->particles_50um);
     }
 
     /**
      * 5.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_50um = 11;</code>
+     * Generated from protobuf field <code>optional uint32 particles_50um = 11;</code>
      * @param int $var
      * @return $this
      */
@@ -414,18 +524,28 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     /**
      * 10.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_100um = 12;</code>
+     * Generated from protobuf field <code>optional uint32 particles_100um = 12;</code>
      * @return int
      */
     public function getParticles100Um()
     {
-        return $this->particles_100um;
+        return isset($this->particles_100um) ? $this->particles_100um : 0;
+    }
+
+    public function hasParticles100Um()
+    {
+        return isset($this->particles_100um);
+    }
+
+    public function clearParticles100Um()
+    {
+        unset($this->particles_100um);
     }
 
     /**
      * 10.0um Particle Count
      *
-     * Generated from protobuf field <code>uint32 particles_100um = 12;</code>
+     * Generated from protobuf field <code>optional uint32 particles_100um = 12;</code>
      * @param int $var
      * @return $this
      */

@@ -71,7 +71,7 @@ class CannedMessageConfig extends \Google\Protobuf\Internal\Message
     protected $enabled = false;
     /**
      * Input event origin accepted by the canned message module.
-     * Can be e.g. "rotEnc1", "upDownEnc1" or keyword "_any"
+     * Can be e.g. "rotEnc1", "upDownEnc1", "scanAndSelect", "cardkb", "serialkb", or keyword "_any"
      *
      * Generated from protobuf field <code>string allow_input_source = 10;</code>
      */
@@ -110,7 +110,7 @@ class CannedMessageConfig extends \Google\Protobuf\Internal\Message
      *           Enable/disable CannedMessageModule.
      *     @type string $allow_input_source
      *           Input event origin accepted by the canned message module.
-     *           Can be e.g. "rotEnc1", "upDownEnc1" or keyword "_any"
+     *           Can be e.g. "rotEnc1", "upDownEnc1", "scanAndSelect", "cardkb", "serialkb", or keyword "_any"
      *     @type bool $send_bell
      *           CannedMessageModule also sends a bell character with the messages.
      *           ExternalNotificationModule can benefit from this feature.
@@ -357,7 +357,7 @@ class CannedMessageConfig extends \Google\Protobuf\Internal\Message
 
     /**
      * Input event origin accepted by the canned message module.
-     * Can be e.g. "rotEnc1", "upDownEnc1" or keyword "_any"
+     * Can be e.g. "rotEnc1", "upDownEnc1", "scanAndSelect", "cardkb", "serialkb", or keyword "_any"
      *
      * Generated from protobuf field <code>string allow_input_source = 10;</code>
      * @return string
@@ -369,7 +369,7 @@ class CannedMessageConfig extends \Google\Protobuf\Internal\Message
 
     /**
      * Input event origin accepted by the canned message module.
-     * Can be e.g. "rotEnc1", "upDownEnc1" or keyword "_any"
+     * Can be e.g. "rotEnc1", "upDownEnc1", "scanAndSelect", "cardkb", "serialkb", or keyword "_any"
      *
      * Generated from protobuf field <code>string allow_input_source = 10;</code>
      * @param string $var

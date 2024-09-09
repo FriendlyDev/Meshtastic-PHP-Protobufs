@@ -88,6 +88,18 @@ class Error
      * Generated from protobuf enum <code>NOT_AUTHORIZED = 33;</code>
      */
     const NOT_AUTHORIZED = 33;
+    /**
+     * The client specified a PKI transport, but the node was unable to send the packet using PKI (and did not send the message at all)
+     *
+     * Generated from protobuf enum <code>PKI_FAILED = 34;</code>
+     */
+    const PKI_FAILED = 34;
+    /**
+     * The receiving node does not have a Public Key to decode with
+     *
+     * Generated from protobuf enum <code>PKI_UNKNOWN_PUBKEY = 35;</code>
+     */
+    const PKI_UNKNOWN_PUBKEY = 35;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -102,6 +114,8 @@ class Error
         self::DUTY_CYCLE_LIMIT => 'DUTY_CYCLE_LIMIT',
         self::BAD_REQUEST => 'BAD_REQUEST',
         self::NOT_AUTHORIZED => 'NOT_AUTHORIZED',
+        self::PKI_FAILED => 'PKI_FAILED',
+        self::PKI_UNKNOWN_PUBKEY => 'PKI_UNKNOWN_PUBKEY',
     ];
 
     public static function name($value)

@@ -9,18 +9,36 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * A message used in our Dynamic Source Routing protocol (RFC 4728 based)
+ * A message used in a traceroute
  *
  * Generated from protobuf message <code>meshtastic.RouteDiscovery</code>
  */
 class RouteDiscovery extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The list of nodenums this packet has visited so far
+     * The list of nodenums this packet has visited so far to the destination.
      *
      * Generated from protobuf field <code>repeated fixed32 route = 1;</code>
      */
     private $route;
+    /**
+     * The list of SNRs (in dB, scaled by 4) in the route towards the destination.
+     *
+     * Generated from protobuf field <code>repeated int32 snr_towards = 2;</code>
+     */
+    private $snr_towards;
+    /**
+     * The list of nodenums the packet has visited on the way back from the destination.
+     *
+     * Generated from protobuf field <code>repeated fixed32 route_back = 3;</code>
+     */
+    private $route_back;
+    /**
+     * The list of SNRs (in dB, scaled by 4) in the route back from the destination.
+     *
+     * Generated from protobuf field <code>repeated int32 snr_back = 4;</code>
+     */
+    private $snr_back;
 
     /**
      * Constructor.
@@ -29,7 +47,13 @@ class RouteDiscovery extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $route
-     *           The list of nodenums this packet has visited so far
+     *           The list of nodenums this packet has visited so far to the destination.
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $snr_towards
+     *           The list of SNRs (in dB, scaled by 4) in the route towards the destination.
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $route_back
+     *           The list of nodenums the packet has visited on the way back from the destination.
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $snr_back
+     *           The list of SNRs (in dB, scaled by 4) in the route back from the destination.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +62,7 @@ class RouteDiscovery extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of nodenums this packet has visited so far
+     * The list of nodenums this packet has visited so far to the destination.
      *
      * Generated from protobuf field <code>repeated fixed32 route = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +73,7 @@ class RouteDiscovery extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The list of nodenums this packet has visited so far
+     * The list of nodenums this packet has visited so far to the destination.
      *
      * Generated from protobuf field <code>repeated fixed32 route = 1;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
@@ -59,6 +83,84 @@ class RouteDiscovery extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FIXED32);
         $this->route = $arr;
+
+        return $this;
+    }
+
+    /**
+     * The list of SNRs (in dB, scaled by 4) in the route towards the destination.
+     *
+     * Generated from protobuf field <code>repeated int32 snr_towards = 2;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getSnrTowards()
+    {
+        return $this->snr_towards;
+    }
+
+    /**
+     * The list of SNRs (in dB, scaled by 4) in the route towards the destination.
+     *
+     * Generated from protobuf field <code>repeated int32 snr_towards = 2;</code>
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setSnrTowards($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT32);
+        $this->snr_towards = $arr;
+
+        return $this;
+    }
+
+    /**
+     * The list of nodenums the packet has visited on the way back from the destination.
+     *
+     * Generated from protobuf field <code>repeated fixed32 route_back = 3;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getRouteBack()
+    {
+        return $this->route_back;
+    }
+
+    /**
+     * The list of nodenums the packet has visited on the way back from the destination.
+     *
+     * Generated from protobuf field <code>repeated fixed32 route_back = 3;</code>
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setRouteBack($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FIXED32);
+        $this->route_back = $arr;
+
+        return $this;
+    }
+
+    /**
+     * The list of SNRs (in dB, scaled by 4) in the route back from the destination.
+     *
+     * Generated from protobuf field <code>repeated int32 snr_back = 4;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getSnrBack()
+    {
+        return $this->snr_back;
+    }
+
+    /**
+     * The list of SNRs (in dB, scaled by 4) in the route back from the destination.
+     *
+     * Generated from protobuf field <code>repeated int32 snr_back = 4;</code>
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setSnrBack($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT32);
+        $this->snr_back = $arr;
 
         return $this;
     }

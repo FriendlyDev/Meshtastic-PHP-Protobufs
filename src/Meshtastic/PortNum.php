@@ -195,7 +195,7 @@ class PortNum
     const SIMULATOR_APP = 69;
     /**
      * Provides a traceroute functionality to show the route a packet towards
-     * a certain destination would take on the mesh.
+     * a certain destination would take on the mesh. Contains a RouteDiscovery message as payload.
      * ENCODING: Protobuf
      *
      * Generated from protobuf enum <code>TRACEROUTE_APP = 70;</code>

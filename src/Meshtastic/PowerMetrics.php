@@ -18,39 +18,39 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Voltage (Ch1)
      *
-     * Generated from protobuf field <code>float ch1_voltage = 1;</code>
+     * Generated from protobuf field <code>optional float ch1_voltage = 1;</code>
      */
-    protected $ch1_voltage = 0.0;
+    protected $ch1_voltage = null;
     /**
      * Current (Ch1)
      *
-     * Generated from protobuf field <code>float ch1_current = 2;</code>
+     * Generated from protobuf field <code>optional float ch1_current = 2;</code>
      */
-    protected $ch1_current = 0.0;
+    protected $ch1_current = null;
     /**
      * Voltage (Ch2)
      *
-     * Generated from protobuf field <code>float ch2_voltage = 3;</code>
+     * Generated from protobuf field <code>optional float ch2_voltage = 3;</code>
      */
-    protected $ch2_voltage = 0.0;
+    protected $ch2_voltage = null;
     /**
      * Current (Ch2)
      *
-     * Generated from protobuf field <code>float ch2_current = 4;</code>
+     * Generated from protobuf field <code>optional float ch2_current = 4;</code>
      */
-    protected $ch2_current = 0.0;
+    protected $ch2_current = null;
     /**
      * Voltage (Ch3)
      *
-     * Generated from protobuf field <code>float ch3_voltage = 5;</code>
+     * Generated from protobuf field <code>optional float ch3_voltage = 5;</code>
      */
-    protected $ch3_voltage = 0.0;
+    protected $ch3_voltage = null;
     /**
      * Current (Ch3)
      *
-     * Generated from protobuf field <code>float ch3_current = 6;</code>
+     * Generated from protobuf field <code>optional float ch3_current = 6;</code>
      */
-    protected $ch3_current = 0.0;
+    protected $ch3_current = null;
 
     /**
      * Constructor.
@@ -80,18 +80,28 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Voltage (Ch1)
      *
-     * Generated from protobuf field <code>float ch1_voltage = 1;</code>
+     * Generated from protobuf field <code>optional float ch1_voltage = 1;</code>
      * @return float
      */
     public function getCh1Voltage()
     {
-        return $this->ch1_voltage;
+        return isset($this->ch1_voltage) ? $this->ch1_voltage : 0.0;
+    }
+
+    public function hasCh1Voltage()
+    {
+        return isset($this->ch1_voltage);
+    }
+
+    public function clearCh1Voltage()
+    {
+        unset($this->ch1_voltage);
     }
 
     /**
      * Voltage (Ch1)
      *
-     * Generated from protobuf field <code>float ch1_voltage = 1;</code>
+     * Generated from protobuf field <code>optional float ch1_voltage = 1;</code>
      * @param float $var
      * @return $this
      */
@@ -106,18 +116,28 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Current (Ch1)
      *
-     * Generated from protobuf field <code>float ch1_current = 2;</code>
+     * Generated from protobuf field <code>optional float ch1_current = 2;</code>
      * @return float
      */
     public function getCh1Current()
     {
-        return $this->ch1_current;
+        return isset($this->ch1_current) ? $this->ch1_current : 0.0;
+    }
+
+    public function hasCh1Current()
+    {
+        return isset($this->ch1_current);
+    }
+
+    public function clearCh1Current()
+    {
+        unset($this->ch1_current);
     }
 
     /**
      * Current (Ch1)
      *
-     * Generated from protobuf field <code>float ch1_current = 2;</code>
+     * Generated from protobuf field <code>optional float ch1_current = 2;</code>
      * @param float $var
      * @return $this
      */
@@ -132,18 +152,28 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Voltage (Ch2)
      *
-     * Generated from protobuf field <code>float ch2_voltage = 3;</code>
+     * Generated from protobuf field <code>optional float ch2_voltage = 3;</code>
      * @return float
      */
     public function getCh2Voltage()
     {
-        return $this->ch2_voltage;
+        return isset($this->ch2_voltage) ? $this->ch2_voltage : 0.0;
+    }
+
+    public function hasCh2Voltage()
+    {
+        return isset($this->ch2_voltage);
+    }
+
+    public function clearCh2Voltage()
+    {
+        unset($this->ch2_voltage);
     }
 
     /**
      * Voltage (Ch2)
      *
-     * Generated from protobuf field <code>float ch2_voltage = 3;</code>
+     * Generated from protobuf field <code>optional float ch2_voltage = 3;</code>
      * @param float $var
      * @return $this
      */
@@ -158,18 +188,28 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Current (Ch2)
      *
-     * Generated from protobuf field <code>float ch2_current = 4;</code>
+     * Generated from protobuf field <code>optional float ch2_current = 4;</code>
      * @return float
      */
     public function getCh2Current()
     {
-        return $this->ch2_current;
+        return isset($this->ch2_current) ? $this->ch2_current : 0.0;
+    }
+
+    public function hasCh2Current()
+    {
+        return isset($this->ch2_current);
+    }
+
+    public function clearCh2Current()
+    {
+        unset($this->ch2_current);
     }
 
     /**
      * Current (Ch2)
      *
-     * Generated from protobuf field <code>float ch2_current = 4;</code>
+     * Generated from protobuf field <code>optional float ch2_current = 4;</code>
      * @param float $var
      * @return $this
      */
@@ -184,18 +224,28 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Voltage (Ch3)
      *
-     * Generated from protobuf field <code>float ch3_voltage = 5;</code>
+     * Generated from protobuf field <code>optional float ch3_voltage = 5;</code>
      * @return float
      */
     public function getCh3Voltage()
     {
-        return $this->ch3_voltage;
+        return isset($this->ch3_voltage) ? $this->ch3_voltage : 0.0;
+    }
+
+    public function hasCh3Voltage()
+    {
+        return isset($this->ch3_voltage);
+    }
+
+    public function clearCh3Voltage()
+    {
+        unset($this->ch3_voltage);
     }
 
     /**
      * Voltage (Ch3)
      *
-     * Generated from protobuf field <code>float ch3_voltage = 5;</code>
+     * Generated from protobuf field <code>optional float ch3_voltage = 5;</code>
      * @param float $var
      * @return $this
      */
@@ -210,18 +260,28 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Current (Ch3)
      *
-     * Generated from protobuf field <code>float ch3_current = 6;</code>
+     * Generated from protobuf field <code>optional float ch3_current = 6;</code>
      * @return float
      */
     public function getCh3Current()
     {
-        return $this->ch3_current;
+        return isset($this->ch3_current) ? $this->ch3_current : 0.0;
+    }
+
+    public function hasCh3Current()
+    {
+        return isset($this->ch3_current);
+    }
+
+    public function clearCh3Current()
+    {
+        unset($this->ch3_current);
     }
 
     /**
      * Current (Ch3)
      *
-     * Generated from protobuf field <code>float ch3_current = 6;</code>
+     * Generated from protobuf field <code>optional float ch3_current = 6;</code>
      * @param float $var
      * @return $this
      */

@@ -23,17 +23,12 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
     protected $role = 0;
     /**
      * Disabling this will disable the SerialConsole by not initilizing the StreamAPI
+     * Moved to SecurityConfig
      *
-     * Generated from protobuf field <code>bool serial_enabled = 2;</code>
+     * Generated from protobuf field <code>bool serial_enabled = 2 [deprecated = true];</code>
+     * @deprecated
      */
     protected $serial_enabled = false;
-    /**
-     * By default we turn off logging as soon as an API client connects (to keep shared serial link quiet).
-     * Set this to true to leave the debug log outputting even when API is active.
-     *
-     * Generated from protobuf field <code>bool debug_log_enabled = 3;</code>
-     */
-    protected $debug_log_enabled = false;
     /**
      * For boards without a hard wired button, this is the pin number that will be used
      * Boards that have more than one button can swap the function with this one. defaults to BUTTON_PIN if defined.
@@ -70,8 +65,10 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
     /**
      * If true, device is considered to be "managed" by a mesh administrator
      * Clients should then limit available configuration and administrative options inside the user interface
+     * Moved to SecurityConfig
      *
-     * Generated from protobuf field <code>bool is_managed = 9;</code>
+     * Generated from protobuf field <code>bool is_managed = 9 [deprecated = true];</code>
+     * @deprecated
      */
     protected $is_managed = false;
     /**
@@ -103,9 +100,7 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
      *           Sets the role of node
      *     @type bool $serial_enabled
      *           Disabling this will disable the SerialConsole by not initilizing the StreamAPI
-     *     @type bool $debug_log_enabled
-     *           By default we turn off logging as soon as an API client connects (to keep shared serial link quiet).
-     *           Set this to true to leave the debug log outputting even when API is active.
+     *           Moved to SecurityConfig
      *     @type int $button_gpio
      *           For boards without a hard wired button, this is the pin number that will be used
      *           Boards that have more than one button can swap the function with this one. defaults to BUTTON_PIN if defined.
@@ -122,6 +117,7 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
      *     @type bool $is_managed
      *           If true, device is considered to be "managed" by a mesh administrator
      *           Clients should then limit available configuration and administrative options inside the user interface
+     *           Moved to SecurityConfig
      *     @type bool $disable_triple_click
      *           Disables the triple-press of user button to enable or disable GPS
      *     @type string $tzdef
@@ -163,54 +159,32 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
 
     /**
      * Disabling this will disable the SerialConsole by not initilizing the StreamAPI
+     * Moved to SecurityConfig
      *
-     * Generated from protobuf field <code>bool serial_enabled = 2;</code>
+     * Generated from protobuf field <code>bool serial_enabled = 2 [deprecated = true];</code>
      * @return bool
+     * @deprecated
      */
     public function getSerialEnabled()
     {
+        @trigger_error('serial_enabled is deprecated.', E_USER_DEPRECATED);
         return $this->serial_enabled;
     }
 
     /**
      * Disabling this will disable the SerialConsole by not initilizing the StreamAPI
+     * Moved to SecurityConfig
      *
-     * Generated from protobuf field <code>bool serial_enabled = 2;</code>
+     * Generated from protobuf field <code>bool serial_enabled = 2 [deprecated = true];</code>
      * @param bool $var
      * @return $this
+     * @deprecated
      */
     public function setSerialEnabled($var)
     {
+        @trigger_error('serial_enabled is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkBool($var);
         $this->serial_enabled = $var;
-
-        return $this;
-    }
-
-    /**
-     * By default we turn off logging as soon as an API client connects (to keep shared serial link quiet).
-     * Set this to true to leave the debug log outputting even when API is active.
-     *
-     * Generated from protobuf field <code>bool debug_log_enabled = 3;</code>
-     * @return bool
-     */
-    public function getDebugLogEnabled()
-    {
-        return $this->debug_log_enabled;
-    }
-
-    /**
-     * By default we turn off logging as soon as an API client connects (to keep shared serial link quiet).
-     * Set this to true to leave the debug log outputting even when API is active.
-     *
-     * Generated from protobuf field <code>bool debug_log_enabled = 3;</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setDebugLogEnabled($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->debug_log_enabled = $var;
 
         return $this;
     }
@@ -354,25 +328,31 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
     /**
      * If true, device is considered to be "managed" by a mesh administrator
      * Clients should then limit available configuration and administrative options inside the user interface
+     * Moved to SecurityConfig
      *
-     * Generated from protobuf field <code>bool is_managed = 9;</code>
+     * Generated from protobuf field <code>bool is_managed = 9 [deprecated = true];</code>
      * @return bool
+     * @deprecated
      */
     public function getIsManaged()
     {
+        @trigger_error('is_managed is deprecated.', E_USER_DEPRECATED);
         return $this->is_managed;
     }
 
     /**
      * If true, device is considered to be "managed" by a mesh administrator
      * Clients should then limit available configuration and administrative options inside the user interface
+     * Moved to SecurityConfig
      *
-     * Generated from protobuf field <code>bool is_managed = 9;</code>
+     * Generated from protobuf field <code>bool is_managed = 9 [deprecated = true];</code>
      * @param bool $var
      * @return $this
+     * @deprecated
      */
     public function setIsManaged($var)
     {
+        @trigger_error('is_managed is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkBool($var);
         $this->is_managed = $var;
 

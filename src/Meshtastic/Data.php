@@ -75,6 +75,12 @@ class Data extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>fixed32 emoji = 8;</code>
      */
     protected $emoji = 0;
+    /**
+     * Bitfield for extra flags. First use is to indicate that user approves the packet being uploaded to MQTT.
+     *
+     * Generated from protobuf field <code>optional uint32 bitfield = 9;</code>
+     */
+    protected $bitfield = null;
 
     /**
      * Constructor.
@@ -108,6 +114,8 @@ class Data extends \Google\Protobuf\Internal\Message
      *     @type int $emoji
      *           Defaults to false. If true, then what is in the payload should be treated as an emoji like giving
      *           a message a heart or poop emoji.
+     *     @type int $bitfield
+     *           Bitfield for extra flags. First use is to indicate that user approves the packet being uploaded to MQTT.
      * }
      */
     public function __construct($data = NULL) {
@@ -339,6 +347,42 @@ class Data extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->emoji = $var;
+
+        return $this;
+    }
+
+    /**
+     * Bitfield for extra flags. First use is to indicate that user approves the packet being uploaded to MQTT.
+     *
+     * Generated from protobuf field <code>optional uint32 bitfield = 9;</code>
+     * @return int
+     */
+    public function getBitfield()
+    {
+        return isset($this->bitfield) ? $this->bitfield : 0;
+    }
+
+    public function hasBitfield()
+    {
+        return isset($this->bitfield);
+    }
+
+    public function clearBitfield()
+    {
+        unset($this->bitfield);
+    }
+
+    /**
+     * Bitfield for extra flags. First use is to indicate that user approves the packet being uploaded to MQTT.
+     *
+     * Generated from protobuf field <code>optional uint32 bitfield = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setBitfield($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->bitfield = $var;
 
         return $this;
     }

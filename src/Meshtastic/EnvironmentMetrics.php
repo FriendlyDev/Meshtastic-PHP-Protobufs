@@ -18,108 +18,108 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Temperature measured
      *
-     * Generated from protobuf field <code>float temperature = 1;</code>
+     * Generated from protobuf field <code>optional float temperature = 1;</code>
      */
-    protected $temperature = 0.0;
+    protected $temperature = null;
     /**
      * Relative humidity percent measured
      *
-     * Generated from protobuf field <code>float relative_humidity = 2;</code>
+     * Generated from protobuf field <code>optional float relative_humidity = 2;</code>
      */
-    protected $relative_humidity = 0.0;
+    protected $relative_humidity = null;
     /**
      * Barometric pressure in hPA measured
      *
-     * Generated from protobuf field <code>float barometric_pressure = 3;</code>
+     * Generated from protobuf field <code>optional float barometric_pressure = 3;</code>
      */
-    protected $barometric_pressure = 0.0;
+    protected $barometric_pressure = null;
     /**
      * Gas resistance in MOhm measured
      *
-     * Generated from protobuf field <code>float gas_resistance = 4;</code>
+     * Generated from protobuf field <code>optional float gas_resistance = 4;</code>
      */
-    protected $gas_resistance = 0.0;
+    protected $gas_resistance = null;
     /**
      * Voltage measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
-     * Generated from protobuf field <code>float voltage = 5;</code>
+     * Generated from protobuf field <code>optional float voltage = 5;</code>
      */
-    protected $voltage = 0.0;
+    protected $voltage = null;
     /**
      * Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
-     * Generated from protobuf field <code>float current = 6;</code>
+     * Generated from protobuf field <code>optional float current = 6;</code>
      */
-    protected $current = 0.0;
+    protected $current = null;
     /**
      * 
      * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      *
-     * Generated from protobuf field <code>uint32 iaq = 7;</code>
+     * Generated from protobuf field <code>optional uint32 iaq = 7;</code>
      */
-    protected $iaq = 0;
+    protected $iaq = null;
     /**
      * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
      *
-     * Generated from protobuf field <code>float distance = 8;</code>
+     * Generated from protobuf field <code>optional float distance = 8;</code>
      */
-    protected $distance = 0.0;
+    protected $distance = null;
     /**
      * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
      *
-     * Generated from protobuf field <code>float lux = 9;</code>
+     * Generated from protobuf field <code>optional float lux = 9;</code>
      */
-    protected $lux = 0.0;
+    protected $lux = null;
     /**
      * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
      *
-     * Generated from protobuf field <code>float white_lux = 10;</code>
+     * Generated from protobuf field <code>optional float white_lux = 10;</code>
      */
-    protected $white_lux = 0.0;
+    protected $white_lux = null;
     /**
      * Infrared lux
      *
-     * Generated from protobuf field <code>float ir_lux = 11;</code>
+     * Generated from protobuf field <code>optional float ir_lux = 11;</code>
      */
-    protected $ir_lux = 0.0;
+    protected $ir_lux = null;
     /**
      * Ultraviolet lux
      *
-     * Generated from protobuf field <code>float uv_lux = 12;</code>
+     * Generated from protobuf field <code>optional float uv_lux = 12;</code>
      */
-    protected $uv_lux = 0.0;
+    protected $uv_lux = null;
     /**
      * Wind direction in degrees
      * 0 degrees = North, 90 = East, etc...
      *
-     * Generated from protobuf field <code>uint32 wind_direction = 13;</code>
+     * Generated from protobuf field <code>optional uint32 wind_direction = 13;</code>
      */
-    protected $wind_direction = 0;
+    protected $wind_direction = null;
     /**
      * Wind speed in m/s
      *
-     * Generated from protobuf field <code>float wind_speed = 14;</code>
+     * Generated from protobuf field <code>optional float wind_speed = 14;</code>
      */
-    protected $wind_speed = 0.0;
+    protected $wind_speed = null;
     /**
      * Weight in KG
      *
-     * Generated from protobuf field <code>float weight = 15;</code>
+     * Generated from protobuf field <code>optional float weight = 15;</code>
      */
-    protected $weight = 0.0;
+    protected $weight = null;
     /**
      * Wind gust in m/s
      *
-     * Generated from protobuf field <code>float wind_gust = 16;</code>
+     * Generated from protobuf field <code>optional float wind_gust = 16;</code>
      */
-    protected $wind_gust = 0.0;
+    protected $wind_gust = null;
     /**
      * Wind lull in m/s
      *
-     * Generated from protobuf field <code>float wind_lull = 17;</code>
+     * Generated from protobuf field <code>optional float wind_lull = 17;</code>
      */
-    protected $wind_lull = 0.0;
+    protected $wind_lull = null;
 
     /**
      * Constructor.
@@ -174,18 +174,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Temperature measured
      *
-     * Generated from protobuf field <code>float temperature = 1;</code>
+     * Generated from protobuf field <code>optional float temperature = 1;</code>
      * @return float
      */
     public function getTemperature()
     {
-        return $this->temperature;
+        return isset($this->temperature) ? $this->temperature : 0.0;
+    }
+
+    public function hasTemperature()
+    {
+        return isset($this->temperature);
+    }
+
+    public function clearTemperature()
+    {
+        unset($this->temperature);
     }
 
     /**
      * Temperature measured
      *
-     * Generated from protobuf field <code>float temperature = 1;</code>
+     * Generated from protobuf field <code>optional float temperature = 1;</code>
      * @param float $var
      * @return $this
      */
@@ -200,18 +210,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Relative humidity percent measured
      *
-     * Generated from protobuf field <code>float relative_humidity = 2;</code>
+     * Generated from protobuf field <code>optional float relative_humidity = 2;</code>
      * @return float
      */
     public function getRelativeHumidity()
     {
-        return $this->relative_humidity;
+        return isset($this->relative_humidity) ? $this->relative_humidity : 0.0;
+    }
+
+    public function hasRelativeHumidity()
+    {
+        return isset($this->relative_humidity);
+    }
+
+    public function clearRelativeHumidity()
+    {
+        unset($this->relative_humidity);
     }
 
     /**
      * Relative humidity percent measured
      *
-     * Generated from protobuf field <code>float relative_humidity = 2;</code>
+     * Generated from protobuf field <code>optional float relative_humidity = 2;</code>
      * @param float $var
      * @return $this
      */
@@ -226,18 +246,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Barometric pressure in hPA measured
      *
-     * Generated from protobuf field <code>float barometric_pressure = 3;</code>
+     * Generated from protobuf field <code>optional float barometric_pressure = 3;</code>
      * @return float
      */
     public function getBarometricPressure()
     {
-        return $this->barometric_pressure;
+        return isset($this->barometric_pressure) ? $this->barometric_pressure : 0.0;
+    }
+
+    public function hasBarometricPressure()
+    {
+        return isset($this->barometric_pressure);
+    }
+
+    public function clearBarometricPressure()
+    {
+        unset($this->barometric_pressure);
     }
 
     /**
      * Barometric pressure in hPA measured
      *
-     * Generated from protobuf field <code>float barometric_pressure = 3;</code>
+     * Generated from protobuf field <code>optional float barometric_pressure = 3;</code>
      * @param float $var
      * @return $this
      */
@@ -252,18 +282,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Gas resistance in MOhm measured
      *
-     * Generated from protobuf field <code>float gas_resistance = 4;</code>
+     * Generated from protobuf field <code>optional float gas_resistance = 4;</code>
      * @return float
      */
     public function getGasResistance()
     {
-        return $this->gas_resistance;
+        return isset($this->gas_resistance) ? $this->gas_resistance : 0.0;
+    }
+
+    public function hasGasResistance()
+    {
+        return isset($this->gas_resistance);
+    }
+
+    public function clearGasResistance()
+    {
+        unset($this->gas_resistance);
     }
 
     /**
      * Gas resistance in MOhm measured
      *
-     * Generated from protobuf field <code>float gas_resistance = 4;</code>
+     * Generated from protobuf field <code>optional float gas_resistance = 4;</code>
      * @param float $var
      * @return $this
      */
@@ -278,18 +318,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Voltage measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
-     * Generated from protobuf field <code>float voltage = 5;</code>
+     * Generated from protobuf field <code>optional float voltage = 5;</code>
      * @return float
      */
     public function getVoltage()
     {
-        return $this->voltage;
+        return isset($this->voltage) ? $this->voltage : 0.0;
+    }
+
+    public function hasVoltage()
+    {
+        return isset($this->voltage);
+    }
+
+    public function clearVoltage()
+    {
+        unset($this->voltage);
     }
 
     /**
      * Voltage measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
-     * Generated from protobuf field <code>float voltage = 5;</code>
+     * Generated from protobuf field <code>optional float voltage = 5;</code>
      * @param float $var
      * @return $this
      */
@@ -304,18 +354,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
-     * Generated from protobuf field <code>float current = 6;</code>
+     * Generated from protobuf field <code>optional float current = 6;</code>
      * @return float
      */
     public function getCurrent()
     {
-        return $this->current;
+        return isset($this->current) ? $this->current : 0.0;
+    }
+
+    public function hasCurrent()
+    {
+        return isset($this->current);
+    }
+
+    public function clearCurrent()
+    {
+        unset($this->current);
     }
 
     /**
      * Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *
-     * Generated from protobuf field <code>float current = 6;</code>
+     * Generated from protobuf field <code>optional float current = 6;</code>
      * @param float $var
      * @return $this
      */
@@ -332,12 +392,22 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      *
-     * Generated from protobuf field <code>uint32 iaq = 7;</code>
+     * Generated from protobuf field <code>optional uint32 iaq = 7;</code>
      * @return int
      */
     public function getIaq()
     {
-        return $this->iaq;
+        return isset($this->iaq) ? $this->iaq : 0;
+    }
+
+    public function hasIaq()
+    {
+        return isset($this->iaq);
+    }
+
+    public function clearIaq()
+    {
+        unset($this->iaq);
     }
 
     /**
@@ -345,7 +415,7 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      *
-     * Generated from protobuf field <code>uint32 iaq = 7;</code>
+     * Generated from protobuf field <code>optional uint32 iaq = 7;</code>
      * @param int $var
      * @return $this
      */
@@ -360,18 +430,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
      *
-     * Generated from protobuf field <code>float distance = 8;</code>
+     * Generated from protobuf field <code>optional float distance = 8;</code>
      * @return float
      */
     public function getDistance()
     {
-        return $this->distance;
+        return isset($this->distance) ? $this->distance : 0.0;
+    }
+
+    public function hasDistance()
+    {
+        return isset($this->distance);
+    }
+
+    public function clearDistance()
+    {
+        unset($this->distance);
     }
 
     /**
      * RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
      *
-     * Generated from protobuf field <code>float distance = 8;</code>
+     * Generated from protobuf field <code>optional float distance = 8;</code>
      * @param float $var
      * @return $this
      */
@@ -386,18 +466,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
      *
-     * Generated from protobuf field <code>float lux = 9;</code>
+     * Generated from protobuf field <code>optional float lux = 9;</code>
      * @return float
      */
     public function getLux()
     {
-        return $this->lux;
+        return isset($this->lux) ? $this->lux : 0.0;
+    }
+
+    public function hasLux()
+    {
+        return isset($this->lux);
+    }
+
+    public function clearLux()
+    {
+        unset($this->lux);
     }
 
     /**
      * VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
      *
-     * Generated from protobuf field <code>float lux = 9;</code>
+     * Generated from protobuf field <code>optional float lux = 9;</code>
      * @param float $var
      * @return $this
      */
@@ -412,18 +502,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
      *
-     * Generated from protobuf field <code>float white_lux = 10;</code>
+     * Generated from protobuf field <code>optional float white_lux = 10;</code>
      * @return float
      */
     public function getWhiteLux()
     {
-        return $this->white_lux;
+        return isset($this->white_lux) ? $this->white_lux : 0.0;
+    }
+
+    public function hasWhiteLux()
+    {
+        return isset($this->white_lux);
+    }
+
+    public function clearWhiteLux()
+    {
+        unset($this->white_lux);
     }
 
     /**
      * VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
      *
-     * Generated from protobuf field <code>float white_lux = 10;</code>
+     * Generated from protobuf field <code>optional float white_lux = 10;</code>
      * @param float $var
      * @return $this
      */
@@ -438,18 +538,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Infrared lux
      *
-     * Generated from protobuf field <code>float ir_lux = 11;</code>
+     * Generated from protobuf field <code>optional float ir_lux = 11;</code>
      * @return float
      */
     public function getIrLux()
     {
-        return $this->ir_lux;
+        return isset($this->ir_lux) ? $this->ir_lux : 0.0;
+    }
+
+    public function hasIrLux()
+    {
+        return isset($this->ir_lux);
+    }
+
+    public function clearIrLux()
+    {
+        unset($this->ir_lux);
     }
 
     /**
      * Infrared lux
      *
-     * Generated from protobuf field <code>float ir_lux = 11;</code>
+     * Generated from protobuf field <code>optional float ir_lux = 11;</code>
      * @param float $var
      * @return $this
      */
@@ -464,18 +574,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Ultraviolet lux
      *
-     * Generated from protobuf field <code>float uv_lux = 12;</code>
+     * Generated from protobuf field <code>optional float uv_lux = 12;</code>
      * @return float
      */
     public function getUvLux()
     {
-        return $this->uv_lux;
+        return isset($this->uv_lux) ? $this->uv_lux : 0.0;
+    }
+
+    public function hasUvLux()
+    {
+        return isset($this->uv_lux);
+    }
+
+    public function clearUvLux()
+    {
+        unset($this->uv_lux);
     }
 
     /**
      * Ultraviolet lux
      *
-     * Generated from protobuf field <code>float uv_lux = 12;</code>
+     * Generated from protobuf field <code>optional float uv_lux = 12;</code>
      * @param float $var
      * @return $this
      */
@@ -491,19 +611,29 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Wind direction in degrees
      * 0 degrees = North, 90 = East, etc...
      *
-     * Generated from protobuf field <code>uint32 wind_direction = 13;</code>
+     * Generated from protobuf field <code>optional uint32 wind_direction = 13;</code>
      * @return int
      */
     public function getWindDirection()
     {
-        return $this->wind_direction;
+        return isset($this->wind_direction) ? $this->wind_direction : 0;
+    }
+
+    public function hasWindDirection()
+    {
+        return isset($this->wind_direction);
+    }
+
+    public function clearWindDirection()
+    {
+        unset($this->wind_direction);
     }
 
     /**
      * Wind direction in degrees
      * 0 degrees = North, 90 = East, etc...
      *
-     * Generated from protobuf field <code>uint32 wind_direction = 13;</code>
+     * Generated from protobuf field <code>optional uint32 wind_direction = 13;</code>
      * @param int $var
      * @return $this
      */
@@ -518,18 +648,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Wind speed in m/s
      *
-     * Generated from protobuf field <code>float wind_speed = 14;</code>
+     * Generated from protobuf field <code>optional float wind_speed = 14;</code>
      * @return float
      */
     public function getWindSpeed()
     {
-        return $this->wind_speed;
+        return isset($this->wind_speed) ? $this->wind_speed : 0.0;
+    }
+
+    public function hasWindSpeed()
+    {
+        return isset($this->wind_speed);
+    }
+
+    public function clearWindSpeed()
+    {
+        unset($this->wind_speed);
     }
 
     /**
      * Wind speed in m/s
      *
-     * Generated from protobuf field <code>float wind_speed = 14;</code>
+     * Generated from protobuf field <code>optional float wind_speed = 14;</code>
      * @param float $var
      * @return $this
      */
@@ -544,18 +684,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Weight in KG
      *
-     * Generated from protobuf field <code>float weight = 15;</code>
+     * Generated from protobuf field <code>optional float weight = 15;</code>
      * @return float
      */
     public function getWeight()
     {
-        return $this->weight;
+        return isset($this->weight) ? $this->weight : 0.0;
+    }
+
+    public function hasWeight()
+    {
+        return isset($this->weight);
+    }
+
+    public function clearWeight()
+    {
+        unset($this->weight);
     }
 
     /**
      * Weight in KG
      *
-     * Generated from protobuf field <code>float weight = 15;</code>
+     * Generated from protobuf field <code>optional float weight = 15;</code>
      * @param float $var
      * @return $this
      */
@@ -570,18 +720,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Wind gust in m/s
      *
-     * Generated from protobuf field <code>float wind_gust = 16;</code>
+     * Generated from protobuf field <code>optional float wind_gust = 16;</code>
      * @return float
      */
     public function getWindGust()
     {
-        return $this->wind_gust;
+        return isset($this->wind_gust) ? $this->wind_gust : 0.0;
+    }
+
+    public function hasWindGust()
+    {
+        return isset($this->wind_gust);
+    }
+
+    public function clearWindGust()
+    {
+        unset($this->wind_gust);
     }
 
     /**
      * Wind gust in m/s
      *
-     * Generated from protobuf field <code>float wind_gust = 16;</code>
+     * Generated from protobuf field <code>optional float wind_gust = 16;</code>
      * @param float $var
      * @return $this
      */
@@ -596,18 +756,28 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Wind lull in m/s
      *
-     * Generated from protobuf field <code>float wind_lull = 17;</code>
+     * Generated from protobuf field <code>optional float wind_lull = 17;</code>
      * @return float
      */
     public function getWindLull()
     {
-        return $this->wind_lull;
+        return isset($this->wind_lull) ? $this->wind_lull : 0.0;
+    }
+
+    public function hasWindLull()
+    {
+        return isset($this->wind_lull);
+    }
+
+    public function clearWindLull()
+    {
+        unset($this->wind_lull);
     }
 
     /**
      * Wind lull in m/s
      *
-     * Generated from protobuf field <code>float wind_lull = 17;</code>
+     * Generated from protobuf field <code>optional float wind_lull = 17;</code>
      * @param float $var
      * @return $this
      */

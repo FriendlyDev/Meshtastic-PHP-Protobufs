@@ -129,6 +129,18 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 hop_start = 15;</code>
      */
     protected $hop_start = 0;
+    /**
+     * Records the public key the packet was encrypted with, if applicable.
+     *
+     * Generated from protobuf field <code>bytes public_key = 16;</code>
+     */
+    protected $public_key = '';
+    /**
+     * Indicates whether the packet was en/decrypted using PKI
+     *
+     * Generated from protobuf field <code>bool pki_encrypted = 17;</code>
+     */
+    protected $pki_encrypted = false;
     protected $payload_variant;
 
     /**
@@ -200,6 +212,10 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      *     @type int $hop_start
      *           Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header.
      *           When receiving a packet, the difference between hop_start and hop_limit gives how many hops it traveled.
+     *     @type string $public_key
+     *           Records the public key the packet was encrypted with, if applicable.
+     *     @type bool $pki_encrypted
+     *           Indicates whether the packet was en/decrypted using PKI
      * }
      */
     public function __construct($data = NULL) {
@@ -673,6 +689,58 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->hop_start = $var;
+
+        return $this;
+    }
+
+    /**
+     * Records the public key the packet was encrypted with, if applicable.
+     *
+     * Generated from protobuf field <code>bytes public_key = 16;</code>
+     * @return string
+     */
+    public function getPublicKey()
+    {
+        return $this->public_key;
+    }
+
+    /**
+     * Records the public key the packet was encrypted with, if applicable.
+     *
+     * Generated from protobuf field <code>bytes public_key = 16;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPublicKey($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->public_key = $var;
+
+        return $this;
+    }
+
+    /**
+     * Indicates whether the packet was en/decrypted using PKI
+     *
+     * Generated from protobuf field <code>bool pki_encrypted = 17;</code>
+     * @return bool
+     */
+    public function getPkiEncrypted()
+    {
+        return $this->pki_encrypted;
+    }
+
+    /**
+     * Indicates whether the packet was en/decrypted using PKI
+     *
+     * Generated from protobuf field <code>bool pki_encrypted = 17;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPkiEncrypted($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->pki_encrypted = $var;
 
         return $this;
     }

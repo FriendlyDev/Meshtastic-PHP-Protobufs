@@ -148,6 +148,12 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool ignore_mqtt = 104;</code>
      */
     protected $ignore_mqtt = false;
+    /**
+     * Sets the ok_to_mqtt bit on outgoing packets
+     *
+     * Generated from protobuf field <code>bool config_ok_to_mqtt = 105;</code>
+     */
+    protected $config_ok_to_mqtt = false;
 
     /**
      * Constructor.
@@ -220,6 +226,8 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
      *           in ignore_incoming will have packets they send dropped on receive (by router.cpp)
      *     @type bool $ignore_mqtt
      *           If true, the device will not process any packets received via LoRa that passed via MQTT anywhere on the path towards it.
+     *     @type bool $config_ok_to_mqtt
+     *           Sets the ok_to_mqtt bit on outgoing packets
      * }
      */
     public function __construct($data = NULL) {
@@ -727,6 +735,32 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->ignore_mqtt = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the ok_to_mqtt bit on outgoing packets
+     *
+     * Generated from protobuf field <code>bool config_ok_to_mqtt = 105;</code>
+     * @return bool
+     */
+    public function getConfigOkToMqtt()
+    {
+        return $this->config_ok_to_mqtt;
+    }
+
+    /**
+     * Sets the ok_to_mqtt bit on outgoing packets
+     *
+     * Generated from protobuf field <code>bool config_ok_to_mqtt = 105;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setConfigOkToMqtt($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->config_ok_to_mqtt = $var;
 
         return $this;
     }

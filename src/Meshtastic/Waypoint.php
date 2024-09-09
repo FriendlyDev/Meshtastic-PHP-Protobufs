@@ -24,15 +24,15 @@ class Waypoint extends \Google\Protobuf\Internal\Message
     /**
      * latitude_i
      *
-     * Generated from protobuf field <code>sfixed32 latitude_i = 2;</code>
+     * Generated from protobuf field <code>optional sfixed32 latitude_i = 2;</code>
      */
-    protected $latitude_i = 0;
+    protected $latitude_i = null;
     /**
      * longitude_i
      *
-     * Generated from protobuf field <code>sfixed32 longitude_i = 3;</code>
+     * Generated from protobuf field <code>optional sfixed32 longitude_i = 3;</code>
      */
-    protected $longitude_i = 0;
+    protected $longitude_i = null;
     /**
      * Time the waypoint is to expire (epoch)
      *
@@ -124,18 +124,28 @@ class Waypoint extends \Google\Protobuf\Internal\Message
     /**
      * latitude_i
      *
-     * Generated from protobuf field <code>sfixed32 latitude_i = 2;</code>
+     * Generated from protobuf field <code>optional sfixed32 latitude_i = 2;</code>
      * @return int
      */
     public function getLatitudeI()
     {
-        return $this->latitude_i;
+        return isset($this->latitude_i) ? $this->latitude_i : 0;
+    }
+
+    public function hasLatitudeI()
+    {
+        return isset($this->latitude_i);
+    }
+
+    public function clearLatitudeI()
+    {
+        unset($this->latitude_i);
     }
 
     /**
      * latitude_i
      *
-     * Generated from protobuf field <code>sfixed32 latitude_i = 2;</code>
+     * Generated from protobuf field <code>optional sfixed32 latitude_i = 2;</code>
      * @param int $var
      * @return $this
      */
@@ -150,18 +160,28 @@ class Waypoint extends \Google\Protobuf\Internal\Message
     /**
      * longitude_i
      *
-     * Generated from protobuf field <code>sfixed32 longitude_i = 3;</code>
+     * Generated from protobuf field <code>optional sfixed32 longitude_i = 3;</code>
      * @return int
      */
     public function getLongitudeI()
     {
-        return $this->longitude_i;
+        return isset($this->longitude_i) ? $this->longitude_i : 0;
+    }
+
+    public function hasLongitudeI()
+    {
+        return isset($this->longitude_i);
+    }
+
+    public function clearLongitudeI()
+    {
+        unset($this->longitude_i);
     }
 
     /**
      * longitude_i
      *
-     * Generated from protobuf field <code>sfixed32 longitude_i = 3;</code>
+     * Generated from protobuf field <code>optional sfixed32 longitude_i = 3;</code>
      * @param int $var
      * @return $this
      */

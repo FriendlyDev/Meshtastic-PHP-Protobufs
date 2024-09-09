@@ -28,6 +28,8 @@ class Config extends \Google\Protobuf\Internal\Message
      *     @type \Meshtastic\Config\DisplayConfig $display
      *     @type \Meshtastic\Config\LoRaConfig $lora
      *     @type \Meshtastic\Config\BluetoothConfig $bluetooth
+     *     @type \Meshtastic\Config\SecurityConfig $security
+     *     @type \Meshtastic\Config\SessionkeyConfig $sessionkey
      * }
      */
     public function __construct($data = NULL) {
@@ -220,6 +222,60 @@ class Config extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\Config\BluetoothConfig::class);
         $this->writeOneof(7, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.Config.SecurityConfig security = 8;</code>
+     * @return \Meshtastic\Config\SecurityConfig|null
+     */
+    public function getSecurity()
+    {
+        return $this->readOneof(8);
+    }
+
+    public function hasSecurity()
+    {
+        return $this->hasOneof(8);
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.Config.SecurityConfig security = 8;</code>
+     * @param \Meshtastic\Config\SecurityConfig $var
+     * @return $this
+     */
+    public function setSecurity($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\Config\SecurityConfig::class);
+        $this->writeOneof(8, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.Config.SessionkeyConfig sessionkey = 9;</code>
+     * @return \Meshtastic\Config\SessionkeyConfig|null
+     */
+    public function getSessionkey()
+    {
+        return $this->readOneof(9);
+    }
+
+    public function hasSessionkey()
+    {
+        return $this->hasOneof(9);
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.Config.SessionkeyConfig sessionkey = 9;</code>
+     * @param \Meshtastic\Config\SessionkeyConfig $var
+     * @return $this
+     */
+    public function setSessionkey($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\Config\SessionkeyConfig::class);
+        $this->writeOneof(9, $var);
 
         return $this;
     }

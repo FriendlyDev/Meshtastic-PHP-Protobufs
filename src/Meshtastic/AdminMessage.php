@@ -17,6 +17,14 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class AdminMessage extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * The node generates this key and sends it with any get_x_response packets.
+     * The client MUST include the same key with any set_x commands. Key expires after 300 seconds.
+     * Prevents replay attacks for admin messages.
+     *
+     * Generated from protobuf field <code>bytes session_passkey = 101;</code>
+     */
+    protected $session_passkey = '';
     protected $payload_variant;
 
     /**
@@ -25,6 +33,10 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $session_passkey
+     *           The node generates this key and sends it with any get_x_response packets.
+     *           The client MUST include the same key with any set_x commands. Key expires after 300 seconds.
+     *           Prevents replay attacks for admin messages.
      *     @type int $get_channel_request
      *           Send the specified channel in the response to this message
      *           NOTE: This field is sent with the channel index + 1 (to ensure we never try to send 'zero' - which protobufs treats as not present)
@@ -97,6 +109,9 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Set fixed position data on the node and then set the position.fixed_position = true
      *     @type bool $remove_fixed_position
      *           Clear fixed position coordinates and then set position.fixed_position = false
+     *     @type int $set_time_only
+     *           Set time only on the node
+     *           Convenience method to set the time on the node (as Net quality) without any other position data
      *     @type bool $begin_edit_settings
      *           Begins an edit transaction for config, module config, owner, and channel settings changes
      *           This will delay the standard *implicit* save to the file system and subsequent reboot behavior until committed (commit_edit_settings)
@@ -123,6 +138,36 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     public function __construct($data = NULL) {
         \GPBMetadata\Meshtastic\Admin::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * The node generates this key and sends it with any get_x_response packets.
+     * The client MUST include the same key with any set_x commands. Key expires after 300 seconds.
+     * Prevents replay attacks for admin messages.
+     *
+     * Generated from protobuf field <code>bytes session_passkey = 101;</code>
+     * @return string
+     */
+    public function getSessionPasskey()
+    {
+        return $this->session_passkey;
+    }
+
+    /**
+     * The node generates this key and sends it with any get_x_response packets.
+     * The client MUST include the same key with any set_x commands. Key expires after 300 seconds.
+     * Prevents replay attacks for admin messages.
+     *
+     * Generated from protobuf field <code>bytes session_passkey = 101;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSessionPasskey($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->session_passkey = $var;
+
+        return $this;
     }
 
     /**
@@ -1156,6 +1201,39 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->writeOneof(42, $var);
+
+        return $this;
+    }
+
+    /**
+     * Set time only on the node
+     * Convenience method to set the time on the node (as Net quality) without any other position data
+     *
+     * Generated from protobuf field <code>fixed32 set_time_only = 43;</code>
+     * @return int
+     */
+    public function getSetTimeOnly()
+    {
+        return $this->readOneof(43);
+    }
+
+    public function hasSetTimeOnly()
+    {
+        return $this->hasOneof(43);
+    }
+
+    /**
+     * Set time only on the node
+     * Convenience method to set the time on the node (as Net quality) without any other position data
+     *
+     * Generated from protobuf field <code>fixed32 set_time_only = 43;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSetTimeOnly($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->writeOneof(43, $var);
 
         return $this;
     }

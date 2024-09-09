@@ -31,12 +31,6 @@ class BluetoothConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 fixed_pin = 3;</code>
      */
     protected $fixed_pin = 0;
-    /**
-     * Enables device (serial style logs) over Bluetooth
-     *
-     * Generated from protobuf field <code>bool device_logging_enabled = 4;</code>
-     */
-    protected $device_logging_enabled = false;
 
     /**
      * Constructor.
@@ -50,8 +44,6 @@ class BluetoothConfig extends \Google\Protobuf\Internal\Message
      *           Determines the pairing strategy for the device
      *     @type int $fixed_pin
      *           Specified PIN for PairingMode.FixedPin
-     *     @type bool $device_logging_enabled
-     *           Enables device (serial style logs) over Bluetooth
      * }
      */
     public function __construct($data = NULL) {
@@ -133,32 +125,6 @@ class BluetoothConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->fixed_pin = $var;
-
-        return $this;
-    }
-
-    /**
-     * Enables device (serial style logs) over Bluetooth
-     *
-     * Generated from protobuf field <code>bool device_logging_enabled = 4;</code>
-     * @return bool
-     */
-    public function getDeviceLoggingEnabled()
-    {
-        return $this->device_logging_enabled;
-    }
-
-    /**
-     * Enables device (serial style logs) over Bluetooth
-     *
-     * Generated from protobuf field <code>bool device_logging_enabled = 4;</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setDeviceLoggingEnabled($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->device_logging_enabled = $var;
 
         return $this;
     }

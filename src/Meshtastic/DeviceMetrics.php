@@ -18,33 +18,33 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     /**
      * 0-100 (>100 means powered)
      *
-     * Generated from protobuf field <code>uint32 battery_level = 1;</code>
+     * Generated from protobuf field <code>optional uint32 battery_level = 1;</code>
      */
-    protected $battery_level = 0;
+    protected $battery_level = null;
     /**
      * Voltage measured
      *
-     * Generated from protobuf field <code>float voltage = 2;</code>
+     * Generated from protobuf field <code>optional float voltage = 2;</code>
      */
-    protected $voltage = 0.0;
+    protected $voltage = null;
     /**
      * Utilization for the current channel, including well formed TX, RX and malformed RX (aka noise).
      *
-     * Generated from protobuf field <code>float channel_utilization = 3;</code>
+     * Generated from protobuf field <code>optional float channel_utilization = 3;</code>
      */
-    protected $channel_utilization = 0.0;
+    protected $channel_utilization = null;
     /**
      * Percent of airtime for transmission used within the last hour.
      *
-     * Generated from protobuf field <code>float air_util_tx = 4;</code>
+     * Generated from protobuf field <code>optional float air_util_tx = 4;</code>
      */
-    protected $air_util_tx = 0.0;
+    protected $air_util_tx = null;
     /**
      * How long the device has been running since the last reboot (in seconds)
      *
-     * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>
+     * Generated from protobuf field <code>optional uint32 uptime_seconds = 5;</code>
      */
-    protected $uptime_seconds = 0;
+    protected $uptime_seconds = null;
 
     /**
      * Constructor.
@@ -72,18 +72,28 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     /**
      * 0-100 (>100 means powered)
      *
-     * Generated from protobuf field <code>uint32 battery_level = 1;</code>
+     * Generated from protobuf field <code>optional uint32 battery_level = 1;</code>
      * @return int
      */
     public function getBatteryLevel()
     {
-        return $this->battery_level;
+        return isset($this->battery_level) ? $this->battery_level : 0;
+    }
+
+    public function hasBatteryLevel()
+    {
+        return isset($this->battery_level);
+    }
+
+    public function clearBatteryLevel()
+    {
+        unset($this->battery_level);
     }
 
     /**
      * 0-100 (>100 means powered)
      *
-     * Generated from protobuf field <code>uint32 battery_level = 1;</code>
+     * Generated from protobuf field <code>optional uint32 battery_level = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -98,18 +108,28 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Voltage measured
      *
-     * Generated from protobuf field <code>float voltage = 2;</code>
+     * Generated from protobuf field <code>optional float voltage = 2;</code>
      * @return float
      */
     public function getVoltage()
     {
-        return $this->voltage;
+        return isset($this->voltage) ? $this->voltage : 0.0;
+    }
+
+    public function hasVoltage()
+    {
+        return isset($this->voltage);
+    }
+
+    public function clearVoltage()
+    {
+        unset($this->voltage);
     }
 
     /**
      * Voltage measured
      *
-     * Generated from protobuf field <code>float voltage = 2;</code>
+     * Generated from protobuf field <code>optional float voltage = 2;</code>
      * @param float $var
      * @return $this
      */
@@ -124,18 +144,28 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Utilization for the current channel, including well formed TX, RX and malformed RX (aka noise).
      *
-     * Generated from protobuf field <code>float channel_utilization = 3;</code>
+     * Generated from protobuf field <code>optional float channel_utilization = 3;</code>
      * @return float
      */
     public function getChannelUtilization()
     {
-        return $this->channel_utilization;
+        return isset($this->channel_utilization) ? $this->channel_utilization : 0.0;
+    }
+
+    public function hasChannelUtilization()
+    {
+        return isset($this->channel_utilization);
+    }
+
+    public function clearChannelUtilization()
+    {
+        unset($this->channel_utilization);
     }
 
     /**
      * Utilization for the current channel, including well formed TX, RX and malformed RX (aka noise).
      *
-     * Generated from protobuf field <code>float channel_utilization = 3;</code>
+     * Generated from protobuf field <code>optional float channel_utilization = 3;</code>
      * @param float $var
      * @return $this
      */
@@ -150,18 +180,28 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     /**
      * Percent of airtime for transmission used within the last hour.
      *
-     * Generated from protobuf field <code>float air_util_tx = 4;</code>
+     * Generated from protobuf field <code>optional float air_util_tx = 4;</code>
      * @return float
      */
     public function getAirUtilTx()
     {
-        return $this->air_util_tx;
+        return isset($this->air_util_tx) ? $this->air_util_tx : 0.0;
+    }
+
+    public function hasAirUtilTx()
+    {
+        return isset($this->air_util_tx);
+    }
+
+    public function clearAirUtilTx()
+    {
+        unset($this->air_util_tx);
     }
 
     /**
      * Percent of airtime for transmission used within the last hour.
      *
-     * Generated from protobuf field <code>float air_util_tx = 4;</code>
+     * Generated from protobuf field <code>optional float air_util_tx = 4;</code>
      * @param float $var
      * @return $this
      */
@@ -176,18 +216,28 @@ class DeviceMetrics extends \Google\Protobuf\Internal\Message
     /**
      * How long the device has been running since the last reboot (in seconds)
      *
-     * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>
+     * Generated from protobuf field <code>optional uint32 uptime_seconds = 5;</code>
      * @return int
      */
     public function getUptimeSeconds()
     {
-        return $this->uptime_seconds;
+        return isset($this->uptime_seconds) ? $this->uptime_seconds : 0;
+    }
+
+    public function hasUptimeSeconds()
+    {
+        return isset($this->uptime_seconds);
+    }
+
+    public function clearUptimeSeconds()
+    {
+        unset($this->uptime_seconds);
     }
 
     /**
      * How long the device has been running since the last reboot (in seconds)
      *
-     * Generated from protobuf field <code>uint32 uptime_seconds = 5;</code>
+     * Generated from protobuf field <code>optional uint32 uptime_seconds = 5;</code>
      * @param int $var
      * @return $this
      */

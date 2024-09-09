@@ -187,6 +187,12 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>MAX17048 = 28;</code>
      */
     const MAX17048 = 28;
+    /**
+     * Custom I2C sensor implementation based on https://github.com/meshtastic/i2c-sensor
+     *
+     * Generated from protobuf enum <code>CUSTOM_SENSOR = 29;</code>
+     */
+    const CUSTOM_SENSOR = 29;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -218,6 +224,7 @@ class TelemetrySensorType
         self::BMP3XX => 'BMP3XX',
         self::ICM20948 => 'ICM20948',
         self::MAX17048 => 'MAX17048',
+        self::CUSTOM_SENSOR => 'CUSTOM_SENSOR',
     ];
 
     public static function name($value)

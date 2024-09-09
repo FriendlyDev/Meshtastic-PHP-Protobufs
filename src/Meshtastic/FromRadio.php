@@ -72,6 +72,8 @@ class FromRadio extends \Google\Protobuf\Internal\Message
      *           MQTT Client Proxy Message (device sending to client / phone for publishing to MQTT)
      *     @type \Meshtastic\FileInfo $fileInfo
      *           File system manifest messages
+     *     @type \Meshtastic\ClientNotification $clientNotification
+     *           Notification message to the client
      * }
      */
     public function __construct($data = NULL) {
@@ -553,6 +555,37 @@ class FromRadio extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\FileInfo::class);
         $this->writeOneof(15, $var);
+
+        return $this;
+    }
+
+    /**
+     * Notification message to the client
+     *
+     * Generated from protobuf field <code>.meshtastic.ClientNotification clientNotification = 16;</code>
+     * @return \Meshtastic\ClientNotification|null
+     */
+    public function getClientNotification()
+    {
+        return $this->readOneof(16);
+    }
+
+    public function hasClientNotification()
+    {
+        return $this->hasOneof(16);
+    }
+
+    /**
+     * Notification message to the client
+     *
+     * Generated from protobuf field <code>.meshtastic.ClientNotification clientNotification = 16;</code>
+     * @param \Meshtastic\ClientNotification $var
+     * @return $this
+     */
+    public function setClientNotification($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\ClientNotification::class);
+        $this->writeOneof(16, $var);
 
         return $this;
     }

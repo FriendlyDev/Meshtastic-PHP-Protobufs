@@ -22,7 +22,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     /**
      * The user info for this node
      *
-     * Generated from protobuf field <code>.meshtastic.User user = 2;</code>
+     * Generated from protobuf field <code>.meshtastic.UserLite user = 2;</code>
      */
     protected $user = null;
     /**
@@ -85,7 +85,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
      *
      *     @type int $num
      *           The node number
-     *     @type \Meshtastic\User $user
+     *     @type \Meshtastic\UserLite $user
      *           The user info for this node
      *     @type \Meshtastic\PositionLite $position
      *           This position data. Note: before 1.2.14 we would also store the last time we've heard from this node in position.time, that is no longer true.
@@ -142,8 +142,8 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     /**
      * The user info for this node
      *
-     * Generated from protobuf field <code>.meshtastic.User user = 2;</code>
-     * @return \Meshtastic\User|null
+     * Generated from protobuf field <code>.meshtastic.UserLite user = 2;</code>
+     * @return \Meshtastic\UserLite|null
      */
     public function getUser()
     {
@@ -163,13 +163,13 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     /**
      * The user info for this node
      *
-     * Generated from protobuf field <code>.meshtastic.User user = 2;</code>
-     * @param \Meshtastic\User $var
+     * Generated from protobuf field <code>.meshtastic.UserLite user = 2;</code>
+     * @param \Meshtastic\UserLite $var
      * @return $this
      */
     public function setUser($var)
     {
-        GPBUtil::checkMessage($var, \Meshtastic\User::class);
+        GPBUtil::checkMessage($var, \Meshtastic\UserLite::class);
         $this->user = $var;
 
         return $this;

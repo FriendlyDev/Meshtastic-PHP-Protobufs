@@ -63,6 +63,19 @@ class Priority
      */
     const RELIABLE = 70;
     /**
+     * If priority is unset but the packet is a response to a request, we want it to get there relatively quickly.
+     * Furthermore, responses stop relaying packets directed to a node early.
+     *
+     * Generated from protobuf enum <code>RESPONSE = 80;</code>
+     */
+    const RESPONSE = 80;
+    /**
+     * Higher priority for specific message types (portnums) to distinguish between other reliable packets.
+     *
+     * Generated from protobuf enum <code>HIGH = 100;</code>
+     */
+    const HIGH = 100;
+    /**
      * Ack/naks are sent with very high priority to ensure that retransmission
      * stops as soon as possible
      *
@@ -82,6 +95,8 @@ class Priority
         self::BACKGROUND => 'BACKGROUND',
         self::PBDEFAULT => 'DEFAULT',
         self::RELIABLE => 'RELIABLE',
+        self::RESPONSE => 'RESPONSE',
+        self::HIGH => 'HIGH',
         self::ACK => 'ACK',
         self::MAX => 'MAX',
     ];

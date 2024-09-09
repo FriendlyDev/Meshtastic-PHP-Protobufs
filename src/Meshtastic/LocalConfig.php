@@ -63,6 +63,12 @@ class LocalConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 version = 8;</code>
      */
     protected $version = 0;
+    /**
+     * The part of the config that is specific to Security settings
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.SecurityConfig security = 9;</code>
+     */
+    protected $security = null;
 
     /**
      * Constructor.
@@ -88,6 +94,8 @@ class LocalConfig extends \Google\Protobuf\Internal\Message
      *           A version integer used to invalidate old save files when we make
      *           incompatible changes This integer is set at build time and is private to
      *           NodeDB.cpp in the device code.
+     *     @type \Meshtastic\Config\SecurityConfig $security
+     *           The part of the config that is specific to Security settings
      * }
      */
     public function __construct($data = NULL) {
@@ -373,6 +381,42 @@ class LocalConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->version = $var;
+
+        return $this;
+    }
+
+    /**
+     * The part of the config that is specific to Security settings
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.SecurityConfig security = 9;</code>
+     * @return \Meshtastic\Config\SecurityConfig|null
+     */
+    public function getSecurity()
+    {
+        return $this->security;
+    }
+
+    public function hasSecurity()
+    {
+        return isset($this->security);
+    }
+
+    public function clearSecurity()
+    {
+        unset($this->security);
+    }
+
+    /**
+     * The part of the config that is specific to Security settings
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.SecurityConfig security = 9;</code>
+     * @param \Meshtastic\Config\SecurityConfig $var
+     * @return $this
+     */
+    public function setSecurity($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\Config\SecurityConfig::class);
+        $this->security = $var;
 
         return $this;
     }

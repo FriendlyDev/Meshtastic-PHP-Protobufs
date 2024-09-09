@@ -39,6 +39,8 @@ class Telemetry extends \Google\Protobuf\Internal\Message
      *           Air quality metrics
      *     @type \Meshtastic\PowerMetrics $power_metrics
      *           Power Metrics
+     *     @type \Meshtastic\LocalStats $local_stats
+     *           Local device mesh statistics
      * }
      */
     public function __construct($data = NULL) {
@@ -192,6 +194,37 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\PowerMetrics::class);
         $this->writeOneof(5, $var);
+
+        return $this;
+    }
+
+    /**
+     * Local device mesh statistics
+     *
+     * Generated from protobuf field <code>.meshtastic.LocalStats local_stats = 6;</code>
+     * @return \Meshtastic\LocalStats|null
+     */
+    public function getLocalStats()
+    {
+        return $this->readOneof(6);
+    }
+
+    public function hasLocalStats()
+    {
+        return $this->hasOneof(6);
+    }
+
+    /**
+     * Local device mesh statistics
+     *
+     * Generated from protobuf field <code>.meshtastic.LocalStats local_stats = 6;</code>
+     * @param \Meshtastic\LocalStats $var
+     * @return $this
+     */
+    public function setLocalStats($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\LocalStats::class);
+        $this->writeOneof(6, $var);
 
         return $this;
     }

@@ -19,21 +19,21 @@ class Position extends \Google\Protobuf\Internal\Message
      * The new preferred location encoding, multiply by 1e-7 to get degrees
      * in floating point
      *
-     * Generated from protobuf field <code>sfixed32 latitude_i = 1;</code>
+     * Generated from protobuf field <code>optional sfixed32 latitude_i = 1;</code>
      */
-    protected $latitude_i = 0;
+    protected $latitude_i = null;
     /**
      * TODO: REPLACE
      *
-     * Generated from protobuf field <code>sfixed32 longitude_i = 2;</code>
+     * Generated from protobuf field <code>optional sfixed32 longitude_i = 2;</code>
      */
-    protected $longitude_i = 0;
+    protected $longitude_i = null;
     /**
      * In meters above MSL (but see issue #359)
      *
-     * Generated from protobuf field <code>int32 altitude = 3;</code>
+     * Generated from protobuf field <code>optional int32 altitude = 3;</code>
      */
-    protected $altitude = 0;
+    protected $altitude = null;
     /**
      * This is usually not sent over the mesh (to save space), but it is sent
      * from the phone so that the local device can set its time if it is sent over
@@ -70,15 +70,15 @@ class Position extends \Google\Protobuf\Internal\Message
     /**
      * HAE altitude in meters - can be used instead of MSL altitude
      *
-     * Generated from protobuf field <code>sint32 altitude_hae = 9;</code>
+     * Generated from protobuf field <code>optional sint32 altitude_hae = 9;</code>
      */
-    protected $altitude_hae = 0;
+    protected $altitude_hae = null;
     /**
      * Geoidal separation in meters
      *
-     * Generated from protobuf field <code>sint32 altitude_geoidal_separation = 10;</code>
+     * Generated from protobuf field <code>optional sint32 altitude_geoidal_separation = 10;</code>
      */
-    protected $altitude_geoidal_separation = 0;
+    protected $altitude_geoidal_separation = null;
     /**
      * Horizontal, Vertical and Position Dilution of Precision, in 1/100 units
      * - PDOP is sufficient for most cases
@@ -117,15 +117,15 @@ class Position extends \Google\Protobuf\Internal\Message
      * - "yaw" indicates a relative rotation about the vertical axis
      * TODO: REMOVE/INTEGRATE
      *
-     * Generated from protobuf field <code>uint32 ground_speed = 15;</code>
+     * Generated from protobuf field <code>optional uint32 ground_speed = 15;</code>
      */
-    protected $ground_speed = 0;
+    protected $ground_speed = null;
     /**
      * TODO: REPLACE
      *
-     * Generated from protobuf field <code>uint32 ground_track = 16;</code>
+     * Generated from protobuf field <code>optional uint32 ground_track = 16;</code>
      */
-    protected $ground_track = 0;
+    protected $ground_track = null;
     /**
      * GPS fix quality (from NMEA GxGGA statement or similar)
      *
@@ -255,19 +255,29 @@ class Position extends \Google\Protobuf\Internal\Message
      * The new preferred location encoding, multiply by 1e-7 to get degrees
      * in floating point
      *
-     * Generated from protobuf field <code>sfixed32 latitude_i = 1;</code>
+     * Generated from protobuf field <code>optional sfixed32 latitude_i = 1;</code>
      * @return int
      */
     public function getLatitudeI()
     {
-        return $this->latitude_i;
+        return isset($this->latitude_i) ? $this->latitude_i : 0;
+    }
+
+    public function hasLatitudeI()
+    {
+        return isset($this->latitude_i);
+    }
+
+    public function clearLatitudeI()
+    {
+        unset($this->latitude_i);
     }
 
     /**
      * The new preferred location encoding, multiply by 1e-7 to get degrees
      * in floating point
      *
-     * Generated from protobuf field <code>sfixed32 latitude_i = 1;</code>
+     * Generated from protobuf field <code>optional sfixed32 latitude_i = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -282,18 +292,28 @@ class Position extends \Google\Protobuf\Internal\Message
     /**
      * TODO: REPLACE
      *
-     * Generated from protobuf field <code>sfixed32 longitude_i = 2;</code>
+     * Generated from protobuf field <code>optional sfixed32 longitude_i = 2;</code>
      * @return int
      */
     public function getLongitudeI()
     {
-        return $this->longitude_i;
+        return isset($this->longitude_i) ? $this->longitude_i : 0;
+    }
+
+    public function hasLongitudeI()
+    {
+        return isset($this->longitude_i);
+    }
+
+    public function clearLongitudeI()
+    {
+        unset($this->longitude_i);
     }
 
     /**
      * TODO: REPLACE
      *
-     * Generated from protobuf field <code>sfixed32 longitude_i = 2;</code>
+     * Generated from protobuf field <code>optional sfixed32 longitude_i = 2;</code>
      * @param int $var
      * @return $this
      */
@@ -308,18 +328,28 @@ class Position extends \Google\Protobuf\Internal\Message
     /**
      * In meters above MSL (but see issue #359)
      *
-     * Generated from protobuf field <code>int32 altitude = 3;</code>
+     * Generated from protobuf field <code>optional int32 altitude = 3;</code>
      * @return int
      */
     public function getAltitude()
     {
-        return $this->altitude;
+        return isset($this->altitude) ? $this->altitude : 0;
+    }
+
+    public function hasAltitude()
+    {
+        return isset($this->altitude);
+    }
+
+    public function clearAltitude()
+    {
+        unset($this->altitude);
     }
 
     /**
      * In meters above MSL (but see issue #359)
      *
-     * Generated from protobuf field <code>int32 altitude = 3;</code>
+     * Generated from protobuf field <code>optional int32 altitude = 3;</code>
      * @param int $var
      * @return $this
      */
@@ -470,18 +500,28 @@ class Position extends \Google\Protobuf\Internal\Message
     /**
      * HAE altitude in meters - can be used instead of MSL altitude
      *
-     * Generated from protobuf field <code>sint32 altitude_hae = 9;</code>
+     * Generated from protobuf field <code>optional sint32 altitude_hae = 9;</code>
      * @return int
      */
     public function getAltitudeHae()
     {
-        return $this->altitude_hae;
+        return isset($this->altitude_hae) ? $this->altitude_hae : 0;
+    }
+
+    public function hasAltitudeHae()
+    {
+        return isset($this->altitude_hae);
+    }
+
+    public function clearAltitudeHae()
+    {
+        unset($this->altitude_hae);
     }
 
     /**
      * HAE altitude in meters - can be used instead of MSL altitude
      *
-     * Generated from protobuf field <code>sint32 altitude_hae = 9;</code>
+     * Generated from protobuf field <code>optional sint32 altitude_hae = 9;</code>
      * @param int $var
      * @return $this
      */
@@ -496,18 +536,28 @@ class Position extends \Google\Protobuf\Internal\Message
     /**
      * Geoidal separation in meters
      *
-     * Generated from protobuf field <code>sint32 altitude_geoidal_separation = 10;</code>
+     * Generated from protobuf field <code>optional sint32 altitude_geoidal_separation = 10;</code>
      * @return int
      */
     public function getAltitudeGeoidalSeparation()
     {
-        return $this->altitude_geoidal_separation;
+        return isset($this->altitude_geoidal_separation) ? $this->altitude_geoidal_separation : 0;
+    }
+
+    public function hasAltitudeGeoidalSeparation()
+    {
+        return isset($this->altitude_geoidal_separation);
+    }
+
+    public function clearAltitudeGeoidalSeparation()
+    {
+        unset($this->altitude_geoidal_separation);
     }
 
     /**
      * Geoidal separation in meters
      *
-     * Generated from protobuf field <code>sint32 altitude_geoidal_separation = 10;</code>
+     * Generated from protobuf field <code>optional sint32 altitude_geoidal_separation = 10;</code>
      * @param int $var
      * @return $this
      */
@@ -643,12 +693,22 @@ class Position extends \Google\Protobuf\Internal\Message
      * - "yaw" indicates a relative rotation about the vertical axis
      * TODO: REMOVE/INTEGRATE
      *
-     * Generated from protobuf field <code>uint32 ground_speed = 15;</code>
+     * Generated from protobuf field <code>optional uint32 ground_speed = 15;</code>
      * @return int
      */
     public function getGroundSpeed()
     {
-        return $this->ground_speed;
+        return isset($this->ground_speed) ? $this->ground_speed : 0;
+    }
+
+    public function hasGroundSpeed()
+    {
+        return isset($this->ground_speed);
+    }
+
+    public function clearGroundSpeed()
+    {
+        unset($this->ground_speed);
     }
 
     /**
@@ -659,7 +719,7 @@ class Position extends \Google\Protobuf\Internal\Message
      * - "yaw" indicates a relative rotation about the vertical axis
      * TODO: REMOVE/INTEGRATE
      *
-     * Generated from protobuf field <code>uint32 ground_speed = 15;</code>
+     * Generated from protobuf field <code>optional uint32 ground_speed = 15;</code>
      * @param int $var
      * @return $this
      */
@@ -674,18 +734,28 @@ class Position extends \Google\Protobuf\Internal\Message
     /**
      * TODO: REPLACE
      *
-     * Generated from protobuf field <code>uint32 ground_track = 16;</code>
+     * Generated from protobuf field <code>optional uint32 ground_track = 16;</code>
      * @return int
      */
     public function getGroundTrack()
     {
-        return $this->ground_track;
+        return isset($this->ground_track) ? $this->ground_track : 0;
+    }
+
+    public function hasGroundTrack()
+    {
+        return isset($this->ground_track);
+    }
+
+    public function clearGroundTrack()
+    {
+        unset($this->ground_track);
     }
 
     /**
      * TODO: REPLACE
      *
-     * Generated from protobuf field <code>uint32 ground_track = 16;</code>
+     * Generated from protobuf field <code>optional uint32 ground_track = 16;</code>
      * @param int $var
      * @return $this
      */

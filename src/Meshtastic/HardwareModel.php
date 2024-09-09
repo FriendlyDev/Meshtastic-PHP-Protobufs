@@ -479,6 +479,33 @@ class HardwareModel
      */
     const RADIOMASTER_900_BANDIT = 74;
     /**
+     * Minewsemi ME25LS01 (ME25LE01_V1.0). NRF52840 w/ LR1110 radio, buttons and leds and pins.
+     *
+     * Generated from protobuf enum <code>ME25LS01_4Y10TD = 75;</code>
+     */
+    const ME25LS01_4Y10TD = 75;
+    /**
+     * RP2040_FEATHER_RFM95
+     * Adafruit Feather RP2040 with RFM95 LoRa Radio RFM95 with SX1272, SSD1306 OLED
+     * https://www.adafruit.com/product/5714
+     * https://www.adafruit.com/product/326
+     * https://www.adafruit.com/product/938
+     *  ^^^ short A0 to switch to I2C address 0x3C
+     *
+     * Generated from protobuf enum <code>RP2040_FEATHER_RFM95 = 76;</code>
+     */
+    const RP2040_FEATHER_RFM95 = 76;
+    /**
+     * M5 esp32 based MCU modules with enclosure, TFT and LORA Shields. All Variants (Basic, Core, Fire, Core2, Paper) https://m5stack.com/ 
+     *
+     * Generated from protobuf enum <code>M5STACK_COREBASIC = 77;</code>
+     */
+    const M5STACK_COREBASIC = 77;
+    /**
+     * Generated from protobuf enum <code>M5STACK_CORE2 = 78;</code>
+     */
+    const M5STACK_CORE2 = 78;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -562,6 +589,10 @@ class HardwareModel
         self::RAK3172 => 'RAK3172',
         self::WIO_E5 => 'WIO_E5',
         self::RADIOMASTER_900_BANDIT => 'RADIOMASTER_900_BANDIT',
+        self::ME25LS01_4Y10TD => 'ME25LS01_4Y10TD',
+        self::RP2040_FEATHER_RFM95 => 'RP2040_FEATHER_RFM95',
+        self::M5STACK_COREBASIC => 'M5STACK_COREBASIC',
+        self::M5STACK_CORE2 => 'M5STACK_CORE2',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
