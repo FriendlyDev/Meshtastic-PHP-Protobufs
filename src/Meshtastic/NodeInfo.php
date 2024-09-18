@@ -83,9 +83,9 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     /**
      * Number of hops away from us this node is (0 if adjacent)
      *
-     * Generated from protobuf field <code>uint32 hops_away = 9;</code>
+     * Generated from protobuf field <code>optional uint32 hops_away = 9;</code>
      */
-    protected $hops_away = 0;
+    protected $hops_away = null;
     /**
      * True if node is in our favorites list
      * Persists between NodeDB internal clean ups
@@ -375,18 +375,28 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     /**
      * Number of hops away from us this node is (0 if adjacent)
      *
-     * Generated from protobuf field <code>uint32 hops_away = 9;</code>
+     * Generated from protobuf field <code>optional uint32 hops_away = 9;</code>
      * @return int
      */
     public function getHopsAway()
     {
-        return $this->hops_away;
+        return isset($this->hops_away) ? $this->hops_away : 0;
+    }
+
+    public function hasHopsAway()
+    {
+        return isset($this->hops_away);
+    }
+
+    public function clearHopsAway()
+    {
+        unset($this->hops_away);
     }
 
     /**
      * Number of hops away from us this node is (0 if adjacent)
      *
-     * Generated from protobuf field <code>uint32 hops_away = 9;</code>
+     * Generated from protobuf field <code>optional uint32 hops_away = 9;</code>
      * @param int $var
      * @return $this
      */

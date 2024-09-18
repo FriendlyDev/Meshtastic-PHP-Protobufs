@@ -75,6 +75,12 @@ class DeviceMetadata extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool hasRemoteHardware = 10;</code>
      */
     protected $hasRemoteHardware = false;
+    /**
+     * Has PKC capabilities
+     *
+     * Generated from protobuf field <code>bool hasPKC = 11;</code>
+     */
+    protected $hasPKC = false;
 
     /**
      * Constructor.
@@ -102,6 +108,8 @@ class DeviceMetadata extends \Google\Protobuf\Internal\Message
      *           Device hardware model
      *     @type bool $hasRemoteHardware
      *           Has Remote Hardware enabled
+     *     @type bool $hasPKC
+     *           Has PKC capabilities
      * }
      */
     public function __construct($data = NULL) {
@@ -365,6 +373,32 @@ class DeviceMetadata extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->hasRemoteHardware = $var;
+
+        return $this;
+    }
+
+    /**
+     * Has PKC capabilities
+     *
+     * Generated from protobuf field <code>bool hasPKC = 11;</code>
+     * @return bool
+     */
+    public function getHasPKC()
+    {
+        return $this->hasPKC;
+    }
+
+    /**
+     * Has PKC capabilities
+     *
+     * Generated from protobuf field <code>bool hasPKC = 11;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setHasPKC($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->hasPKC = $var;
 
         return $this;
     }

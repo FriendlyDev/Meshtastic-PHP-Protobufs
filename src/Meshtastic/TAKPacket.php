@@ -59,6 +59,9 @@ class TAKPacket extends \Google\Protobuf\Internal\Message
      *           TAK position report
      *     @type \Meshtastic\GeoChat $chat
      *           ATAK GeoChat message
+     *     @type string $detail
+     *           Generic CoT detail XML
+     *           May be compressed / truncated by the sender
      * }
      */
     public function __construct($data = NULL) {
@@ -258,6 +261,39 @@ class TAKPacket extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\GeoChat::class);
         $this->writeOneof(6, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generic CoT detail XML
+     * May be compressed / truncated by the sender
+     *
+     * Generated from protobuf field <code>bytes detail = 7;</code>
+     * @return string
+     */
+    public function getDetail()
+    {
+        return $this->readOneof(7);
+    }
+
+    public function hasDetail()
+    {
+        return $this->hasOneof(7);
+    }
+
+    /**
+     * Generic CoT detail XML
+     * May be compressed / truncated by the sender
+     *
+     * Generated from protobuf field <code>bytes detail = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDetail($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->writeOneof(7, $var);
 
         return $this;
     }

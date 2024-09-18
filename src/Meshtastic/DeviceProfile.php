@@ -46,6 +46,24 @@ class DeviceProfile extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional .meshtastic.LocalModuleConfig module_config = 5;</code>
      */
     protected $module_config = null;
+    /**
+     * Fixed position data
+     *
+     * Generated from protobuf field <code>optional .meshtastic.Position fixed_position = 6;</code>
+     */
+    protected $fixed_position = null;
+    /**
+     * Ringtone for ExternalNotification
+     *
+     * Generated from protobuf field <code>optional string ringtone = 7;</code>
+     */
+    protected $ringtone = null;
+    /**
+     * Predefined messages for CannedMessage
+     *
+     * Generated from protobuf field <code>optional string canned_messages = 8;</code>
+     */
+    protected $canned_messages = null;
 
     /**
      * Constructor.
@@ -63,6 +81,12 @@ class DeviceProfile extends \Google\Protobuf\Internal\Message
      *           The Config of the node
      *     @type \Meshtastic\LocalModuleConfig $module_config
      *           The ModuleConfig of the node
+     *     @type \Meshtastic\Position $fixed_position
+     *           Fixed position data
+     *     @type string $ringtone
+     *           Ringtone for ExternalNotification
+     *     @type string $canned_messages
+     *           Predefined messages for CannedMessage
      * }
      */
     public function __construct($data = NULL) {
@@ -246,6 +270,114 @@ class DeviceProfile extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\LocalModuleConfig::class);
         $this->module_config = $var;
+
+        return $this;
+    }
+
+    /**
+     * Fixed position data
+     *
+     * Generated from protobuf field <code>optional .meshtastic.Position fixed_position = 6;</code>
+     * @return \Meshtastic\Position|null
+     */
+    public function getFixedPosition()
+    {
+        return $this->fixed_position;
+    }
+
+    public function hasFixedPosition()
+    {
+        return isset($this->fixed_position);
+    }
+
+    public function clearFixedPosition()
+    {
+        unset($this->fixed_position);
+    }
+
+    /**
+     * Fixed position data
+     *
+     * Generated from protobuf field <code>optional .meshtastic.Position fixed_position = 6;</code>
+     * @param \Meshtastic\Position $var
+     * @return $this
+     */
+    public function setFixedPosition($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\Position::class);
+        $this->fixed_position = $var;
+
+        return $this;
+    }
+
+    /**
+     * Ringtone for ExternalNotification
+     *
+     * Generated from protobuf field <code>optional string ringtone = 7;</code>
+     * @return string
+     */
+    public function getRingtone()
+    {
+        return isset($this->ringtone) ? $this->ringtone : '';
+    }
+
+    public function hasRingtone()
+    {
+        return isset($this->ringtone);
+    }
+
+    public function clearRingtone()
+    {
+        unset($this->ringtone);
+    }
+
+    /**
+     * Ringtone for ExternalNotification
+     *
+     * Generated from protobuf field <code>optional string ringtone = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRingtone($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ringtone = $var;
+
+        return $this;
+    }
+
+    /**
+     * Predefined messages for CannedMessage
+     *
+     * Generated from protobuf field <code>optional string canned_messages = 8;</code>
+     * @return string
+     */
+    public function getCannedMessages()
+    {
+        return isset($this->canned_messages) ? $this->canned_messages : '';
+    }
+
+    public function hasCannedMessages()
+    {
+        return isset($this->canned_messages);
+    }
+
+    public function clearCannedMessages()
+    {
+        unset($this->canned_messages);
+    }
+
+    /**
+     * Predefined messages for CannedMessage
+     *
+     * Generated from protobuf field <code>optional string canned_messages = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCannedMessages($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->canned_messages = $var;
 
         return $this;
     }

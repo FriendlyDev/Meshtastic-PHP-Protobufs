@@ -100,6 +100,18 @@ class Error
      * Generated from protobuf enum <code>PKI_UNKNOWN_PUBKEY = 35;</code>
      */
     const PKI_UNKNOWN_PUBKEY = 35;
+    /**
+     * Admin packet otherwise checks out, but uses a bogus or expired session key
+     *
+     * Generated from protobuf enum <code>ADMIN_BAD_SESSION_KEY = 36;</code>
+     */
+    const ADMIN_BAD_SESSION_KEY = 36;
+    /**
+     * Admin packet sent using PKC, but not from a public key on the admin key list
+     *
+     * Generated from protobuf enum <code>ADMIN_PUBLIC_KEY_UNAUTHORIZED = 37;</code>
+     */
+    const ADMIN_PUBLIC_KEY_UNAUTHORIZED = 37;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -116,6 +128,8 @@ class Error
         self::NOT_AUTHORIZED => 'NOT_AUTHORIZED',
         self::PKI_FAILED => 'PKI_FAILED',
         self::PKI_UNKNOWN_PUBKEY => 'PKI_UNKNOWN_PUBKEY',
+        self::ADMIN_BAD_SESSION_KEY => 'ADMIN_BAD_SESSION_KEY',
+        self::ADMIN_PUBLIC_KEY_UNAUTHORIZED => 'ADMIN_PUBLIC_KEY_UNAUTHORIZED',
     ];
 
     public static function name($value)
