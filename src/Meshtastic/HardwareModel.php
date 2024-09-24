@@ -163,6 +163,12 @@ class HardwareModel
      */
     const HELTEC_HRU_3601 = 23;
     /**
+     * Heltec Wireless Bridge
+     *
+     * Generated from protobuf enum <code>HELTEC_WIRELESS_BRIDGE = 24;</code>
+     */
+    const HELTEC_WIRELESS_BRIDGE = 24;
+    /**
      * B&Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
      *
      * Generated from protobuf enum <code>STATION_G1 = 25;</code>
@@ -267,7 +273,7 @@ class HardwareModel
      */
     const DR_DEV = 41;
     /**
-     * M5 esp32 based MCU modules with enclosure, TFT and LORA Shields. All Variants (Basic, Core, Fire, Core2, Paper) https://m5stack.com/
+     * M5 esp32 based MCU modules with enclosure, TFT and LORA Shields. All Variants (Basic, Core, Fire, Core2, CoreS3, Paper) https://m5stack.com/
      *
      * Generated from protobuf enum <code>M5STACK = 42;</code>
      */
@@ -496,7 +502,7 @@ class HardwareModel
      */
     const RP2040_FEATHER_RFM95 = 76;
     /**
-     * M5 esp32 based MCU modules with enclosure, TFT and LORA Shields. All Variants (Basic, Core, Fire, Core2, Paper) https://m5stack.com/ 
+     * M5 esp32 based MCU modules with enclosure, TFT and LORA Shields. All Variants (Basic, Core, Fire, Core2, CoreS3, Paper) https://m5stack.com/ 
      *
      * Generated from protobuf enum <code>M5STACK_COREBASIC = 77;</code>
      */
@@ -505,6 +511,18 @@ class HardwareModel
      * Generated from protobuf enum <code>M5STACK_CORE2 = 78;</code>
      */
     const M5STACK_CORE2 = 78;
+    /**
+     * Pico2 with Waveshare Hat, same as Pico 
+     *
+     * Generated from protobuf enum <code>RPI_PICO2 = 79;</code>
+     */
+    const RPI_PICO2 = 79;
+    /**
+     * M5 esp32 based MCU modules with enclosure, TFT and LORA Shields. All Variants (Basic, Core, Fire, Core2, CoreS3, Paper) https://m5stack.com/ 
+     *
+     * Generated from protobuf enum <code>M5STACK_CORES3 = 80;</code>
+     */
+    const M5STACK_CORES3 = 80;
     /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
@@ -539,6 +557,7 @@ class HardwareModel
         self::WIO_WM1110 => 'WIO_WM1110',
         self::RAK2560 => 'RAK2560',
         self::HELTEC_HRU_3601 => 'HELTEC_HRU_3601',
+        self::HELTEC_WIRELESS_BRIDGE => 'HELTEC_WIRELESS_BRIDGE',
         self::STATION_G1 => 'STATION_G1',
         self::RAK11310 => 'RAK11310',
         self::SENSELORA_RP2040 => 'SENSELORA_RP2040',
@@ -593,6 +612,8 @@ class HardwareModel
         self::RP2040_FEATHER_RFM95 => 'RP2040_FEATHER_RFM95',
         self::M5STACK_COREBASIC => 'M5STACK_COREBASIC',
         self::M5STACK_CORE2 => 'M5STACK_CORE2',
+        self::RPI_PICO2 => 'RPI_PICO2',
+        self::M5STACK_CORES3 => 'M5STACK_CORES3',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
