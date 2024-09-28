@@ -22,15 +22,17 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
      */
     protected $enabled = false;
     /**
-     * Interval in seconds of how often we can send a message to the mesh when a state change is detected
+     * Interval in seconds of how often we can send a message to the mesh when a
+     * trigger event is detected
      *
      * Generated from protobuf field <code>uint32 minimum_broadcast_secs = 2;</code>
      */
     protected $minimum_broadcast_secs = 0;
     /**
-     * Interval in seconds of how often we should send a message to the mesh with the current state regardless of changes
-     * When set to 0, only state changes will be broadcasted
-     * Works as a sort of status heartbeat for peace of mind
+     * Interval in seconds of how often we should send a message to the mesh
+     * with the current state regardless of trigger events When set to 0, only
+     * trigger events will be broadcasted Works as a sort of status heartbeat
+     * for peace of mind
      *
      * Generated from protobuf field <code>uint32 state_broadcast_secs = 3;</code>
      */
@@ -57,12 +59,11 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
      */
     protected $monitor_pin = 0;
     /**
-     * Whether or not the GPIO pin state detection is triggered on HIGH (1)
-     * Otherwise LOW (0)
+     * The type of trigger event to be used
      *
-     * Generated from protobuf field <code>bool detection_triggered_high = 7;</code>
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.DetectionSensorConfig.TriggerType detection_trigger_type = 7;</code>
      */
-    protected $detection_triggered_high = false;
+    protected $detection_trigger_type = 0;
     /**
      * Whether or not use INPUT_PULLUP mode for GPIO pin
      * Only applicable if the board uses pull-up resistors on the pin
@@ -80,11 +81,13 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
      *     @type bool $enabled
      *           Whether the Module is enabled
      *     @type int $minimum_broadcast_secs
-     *           Interval in seconds of how often we can send a message to the mesh when a state change is detected
+     *           Interval in seconds of how often we can send a message to the mesh when a
+     *           trigger event is detected
      *     @type int $state_broadcast_secs
-     *           Interval in seconds of how often we should send a message to the mesh with the current state regardless of changes
-     *           When set to 0, only state changes will be broadcasted
-     *           Works as a sort of status heartbeat for peace of mind
+     *           Interval in seconds of how often we should send a message to the mesh
+     *           with the current state regardless of trigger events When set to 0, only
+     *           trigger events will be broadcasted Works as a sort of status heartbeat
+     *           for peace of mind
      *     @type bool $send_bell
      *           Send ASCII bell with alert message
      *           Useful for triggering ext. notification on bell
@@ -94,9 +97,8 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
      *           Maximum length of 20 characters
      *     @type int $monitor_pin
      *           GPIO pin to monitor for state changes
-     *     @type bool $detection_triggered_high
-     *           Whether or not the GPIO pin state detection is triggered on HIGH (1)
-     *           Otherwise LOW (0)
+     *     @type int $detection_trigger_type
+     *           The type of trigger event to be used
      *     @type bool $use_pullup
      *           Whether or not use INPUT_PULLUP mode for GPIO pin
      *           Only applicable if the board uses pull-up resistors on the pin
@@ -134,7 +136,8 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Interval in seconds of how often we can send a message to the mesh when a state change is detected
+     * Interval in seconds of how often we can send a message to the mesh when a
+     * trigger event is detected
      *
      * Generated from protobuf field <code>uint32 minimum_broadcast_secs = 2;</code>
      * @return int
@@ -145,7 +148,8 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Interval in seconds of how often we can send a message to the mesh when a state change is detected
+     * Interval in seconds of how often we can send a message to the mesh when a
+     * trigger event is detected
      *
      * Generated from protobuf field <code>uint32 minimum_broadcast_secs = 2;</code>
      * @param int $var
@@ -160,9 +164,10 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Interval in seconds of how often we should send a message to the mesh with the current state regardless of changes
-     * When set to 0, only state changes will be broadcasted
-     * Works as a sort of status heartbeat for peace of mind
+     * Interval in seconds of how often we should send a message to the mesh
+     * with the current state regardless of trigger events When set to 0, only
+     * trigger events will be broadcasted Works as a sort of status heartbeat
+     * for peace of mind
      *
      * Generated from protobuf field <code>uint32 state_broadcast_secs = 3;</code>
      * @return int
@@ -173,9 +178,10 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Interval in seconds of how often we should send a message to the mesh with the current state regardless of changes
-     * When set to 0, only state changes will be broadcasted
-     * Works as a sort of status heartbeat for peace of mind
+     * Interval in seconds of how often we should send a message to the mesh
+     * with the current state regardless of trigger events When set to 0, only
+     * trigger events will be broadcasted Works as a sort of status heartbeat
+     * for peace of mind
      *
      * Generated from protobuf field <code>uint32 state_broadcast_secs = 3;</code>
      * @param int $var
@@ -274,29 +280,27 @@ class DetectionSensorConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Whether or not the GPIO pin state detection is triggered on HIGH (1)
-     * Otherwise LOW (0)
+     * The type of trigger event to be used
      *
-     * Generated from protobuf field <code>bool detection_triggered_high = 7;</code>
-     * @return bool
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.DetectionSensorConfig.TriggerType detection_trigger_type = 7;</code>
+     * @return int
      */
-    public function getDetectionTriggeredHigh()
+    public function getDetectionTriggerType()
     {
-        return $this->detection_triggered_high;
+        return $this->detection_trigger_type;
     }
 
     /**
-     * Whether or not the GPIO pin state detection is triggered on HIGH (1)
-     * Otherwise LOW (0)
+     * The type of trigger event to be used
      *
-     * Generated from protobuf field <code>bool detection_triggered_high = 7;</code>
-     * @param bool $var
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.DetectionSensorConfig.TriggerType detection_trigger_type = 7;</code>
+     * @param int $var
      * @return $this
      */
-    public function setDetectionTriggeredHigh($var)
+    public function setDetectionTriggerType($var)
     {
-        GPBUtil::checkBool($var);
-        $this->detection_triggered_high = $var;
+        GPBUtil::checkEnum($var, \Meshtastic\ModuleConfig\DetectionSensorConfig\TriggerType::class);
+        $this->detection_trigger_type = $var;
 
         return $this;
     }

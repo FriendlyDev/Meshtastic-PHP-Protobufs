@@ -524,6 +524,24 @@ class HardwareModel
      */
     const M5STACK_CORES3 = 80;
     /**
+     * Seeed XIAO S3 DK
+     *
+     * Generated from protobuf enum <code>SEEED_XIAO_S3 = 81;</code>
+     */
+    const SEEED_XIAO_S3 = 81;
+    /**
+     * Nordic nRF52840+Semtech SX1262 LoRa BLE Combo Module. nRF52840+SX1262 MS24SF1
+     *
+     * Generated from protobuf enum <code>MS24SF1 = 82;</code>
+     */
+    const MS24SF1 = 82;
+    /**
+     * Lilygo TLora-C6 with the new ESP32-C6 MCU
+     *
+     * Generated from protobuf enum <code>TLORA_C6 = 83;</code>
+     */
+    const TLORA_C6 = 83;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -614,6 +632,9 @@ class HardwareModel
         self::M5STACK_CORE2 => 'M5STACK_CORE2',
         self::RPI_PICO2 => 'RPI_PICO2',
         self::M5STACK_CORES3 => 'M5STACK_CORES3',
+        self::SEEED_XIAO_S3 => 'SEEED_XIAO_S3',
+        self::MS24SF1 => 'MS24SF1',
+        self::TLORA_C6 => 'TLORA_C6',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
