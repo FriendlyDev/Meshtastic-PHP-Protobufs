@@ -61,7 +61,7 @@ class TAKPacket extends \Google\Protobuf\Internal\Message
      *           ATAK GeoChat message
      *     @type string $detail
      *           Generic CoT detail XML
-     *           May be compressed / truncated by the sender
+     *           May be compressed / truncated by the sender (EUD)
      * }
      */
     public function __construct($data = NULL) {
@@ -267,7 +267,7 @@ class TAKPacket extends \Google\Protobuf\Internal\Message
 
     /**
      * Generic CoT detail XML
-     * May be compressed / truncated by the sender
+     * May be compressed / truncated by the sender (EUD)
      *
      * Generated from protobuf field <code>bytes detail = 7;</code>
      * @return string
@@ -284,7 +284,7 @@ class TAKPacket extends \Google\Protobuf\Internal\Message
 
     /**
      * Generic CoT detail XML
-     * May be compressed / truncated by the sender
+     * May be compressed / truncated by the sender (EUD)
      *
      * Generated from protobuf field <code>bytes detail = 7;</code>
      * @param string $var
