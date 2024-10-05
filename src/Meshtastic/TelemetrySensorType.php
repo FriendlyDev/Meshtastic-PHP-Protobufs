@@ -193,6 +193,18 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>CUSTOM_SENSOR = 29;</code>
      */
     const CUSTOM_SENSOR = 29;
+    /**
+     * MAX30102 Pulse Oximeter and Heart-Rate Sensor 
+     *
+     * Generated from protobuf enum <code>MAX30102 = 30;</code>
+     */
+    const MAX30102 = 30;
+    /**
+     * MLX90614 non-contact IR temperature sensor.
+     *
+     * Generated from protobuf enum <code>MLX90614 = 31;</code>
+     */
+    const MLX90614 = 31;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -225,6 +237,8 @@ class TelemetrySensorType
         self::ICM20948 => 'ICM20948',
         self::MAX17048 => 'MAX17048',
         self::CUSTOM_SENSOR => 'CUSTOM_SENSOR',
+        self::MAX30102 => 'MAX30102',
+        self::MLX90614 => 'MLX90614',
     ];
 
     public static function name($value)

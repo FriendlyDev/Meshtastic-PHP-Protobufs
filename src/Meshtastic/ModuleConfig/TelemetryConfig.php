@@ -80,6 +80,20 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool power_screen_enabled = 10;</code>
      */
     protected $power_screen_enabled = false;
+    /**
+     * Preferences for the (Health) Telemetry Module
+     * Enable/Disable the telemetry measurement module measurement collection
+     *
+     * Generated from protobuf field <code>bool health_measurement_enabled = 11;</code>
+     */
+    protected $health_measurement_enabled = false;
+    /**
+     * Interval in seconds of how often we should try to send our
+     * health metrics to the mesh
+     *
+     * Generated from protobuf field <code>uint32 health_update_interval = 12;</code>
+     */
+    protected $health_update_interval = 0;
 
     /**
      * Constructor.
@@ -113,6 +127,12 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      *     @type bool $power_screen_enabled
      *           Interval in seconds of how often we should try to send our
      *           air quality metrics to the mesh
+     *     @type bool $health_measurement_enabled
+     *           Preferences for the (Health) Telemetry Module
+     *           Enable/Disable the telemetry measurement module measurement collection
+     *     @type int $health_update_interval
+     *           Interval in seconds of how often we should try to send our
+     *           health metrics to the mesh
      * }
      */
     public function __construct($data = NULL) {
@@ -386,6 +406,62 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->power_screen_enabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Preferences for the (Health) Telemetry Module
+     * Enable/Disable the telemetry measurement module measurement collection
+     *
+     * Generated from protobuf field <code>bool health_measurement_enabled = 11;</code>
+     * @return bool
+     */
+    public function getHealthMeasurementEnabled()
+    {
+        return $this->health_measurement_enabled;
+    }
+
+    /**
+     * Preferences for the (Health) Telemetry Module
+     * Enable/Disable the telemetry measurement module measurement collection
+     *
+     * Generated from protobuf field <code>bool health_measurement_enabled = 11;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setHealthMeasurementEnabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->health_measurement_enabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Interval in seconds of how often we should try to send our
+     * health metrics to the mesh
+     *
+     * Generated from protobuf field <code>uint32 health_update_interval = 12;</code>
+     * @return int
+     */
+    public function getHealthUpdateInterval()
+    {
+        return $this->health_update_interval;
+    }
+
+    /**
+     * Interval in seconds of how often we should try to send our
+     * health metrics to the mesh
+     *
+     * Generated from protobuf field <code>uint32 health_update_interval = 12;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setHealthUpdateInterval($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->health_update_interval = $var;
 
         return $this;
     }

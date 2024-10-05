@@ -40,7 +40,7 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      */
     protected $num_packets_tx = 0;
     /**
-     * Number of packets received good
+     * Number of packets received (both good and bad)
      *
      * Generated from protobuf field <code>uint32 num_packets_rx = 5;</code>
      */
@@ -63,6 +63,26 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 num_total_nodes = 8;</code>
      */
     protected $num_total_nodes = 0;
+    /**
+     * Number of received packets that were duplicates (due to multiple nodes relaying).
+     * If this number is high, there are nodes in the mesh relaying packets when it's unnecessary, for example due to the ROUTER/REPEATER role.
+     *
+     * Generated from protobuf field <code>uint32 num_rx_dupe = 9;</code>
+     */
+    protected $num_rx_dupe = 0;
+    /**
+     * Number of packets we transmitted that were a relay for others (not originating from ourselves).
+     *
+     * Generated from protobuf field <code>uint32 num_tx_relay = 10;</code>
+     */
+    protected $num_tx_relay = 0;
+    /**
+     * Number of times we canceled a packet to be relayed, because someone else did it before us.
+     * This will always be zero for ROUTERs/REPEATERs. If this number is high, some other node(s) is/are relaying faster than you.
+     *
+     * Generated from protobuf field <code>uint32 num_tx_relay_canceled = 11;</code>
+     */
+    protected $num_tx_relay_canceled = 0;
 
     /**
      * Constructor.
@@ -79,13 +99,21 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      *     @type int $num_packets_tx
      *           Number of packets sent
      *     @type int $num_packets_rx
-     *           Number of packets received good
+     *           Number of packets received (both good and bad)
      *     @type int $num_packets_rx_bad
      *           Number of packets received that are malformed or violate the protocol
      *     @type int $num_online_nodes
      *           Number of nodes online (in the past 2 hours)
      *     @type int $num_total_nodes
      *           Number of nodes total
+     *     @type int $num_rx_dupe
+     *           Number of received packets that were duplicates (due to multiple nodes relaying).
+     *           If this number is high, there are nodes in the mesh relaying packets when it's unnecessary, for example due to the ROUTER/REPEATER role.
+     *     @type int $num_tx_relay
+     *           Number of packets we transmitted that were a relay for others (not originating from ourselves).
+     *     @type int $num_tx_relay_canceled
+     *           Number of times we canceled a packet to be relayed, because someone else did it before us.
+     *           This will always be zero for ROUTERs/REPEATERs. If this number is high, some other node(s) is/are relaying faster than you.
      * }
      */
     public function __construct($data = NULL) {
@@ -198,7 +226,7 @@ class LocalStats extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Number of packets received good
+     * Number of packets received (both good and bad)
      *
      * Generated from protobuf field <code>uint32 num_packets_rx = 5;</code>
      * @return int
@@ -209,7 +237,7 @@ class LocalStats extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Number of packets received good
+     * Number of packets received (both good and bad)
      *
      * Generated from protobuf field <code>uint32 num_packets_rx = 5;</code>
      * @param int $var
@@ -297,6 +325,88 @@ class LocalStats extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->num_total_nodes = $var;
+
+        return $this;
+    }
+
+    /**
+     * Number of received packets that were duplicates (due to multiple nodes relaying).
+     * If this number is high, there are nodes in the mesh relaying packets when it's unnecessary, for example due to the ROUTER/REPEATER role.
+     *
+     * Generated from protobuf field <code>uint32 num_rx_dupe = 9;</code>
+     * @return int
+     */
+    public function getNumRxDupe()
+    {
+        return $this->num_rx_dupe;
+    }
+
+    /**
+     * Number of received packets that were duplicates (due to multiple nodes relaying).
+     * If this number is high, there are nodes in the mesh relaying packets when it's unnecessary, for example due to the ROUTER/REPEATER role.
+     *
+     * Generated from protobuf field <code>uint32 num_rx_dupe = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNumRxDupe($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->num_rx_dupe = $var;
+
+        return $this;
+    }
+
+    /**
+     * Number of packets we transmitted that were a relay for others (not originating from ourselves).
+     *
+     * Generated from protobuf field <code>uint32 num_tx_relay = 10;</code>
+     * @return int
+     */
+    public function getNumTxRelay()
+    {
+        return $this->num_tx_relay;
+    }
+
+    /**
+     * Number of packets we transmitted that were a relay for others (not originating from ourselves).
+     *
+     * Generated from protobuf field <code>uint32 num_tx_relay = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNumTxRelay($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->num_tx_relay = $var;
+
+        return $this;
+    }
+
+    /**
+     * Number of times we canceled a packet to be relayed, because someone else did it before us.
+     * This will always be zero for ROUTERs/REPEATERs. If this number is high, some other node(s) is/are relaying faster than you.
+     *
+     * Generated from protobuf field <code>uint32 num_tx_relay_canceled = 11;</code>
+     * @return int
+     */
+    public function getNumTxRelayCanceled()
+    {
+        return $this->num_tx_relay_canceled;
+    }
+
+    /**
+     * Number of times we canceled a packet to be relayed, because someone else did it before us.
+     * This will always be zero for ROUTERs/REPEATERs. If this number is high, some other node(s) is/are relaying faster than you.
+     *
+     * Generated from protobuf field <code>uint32 num_tx_relay_canceled = 11;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNumTxRelayCanceled($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->num_tx_relay_canceled = $var;
 
         return $this;
     }
