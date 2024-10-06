@@ -60,22 +60,20 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      */
     protected $air_quality_interval = 0;
     /**
-     * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * Enable/disable Power metrics
      *
      * Generated from protobuf field <code>bool power_measurement_enabled = 8;</code>
      */
     protected $power_measurement_enabled = false;
     /**
      * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * power metrics to the mesh
      *
      * Generated from protobuf field <code>uint32 power_update_interval = 9;</code>
      */
     protected $power_update_interval = 0;
     /**
-     * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * Enable/Disable the power measurement module on-device display
      *
      * Generated from protobuf field <code>bool power_screen_enabled = 10;</code>
      */
@@ -94,6 +92,12 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 health_update_interval = 12;</code>
      */
     protected $health_update_interval = 0;
+    /**
+     * Enable/Disable the health telemetry module on-device display
+     *
+     * Generated from protobuf field <code>bool health_screen_enabled = 13;</code>
+     */
+    protected $health_screen_enabled = false;
 
     /**
      * Constructor.
@@ -119,20 +123,20 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      *           Interval in seconds of how often we should try to send our
      *           air quality metrics to the mesh
      *     @type bool $power_measurement_enabled
-     *           Interval in seconds of how often we should try to send our
-     *           air quality metrics to the mesh
+     *           Enable/disable Power metrics
      *     @type int $power_update_interval
      *           Interval in seconds of how often we should try to send our
-     *           air quality metrics to the mesh
+     *           power metrics to the mesh
      *     @type bool $power_screen_enabled
-     *           Interval in seconds of how often we should try to send our
-     *           air quality metrics to the mesh
+     *           Enable/Disable the power measurement module on-device display
      *     @type bool $health_measurement_enabled
      *           Preferences for the (Health) Telemetry Module
      *           Enable/Disable the telemetry measurement module measurement collection
      *     @type int $health_update_interval
      *           Interval in seconds of how often we should try to send our
      *           health metrics to the mesh
+     *     @type bool $health_screen_enabled
+     *           Enable/Disable the health telemetry module on-device display
      * }
      */
     public function __construct($data = NULL) {
@@ -327,8 +331,7 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * Enable/disable Power metrics
      *
      * Generated from protobuf field <code>bool power_measurement_enabled = 8;</code>
      * @return bool
@@ -339,8 +342,7 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * Enable/disable Power metrics
      *
      * Generated from protobuf field <code>bool power_measurement_enabled = 8;</code>
      * @param bool $var
@@ -356,7 +358,7 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
 
     /**
      * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * power metrics to the mesh
      *
      * Generated from protobuf field <code>uint32 power_update_interval = 9;</code>
      * @return int
@@ -368,7 +370,7 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
 
     /**
      * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * power metrics to the mesh
      *
      * Generated from protobuf field <code>uint32 power_update_interval = 9;</code>
      * @param int $var
@@ -383,8 +385,7 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * Enable/Disable the power measurement module on-device display
      *
      * Generated from protobuf field <code>bool power_screen_enabled = 10;</code>
      * @return bool
@@ -395,8 +396,7 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Interval in seconds of how often we should try to send our
-     * air quality metrics to the mesh
+     * Enable/Disable the power measurement module on-device display
      *
      * Generated from protobuf field <code>bool power_screen_enabled = 10;</code>
      * @param bool $var
@@ -462,6 +462,32 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->health_update_interval = $var;
+
+        return $this;
+    }
+
+    /**
+     * Enable/Disable the health telemetry module on-device display
+     *
+     * Generated from protobuf field <code>bool health_screen_enabled = 13;</code>
+     * @return bool
+     */
+    public function getHealthScreenEnabled()
+    {
+        return $this->health_screen_enabled;
+    }
+
+    /**
+     * Enable/Disable the health telemetry module on-device display
+     *
+     * Generated from protobuf field <code>bool health_screen_enabled = 13;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setHealthScreenEnabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->health_screen_enabled = $var;
 
         return $this;
     }

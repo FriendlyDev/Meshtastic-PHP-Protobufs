@@ -125,6 +125,24 @@ class RegionCode
      * Generated from protobuf enum <code>SG_923 = 18;</code>
      */
     const SG_923 = 18;
+    /**
+     * Philippines 433mhz
+     *
+     * Generated from protobuf enum <code>PH_433 = 19;</code>
+     */
+    const PH_433 = 19;
+    /**
+     * Philippines 868mhz
+     *
+     * Generated from protobuf enum <code>PH_868 = 20;</code>
+     */
+    const PH_868 = 20;
+    /**
+     * Philippines 915mhz
+     *
+     * Generated from protobuf enum <code>PH_915 = 21;</code>
+     */
+    const PH_915 = 21;
 
     private static $valueToName = [
         self::PBUNSET => 'UNSET',
@@ -146,6 +164,9 @@ class RegionCode
         self::MY_433 => 'MY_433',
         self::MY_919 => 'MY_919',
         self::SG_923 => 'SG_923',
+        self::PH_433 => 'PH_433',
+        self::PH_868 => 'PH_868',
+        self::PH_915 => 'PH_915',
     ];
 
     public static function name($value)
