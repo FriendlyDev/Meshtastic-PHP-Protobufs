@@ -200,11 +200,17 @@ class TelemetrySensorType
      */
     const MAX30102 = 30;
     /**
-     * MLX90614 non-contact IR temperature sensor.
+     * MLX90614 non-contact IR temperature sensor
      *
      * Generated from protobuf enum <code>MLX90614 = 31;</code>
      */
     const MLX90614 = 31;
+    /**
+     * SCD40/SCD41 CO2, humidity, temperature sensor
+     *
+     * Generated from protobuf enum <code>SCD4X = 32;</code>
+     */
+    const SCD4X = 32;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -239,6 +245,7 @@ class TelemetrySensorType
         self::CUSTOM_SENSOR => 'CUSTOM_SENSOR',
         self::MAX30102 => 'MAX30102',
         self::MLX90614 => 'MLX90614',
+        self::SCD4X => 'SCD4X',
     ];
 
     public static function name($value)

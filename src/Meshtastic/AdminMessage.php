@@ -112,6 +112,12 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *     @type int $set_time_only
      *           Set time only on the node
      *           Convenience method to set the time on the node (as Net quality) without any other position data
+     *     @type bool $get_ui_config_request
+     *           Tell the node to send the stored ui data.
+     *     @type \Meshtastic\DeviceUIConfig $get_ui_config_response
+     *           Reply stored device ui data.
+     *     @type \Meshtastic\DeviceUIConfig $store_ui_config
+     *           Tell the node to store UI data persistently.
      *     @type bool $begin_edit_settings
      *           Begins an edit transaction for config, module config, owner, and channel settings changes
      *           This will delay the standard *implicit* save to the file system and subsequent reboot behavior until committed (commit_edit_settings)
@@ -1234,6 +1240,99 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->writeOneof(43, $var);
+
+        return $this;
+    }
+
+    /**
+     * Tell the node to send the stored ui data.
+     *
+     * Generated from protobuf field <code>bool get_ui_config_request = 44;</code>
+     * @return bool
+     */
+    public function getGetUiConfigRequest()
+    {
+        return $this->readOneof(44);
+    }
+
+    public function hasGetUiConfigRequest()
+    {
+        return $this->hasOneof(44);
+    }
+
+    /**
+     * Tell the node to send the stored ui data.
+     *
+     * Generated from protobuf field <code>bool get_ui_config_request = 44;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setGetUiConfigRequest($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->writeOneof(44, $var);
+
+        return $this;
+    }
+
+    /**
+     * Reply stored device ui data.
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig get_ui_config_response = 45;</code>
+     * @return \Meshtastic\DeviceUIConfig|null
+     */
+    public function getGetUiConfigResponse()
+    {
+        return $this->readOneof(45);
+    }
+
+    public function hasGetUiConfigResponse()
+    {
+        return $this->hasOneof(45);
+    }
+
+    /**
+     * Reply stored device ui data.
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig get_ui_config_response = 45;</code>
+     * @param \Meshtastic\DeviceUIConfig $var
+     * @return $this
+     */
+    public function setGetUiConfigResponse($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\DeviceUIConfig::class);
+        $this->writeOneof(45, $var);
+
+        return $this;
+    }
+
+    /**
+     * Tell the node to store UI data persistently.
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig store_ui_config = 46;</code>
+     * @return \Meshtastic\DeviceUIConfig|null
+     */
+    public function getStoreUiConfig()
+    {
+        return $this->readOneof(46);
+    }
+
+    public function hasStoreUiConfig()
+    {
+        return $this->hasOneof(46);
+    }
+
+    /**
+     * Tell the node to store UI data persistently.
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig store_ui_config = 46;</code>
+     * @param \Meshtastic\DeviceUIConfig $var
+     * @return $this
+     */
+    public function setStoreUiConfig($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\DeviceUIConfig::class);
+        $this->writeOneof(46, $var);
 
         return $this;
     }

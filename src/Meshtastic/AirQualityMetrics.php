@@ -87,6 +87,12 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional uint32 particles_100um = 12;</code>
      */
     protected $particles_100um = null;
+    /**
+     * 10.0um Particle Count
+     *
+     * Generated from protobuf field <code>optional uint32 co2 = 13;</code>
+     */
+    protected $co2 = null;
 
     /**
      * Constructor.
@@ -117,6 +123,8 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
      *     @type int $particles_50um
      *           5.0um Particle Count
      *     @type int $particles_100um
+     *           10.0um Particle Count
+     *     @type int $co2
      *           10.0um Particle Count
      * }
      */
@@ -553,6 +561,42 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->particles_100um = $var;
+
+        return $this;
+    }
+
+    /**
+     * 10.0um Particle Count
+     *
+     * Generated from protobuf field <code>optional uint32 co2 = 13;</code>
+     * @return int
+     */
+    public function getCo2()
+    {
+        return isset($this->co2) ? $this->co2 : 0;
+    }
+
+    public function hasCo2()
+    {
+        return isset($this->co2);
+    }
+
+    public function clearCo2()
+    {
+        unset($this->co2);
+    }
+
+    /**
+     * 10.0um Particle Count
+     *
+     * Generated from protobuf field <code>optional uint32 co2 = 13;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCo2($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->co2 = $var;
 
         return $this;
     }

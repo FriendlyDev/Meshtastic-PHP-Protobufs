@@ -41,12 +41,19 @@ class RebroadcastMode
      * Generated from protobuf enum <code>KNOWN_ONLY = 3;</code>
      */
     const KNOWN_ONLY = 3;
+    /**
+     * Only permitted for SENSOR, TRACKER and TAK_TRACKER roles, this will inhibit all rebroadcasts, not unlike CLIENT_MUTE role.
+     *
+     * Generated from protobuf enum <code>NONE = 4;</code>
+     */
+    const NONE = 4;
 
     private static $valueToName = [
         self::ALL => 'ALL',
         self::ALL_SKIP_DECODING => 'ALL_SKIP_DECODING',
         self::LOCAL_ONLY => 'LOCAL_ONLY',
         self::KNOWN_ONLY => 'KNOWN_ONLY',
+        self::NONE => 'NONE',
     ];
 
     public static function name($value)

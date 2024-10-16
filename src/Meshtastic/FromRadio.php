@@ -74,6 +74,8 @@ class FromRadio extends \Google\Protobuf\Internal\Message
      *           File system manifest messages
      *     @type \Meshtastic\ClientNotification $clientNotification
      *           Notification message to the client
+     *     @type \Meshtastic\DeviceUIConfig $deviceuiConfig
+     *           Persistent data for device-ui
      * }
      */
     public function __construct($data = NULL) {
@@ -586,6 +588,37 @@ class FromRadio extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\ClientNotification::class);
         $this->writeOneof(16, $var);
+
+        return $this;
+    }
+
+    /**
+     * Persistent data for device-ui
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig deviceuiConfig = 17;</code>
+     * @return \Meshtastic\DeviceUIConfig|null
+     */
+    public function getDeviceuiConfig()
+    {
+        return $this->readOneof(17);
+    }
+
+    public function hasDeviceuiConfig()
+    {
+        return $this->hasOneof(17);
+    }
+
+    /**
+     * Persistent data for device-ui
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig deviceuiConfig = 17;</code>
+     * @param \Meshtastic\DeviceUIConfig $var
+     * @return $this
+     */
+    public function setDeviceuiConfig($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\DeviceUIConfig::class);
+        $this->writeOneof(17, $var);
 
         return $this;
     }

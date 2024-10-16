@@ -66,6 +66,12 @@ class ConfigType
      * Generated from protobuf enum <code>SESSIONKEY_CONFIG = 8;</code>
      */
     const SESSIONKEY_CONFIG = 8;
+    /**
+     * device-ui config
+     *
+     * Generated from protobuf enum <code>DEVICEUI_CONFIG = 9;</code>
+     */
+    const DEVICEUI_CONFIG = 9;
 
     private static $valueToName = [
         self::DEVICE_CONFIG => 'DEVICE_CONFIG',
@@ -77,6 +83,7 @@ class ConfigType
         self::BLUETOOTH_CONFIG => 'BLUETOOTH_CONFIG',
         self::SECURITY_CONFIG => 'SECURITY_CONFIG',
         self::SESSIONKEY_CONFIG => 'SESSIONKEY_CONFIG',
+        self::DEVICEUI_CONFIG => 'DEVICEUI_CONFIG',
     ];
 
     public static function name($value)
