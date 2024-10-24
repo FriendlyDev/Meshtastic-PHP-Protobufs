@@ -38,6 +38,12 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 min_app_version = 11;</code>
      */
     protected $min_app_version = 0;
+    /**
+     * Unique hardware identifier for this device
+     *
+     * Generated from protobuf field <code>bytes device_id = 12;</code>
+     */
+    protected $device_id = '';
 
     /**
      * Constructor.
@@ -54,6 +60,8 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
      *     @type int $min_app_version
      *           The minimum app version that can talk to this device.
      *           Phone/PC apps should compare this to their build number and if too low tell the user they must update their app
+     *     @type string $device_id
+     *           Unique hardware identifier for this device
      * }
      */
     public function __construct($data = NULL) {
@@ -141,6 +149,32 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->min_app_version = $var;
+
+        return $this;
+    }
+
+    /**
+     * Unique hardware identifier for this device
+     *
+     * Generated from protobuf field <code>bytes device_id = 12;</code>
+     * @return string
+     */
+    public function getDeviceId()
+    {
+        return $this->device_id;
+    }
+
+    /**
+     * Unique hardware identifier for this device
+     *
+     * Generated from protobuf field <code>bytes device_id = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDeviceId($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->device_id = $var;
 
         return $this;
     }

@@ -47,6 +47,13 @@ class RebroadcastMode
      * Generated from protobuf enum <code>NONE = 4;</code>
      */
     const NONE = 4;
+    /**
+     * Ignores packets from non-standard portnums such as: TAK, RangeTest, PaxCounter, etc.
+     * Only rebroadcasts packets with standard portnums: NodeInfo, Text, Position, Telemetry, and Routing.
+     *
+     * Generated from protobuf enum <code>CORE_PORTNUMS_ONLY = 5;</code>
+     */
+    const CORE_PORTNUMS_ONLY = 5;
 
     private static $valueToName = [
         self::ALL => 'ALL',
@@ -54,6 +61,7 @@ class RebroadcastMode
         self::LOCAL_ONLY => 'LOCAL_ONLY',
         self::KNOWN_ONLY => 'KNOWN_ONLY',
         self::NONE => 'NONE',
+        self::CORE_PORTNUMS_ONLY => 'CORE_PORTNUMS_ONLY',
     ];
 
     public static function name($value)
