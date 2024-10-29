@@ -14,51 +14,73 @@ use Google\Protobuf\Internal\GPBUtil;
 class DeviceUIConfig extends \Google\Protobuf\Internal\Message
 {
     /**
+     * A version integer used to invalidate saved files when we make incompatible changes.
+     *
+     * Generated from protobuf field <code>uint32 version = 1;</code>
+     */
+    protected $version = 0;
+    /**
      * TFT display brightness 1..255 
      *
-     * Generated from protobuf field <code>uint32 screen_brightness = 1;</code>
+     * Generated from protobuf field <code>uint32 screen_brightness = 2;</code>
      */
     protected $screen_brightness = 0;
     /**
      * Screen timeout 0..900 
      *
-     * Generated from protobuf field <code>uint32 screen_timeout = 2;</code>
+     * Generated from protobuf field <code>uint32 screen_timeout = 3;</code>
      */
     protected $screen_timeout = 0;
     /**
-     * Screen lock enabled 
+     * Screen/Settings lock enabled 
      *
-     * Generated from protobuf field <code>bool screen_lock = 3;</code>
+     * Generated from protobuf field <code>bool screen_lock = 4;</code>
      */
     protected $screen_lock = false;
     /**
+     * Generated from protobuf field <code>bool settings_lock = 5;</code>
+     */
+    protected $settings_lock = false;
+    /**
+     * Generated from protobuf field <code>uint32 pin_code = 6;</code>
+     */
+    protected $pin_code = 0;
+    /**
      * Color theme 
      *
-     * Generated from protobuf field <code>.meshtastic.Theme theme = 4;</code>
+     * Generated from protobuf field <code>.meshtastic.Theme theme = 7;</code>
      */
     protected $theme = 0;
     /**
-     * Audible message alert enabled
+     * Audible message, banner and ring tone
      *
-     * Generated from protobuf field <code>bool alert_enabled = 5;</code>
+     * Generated from protobuf field <code>bool alert_enabled = 8;</code>
      */
     protected $alert_enabled = false;
     /**
+     * Generated from protobuf field <code>bool banner_enabled = 9;</code>
+     */
+    protected $banner_enabled = false;
+    /**
+     * Generated from protobuf field <code>uint32 ring_tone_id = 10;</code>
+     */
+    protected $ring_tone_id = 0;
+    /**
      * Localization 
      *
-     * Generated from protobuf field <code>.meshtastic.Language language = 6;</code>
+     * Generated from protobuf field <code>.meshtastic.Language language = 11;</code>
      */
     protected $language = 0;
     /**
      * Node list filter 
      *
-     * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 7;</code>
+     * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 12;</code>
      */
     protected $node_filter = null;
     /**
-     * Node list highlightening 
+     * Node list highlightening
      *
-     * Generated from protobuf field <code>.meshtastic.NodeHighlight node_highlight = 8;</code>
+     * Generated from protobuf field <code>.meshtastic.NodeHighlight node_highlight = 13;</code>
      */
     protected $node_highlight = null;
 
@@ -68,22 +90,28 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type int $version
+     *           A version integer used to invalidate saved files when we make incompatible changes.
      *     @type int $screen_brightness
      *           TFT display brightness 1..255 
      *     @type int $screen_timeout
      *           Screen timeout 0..900 
      *     @type bool $screen_lock
-     *           Screen lock enabled 
+     *           Screen/Settings lock enabled 
+     *     @type bool $settings_lock
+     *     @type int $pin_code
      *     @type int $theme
      *           Color theme 
      *     @type bool $alert_enabled
-     *           Audible message alert enabled
+     *           Audible message, banner and ring tone
+     *     @type bool $banner_enabled
+     *     @type int $ring_tone_id
      *     @type int $language
      *           Localization 
      *     @type \Meshtastic\NodeFilter $node_filter
      *           Node list filter 
      *     @type \Meshtastic\NodeHighlight $node_highlight
-     *           Node list highlightening 
+     *           Node list highlightening
      * }
      */
     public function __construct($data = NULL) {
@@ -92,9 +120,35 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * A version integer used to invalidate saved files when we make incompatible changes.
+     *
+     * Generated from protobuf field <code>uint32 version = 1;</code>
+     * @return int
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     * A version integer used to invalidate saved files when we make incompatible changes.
+     *
+     * Generated from protobuf field <code>uint32 version = 1;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setVersion($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->version = $var;
+
+        return $this;
+    }
+
+    /**
      * TFT display brightness 1..255 
      *
-     * Generated from protobuf field <code>uint32 screen_brightness = 1;</code>
+     * Generated from protobuf field <code>uint32 screen_brightness = 2;</code>
      * @return int
      */
     public function getScreenBrightness()
@@ -105,7 +159,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     /**
      * TFT display brightness 1..255 
      *
-     * Generated from protobuf field <code>uint32 screen_brightness = 1;</code>
+     * Generated from protobuf field <code>uint32 screen_brightness = 2;</code>
      * @param int $var
      * @return $this
      */
@@ -120,7 +174,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     /**
      * Screen timeout 0..900 
      *
-     * Generated from protobuf field <code>uint32 screen_timeout = 2;</code>
+     * Generated from protobuf field <code>uint32 screen_timeout = 3;</code>
      * @return int
      */
     public function getScreenTimeout()
@@ -131,7 +185,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     /**
      * Screen timeout 0..900 
      *
-     * Generated from protobuf field <code>uint32 screen_timeout = 2;</code>
+     * Generated from protobuf field <code>uint32 screen_timeout = 3;</code>
      * @param int $var
      * @return $this
      */
@@ -144,9 +198,9 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Screen lock enabled 
+     * Screen/Settings lock enabled 
      *
-     * Generated from protobuf field <code>bool screen_lock = 3;</code>
+     * Generated from protobuf field <code>bool screen_lock = 4;</code>
      * @return bool
      */
     public function getScreenLock()
@@ -155,9 +209,9 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Screen lock enabled 
+     * Screen/Settings lock enabled 
      *
-     * Generated from protobuf field <code>bool screen_lock = 3;</code>
+     * Generated from protobuf field <code>bool screen_lock = 4;</code>
      * @param bool $var
      * @return $this
      */
@@ -170,9 +224,53 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>bool settings_lock = 5;</code>
+     * @return bool
+     */
+    public function getSettingsLock()
+    {
+        return $this->settings_lock;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool settings_lock = 5;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSettingsLock($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->settings_lock = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 pin_code = 6;</code>
+     * @return int
+     */
+    public function getPinCode()
+    {
+        return $this->pin_code;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 pin_code = 6;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPinCode($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->pin_code = $var;
+
+        return $this;
+    }
+
+    /**
      * Color theme 
      *
-     * Generated from protobuf field <code>.meshtastic.Theme theme = 4;</code>
+     * Generated from protobuf field <code>.meshtastic.Theme theme = 7;</code>
      * @return int
      */
     public function getTheme()
@@ -183,7 +281,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     /**
      * Color theme 
      *
-     * Generated from protobuf field <code>.meshtastic.Theme theme = 4;</code>
+     * Generated from protobuf field <code>.meshtastic.Theme theme = 7;</code>
      * @param int $var
      * @return $this
      */
@@ -196,9 +294,9 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Audible message alert enabled
+     * Audible message, banner and ring tone
      *
-     * Generated from protobuf field <code>bool alert_enabled = 5;</code>
+     * Generated from protobuf field <code>bool alert_enabled = 8;</code>
      * @return bool
      */
     public function getAlertEnabled()
@@ -207,9 +305,9 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Audible message alert enabled
+     * Audible message, banner and ring tone
      *
-     * Generated from protobuf field <code>bool alert_enabled = 5;</code>
+     * Generated from protobuf field <code>bool alert_enabled = 8;</code>
      * @param bool $var
      * @return $this
      */
@@ -222,9 +320,53 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>bool banner_enabled = 9;</code>
+     * @return bool
+     */
+    public function getBannerEnabled()
+    {
+        return $this->banner_enabled;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool banner_enabled = 9;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setBannerEnabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->banner_enabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 ring_tone_id = 10;</code>
+     * @return int
+     */
+    public function getRingToneId()
+    {
+        return $this->ring_tone_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 ring_tone_id = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRingToneId($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->ring_tone_id = $var;
+
+        return $this;
+    }
+
+    /**
      * Localization 
      *
-     * Generated from protobuf field <code>.meshtastic.Language language = 6;</code>
+     * Generated from protobuf field <code>.meshtastic.Language language = 11;</code>
      * @return int
      */
     public function getLanguage()
@@ -235,7 +377,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     /**
      * Localization 
      *
-     * Generated from protobuf field <code>.meshtastic.Language language = 6;</code>
+     * Generated from protobuf field <code>.meshtastic.Language language = 11;</code>
      * @param int $var
      * @return $this
      */
@@ -250,7 +392,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     /**
      * Node list filter 
      *
-     * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 7;</code>
+     * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 12;</code>
      * @return \Meshtastic\NodeFilter|null
      */
     public function getNodeFilter()
@@ -271,7 +413,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     /**
      * Node list filter 
      *
-     * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 7;</code>
+     * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 12;</code>
      * @param \Meshtastic\NodeFilter $var
      * @return $this
      */
@@ -284,9 +426,9 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Node list highlightening 
+     * Node list highlightening
      *
-     * Generated from protobuf field <code>.meshtastic.NodeHighlight node_highlight = 8;</code>
+     * Generated from protobuf field <code>.meshtastic.NodeHighlight node_highlight = 13;</code>
      * @return \Meshtastic\NodeHighlight|null
      */
     public function getNodeHighlight()
@@ -305,9 +447,9 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Node list highlightening 
+     * Node list highlightening
      *
-     * Generated from protobuf field <code>.meshtastic.NodeHighlight node_highlight = 8;</code>
+     * Generated from protobuf field <code>.meshtastic.NodeHighlight node_highlight = 13;</code>
      * @param \Meshtastic\NodeHighlight $var
      * @return $this
      */

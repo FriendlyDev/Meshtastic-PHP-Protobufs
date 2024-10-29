@@ -30,6 +30,7 @@ class Config extends \Google\Protobuf\Internal\Message
      *     @type \Meshtastic\Config\BluetoothConfig $bluetooth
      *     @type \Meshtastic\Config\SecurityConfig $security
      *     @type \Meshtastic\Config\SessionkeyConfig $sessionkey
+     *     @type \Meshtastic\DeviceUIConfig $device_ui
      * }
      */
     public function __construct($data = NULL) {
@@ -276,6 +277,33 @@ class Config extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\Config\SessionkeyConfig::class);
         $this->writeOneof(9, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig device_ui = 10;</code>
+     * @return \Meshtastic\DeviceUIConfig|null
+     */
+    public function getDeviceUi()
+    {
+        return $this->readOneof(10);
+    }
+
+    public function hasDeviceUi()
+    {
+        return $this->hasOneof(10);
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig device_ui = 10;</code>
+     * @param \Meshtastic\DeviceUIConfig $var
+     * @return $this
+     */
+    public function setDeviceUi($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\DeviceUIConfig::class);
+        $this->writeOneof(10, $var);
 
         return $this;
     }

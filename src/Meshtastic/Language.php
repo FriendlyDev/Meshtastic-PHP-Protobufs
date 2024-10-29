@@ -73,6 +73,42 @@ class Language
      * Generated from protobuf enum <code>TURKISH = 9;</code>
      */
     const TURKISH = 9;
+    /**
+     * Serbian
+     *
+     * Generated from protobuf enum <code>SERBIAN = 10;</code>
+     */
+    const SERBIAN = 10;
+    /**
+     * Russian
+     *
+     * Generated from protobuf enum <code>RUSSIAN = 11;</code>
+     */
+    const RUSSIAN = 11;
+    /**
+     * Dutch
+     *
+     * Generated from protobuf enum <code>DUTCH = 12;</code>
+     */
+    const DUTCH = 12;
+    /**
+     * Greek
+     *
+     * Generated from protobuf enum <code>GREEK = 13;</code>
+     */
+    const GREEK = 13;
+    /**
+     * Simplified Chinese (experimental)
+     *
+     * Generated from protobuf enum <code>SIMPLIFIED_CHINESE = 30;</code>
+     */
+    const SIMPLIFIED_CHINESE = 30;
+    /**
+     * Traditional Chinese (experimental)
+     *
+     * Generated from protobuf enum <code>TRADITIONAL_CHINESE = 31;</code>
+     */
+    const TRADITIONAL_CHINESE = 31;
 
     private static $valueToName = [
         self::ENGLISH => 'ENGLISH',
@@ -85,6 +121,12 @@ class Language
         self::FINNISH => 'FINNISH',
         self::POLISH => 'POLISH',
         self::TURKISH => 'TURKISH',
+        self::SERBIAN => 'SERBIAN',
+        self::RUSSIAN => 'RUSSIAN',
+        self::DUTCH => 'DUTCH',
+        self::GREEK => 'GREEK',
+        self::SIMPLIFIED_CHINESE => 'SIMPLIFIED_CHINESE',
+        self::TRADITIONAL_CHINESE => 'TRADITIONAL_CHINESE',
     ];
 
     public static function name($value)
