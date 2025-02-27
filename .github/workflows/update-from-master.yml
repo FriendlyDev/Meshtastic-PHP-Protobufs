@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  "0 */3 * * *"
+    - cron: "0 */3 * * *"
   workflow_dispatch:
 
 name: Create PHP protobufs from latest Meshtastic Protobufs
@@ -14,26 +14,6 @@ jobs:
       contents: write
 
     steps:
-      - name: Clone Meshtastic Protobufs repository
-        uses: actions/checkout@v4
-        with:
-          repository: meshtastic/protobufs
-          token: ${{ github.token }}
-          path: ./protobufs
-          fetch-depth: 0
-          fetch-tags: true
-
-      - name: Checkout Meshtastic Protobufs latest release tag
-        run: |
-          cd ./protobufs
-          git reset --hard HEAD
-          LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
-          git checkout $LATEST_TAG
-          cd ..
-          echo "LATEST_TAG=${LATEST_TAG}" >> "$GITHUB_ENV"
-          echo "LATEST_TAG_NUMBER=${LATEST_TAG:1}" >> "$GITHUB_ENV"
-        shell: bash
-
       - name: Checkout current code
         uses: actions/checkout@v4
         with:
@@ -45,6 +25,7 @@ jobs:
 
       - name: Get latest tag of this repository
         run: |
+          set -e
           cd ./php-code
           git checkout master
           git reset --hard HEAD
@@ -59,33 +40,77 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
 
+      - name: Clone Meshtastic Protobufs repository
+        uses: actions/checkout@v4
+        with:
+          repository: meshtastic/protobufs
+          token: ${{ github.token }}
+          path: ./protobufs
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Checkout Meshtastic Protobufs latest release tag
+        run: |
+          set -e
+          cd ./protobufs
+          git reset --hard HEAD
+          LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+          git checkout $LATEST_TAG
+          cd ..
+          echo "LATEST_TAG=${LATEST_TAG}" >> "$GITHUB_ENV"
+          echo "LATEST_TAG_NUMBER=${LATEST_TAG:1}" >> "$GITHUB_ENV"
+        shell: bash
+
+      - name: Install gh CLI
+        run: sudo apt-get update && sudo apt-get install gh -y
+
+      - name: Compare release dates
+        id: compare_releases
+        run: |
+          set -e
+          CURRENT_RELEASE_DATE=$(gh release view "$CURRENT_TAG" --json createdAt --jq '.createdAt' | date -d @$(echo $(date -d "$CURRENT_RELEASE_DATE" +%s)) +%s)
+          LATEST_RELEASE_DATE=$(gh release view "$LATEST_TAG" --json createdAt --jq '.createdAt' | date -d @$(echo $(date -d "$LATEST_RELEASE_DATE" +%s)) +%s)
+
+          echo "CURRENT_RELEASE_DATE=$CURRENT_RELEASE_DATE" >> "$GITHUB_ENV"
+          echo "LATEST_RELEASE_DATE=$LATEST_RELEASE_DATE" >> "$GITHUB_ENV"
+
+          if [ "$LATEST_RELEASE_DATE" -gt "$CURRENT_RELEASE_DATE" ]; then
+            echo "NEW_RELEASE_AVAILABLE=true" >> "$GITHUB_ENV"
+          else
+            echo "NEW_RELEASE_AVAILABLE=false" >> "$GITHUB_ENV"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+
       - name: Show working directory
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         run: ls -lash ./*
         shell: bash
 
       - name: Install Protoc
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         uses: arduino/setup-protoc@v3
 
       - name: Check protoc is installed
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         run: which protoc
         shell: bash
 
       - name: Create output directory
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         run: mkdir -p ./protobufs-output
         shell: bash
 
       - name: Show working directory
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         run: ls -lash ./*
         shell: bash
 
       - name: Convert the nanopb.proto file to proto3
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         run: |
+          set -e
           cd ./protobufs
           sed -i 's/proto2/proto3/g' ./nanopb.proto
           sed -i 's/ \[default = [^;]*//g' ./nanopb.proto
@@ -94,16 +119,18 @@ jobs:
         shell: bash
 
       - name: Generate the PHP files from the protobufs
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         run: |
+          set -e
           cd ./protobufs
           find . -type f -iname '*.proto' -exec protoc --proto_path= --php_out=../protobufs-output {} \;
           cd ..
         shell: bash
 
       - name: Replace the current protobuf PHP files with the ones we just generated
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         run: |
+          set -e
           rm -rf ./php-code/src/GPBMetadata
           rm -rf ./php-code/src/Meshtastic
           mv ./protobufs-output/GPBMetadata ./php-code/src/
@@ -111,22 +138,22 @@ jobs:
         shell: bash
 
       - name: Commit and push changes
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
         run: |
+          set -e
           cd ./php-code
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git add .
           git commit -m "Update protobufs to latest version"
-          git push origin master
-          git tag -a $LATEST_TAG -m "Update protobufs to latest version"
-          git push --tags origin master
+          git tag -a "$LATEST_TAG" HEAD
+          git push origin master --tags
         shell: bash
 
       - name: Create Release
         id: create_release
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
-        uses: actions/create-release@latest
+        if: env.NEW_RELEASE_AVAILABLE == 'true'
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
