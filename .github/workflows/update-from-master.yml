@@ -68,6 +68,8 @@ jobs:
         id: compare_releases
         run: |
           set -e
+          cd ./protobufs
+
           CURRENT_RELEASE_DATE=$(gh release view "$CURRENT_TAG" --json createdAt --jq '.createdAt' | date -d @$(echo $(date -d "$CURRENT_RELEASE_DATE" +%s)) +%s)
           LATEST_RELEASE_DATE=$(gh release view "$LATEST_TAG" --json createdAt --jq '.createdAt' | date -d @$(echo $(date -d "$LATEST_RELEASE_DATE" +%s)) +%s)
 
@@ -79,6 +81,8 @@ jobs:
           else
             echo "NEW_RELEASE_AVAILABLE=false" >> "$GITHUB_ENV"
           fi
+
+          cd ..
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
