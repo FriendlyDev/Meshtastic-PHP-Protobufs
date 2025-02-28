@@ -81,6 +81,13 @@ class DeviceMetadata extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool hasPKC = 11;</code>
      */
     protected $hasPKC = false;
+    /**
+     * Bit field of boolean for excluded modules
+     * (bitwise OR of ExcludedModules)
+     *
+     * Generated from protobuf field <code>uint32 excluded_modules = 12;</code>
+     */
+    protected $excluded_modules = 0;
 
     /**
      * Constructor.
@@ -110,6 +117,9 @@ class DeviceMetadata extends \Google\Protobuf\Internal\Message
      *           Has Remote Hardware enabled
      *     @type bool $hasPKC
      *           Has PKC capabilities
+     *     @type int $excluded_modules
+     *           Bit field of boolean for excluded modules
+     *           (bitwise OR of ExcludedModules)
      * }
      */
     public function __construct($data = NULL) {
@@ -399,6 +409,34 @@ class DeviceMetadata extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->hasPKC = $var;
+
+        return $this;
+    }
+
+    /**
+     * Bit field of boolean for excluded modules
+     * (bitwise OR of ExcludedModules)
+     *
+     * Generated from protobuf field <code>uint32 excluded_modules = 12;</code>
+     * @return int
+     */
+    public function getExcludedModules()
+    {
+        return $this->excluded_modules;
+    }
+
+    /**
+     * Bit field of boolean for excluded modules
+     * (bitwise OR of ExcludedModules)
+     *
+     * Generated from protobuf field <code>uint32 excluded_modules = 12;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setExcludedModules($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->excluded_modules = $var;
 
         return $this;
     }

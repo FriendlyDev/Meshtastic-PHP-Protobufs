@@ -23,11 +23,18 @@ class NeighborInfoConfig extends \Google\Protobuf\Internal\Message
     protected $enabled = false;
     /**
      * Interval in seconds of how often we should try to send our
-     * Neighbor Info to the mesh
+     * Neighbor Info (minimum is 14400, i.e., 4 hours)
      *
      * Generated from protobuf field <code>uint32 update_interval = 2;</code>
      */
     protected $update_interval = 0;
+    /**
+     * Whether in addition to sending it to MQTT and the PhoneAPI, our NeighborInfo should be transmitted over LoRa.
+     * Note that this is not available on a channel with default key and name.
+     *
+     * Generated from protobuf field <code>bool transmit_over_lora = 3;</code>
+     */
+    protected $transmit_over_lora = false;
 
     /**
      * Constructor.
@@ -39,7 +46,10 @@ class NeighborInfoConfig extends \Google\Protobuf\Internal\Message
      *           Whether the Module is enabled
      *     @type int $update_interval
      *           Interval in seconds of how often we should try to send our
-     *           Neighbor Info to the mesh
+     *           Neighbor Info (minimum is 14400, i.e., 4 hours)
+     *     @type bool $transmit_over_lora
+     *           Whether in addition to sending it to MQTT and the PhoneAPI, our NeighborInfo should be transmitted over LoRa.
+     *           Note that this is not available on a channel with default key and name.
      * }
      */
     public function __construct($data = NULL) {
@@ -75,7 +85,7 @@ class NeighborInfoConfig extends \Google\Protobuf\Internal\Message
 
     /**
      * Interval in seconds of how often we should try to send our
-     * Neighbor Info to the mesh
+     * Neighbor Info (minimum is 14400, i.e., 4 hours)
      *
      * Generated from protobuf field <code>uint32 update_interval = 2;</code>
      * @return int
@@ -87,7 +97,7 @@ class NeighborInfoConfig extends \Google\Protobuf\Internal\Message
 
     /**
      * Interval in seconds of how often we should try to send our
-     * Neighbor Info to the mesh
+     * Neighbor Info (minimum is 14400, i.e., 4 hours)
      *
      * Generated from protobuf field <code>uint32 update_interval = 2;</code>
      * @param int $var
@@ -97,6 +107,34 @@ class NeighborInfoConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->update_interval = $var;
+
+        return $this;
+    }
+
+    /**
+     * Whether in addition to sending it to MQTT and the PhoneAPI, our NeighborInfo should be transmitted over LoRa.
+     * Note that this is not available on a channel with default key and name.
+     *
+     * Generated from protobuf field <code>bool transmit_over_lora = 3;</code>
+     * @return bool
+     */
+    public function getTransmitOverLora()
+    {
+        return $this->transmit_over_lora;
+    }
+
+    /**
+     * Whether in addition to sending it to MQTT and the PhoneAPI, our NeighborInfo should be transmitted over LoRa.
+     * Note that this is not available on a channel with default key and name.
+     *
+     * Generated from protobuf field <code>bool transmit_over_lora = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setTransmitOverLora($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->transmit_over_lora = $var;
 
         return $this;
     }

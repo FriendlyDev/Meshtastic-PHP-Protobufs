@@ -76,6 +76,12 @@ class Priority
      */
     const HIGH = 100;
     /**
+     * Higher priority alert message used for critical alerts which take priority over other reliable packets.
+     *
+     * Generated from protobuf enum <code>ALERT = 110;</code>
+     */
+    const ALERT = 110;
+    /**
      * Ack/naks are sent with very high priority to ensure that retransmission
      * stops as soon as possible
      *
@@ -97,6 +103,7 @@ class Priority
         self::RELIABLE => 'RELIABLE',
         self::RESPONSE => 'RESPONSE',
         self::HIGH => 'HIGH',
+        self::ALERT => 'ALERT',
         self::ACK => 'ACK',
         self::MAX => 'MAX',
     ];

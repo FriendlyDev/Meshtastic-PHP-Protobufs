@@ -83,6 +83,18 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.meshtastic.NodeHighlight node_highlight = 13;</code>
      */
     protected $node_highlight = null;
+    /**
+     * 8 integers for screen calibration data
+     *
+     * Generated from protobuf field <code>bytes calibration_data = 14;</code>
+     */
+    protected $calibration_data = '';
+    /**
+     * Map related data
+     *
+     * Generated from protobuf field <code>.meshtastic.Map map_data = 15;</code>
+     */
+    protected $map_data = null;
 
     /**
      * Constructor.
@@ -112,6 +124,10 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      *           Node list filter 
      *     @type \Meshtastic\NodeHighlight $node_highlight
      *           Node list highlightening
+     *     @type string $calibration_data
+     *           8 integers for screen calibration data
+     *     @type \Meshtastic\Map $map_data
+     *           Map related data
      * }
      */
     public function __construct($data = NULL) {
@@ -457,6 +473,68 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\NodeHighlight::class);
         $this->node_highlight = $var;
+
+        return $this;
+    }
+
+    /**
+     * 8 integers for screen calibration data
+     *
+     * Generated from protobuf field <code>bytes calibration_data = 14;</code>
+     * @return string
+     */
+    public function getCalibrationData()
+    {
+        return $this->calibration_data;
+    }
+
+    /**
+     * 8 integers for screen calibration data
+     *
+     * Generated from protobuf field <code>bytes calibration_data = 14;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCalibrationData($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->calibration_data = $var;
+
+        return $this;
+    }
+
+    /**
+     * Map related data
+     *
+     * Generated from protobuf field <code>.meshtastic.Map map_data = 15;</code>
+     * @return \Meshtastic\Map|null
+     */
+    public function getMapData()
+    {
+        return $this->map_data;
+    }
+
+    public function hasMapData()
+    {
+        return isset($this->map_data);
+    }
+
+    public function clearMapData()
+    {
+        unset($this->map_data);
+    }
+
+    /**
+     * Map related data
+     *
+     * Generated from protobuf field <code>.meshtastic.Map map_data = 15;</code>
+     * @param \Meshtastic\Map $var
+     * @return $this
+     */
+    public function setMapData($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\Map::class);
+        $this->map_data = $var;
 
         return $this;
     }

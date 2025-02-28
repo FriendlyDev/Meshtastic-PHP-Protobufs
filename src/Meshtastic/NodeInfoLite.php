@@ -64,7 +64,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
      */
     protected $via_mqtt = false;
     /**
-     * Number of hops away from us this node is (0 if adjacent)
+     * Number of hops away from us this node is (0 if direct neighbor)
      *
      * Generated from protobuf field <code>optional uint32 hops_away = 9;</code>
      */
@@ -76,6 +76,19 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool is_favorite = 10;</code>
      */
     protected $is_favorite = false;
+    /**
+     * True if node is in our ignored list
+     * Persists between NodeDB internal clean ups
+     *
+     * Generated from protobuf field <code>bool is_ignored = 11;</code>
+     */
+    protected $is_ignored = false;
+    /**
+     * Last byte of the node number of the node that should be used as the next hop to reach this node. 
+     *
+     * Generated from protobuf field <code>uint32 next_hop = 12;</code>
+     */
+    protected $next_hop = 0;
 
     /**
      * Constructor.
@@ -102,10 +115,15 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
      *     @type bool $via_mqtt
      *           True if we witnessed the node over MQTT instead of LoRA transport
      *     @type int $hops_away
-     *           Number of hops away from us this node is (0 if adjacent)
+     *           Number of hops away from us this node is (0 if direct neighbor)
      *     @type bool $is_favorite
      *           True if node is in our favorites list
      *           Persists between NodeDB internal clean ups
+     *     @type bool $is_ignored
+     *           True if node is in our ignored list
+     *           Persists between NodeDB internal clean ups
+     *     @type int $next_hop
+     *           Last byte of the node number of the node that should be used as the next hop to reach this node. 
      * }
      */
     public function __construct($data = NULL) {
@@ -356,7 +374,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Number of hops away from us this node is (0 if adjacent)
+     * Number of hops away from us this node is (0 if direct neighbor)
      *
      * Generated from protobuf field <code>optional uint32 hops_away = 9;</code>
      * @return int
@@ -377,7 +395,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Number of hops away from us this node is (0 if adjacent)
+     * Number of hops away from us this node is (0 if direct neighbor)
      *
      * Generated from protobuf field <code>optional uint32 hops_away = 9;</code>
      * @param int $var
@@ -415,6 +433,60 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->is_favorite = $var;
+
+        return $this;
+    }
+
+    /**
+     * True if node is in our ignored list
+     * Persists between NodeDB internal clean ups
+     *
+     * Generated from protobuf field <code>bool is_ignored = 11;</code>
+     * @return bool
+     */
+    public function getIsIgnored()
+    {
+        return $this->is_ignored;
+    }
+
+    /**
+     * True if node is in our ignored list
+     * Persists between NodeDB internal clean ups
+     *
+     * Generated from protobuf field <code>bool is_ignored = 11;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsIgnored($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_ignored = $var;
+
+        return $this;
+    }
+
+    /**
+     * Last byte of the node number of the node that should be used as the next hop to reach this node. 
+     *
+     * Generated from protobuf field <code>uint32 next_hop = 12;</code>
+     * @return int
+     */
+    public function getNextHop()
+    {
+        return $this->next_hop;
+    }
+
+    /**
+     * Last byte of the node number of the node that should be used as the next hop to reach this node. 
+     *
+     * Generated from protobuf field <code>uint32 next_hop = 12;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNextHop($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->next_hop = $var;
 
         return $this;
     }

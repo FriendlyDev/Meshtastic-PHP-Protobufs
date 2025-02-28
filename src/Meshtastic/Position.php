@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * a gps position
+ * A GPS Position
  *
  * Generated from protobuf message <code>meshtastic.Position</code>
  */

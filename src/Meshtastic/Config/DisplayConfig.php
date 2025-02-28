@@ -84,6 +84,13 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.CompassOrientation compass_orientation = 11;</code>
      */
     protected $compass_orientation = 0;
+    /**
+     * If false (default), the device will display the time in 24-hour format on screen.
+     * If true, the device will display the time in 12-hour format on screen.
+     *
+     * Generated from protobuf field <code>bool use_12h_clock = 12;</code>
+     */
+    protected $use_12h_clock = false;
 
     /**
      * Constructor.
@@ -116,6 +123,9 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      *           Should we wake the screen up on accelerometer detected motion or tap
      *     @type int $compass_orientation
      *           Indicates how to rotate or invert the compass output to accurate display on the display.
+     *     @type bool $use_12h_clock
+     *           If false (default), the device will display the time in 24-hour format on screen.
+     *           If true, the device will display the time in 12-hour format on screen.
      * }
      */
     public function __construct($data = NULL) {
@@ -411,6 +421,34 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Meshtastic\Config\DisplayConfig\CompassOrientation::class);
         $this->compass_orientation = $var;
+
+        return $this;
+    }
+
+    /**
+     * If false (default), the device will display the time in 24-hour format on screen.
+     * If true, the device will display the time in 12-hour format on screen.
+     *
+     * Generated from protobuf field <code>bool use_12h_clock = 12;</code>
+     * @return bool
+     */
+    public function getUse12HClock()
+    {
+        return $this->use_12h_clock;
+    }
+
+    /**
+     * If false (default), the device will display the time in 24-hour format on screen.
+     * If true, the device will display the time in 12-hour format on screen.
+     *
+     * Generated from protobuf field <code>bool use_12h_clock = 12;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setUse12HClock($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->use_12h_clock = $var;
 
         return $this;
     }

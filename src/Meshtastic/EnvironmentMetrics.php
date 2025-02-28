@@ -120,6 +120,24 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional float wind_lull = 17;</code>
      */
     protected $wind_lull = null;
+    /**
+     * Radiation in µR/h
+     *
+     * Generated from protobuf field <code>optional float radiation = 18;</code>
+     */
+    protected $radiation = null;
+    /**
+     * Rainfall in the last hour in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_1h = 19;</code>
+     */
+    protected $rainfall_1h = null;
+    /**
+     * Rainfall in the last 24 hours in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_24h = 20;</code>
+     */
+    protected $rainfall_24h = null;
 
     /**
      * Constructor.
@@ -164,6 +182,12 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *           Wind gust in m/s
      *     @type float $wind_lull
      *           Wind lull in m/s
+     *     @type float $radiation
+     *           Radiation in µR/h
+     *     @type float $rainfall_1h
+     *           Rainfall in the last hour in mm
+     *     @type float $rainfall_24h
+     *           Rainfall in the last 24 hours in mm
      * }
      */
     public function __construct($data = NULL) {
@@ -785,6 +809,114 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->wind_lull = $var;
+
+        return $this;
+    }
+
+    /**
+     * Radiation in µR/h
+     *
+     * Generated from protobuf field <code>optional float radiation = 18;</code>
+     * @return float
+     */
+    public function getRadiation()
+    {
+        return isset($this->radiation) ? $this->radiation : 0.0;
+    }
+
+    public function hasRadiation()
+    {
+        return isset($this->radiation);
+    }
+
+    public function clearRadiation()
+    {
+        unset($this->radiation);
+    }
+
+    /**
+     * Radiation in µR/h
+     *
+     * Generated from protobuf field <code>optional float radiation = 18;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setRadiation($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->radiation = $var;
+
+        return $this;
+    }
+
+    /**
+     * Rainfall in the last hour in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_1h = 19;</code>
+     * @return float
+     */
+    public function getRainfall1H()
+    {
+        return isset($this->rainfall_1h) ? $this->rainfall_1h : 0.0;
+    }
+
+    public function hasRainfall1H()
+    {
+        return isset($this->rainfall_1h);
+    }
+
+    public function clearRainfall1H()
+    {
+        unset($this->rainfall_1h);
+    }
+
+    /**
+     * Rainfall in the last hour in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_1h = 19;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setRainfall1H($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->rainfall_1h = $var;
+
+        return $this;
+    }
+
+    /**
+     * Rainfall in the last 24 hours in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_24h = 20;</code>
+     * @return float
+     */
+    public function getRainfall24H()
+    {
+        return isset($this->rainfall_24h) ? $this->rainfall_24h : 0.0;
+    }
+
+    public function hasRainfall24H()
+    {
+        return isset($this->rainfall_24h);
+    }
+
+    public function clearRainfall24H()
+    {
+        unset($this->rainfall_24h);
+    }
+
+    /**
+     * Rainfall in the last 24 hours in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_24h = 20;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setRainfall24H($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->rainfall_24h = $var;
 
         return $this;
     }

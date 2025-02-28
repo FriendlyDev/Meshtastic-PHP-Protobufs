@@ -49,6 +49,12 @@ class NodeFilter extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string node_name = 6;</code>
      */
     protected $node_name = '';
+    /**
+     * Filter based on channel
+     *
+     * Generated from protobuf field <code>int32 channel = 7;</code>
+     */
+    protected $channel = 0;
 
     /**
      * Constructor.
@@ -68,6 +74,8 @@ class NodeFilter extends \Google\Protobuf\Internal\Message
      *           Filter nodes w/o position
      *     @type string $node_name
      *           Filter nodes by matching name string
+     *     @type int $channel
+     *           Filter based on channel
      * }
      */
     public function __construct($data = NULL) {
@@ -227,6 +235,32 @@ class NodeFilter extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->node_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Filter based on channel
+     *
+     * Generated from protobuf field <code>int32 channel = 7;</code>
+     * @return int
+     */
+    public function getChannel()
+    {
+        return $this->channel;
+    }
+
+    /**
+     * Filter based on channel
+     *
+     * Generated from protobuf field <code>int32 channel = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setChannel($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->channel = $var;
 
         return $this;
     }

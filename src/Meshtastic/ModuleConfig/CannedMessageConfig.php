@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * TODO: REPLACE
+ * Canned Messages Module Config
  *
  * Generated from protobuf message <code>meshtastic.ModuleConfig.CannedMessageConfig</code>
  */

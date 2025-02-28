@@ -542,6 +542,36 @@ class HardwareModel
      */
     const TLORA_C6 = 83;
     /**
+     * WisMesh Tap
+     * RAK-4631 w/ TFT in injection modled case
+     *
+     * Generated from protobuf enum <code>WISMESH_TAP = 84;</code>
+     */
+    const WISMESH_TAP = 84;
+    /**
+     * Similar to PORTDUINO but used by Routastic devices, this is not any
+     * particular device and does not run Meshtastic's code but supports
+     * the same frame format.
+     * Runs on linux, see https://github.com/Jorropo/routastic
+     *
+     * Generated from protobuf enum <code>ROUTASTIC = 85;</code>
+     */
+    const ROUTASTIC = 85;
+    /**
+     * Mesh-Tab, esp32 based
+     * https://github.com/valzzu/Mesh-Tab
+     *
+     * Generated from protobuf enum <code>MESH_TAB = 86;</code>
+     */
+    const MESH_TAB = 86;
+    /**
+     * MeshLink board developed by LoraItalia. NRF52840, eByte E22900M22S (Will also come with other frequencies), 25w MPPT solar charger (5v,12v,18v selectable), support for gps, buzzer, oled or e-ink display, 10 gpios, hardware watchdog
+     * https://www.loraitalia.it
+     *
+     * Generated from protobuf enum <code>MESHLINK = 87;</code>
+     */
+    const MESHLINK = 87;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -635,6 +665,10 @@ class HardwareModel
         self::SEEED_XIAO_S3 => 'SEEED_XIAO_S3',
         self::MS24SF1 => 'MS24SF1',
         self::TLORA_C6 => 'TLORA_C6',
+        self::WISMESH_TAP => 'WISMESH_TAP',
+        self::ROUTASTIC => 'ROUTASTIC',
+        self::MESH_TAB => 'MESH_TAB',
+        self::MESHLINK => 'MESHLINK',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

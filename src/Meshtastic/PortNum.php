@@ -118,6 +118,12 @@ class PortNum
      */
     const DETECTION_SENSOR_APP = 10;
     /**
+     * Same as Text Message but used for critical alerts.
+     *
+     * Generated from protobuf enum <code>ALERT_APP = 11;</code>
+     */
+    const ALERT_APP = 11;
+    /**
      * Provides a 'ping' service that replies to any packet it receives.
      * Also serves as a small example module.
      * ENCODING: ASCII Plaintext
@@ -261,6 +267,7 @@ class PortNum
         self::WAYPOINT_APP => 'WAYPOINT_APP',
         self::AUDIO_APP => 'AUDIO_APP',
         self::DETECTION_SENSOR_APP => 'DETECTION_SENSOR_APP',
+        self::ALERT_APP => 'ALERT_APP',
         self::REPLY_APP => 'REPLY_APP',
         self::IP_TUNNEL_APP => 'IP_TUNNEL_APP',
         self::PAXCOUNTER_APP => 'PAXCOUNTER_APP',

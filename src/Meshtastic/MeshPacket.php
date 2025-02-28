@@ -74,7 +74,7 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      */
     protected $rx_snr = 0.0;
     /**
-     * If unset treated as zero (no forwarding, send to adjacent nodes only)
+     * If unset treated as zero (no forwarding, send to direct neighbor nodes only)
      * if 1, allow hopping through one node, etc...
      * For our usecase real world topologies probably have a max of about 3.
      * This field is normally placed into a few of bits in the header.
@@ -141,6 +141,28 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool pki_encrypted = 17;</code>
      */
     protected $pki_encrypted = false;
+    /**
+     * Last byte of the node number of the node that should be used as the next hop in routing. 
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 next_hop = 18;</code>
+     */
+    protected $next_hop = 0;
+    /**
+     * Last byte of the node number of the node that will relay/relayed this packet.
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 relay_node = 19;</code>
+     */
+    protected $relay_node = 0;
+    /**
+     * *Never* sent over the radio links.
+     * Timestamp after which this packet may be sent.
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 tx_after = 20;</code>
+     */
+    protected $tx_after = 0;
     protected $payload_variant;
 
     /**
@@ -186,7 +208,7 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      *           Set during reception to indicate the SNR of this packet.
      *           Used to collect statistics on current link quality.
      *     @type int $hop_limit
-     *           If unset treated as zero (no forwarding, send to adjacent nodes only)
+     *           If unset treated as zero (no forwarding, send to direct neighbor nodes only)
      *           if 1, allow hopping through one node, etc...
      *           For our usecase real world topologies probably have a max of about 3.
      *           This field is normally placed into a few of bits in the header.
@@ -216,6 +238,16 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      *           Records the public key the packet was encrypted with, if applicable.
      *     @type bool $pki_encrypted
      *           Indicates whether the packet was en/decrypted using PKI
+     *     @type int $next_hop
+     *           Last byte of the node number of the node that should be used as the next hop in routing. 
+     *           Set by the firmware internally, clients are not supposed to set this.
+     *     @type int $relay_node
+     *           Last byte of the node number of the node that will relay/relayed this packet.
+     *           Set by the firmware internally, clients are not supposed to set this.
+     *     @type int $tx_after
+     *           *Never* sent over the radio links.
+     *           Timestamp after which this packet may be sent.
+     *           Set by the firmware internally, clients are not supposed to set this.
      * }
      */
     public function __construct($data = NULL) {
@@ -482,7 +514,7 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If unset treated as zero (no forwarding, send to adjacent nodes only)
+     * If unset treated as zero (no forwarding, send to direct neighbor nodes only)
      * if 1, allow hopping through one node, etc...
      * For our usecase real world topologies probably have a max of about 3.
      * This field is normally placed into a few of bits in the header.
@@ -496,7 +528,7 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If unset treated as zero (no forwarding, send to adjacent nodes only)
+     * If unset treated as zero (no forwarding, send to direct neighbor nodes only)
      * if 1, allow hopping through one node, etc...
      * For our usecase real world topologies probably have a max of about 3.
      * This field is normally placed into a few of bits in the header.
@@ -741,6 +773,92 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->pki_encrypted = $var;
+
+        return $this;
+    }
+
+    /**
+     * Last byte of the node number of the node that should be used as the next hop in routing. 
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 next_hop = 18;</code>
+     * @return int
+     */
+    public function getNextHop()
+    {
+        return $this->next_hop;
+    }
+
+    /**
+     * Last byte of the node number of the node that should be used as the next hop in routing. 
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 next_hop = 18;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNextHop($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->next_hop = $var;
+
+        return $this;
+    }
+
+    /**
+     * Last byte of the node number of the node that will relay/relayed this packet.
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 relay_node = 19;</code>
+     * @return int
+     */
+    public function getRelayNode()
+    {
+        return $this->relay_node;
+    }
+
+    /**
+     * Last byte of the node number of the node that will relay/relayed this packet.
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 relay_node = 19;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRelayNode($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->relay_node = $var;
+
+        return $this;
+    }
+
+    /**
+     * *Never* sent over the radio links.
+     * Timestamp after which this packet may be sent.
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 tx_after = 20;</code>
+     * @return int
+     */
+    public function getTxAfter()
+    {
+        return $this->tx_after;
+    }
+
+    /**
+     * *Never* sent over the radio links.
+     * Timestamp after which this packet may be sent.
+     * Set by the firmware internally, clients are not supposed to set this.
+     *
+     * Generated from protobuf field <code>uint32 tx_after = 20;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTxAfter($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->tx_after = $var;
 
         return $this;
     }

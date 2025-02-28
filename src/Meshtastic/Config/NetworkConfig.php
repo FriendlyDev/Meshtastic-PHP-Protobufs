@@ -64,6 +64,12 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string rsyslog_server = 9;</code>
      */
     protected $rsyslog_server = '';
+    /**
+     * Flags for enabling/disabling network protocols
+     *
+     * Generated from protobuf field <code>uint32 enabled_protocols = 10;</code>
+     */
+    protected $enabled_protocols = 0;
 
     /**
      * Constructor.
@@ -88,6 +94,8 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
      *           struct to keep static address
      *     @type string $rsyslog_server
      *           rsyslog Server and Port
+     *     @type int $enabled_protocols
+     *           Flags for enabling/disabling network protocols
      * }
      */
     public function __construct($data = NULL) {
@@ -311,6 +319,32 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->rsyslog_server = $var;
+
+        return $this;
+    }
+
+    /**
+     * Flags for enabling/disabling network protocols
+     *
+     * Generated from protobuf field <code>uint32 enabled_protocols = 10;</code>
+     * @return int
+     */
+    public function getEnabledProtocols()
+    {
+        return $this->enabled_protocols;
+    }
+
+    /**
+     * Flags for enabling/disabling network protocols
+     *
+     * Generated from protobuf field <code>uint32 enabled_protocols = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setEnabledProtocols($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->enabled_protocols = $var;
 
         return $this;
     }

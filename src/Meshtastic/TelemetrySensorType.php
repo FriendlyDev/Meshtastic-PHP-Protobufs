@@ -211,6 +211,24 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>SCD4X = 32;</code>
      */
     const SCD4X = 32;
+    /**
+     * ClimateGuard RadSens, radiation, Geiger-Muller Tube
+     *
+     * Generated from protobuf enum <code>RADSENS = 33;</code>
+     */
+    const RADSENS = 33;
+    /**
+     * High accuracy current and voltage
+     *
+     * Generated from protobuf enum <code>INA226 = 34;</code>
+     */
+    const INA226 = 34;
+    /**
+     * DFRobot Gravity tipping bucket rain gauge
+     *
+     * Generated from protobuf enum <code>DFROBOT_RAIN = 35;</code>
+     */
+    const DFROBOT_RAIN = 35;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -246,6 +264,9 @@ class TelemetrySensorType
         self::MAX30102 => 'MAX30102',
         self::MLX90614 => 'MLX90614',
         self::SCD4X => 'SCD4X',
+        self::RADSENS => 'RADSENS',
+        self::INA226 => 'INA226',
+        self::DFROBOT_RAIN => 'DFROBOT_RAIN',
     ];
 
     public static function name($value)
