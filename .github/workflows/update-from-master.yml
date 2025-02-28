@@ -1,9 +1,9 @@
+name: Create PHP protobufs from latest Meshtastic Protobufs
+
 on:
   schedule:
-    - cron:  "0 */3 * * *"
+    - cron: "0 */3 * * *"
   workflow_dispatch:
-
-name: Create PHP protobufs from latest Meshtastic Protobufs
 
 jobs:
   update-from-master:
@@ -24,6 +24,7 @@ jobs:
           fetch-tags: true
 
       - name: Checkout Meshtastic Protobufs latest release tag
+        id: checkout_protobufs
         run: |
           cd ./protobufs
           git reset --hard HEAD
@@ -31,8 +32,8 @@ jobs:
           git checkout $LATEST_TAG
           cd ..
           echo "LATEST_TAG=${LATEST_TAG}" >> "$GITHUB_ENV"
-          echo "LATEST_TAG_NUMBER=${LATEST_TAG:1}" >> "$GITHUB_ENV"
         shell: bash
+        continue-on-error: false
 
       - name: Checkout current code
         uses: actions/checkout@v4
@@ -44,47 +45,67 @@ jobs:
           fetch-tags: true
 
       - name: Get latest tag of this repository
+        id: get_current_tag
         run: |
           cd ./php-code
           git checkout master
           git reset --hard HEAD
-          CURRENT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
-          CURRENT_RELEASE=$(gh release view --json tagName --jq '.tagName')
+          CURRENT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1) || echo "v0.0.0") # Default tag if none exist
+          CURRENT_RELEASE=$(gh release view --json tagName --jq '.tagName' || echo "$CURRENT_TAG") # Use tag if no release
           cd ..
           echo "CURRENT_TAG=${CURRENT_TAG}" >> "$GITHUB_ENV"
-          echo "CURRENT_TAG_NUMBER=${CURRENT_TAG:1}" >> "$GITHUB_ENV"
-          echo "CURRENT_RELEASE=${CURRENT_RELEASE}" >> "$GITHUB_ENV"
-          echo "CURRENT_RELEASE_NUMBER=${CURRENT_RELEASE:1}" >> "$GITHUB_ENV"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
+        continue-on-error: false
+
+      - name: Compare Versions and Proceed
+        id: compare_versions
+        run: |
+          LATEST_TAG="${{ env.LATEST_TAG }}"
+          CURRENT_TAG="${{ env.CURRENT_TAG }}"
+
+          if [[ "$LATEST_TAG" == "$CURRENT_TAG" ]]; then
+            echo "Versions are the same. No update required."
+            echo "UPDATE_REQUIRED=false" >> "$GITHUB_ENV"
+          else
+            # Use version sort to compare the tags
+            if [[ "$(printf '%s\n%s\n' "$CURRENT_TAG" "$LATEST_TAG" | sort -V | head -n 1)" == "$CURRENT_TAG" ]]; then
+              echo "Latest tag is newer. Update required."
+              echo "UPDATE_REQUIRED=true" >> "$GITHUB_ENV"
+            else
+              echo "Current tag is newer or equal. No update required."
+              echo "UPDATE_REQUIRED=false" >> "$GITHUB_ENV"
+            fi
+          fi
+        shell: bash
 
       - name: Show working directory
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         run: ls -lash ./*
         shell: bash
 
       - name: Install Protoc
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         uses: arduino/setup-protoc@v3
 
       - name: Check protoc is installed
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         run: which protoc
         shell: bash
 
       - name: Create output directory
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         run: mkdir -p ./protobufs-output
         shell: bash
 
       - name: Show working directory
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         run: ls -lash ./*
         shell: bash
 
       - name: Convert the nanopb.proto file to proto3
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         run: |
           cd ./protobufs
           sed -i 's/proto2/proto3/g' ./nanopb.proto
@@ -94,7 +115,7 @@ jobs:
         shell: bash
 
       - name: Generate the PHP files from the protobufs
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         run: |
           cd ./protobufs
           find . -type f -iname '*.proto' -exec protoc --proto_path= --php_out=../protobufs-output {} \;
@@ -102,7 +123,7 @@ jobs:
         shell: bash
 
       - name: Replace the current protobuf PHP files with the ones we just generated
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         run: |
           rm -rf ./php-code/src/GPBMetadata
           rm -rf ./php-code/src/Meshtastic
@@ -111,7 +132,7 @@ jobs:
         shell: bash
 
       - name: Commit and push changes
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
+        if: env.UPDATE_REQUIRED == 'true'
         run: |
           cd ./php-code
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -125,8 +146,8 @@ jobs:
 
       - name: Create Release
         id: create_release
-        if: env.LATEST_TAG_NUMBER > env.CURRENT_TAG_NUMBER
-        uses: actions/create-release@latest
+        if: env.UPDATE_REQUIRED == 'true'
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
@@ -138,3 +159,4 @@ jobs:
             Changelog for this version tag is [here](https://github.com/meshtastic/protobufs/releases/tag/${{ env.LATEST_TAG }})
           draft: false
           prerelease: false
+        continue-on-error: true
