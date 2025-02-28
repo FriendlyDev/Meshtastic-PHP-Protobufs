@@ -144,6 +144,10 @@ jobs:
           git push --tags origin master
         shell: bash
 
+      - name: Wait for tag to propagate
+        if: env.UPDATE_REQUIRED == 'true'
+        run: sleep 10 # Give the tag some time to propagate
+
       - name: Create Release
         id: create_release
         if: env.UPDATE_REQUIRED == 'true'
