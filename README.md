@@ -1,10 +1,10 @@
 # PHP Meshtastic Protobuf Definitions
 
-[![Latest Stable Version](http://poser.pugx.org/friendlydev/meshtastic-protobufs/v?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
-[![Total Downloads](http://poser.pugx.org/friendlydev/meshtastic-protobufs/downloads?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
-[![Monthly Downloads](http://poser.pugx.org/friendlydev/meshtastic-protobufs/d/monthly?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
-[![License](http://poser.pugx.org/friendlydev/meshtastic-protobufs/license?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
-[![PHP Version Require](http://poser.pugx.org/friendlydev/meshtastic-protobufs/require/php?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
+[![Latest Stable Version](https://poser.pugx.org/friendlydev/meshtastic-protobufs/v?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
+[![Total Downloads](https://poser.pugx.org/friendlydev/meshtastic-protobufs/downloads?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
+[![Monthly Downloads](https://poser.pugx.org/friendlydev/meshtastic-protobufs/d/monthly?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
+[![License](https://poser.pugx.org/friendlydev/meshtastic-protobufs/license?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs) 
+[![PHP Version Require](https://poser.pugx.org/friendlydev/meshtastic-protobufs/require/php?style=for-the-badge)](https://packagist.org/packages/friendlydev/meshtastic-protobufs)
 
 
 ## Overview
