@@ -44,6 +44,12 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes device_id = 12;</code>
      */
     protected $device_id = '';
+    /**
+     * The PlatformIO environment used to build this firmware
+     *
+     * Generated from protobuf field <code>string pio_env = 13;</code>
+     */
+    protected $pio_env = '';
 
     /**
      * Constructor.
@@ -62,6 +68,8 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
      *           Phone/PC apps should compare this to their build number and if too low tell the user they must update their app
      *     @type string $device_id
      *           Unique hardware identifier for this device
+     *     @type string $pio_env
+     *           The PlatformIO environment used to build this firmware
      * }
      */
     public function __construct($data = NULL) {
@@ -175,6 +183,32 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->device_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * The PlatformIO environment used to build this firmware
+     *
+     * Generated from protobuf field <code>string pio_env = 13;</code>
+     * @return string
+     */
+    public function getPioEnv()
+    {
+        return $this->pio_env;
+    }
+
+    /**
+     * The PlatformIO environment used to build this firmware
+     *
+     * Generated from protobuf field <code>string pio_env = 13;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPioEnv($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->pio_env = $var;
 
         return $this;
     }

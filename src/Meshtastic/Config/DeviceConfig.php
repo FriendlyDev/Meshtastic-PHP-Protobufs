@@ -84,11 +84,18 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
      */
     protected $tzdef = '';
     /**
-     * If true, disable the default blinking LED (LED_PIN) behavior on the device 
+     * If true, disable the default blinking LED (LED_PIN) behavior on the device
      *
      * Generated from protobuf field <code>bool led_heartbeat_disabled = 12;</code>
      */
     protected $led_heartbeat_disabled = false;
+    /**
+     * Controls buzzer behavior for audio feedback
+     * Defaults to ENABLED
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.DeviceConfig.BuzzerMode buzzer_mode = 13;</code>
+     */
+    protected $buzzer_mode = 0;
 
     /**
      * Constructor.
@@ -123,7 +130,10 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
      *     @type string $tzdef
      *           POSIX Timezone definition string from https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv.
      *     @type bool $led_heartbeat_disabled
-     *           If true, disable the default blinking LED (LED_PIN) behavior on the device 
+     *           If true, disable the default blinking LED (LED_PIN) behavior on the device
+     *     @type int $buzzer_mode
+     *           Controls buzzer behavior for audio feedback
+     *           Defaults to ENABLED
      * }
      */
     public function __construct($data = NULL) {
@@ -412,7 +422,7 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, disable the default blinking LED (LED_PIN) behavior on the device 
+     * If true, disable the default blinking LED (LED_PIN) behavior on the device
      *
      * Generated from protobuf field <code>bool led_heartbeat_disabled = 12;</code>
      * @return bool
@@ -423,7 +433,7 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, disable the default blinking LED (LED_PIN) behavior on the device 
+     * If true, disable the default blinking LED (LED_PIN) behavior on the device
      *
      * Generated from protobuf field <code>bool led_heartbeat_disabled = 12;</code>
      * @param bool $var
@@ -433,6 +443,34 @@ class DeviceConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->led_heartbeat_disabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Controls buzzer behavior for audio feedback
+     * Defaults to ENABLED
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.DeviceConfig.BuzzerMode buzzer_mode = 13;</code>
+     * @return int
+     */
+    public function getBuzzerMode()
+    {
+        return $this->buzzer_mode;
+    }
+
+    /**
+     * Controls buzzer behavior for audio feedback
+     * Defaults to ENABLED
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.DeviceConfig.BuzzerMode buzzer_mode = 13;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setBuzzerMode($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\Config\DeviceConfig\BuzzerMode::class);
+        $this->buzzer_mode = $var;
 
         return $this;
     }

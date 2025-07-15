@@ -14,19 +14,19 @@ use UnexpectedValueException;
 class OledType
 {
     /**
-     * Default / Auto
+     * Default / Autodetect
      *
      * Generated from protobuf enum <code>OLED_AUTO = 0;</code>
      */
     const OLED_AUTO = 0;
     /**
-     * Default / Auto
+     * Default / Autodetect
      *
      * Generated from protobuf enum <code>OLED_SSD1306 = 1;</code>
      */
     const OLED_SSD1306 = 1;
     /**
-     * Default / Auto
+     * Default / Autodetect
      *
      * Generated from protobuf enum <code>OLED_SH1106 = 2;</code>
      */
@@ -37,12 +37,19 @@ class OledType
      * Generated from protobuf enum <code>OLED_SH1107 = 3;</code>
      */
     const OLED_SH1107 = 3;
+    /**
+     * Can not be auto detected but set by proto. Used for 128x64 screens
+     *
+     * Generated from protobuf enum <code>OLED_SH1107_128_64 = 4;</code>
+     */
+    const OLED_SH1107_128_64 = 4;
 
     private static $valueToName = [
         self::OLED_AUTO => 'OLED_AUTO',
         self::OLED_SSD1306 => 'OLED_SSD1306',
         self::OLED_SH1106 => 'OLED_SH1106',
         self::OLED_SH1107 => 'OLED_SH1107',
+        self::OLED_SH1107_128_64 => 'OLED_SH1107_128_64',
     ];
 
     public static function name($value)

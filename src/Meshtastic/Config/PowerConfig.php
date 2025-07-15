@@ -17,7 +17,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PowerConfig extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio. 
+     * Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio.
      * Don't use this setting if you want to use your device with the phone apps or are using a device without a user button.
      * Technical Details: Works for ESP32 devices and NRF52 devices in the Sensor or Tracker roles
      *
@@ -90,7 +90,7 @@ class PowerConfig extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $is_power_saving
-     *           Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio. 
+     *           Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio.
      *           Don't use this setting if you want to use your device with the phone apps or are using a device without a user button.
      *           Technical Details: Works for ESP32 devices and NRF52 devices in the Sensor or Tracker roles
      *     @type int $on_battery_shutdown_after_secs
@@ -127,7 +127,7 @@ class PowerConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio. 
+     * Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio.
      * Don't use this setting if you want to use your device with the phone apps or are using a device without a user button.
      * Technical Details: Works for ESP32 devices and NRF52 devices in the Sensor or Tracker roles
      *
@@ -140,7 +140,7 @@ class PowerConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio. 
+     * Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio.
      * Don't use this setting if you want to use your device with the phone apps or are using a device without a user button.
      * Technical Details: Works for ESP32 devices and NRF52 devices in the Sensor or Tracker roles
      *

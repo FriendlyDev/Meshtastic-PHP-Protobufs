@@ -52,7 +52,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      */
     protected $current = null;
     /**
-     * 
      * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      *
@@ -120,6 +119,36 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional float wind_lull = 17;</code>
      */
     protected $wind_lull = null;
+    /**
+     * Radiation in µR/h
+     *
+     * Generated from protobuf field <code>optional float radiation = 18;</code>
+     */
+    protected $radiation = null;
+    /**
+     * Rainfall in the last hour in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_1h = 19;</code>
+     */
+    protected $rainfall_1h = null;
+    /**
+     * Rainfall in the last 24 hours in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_24h = 20;</code>
+     */
+    protected $rainfall_24h = null;
+    /**
+     * Soil moisture measured (% 1-100)
+     *
+     * Generated from protobuf field <code>optional uint32 soil_moisture = 21;</code>
+     */
+    protected $soil_moisture = null;
+    /**
+     * Soil temperature measured (*C)
+     *
+     * Generated from protobuf field <code>optional float soil_temperature = 22;</code>
+     */
+    protected $soil_temperature = null;
 
     /**
      * Constructor.
@@ -140,7 +169,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *     @type float $current
      *           Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
      *     @type int $iaq
-     *           
      *           relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      *           Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      *     @type float $distance
@@ -164,6 +192,16 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *           Wind gust in m/s
      *     @type float $wind_lull
      *           Wind lull in m/s
+     *     @type float $radiation
+     *           Radiation in µR/h
+     *     @type float $rainfall_1h
+     *           Rainfall in the last hour in mm
+     *     @type float $rainfall_24h
+     *           Rainfall in the last 24 hours in mm
+     *     @type int $soil_moisture
+     *           Soil moisture measured (% 1-100)
+     *     @type float $soil_temperature
+     *           Soil temperature measured (*C)
      * }
      */
     public function __construct($data = NULL) {
@@ -388,7 +426,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 
      * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      *
@@ -411,7 +448,6 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 
      * relative scale IAQ value as measured by Bosch BME680 . value 0-500.
      * Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
      *
@@ -785,6 +821,186 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->wind_lull = $var;
+
+        return $this;
+    }
+
+    /**
+     * Radiation in µR/h
+     *
+     * Generated from protobuf field <code>optional float radiation = 18;</code>
+     * @return float
+     */
+    public function getRadiation()
+    {
+        return isset($this->radiation) ? $this->radiation : 0.0;
+    }
+
+    public function hasRadiation()
+    {
+        return isset($this->radiation);
+    }
+
+    public function clearRadiation()
+    {
+        unset($this->radiation);
+    }
+
+    /**
+     * Radiation in µR/h
+     *
+     * Generated from protobuf field <code>optional float radiation = 18;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setRadiation($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->radiation = $var;
+
+        return $this;
+    }
+
+    /**
+     * Rainfall in the last hour in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_1h = 19;</code>
+     * @return float
+     */
+    public function getRainfall1H()
+    {
+        return isset($this->rainfall_1h) ? $this->rainfall_1h : 0.0;
+    }
+
+    public function hasRainfall1H()
+    {
+        return isset($this->rainfall_1h);
+    }
+
+    public function clearRainfall1H()
+    {
+        unset($this->rainfall_1h);
+    }
+
+    /**
+     * Rainfall in the last hour in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_1h = 19;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setRainfall1H($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->rainfall_1h = $var;
+
+        return $this;
+    }
+
+    /**
+     * Rainfall in the last 24 hours in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_24h = 20;</code>
+     * @return float
+     */
+    public function getRainfall24H()
+    {
+        return isset($this->rainfall_24h) ? $this->rainfall_24h : 0.0;
+    }
+
+    public function hasRainfall24H()
+    {
+        return isset($this->rainfall_24h);
+    }
+
+    public function clearRainfall24H()
+    {
+        unset($this->rainfall_24h);
+    }
+
+    /**
+     * Rainfall in the last 24 hours in mm
+     *
+     * Generated from protobuf field <code>optional float rainfall_24h = 20;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setRainfall24H($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->rainfall_24h = $var;
+
+        return $this;
+    }
+
+    /**
+     * Soil moisture measured (% 1-100)
+     *
+     * Generated from protobuf field <code>optional uint32 soil_moisture = 21;</code>
+     * @return int
+     */
+    public function getSoilMoisture()
+    {
+        return isset($this->soil_moisture) ? $this->soil_moisture : 0;
+    }
+
+    public function hasSoilMoisture()
+    {
+        return isset($this->soil_moisture);
+    }
+
+    public function clearSoilMoisture()
+    {
+        unset($this->soil_moisture);
+    }
+
+    /**
+     * Soil moisture measured (% 1-100)
+     *
+     * Generated from protobuf field <code>optional uint32 soil_moisture = 21;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSoilMoisture($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->soil_moisture = $var;
+
+        return $this;
+    }
+
+    /**
+     * Soil temperature measured (*C)
+     *
+     * Generated from protobuf field <code>optional float soil_temperature = 22;</code>
+     * @return float
+     */
+    public function getSoilTemperature()
+    {
+        return isset($this->soil_temperature) ? $this->soil_temperature : 0.0;
+    }
+
+    public function hasSoilTemperature()
+    {
+        return isset($this->soil_temperature);
+    }
+
+    public function clearSoilTemperature()
+    {
+        unset($this->soil_temperature);
+    }
+
+    /**
+     * Soil temperature measured (*C)
+     *
+     * Generated from protobuf field <code>optional float soil_temperature = 22;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setSoilTemperature($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->soil_temperature = $var;
 
         return $this;
     }

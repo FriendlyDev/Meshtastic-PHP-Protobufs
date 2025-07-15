@@ -158,7 +158,7 @@ class TelemetrySensorType
      */
     const AHT10 = 23;
     /**
-     * DFRobot Lark Weather station (temperature, humidity, pressure, wind speed and direction) 
+     * DFRobot Lark Weather station (temperature, humidity, pressure, wind speed and direction)
      *
      * Generated from protobuf enum <code>DFROBOT_LARK = 24;</code>
      */
@@ -194,7 +194,7 @@ class TelemetrySensorType
      */
     const CUSTOM_SENSOR = 29;
     /**
-     * MAX30102 Pulse Oximeter and Heart-Rate Sensor 
+     * MAX30102 Pulse Oximeter and Heart-Rate Sensor
      *
      * Generated from protobuf enum <code>MAX30102 = 30;</code>
      */
@@ -211,6 +211,54 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>SCD4X = 32;</code>
      */
     const SCD4X = 32;
+    /**
+     * ClimateGuard RadSens, radiation, Geiger-Muller Tube
+     *
+     * Generated from protobuf enum <code>RADSENS = 33;</code>
+     */
+    const RADSENS = 33;
+    /**
+     * High accuracy current and voltage
+     *
+     * Generated from protobuf enum <code>INA226 = 34;</code>
+     */
+    const INA226 = 34;
+    /**
+     * DFRobot Gravity tipping bucket rain gauge
+     *
+     * Generated from protobuf enum <code>DFROBOT_RAIN = 35;</code>
+     */
+    const DFROBOT_RAIN = 35;
+    /**
+     * Infineon DPS310 High accuracy pressure and temperature
+     *
+     * Generated from protobuf enum <code>DPS310 = 36;</code>
+     */
+    const DPS310 = 36;
+    /**
+     * RAKWireless RAK12035 Soil Moisture Sensor Module
+     *
+     * Generated from protobuf enum <code>RAK12035 = 37;</code>
+     */
+    const RAK12035 = 37;
+    /**
+     * MAX17261 lipo battery gauge
+     *
+     * Generated from protobuf enum <code>MAX17261 = 38;</code>
+     */
+    const MAX17261 = 38;
+    /**
+     * PCT2075 Temperature Sensor
+     *
+     * Generated from protobuf enum <code>PCT2075 = 39;</code>
+     */
+    const PCT2075 = 39;
+    /**
+     * ADS1X15 ADC
+     *
+     * Generated from protobuf enum <code>ADS1X15 = 40;</code>
+     */
+    const ADS1X15 = 40;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -246,6 +294,14 @@ class TelemetrySensorType
         self::MAX30102 => 'MAX30102',
         self::MLX90614 => 'MLX90614',
         self::SCD4X => 'SCD4X',
+        self::RADSENS => 'RADSENS',
+        self::INA226 => 'INA226',
+        self::DFROBOT_RAIN => 'DFROBOT_RAIN',
+        self::DPS310 => 'DPS310',
+        self::RAK12035 => 'RAK12035',
+        self::MAX17261 => 'MAX17261',
+        self::PCT2075 => 'PCT2075',
+        self::ADS1X15 => 'ADS1X15',
     ];
 
     public static function name($value)

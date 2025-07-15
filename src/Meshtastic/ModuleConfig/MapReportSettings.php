@@ -27,6 +27,12 @@ class MapReportSettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 position_precision = 2;</code>
      */
     protected $position_precision = 0;
+    /**
+     * Whether we have opted-in to report our location to the map
+     *
+     * Generated from protobuf field <code>bool should_report_location = 3;</code>
+     */
+    protected $should_report_location = false;
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class MapReportSettings extends \Google\Protobuf\Internal\Message
      *           How often we should report our info to the map (in seconds)
      *     @type int $position_precision
      *           Bits of precision for the location sent (default of 32 is full precision).
+     *     @type bool $should_report_location
+     *           Whether we have opted-in to report our location to the map
      * }
      */
     public function __construct($data = NULL) {
@@ -93,6 +101,32 @@ class MapReportSettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->position_precision = $var;
+
+        return $this;
+    }
+
+    /**
+     * Whether we have opted-in to report our location to the map
+     *
+     * Generated from protobuf field <code>bool should_report_location = 3;</code>
+     * @return bool
+     */
+    public function getShouldReportLocation()
+    {
+        return $this->should_report_location;
+    }
+
+    /**
+     * Whether we have opted-in to report our location to the map
+     *
+     * Generated from protobuf field <code>bool should_report_location = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setShouldReportLocation($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->should_report_location = $var;
 
         return $this;
     }

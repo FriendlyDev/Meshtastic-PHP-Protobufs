@@ -35,7 +35,7 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
      */
     protected $wifi_psk = '';
     /**
-     * NTP server to use if WiFi is conneced, defaults to `0.pool.ntp.org`
+     * NTP server to use if WiFi is conneced, defaults to `meshtastic.pool.ntp.org`
      *
      * Generated from protobuf field <code>string ntp_server = 5;</code>
      */
@@ -64,6 +64,18 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string rsyslog_server = 9;</code>
      */
     protected $rsyslog_server = '';
+    /**
+     * Flags for enabling/disabling network protocols
+     *
+     * Generated from protobuf field <code>uint32 enabled_protocols = 10;</code>
+     */
+    protected $enabled_protocols = 0;
+    /**
+     * Enable/Disable ipv6 support
+     *
+     * Generated from protobuf field <code>bool ipv6_enabled = 11;</code>
+     */
+    protected $ipv6_enabled = false;
 
     /**
      * Constructor.
@@ -79,7 +91,7 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
      *     @type string $wifi_psk
      *           If set, will be use to authenticate to the named wifi
      *     @type string $ntp_server
-     *           NTP server to use if WiFi is conneced, defaults to `0.pool.ntp.org`
+     *           NTP server to use if WiFi is conneced, defaults to `meshtastic.pool.ntp.org`
      *     @type bool $eth_enabled
      *           Enable Ethernet
      *     @type int $address_mode
@@ -88,6 +100,10 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
      *           struct to keep static address
      *     @type string $rsyslog_server
      *           rsyslog Server and Port
+     *     @type int $enabled_protocols
+     *           Flags for enabling/disabling network protocols
+     *     @type bool $ipv6_enabled
+     *           Enable/Disable ipv6 support
      * }
      */
     public function __construct($data = NULL) {
@@ -176,7 +192,7 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * NTP server to use if WiFi is conneced, defaults to `0.pool.ntp.org`
+     * NTP server to use if WiFi is conneced, defaults to `meshtastic.pool.ntp.org`
      *
      * Generated from protobuf field <code>string ntp_server = 5;</code>
      * @return string
@@ -187,7 +203,7 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * NTP server to use if WiFi is conneced, defaults to `0.pool.ntp.org`
+     * NTP server to use if WiFi is conneced, defaults to `meshtastic.pool.ntp.org`
      *
      * Generated from protobuf field <code>string ntp_server = 5;</code>
      * @param string $var
@@ -311,6 +327,58 @@ class NetworkConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->rsyslog_server = $var;
+
+        return $this;
+    }
+
+    /**
+     * Flags for enabling/disabling network protocols
+     *
+     * Generated from protobuf field <code>uint32 enabled_protocols = 10;</code>
+     * @return int
+     */
+    public function getEnabledProtocols()
+    {
+        return $this->enabled_protocols;
+    }
+
+    /**
+     * Flags for enabling/disabling network protocols
+     *
+     * Generated from protobuf field <code>uint32 enabled_protocols = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setEnabledProtocols($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->enabled_protocols = $var;
+
+        return $this;
+    }
+
+    /**
+     * Enable/Disable ipv6 support
+     *
+     * Generated from protobuf field <code>bool ipv6_enabled = 11;</code>
+     * @return bool
+     */
+    public function getIpv6Enabled()
+    {
+        return $this->ipv6_enabled;
+    }
+
+    /**
+     * Enable/Disable ipv6 support
+     *
+     * Generated from protobuf field <code>bool ipv6_enabled = 11;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIpv6Enabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->ipv6_enabled = $var;
 
         return $this;
     }

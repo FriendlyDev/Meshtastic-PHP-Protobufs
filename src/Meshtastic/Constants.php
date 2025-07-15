@@ -25,9 +25,9 @@ class Constants
      * note: this payload length is ONLY the bytes that are sent inside of the Data protobuf (excluding protobuf overhead). The 16 byte header is
      * outside of this envelope
      *
-     * Generated from protobuf enum <code>DATA_PAYLOAD_LEN = 237;</code>
+     * Generated from protobuf enum <code>DATA_PAYLOAD_LEN = 233;</code>
      */
-    const DATA_PAYLOAD_LEN = 237;
+    const DATA_PAYLOAD_LEN = 233;
 
     private static $valueToName = [
         self::ZERO => 'ZERO',

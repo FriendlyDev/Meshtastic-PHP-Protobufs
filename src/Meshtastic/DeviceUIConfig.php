@@ -20,19 +20,19 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      */
     protected $version = 0;
     /**
-     * TFT display brightness 1..255 
+     * TFT display brightness 1..255
      *
      * Generated from protobuf field <code>uint32 screen_brightness = 2;</code>
      */
     protected $screen_brightness = 0;
     /**
-     * Screen timeout 0..900 
+     * Screen timeout 0..900
      *
      * Generated from protobuf field <code>uint32 screen_timeout = 3;</code>
      */
     protected $screen_timeout = 0;
     /**
-     * Screen/Settings lock enabled 
+     * Screen/Settings lock enabled
      *
      * Generated from protobuf field <code>bool screen_lock = 4;</code>
      */
@@ -46,7 +46,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      */
     protected $pin_code = 0;
     /**
-     * Color theme 
+     * Color theme
      *
      * Generated from protobuf field <code>.meshtastic.Theme theme = 7;</code>
      */
@@ -66,13 +66,13 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      */
     protected $ring_tone_id = 0;
     /**
-     * Localization 
+     * Localization
      *
      * Generated from protobuf field <code>.meshtastic.Language language = 11;</code>
      */
     protected $language = 0;
     /**
-     * Node list filter 
+     * Node list filter
      *
      * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 12;</code>
      */
@@ -83,6 +83,38 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.meshtastic.NodeHighlight node_highlight = 13;</code>
      */
     protected $node_highlight = null;
+    /**
+     * 8 integers for screen calibration data
+     *
+     * Generated from protobuf field <code>bytes calibration_data = 14;</code>
+     */
+    protected $calibration_data = '';
+    /**
+     * Map related data
+     *
+     * Generated from protobuf field <code>.meshtastic.Map map_data = 15;</code>
+     */
+    protected $map_data = null;
+    /**
+     * Compass mode
+     *
+     * Generated from protobuf field <code>.meshtastic.CompassMode compass_mode = 16;</code>
+     */
+    protected $compass_mode = 0;
+    /**
+     * RGB color for BaseUI
+     * 0xRRGGBB format, e.g. 0xFF0000 for red
+     *
+     * Generated from protobuf field <code>uint32 screen_rgb_color = 17;</code>
+     */
+    protected $screen_rgb_color = 0;
+    /**
+     * Clockface analog style
+     * true for analog clockface, false for digital clockface
+     *
+     * Generated from protobuf field <code>bool is_clockface_analog = 18;</code>
+     */
+    protected $is_clockface_analog = false;
 
     /**
      * Constructor.
@@ -93,25 +125,37 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      *     @type int $version
      *           A version integer used to invalidate saved files when we make incompatible changes.
      *     @type int $screen_brightness
-     *           TFT display brightness 1..255 
+     *           TFT display brightness 1..255
      *     @type int $screen_timeout
-     *           Screen timeout 0..900 
+     *           Screen timeout 0..900
      *     @type bool $screen_lock
-     *           Screen/Settings lock enabled 
+     *           Screen/Settings lock enabled
      *     @type bool $settings_lock
      *     @type int $pin_code
      *     @type int $theme
-     *           Color theme 
+     *           Color theme
      *     @type bool $alert_enabled
      *           Audible message, banner and ring tone
      *     @type bool $banner_enabled
      *     @type int $ring_tone_id
      *     @type int $language
-     *           Localization 
+     *           Localization
      *     @type \Meshtastic\NodeFilter $node_filter
-     *           Node list filter 
+     *           Node list filter
      *     @type \Meshtastic\NodeHighlight $node_highlight
      *           Node list highlightening
+     *     @type string $calibration_data
+     *           8 integers for screen calibration data
+     *     @type \Meshtastic\Map $map_data
+     *           Map related data
+     *     @type int $compass_mode
+     *           Compass mode
+     *     @type int $screen_rgb_color
+     *           RGB color for BaseUI
+     *           0xRRGGBB format, e.g. 0xFF0000 for red
+     *     @type bool $is_clockface_analog
+     *           Clockface analog style
+     *           true for analog clockface, false for digital clockface
      * }
      */
     public function __construct($data = NULL) {
@@ -146,7 +190,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * TFT display brightness 1..255 
+     * TFT display brightness 1..255
      *
      * Generated from protobuf field <code>uint32 screen_brightness = 2;</code>
      * @return int
@@ -157,7 +201,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * TFT display brightness 1..255 
+     * TFT display brightness 1..255
      *
      * Generated from protobuf field <code>uint32 screen_brightness = 2;</code>
      * @param int $var
@@ -172,7 +216,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Screen timeout 0..900 
+     * Screen timeout 0..900
      *
      * Generated from protobuf field <code>uint32 screen_timeout = 3;</code>
      * @return int
@@ -183,7 +227,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Screen timeout 0..900 
+     * Screen timeout 0..900
      *
      * Generated from protobuf field <code>uint32 screen_timeout = 3;</code>
      * @param int $var
@@ -198,7 +242,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Screen/Settings lock enabled 
+     * Screen/Settings lock enabled
      *
      * Generated from protobuf field <code>bool screen_lock = 4;</code>
      * @return bool
@@ -209,7 +253,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Screen/Settings lock enabled 
+     * Screen/Settings lock enabled
      *
      * Generated from protobuf field <code>bool screen_lock = 4;</code>
      * @param bool $var
@@ -268,7 +312,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Color theme 
+     * Color theme
      *
      * Generated from protobuf field <code>.meshtastic.Theme theme = 7;</code>
      * @return int
@@ -279,7 +323,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Color theme 
+     * Color theme
      *
      * Generated from protobuf field <code>.meshtastic.Theme theme = 7;</code>
      * @param int $var
@@ -364,7 +408,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Localization 
+     * Localization
      *
      * Generated from protobuf field <code>.meshtastic.Language language = 11;</code>
      * @return int
@@ -375,7 +419,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Localization 
+     * Localization
      *
      * Generated from protobuf field <code>.meshtastic.Language language = 11;</code>
      * @param int $var
@@ -390,7 +434,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Node list filter 
+     * Node list filter
      *
      * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 12;</code>
      * @return \Meshtastic\NodeFilter|null
@@ -411,7 +455,7 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Node list filter 
+     * Node list filter
      *
      * Generated from protobuf field <code>.meshtastic.NodeFilter node_filter = 12;</code>
      * @param \Meshtastic\NodeFilter $var
@@ -457,6 +501,150 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\NodeHighlight::class);
         $this->node_highlight = $var;
+
+        return $this;
+    }
+
+    /**
+     * 8 integers for screen calibration data
+     *
+     * Generated from protobuf field <code>bytes calibration_data = 14;</code>
+     * @return string
+     */
+    public function getCalibrationData()
+    {
+        return $this->calibration_data;
+    }
+
+    /**
+     * 8 integers for screen calibration data
+     *
+     * Generated from protobuf field <code>bytes calibration_data = 14;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCalibrationData($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->calibration_data = $var;
+
+        return $this;
+    }
+
+    /**
+     * Map related data
+     *
+     * Generated from protobuf field <code>.meshtastic.Map map_data = 15;</code>
+     * @return \Meshtastic\Map|null
+     */
+    public function getMapData()
+    {
+        return $this->map_data;
+    }
+
+    public function hasMapData()
+    {
+        return isset($this->map_data);
+    }
+
+    public function clearMapData()
+    {
+        unset($this->map_data);
+    }
+
+    /**
+     * Map related data
+     *
+     * Generated from protobuf field <code>.meshtastic.Map map_data = 15;</code>
+     * @param \Meshtastic\Map $var
+     * @return $this
+     */
+    public function setMapData($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\Map::class);
+        $this->map_data = $var;
+
+        return $this;
+    }
+
+    /**
+     * Compass mode
+     *
+     * Generated from protobuf field <code>.meshtastic.CompassMode compass_mode = 16;</code>
+     * @return int
+     */
+    public function getCompassMode()
+    {
+        return $this->compass_mode;
+    }
+
+    /**
+     * Compass mode
+     *
+     * Generated from protobuf field <code>.meshtastic.CompassMode compass_mode = 16;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCompassMode($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\CompassMode::class);
+        $this->compass_mode = $var;
+
+        return $this;
+    }
+
+    /**
+     * RGB color for BaseUI
+     * 0xRRGGBB format, e.g. 0xFF0000 for red
+     *
+     * Generated from protobuf field <code>uint32 screen_rgb_color = 17;</code>
+     * @return int
+     */
+    public function getScreenRgbColor()
+    {
+        return $this->screen_rgb_color;
+    }
+
+    /**
+     * RGB color for BaseUI
+     * 0xRRGGBB format, e.g. 0xFF0000 for red
+     *
+     * Generated from protobuf field <code>uint32 screen_rgb_color = 17;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setScreenRgbColor($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->screen_rgb_color = $var;
+
+        return $this;
+    }
+
+    /**
+     * Clockface analog style
+     * true for analog clockface, false for digital clockface
+     *
+     * Generated from protobuf field <code>bool is_clockface_analog = 18;</code>
+     * @return bool
+     */
+    public function getIsClockfaceAnalog()
+    {
+        return $this->is_clockface_analog;
+    }
+
+    /**
+     * Clockface analog style
+     * true for analog clockface, false for digital clockface
+     *
+     * Generated from protobuf field <code>bool is_clockface_analog = 18;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsClockfaceAnalog($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_clockface_analog = $var;
 
         return $this;
     }

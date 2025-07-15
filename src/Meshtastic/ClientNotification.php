@@ -42,6 +42,7 @@ class ClientNotification extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string message = 4;</code>
      */
     protected $message = '';
+    protected $payload_variant;
 
     /**
      * Constructor.
@@ -57,6 +58,11 @@ class ClientNotification extends \Google\Protobuf\Internal\Message
      *           The level type of notification
      *     @type string $message
      *           The message body of the notification
+     *     @type \Meshtastic\KeyVerificationNumberInform $key_verification_number_inform
+     *     @type \Meshtastic\KeyVerificationNumberRequest $key_verification_number_request
+     *     @type \Meshtastic\KeyVerificationFinal $key_verification_final
+     *     @type \Meshtastic\DuplicatedPublicKey $duplicated_public_key
+     *     @type \Meshtastic\LowEntropyKey $low_entropy_key
      * }
      */
     public function __construct($data = NULL) {
@@ -176,6 +182,149 @@ class ClientNotification extends \Google\Protobuf\Internal\Message
         $this->message = $var;
 
         return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.KeyVerificationNumberInform key_verification_number_inform = 11;</code>
+     * @return \Meshtastic\KeyVerificationNumberInform|null
+     */
+    public function getKeyVerificationNumberInform()
+    {
+        return $this->readOneof(11);
+    }
+
+    public function hasKeyVerificationNumberInform()
+    {
+        return $this->hasOneof(11);
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.KeyVerificationNumberInform key_verification_number_inform = 11;</code>
+     * @param \Meshtastic\KeyVerificationNumberInform $var
+     * @return $this
+     */
+    public function setKeyVerificationNumberInform($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\KeyVerificationNumberInform::class);
+        $this->writeOneof(11, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.KeyVerificationNumberRequest key_verification_number_request = 12;</code>
+     * @return \Meshtastic\KeyVerificationNumberRequest|null
+     */
+    public function getKeyVerificationNumberRequest()
+    {
+        return $this->readOneof(12);
+    }
+
+    public function hasKeyVerificationNumberRequest()
+    {
+        return $this->hasOneof(12);
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.KeyVerificationNumberRequest key_verification_number_request = 12;</code>
+     * @param \Meshtastic\KeyVerificationNumberRequest $var
+     * @return $this
+     */
+    public function setKeyVerificationNumberRequest($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\KeyVerificationNumberRequest::class);
+        $this->writeOneof(12, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.KeyVerificationFinal key_verification_final = 13;</code>
+     * @return \Meshtastic\KeyVerificationFinal|null
+     */
+    public function getKeyVerificationFinal()
+    {
+        return $this->readOneof(13);
+    }
+
+    public function hasKeyVerificationFinal()
+    {
+        return $this->hasOneof(13);
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.KeyVerificationFinal key_verification_final = 13;</code>
+     * @param \Meshtastic\KeyVerificationFinal $var
+     * @return $this
+     */
+    public function setKeyVerificationFinal($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\KeyVerificationFinal::class);
+        $this->writeOneof(13, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.DuplicatedPublicKey duplicated_public_key = 14;</code>
+     * @return \Meshtastic\DuplicatedPublicKey|null
+     */
+    public function getDuplicatedPublicKey()
+    {
+        return $this->readOneof(14);
+    }
+
+    public function hasDuplicatedPublicKey()
+    {
+        return $this->hasOneof(14);
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.DuplicatedPublicKey duplicated_public_key = 14;</code>
+     * @param \Meshtastic\DuplicatedPublicKey $var
+     * @return $this
+     */
+    public function setDuplicatedPublicKey($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\DuplicatedPublicKey::class);
+        $this->writeOneof(14, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.LowEntropyKey low_entropy_key = 15;</code>
+     * @return \Meshtastic\LowEntropyKey|null
+     */
+    public function getLowEntropyKey()
+    {
+        return $this->readOneof(15);
+    }
+
+    public function hasLowEntropyKey()
+    {
+        return $this->hasOneof(15);
+    }
+
+    /**
+     * Generated from protobuf field <code>.meshtastic.LowEntropyKey low_entropy_key = 15;</code>
+     * @param \Meshtastic\LowEntropyKey $var
+     * @return $this
+     */
+    public function setLowEntropyKey($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\LowEntropyKey::class);
+        $this->writeOneof(15, $var);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPayloadVariant()
+    {
+        return $this->whichOneof("payload_variant");
     }
 
 }

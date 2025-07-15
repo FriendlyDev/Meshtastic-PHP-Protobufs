@@ -95,6 +95,13 @@ class MapReport extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 num_online_local_nodes = 13;</code>
      */
     protected $num_online_local_nodes = 0;
+    /**
+     * User has opted in to share their location (map report) with the mqtt server
+     * Controlled by map_report.should_report_location
+     *
+     * Generated from protobuf field <code>bool has_opted_report_location = 14;</code>
+     */
+    protected $has_opted_report_location = false;
 
     /**
      * Constructor.
@@ -130,6 +137,9 @@ class MapReport extends \Google\Protobuf\Internal\Message
      *           Indicates the bits of precision for latitude and longitude set by the sending node
      *     @type int $num_online_local_nodes
      *           Number of online nodes (heard in the last 2 hours) this node has in its list that were received locally (not via MQTT)
+     *     @type bool $has_opted_report_location
+     *           User has opted in to share their location (map report) with the mqtt server
+     *           Controlled by map_report.should_report_location
      * }
      */
     public function __construct($data = NULL) {
@@ -475,6 +485,34 @@ class MapReport extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->num_online_local_nodes = $var;
+
+        return $this;
+    }
+
+    /**
+     * User has opted in to share their location (map report) with the mqtt server
+     * Controlled by map_report.should_report_location
+     *
+     * Generated from protobuf field <code>bool has_opted_report_location = 14;</code>
+     * @return bool
+     */
+    public function getHasOptedReportLocation()
+    {
+        return $this->has_opted_report_location;
+    }
+
+    /**
+     * User has opted in to share their location (map report) with the mqtt server
+     * Controlled by map_report.should_report_location
+     *
+     * Generated from protobuf field <code>bool has_opted_report_location = 14;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setHasOptedReportLocation($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->has_opted_report_location = $var;
 
         return $this;
     }

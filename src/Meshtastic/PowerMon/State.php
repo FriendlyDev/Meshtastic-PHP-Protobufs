@@ -8,7 +8,7 @@ use UnexpectedValueException;
 
 /**
  * Any significant power changing event in meshtastic should be tagged with a powermon state transition.
- *If you are making new meshtastic features feel free to add new entries at the end of this definition.
+ * If you are making new meshtastic features feel free to add new entries at the end of this definition.
  *
  * Protobuf type <code>meshtastic.PowerMon.State</code>
  */
@@ -71,8 +71,8 @@ class State
      */
     const Wifi_On = 1024;
     /**
-     *GPS is actively trying to find our location
-     *See GPSPowerState for more details
+     * GPS is actively trying to find our location
+     * See GPSPowerState for more details
      *
      * Generated from protobuf enum <code>GPS_Active = 2048;</code>
      */

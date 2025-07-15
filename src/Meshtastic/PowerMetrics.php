@@ -51,6 +51,66 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional float ch3_current = 6;</code>
      */
     protected $ch3_current = null;
+    /**
+     * Voltage (Ch4)
+     *
+     * Generated from protobuf field <code>optional float ch4_voltage = 7;</code>
+     */
+    protected $ch4_voltage = null;
+    /**
+     * Current (Ch4)
+     *
+     * Generated from protobuf field <code>optional float ch4_current = 8;</code>
+     */
+    protected $ch4_current = null;
+    /**
+     * Voltage (Ch5)
+     *
+     * Generated from protobuf field <code>optional float ch5_voltage = 9;</code>
+     */
+    protected $ch5_voltage = null;
+    /**
+     * Current (Ch5)
+     *
+     * Generated from protobuf field <code>optional float ch5_current = 10;</code>
+     */
+    protected $ch5_current = null;
+    /**
+     * Voltage (Ch6)
+     *
+     * Generated from protobuf field <code>optional float ch6_voltage = 11;</code>
+     */
+    protected $ch6_voltage = null;
+    /**
+     * Current (Ch6)
+     *
+     * Generated from protobuf field <code>optional float ch6_current = 12;</code>
+     */
+    protected $ch6_current = null;
+    /**
+     * Voltage (Ch7)
+     *
+     * Generated from protobuf field <code>optional float ch7_voltage = 13;</code>
+     */
+    protected $ch7_voltage = null;
+    /**
+     * Current (Ch7)
+     *
+     * Generated from protobuf field <code>optional float ch7_current = 14;</code>
+     */
+    protected $ch7_current = null;
+    /**
+     * Voltage (Ch8)
+     *
+     * Generated from protobuf field <code>optional float ch8_voltage = 15;</code>
+     */
+    protected $ch8_voltage = null;
+    /**
+     * Current (Ch8)
+     *
+     * Generated from protobuf field <code>optional float ch8_current = 16;</code>
+     */
+    protected $ch8_current = null;
 
     /**
      * Constructor.
@@ -70,6 +130,26 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
      *           Voltage (Ch3)
      *     @type float $ch3_current
      *           Current (Ch3)
+     *     @type float $ch4_voltage
+     *           Voltage (Ch4)
+     *     @type float $ch4_current
+     *           Current (Ch4)
+     *     @type float $ch5_voltage
+     *           Voltage (Ch5)
+     *     @type float $ch5_current
+     *           Current (Ch5)
+     *     @type float $ch6_voltage
+     *           Voltage (Ch6)
+     *     @type float $ch6_current
+     *           Current (Ch6)
+     *     @type float $ch7_voltage
+     *           Voltage (Ch7)
+     *     @type float $ch7_current
+     *           Current (Ch7)
+     *     @type float $ch8_voltage
+     *           Voltage (Ch8)
+     *     @type float $ch8_current
+     *           Current (Ch8)
      * }
      */
     public function __construct($data = NULL) {
@@ -289,6 +369,366 @@ class PowerMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->ch3_current = $var;
+
+        return $this;
+    }
+
+    /**
+     * Voltage (Ch4)
+     *
+     * Generated from protobuf field <code>optional float ch4_voltage = 7;</code>
+     * @return float
+     */
+    public function getCh4Voltage()
+    {
+        return isset($this->ch4_voltage) ? $this->ch4_voltage : 0.0;
+    }
+
+    public function hasCh4Voltage()
+    {
+        return isset($this->ch4_voltage);
+    }
+
+    public function clearCh4Voltage()
+    {
+        unset($this->ch4_voltage);
+    }
+
+    /**
+     * Voltage (Ch4)
+     *
+     * Generated from protobuf field <code>optional float ch4_voltage = 7;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh4Voltage($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch4_voltage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Current (Ch4)
+     *
+     * Generated from protobuf field <code>optional float ch4_current = 8;</code>
+     * @return float
+     */
+    public function getCh4Current()
+    {
+        return isset($this->ch4_current) ? $this->ch4_current : 0.0;
+    }
+
+    public function hasCh4Current()
+    {
+        return isset($this->ch4_current);
+    }
+
+    public function clearCh4Current()
+    {
+        unset($this->ch4_current);
+    }
+
+    /**
+     * Current (Ch4)
+     *
+     * Generated from protobuf field <code>optional float ch4_current = 8;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh4Current($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch4_current = $var;
+
+        return $this;
+    }
+
+    /**
+     * Voltage (Ch5)
+     *
+     * Generated from protobuf field <code>optional float ch5_voltage = 9;</code>
+     * @return float
+     */
+    public function getCh5Voltage()
+    {
+        return isset($this->ch5_voltage) ? $this->ch5_voltage : 0.0;
+    }
+
+    public function hasCh5Voltage()
+    {
+        return isset($this->ch5_voltage);
+    }
+
+    public function clearCh5Voltage()
+    {
+        unset($this->ch5_voltage);
+    }
+
+    /**
+     * Voltage (Ch5)
+     *
+     * Generated from protobuf field <code>optional float ch5_voltage = 9;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh5Voltage($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch5_voltage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Current (Ch5)
+     *
+     * Generated from protobuf field <code>optional float ch5_current = 10;</code>
+     * @return float
+     */
+    public function getCh5Current()
+    {
+        return isset($this->ch5_current) ? $this->ch5_current : 0.0;
+    }
+
+    public function hasCh5Current()
+    {
+        return isset($this->ch5_current);
+    }
+
+    public function clearCh5Current()
+    {
+        unset($this->ch5_current);
+    }
+
+    /**
+     * Current (Ch5)
+     *
+     * Generated from protobuf field <code>optional float ch5_current = 10;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh5Current($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch5_current = $var;
+
+        return $this;
+    }
+
+    /**
+     * Voltage (Ch6)
+     *
+     * Generated from protobuf field <code>optional float ch6_voltage = 11;</code>
+     * @return float
+     */
+    public function getCh6Voltage()
+    {
+        return isset($this->ch6_voltage) ? $this->ch6_voltage : 0.0;
+    }
+
+    public function hasCh6Voltage()
+    {
+        return isset($this->ch6_voltage);
+    }
+
+    public function clearCh6Voltage()
+    {
+        unset($this->ch6_voltage);
+    }
+
+    /**
+     * Voltage (Ch6)
+     *
+     * Generated from protobuf field <code>optional float ch6_voltage = 11;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh6Voltage($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch6_voltage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Current (Ch6)
+     *
+     * Generated from protobuf field <code>optional float ch6_current = 12;</code>
+     * @return float
+     */
+    public function getCh6Current()
+    {
+        return isset($this->ch6_current) ? $this->ch6_current : 0.0;
+    }
+
+    public function hasCh6Current()
+    {
+        return isset($this->ch6_current);
+    }
+
+    public function clearCh6Current()
+    {
+        unset($this->ch6_current);
+    }
+
+    /**
+     * Current (Ch6)
+     *
+     * Generated from protobuf field <code>optional float ch6_current = 12;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh6Current($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch6_current = $var;
+
+        return $this;
+    }
+
+    /**
+     * Voltage (Ch7)
+     *
+     * Generated from protobuf field <code>optional float ch7_voltage = 13;</code>
+     * @return float
+     */
+    public function getCh7Voltage()
+    {
+        return isset($this->ch7_voltage) ? $this->ch7_voltage : 0.0;
+    }
+
+    public function hasCh7Voltage()
+    {
+        return isset($this->ch7_voltage);
+    }
+
+    public function clearCh7Voltage()
+    {
+        unset($this->ch7_voltage);
+    }
+
+    /**
+     * Voltage (Ch7)
+     *
+     * Generated from protobuf field <code>optional float ch7_voltage = 13;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh7Voltage($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch7_voltage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Current (Ch7)
+     *
+     * Generated from protobuf field <code>optional float ch7_current = 14;</code>
+     * @return float
+     */
+    public function getCh7Current()
+    {
+        return isset($this->ch7_current) ? $this->ch7_current : 0.0;
+    }
+
+    public function hasCh7Current()
+    {
+        return isset($this->ch7_current);
+    }
+
+    public function clearCh7Current()
+    {
+        unset($this->ch7_current);
+    }
+
+    /**
+     * Current (Ch7)
+     *
+     * Generated from protobuf field <code>optional float ch7_current = 14;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh7Current($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch7_current = $var;
+
+        return $this;
+    }
+
+    /**
+     * Voltage (Ch8)
+     *
+     * Generated from protobuf field <code>optional float ch8_voltage = 15;</code>
+     * @return float
+     */
+    public function getCh8Voltage()
+    {
+        return isset($this->ch8_voltage) ? $this->ch8_voltage : 0.0;
+    }
+
+    public function hasCh8Voltage()
+    {
+        return isset($this->ch8_voltage);
+    }
+
+    public function clearCh8Voltage()
+    {
+        unset($this->ch8_voltage);
+    }
+
+    /**
+     * Voltage (Ch8)
+     *
+     * Generated from protobuf field <code>optional float ch8_voltage = 15;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh8Voltage($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch8_voltage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Current (Ch8)
+     *
+     * Generated from protobuf field <code>optional float ch8_current = 16;</code>
+     * @return float
+     */
+    public function getCh8Current()
+    {
+        return isset($this->ch8_current) ? $this->ch8_current : 0.0;
+    }
+
+    public function hasCh8Current()
+    {
+        return isset($this->ch8_current);
+    }
+
+    public function clearCh8Current()
+    {
+        unset($this->ch8_current);
+    }
+
+    /**
+     * Current (Ch8)
+     *
+     * Generated from protobuf field <code>optional float ch8_current = 16;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCh8Current($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->ch8_current = $var;
 
         return $this;
     }

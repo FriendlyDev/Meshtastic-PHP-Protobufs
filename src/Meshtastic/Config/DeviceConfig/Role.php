@@ -102,6 +102,16 @@ class Role
      * Generated from protobuf enum <code>TAK_TRACKER = 10;</code>
      */
     const TAK_TRACKER = 10;
+    /**
+     * Description: Will always rebroadcast packets, but will do so after all other modes.
+     * Technical Details: Used for router nodes that are intended to provide additional coverage
+     *    in areas not already covered by other routers, or to bridge around problematic terrain,
+     *    but should not be given priority over other routers in order to avoid unnecessaraily
+     *    consuming hops.
+     *
+     * Generated from protobuf enum <code>ROUTER_LATE = 11;</code>
+     */
+    const ROUTER_LATE = 11;
 
     private static $valueToName = [
         self::CLIENT => 'CLIENT',
@@ -115,6 +125,7 @@ class Role
         self::CLIENT_HIDDEN => 'CLIENT_HIDDEN',
         self::LOST_AND_FOUND => 'LOST_AND_FOUND',
         self::TAK_TRACKER => 'TAK_TRACKER',
+        self::ROUTER_LATE => 'ROUTER_LATE',
     ];
 
     public static function name($value)

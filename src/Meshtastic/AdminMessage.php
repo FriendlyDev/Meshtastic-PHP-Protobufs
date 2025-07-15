@@ -83,6 +83,15 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Delete the file by the specified path from the device
      *     @type int $set_scale
      *           Set zero and offset for scale chips
+     *     @type int $backup_preferences
+     *           Backup the node's preferences
+     *     @type int $restore_preferences
+     *           Restore the node's preferences
+     *     @type int $remove_backup_preferences
+     *           Remove backups of the node's preferences
+     *     @type \Meshtastic\AdminMessage\InputEvent $send_input_event
+     *           Send an input event to the node.
+     *           This is used to trigger physical input events like button presses, touch events, etc.
      *     @type \Meshtastic\User $set_owner
      *           Set the owner for this node
      *     @type \Meshtastic\Channel $set_channel
@@ -118,11 +127,19 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Reply stored device ui data.
      *     @type \Meshtastic\DeviceUIConfig $store_ui_config
      *           Tell the node to store UI data persistently.
+     *     @type int $set_ignored_node
+     *           Set specified node-num to be ignored on the NodeDB on the device
+     *     @type int $remove_ignored_node
+     *           Set specified node-num to be un-ignored on the NodeDB on the device
      *     @type bool $begin_edit_settings
      *           Begins an edit transaction for config, module config, owner, and channel settings changes
      *           This will delay the standard *implicit* save to the file system and subsequent reboot behavior until committed (commit_edit_settings)
      *     @type bool $commit_edit_settings
      *           Commits an open transaction for any edits made to config, module config, owner, and channel settings
+     *     @type \Meshtastic\SharedContact $add_contact
+     *           Add a contact (User) to the nodedb
+     *     @type \Meshtastic\KeyVerificationAdmin $key_verification
+     *           Initiate or respond to a key verification request
      *     @type int $factory_reset_device
      *           Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
      *     @type int $reboot_ota_seconds
@@ -863,6 +880,132 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Backup the node's preferences
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.BackupLocation backup_preferences = 24;</code>
+     * @return int
+     */
+    public function getBackupPreferences()
+    {
+        return $this->readOneof(24);
+    }
+
+    public function hasBackupPreferences()
+    {
+        return $this->hasOneof(24);
+    }
+
+    /**
+     * Backup the node's preferences
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.BackupLocation backup_preferences = 24;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setBackupPreferences($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\AdminMessage\BackupLocation::class);
+        $this->writeOneof(24, $var);
+
+        return $this;
+    }
+
+    /**
+     * Restore the node's preferences
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.BackupLocation restore_preferences = 25;</code>
+     * @return int
+     */
+    public function getRestorePreferences()
+    {
+        return $this->readOneof(25);
+    }
+
+    public function hasRestorePreferences()
+    {
+        return $this->hasOneof(25);
+    }
+
+    /**
+     * Restore the node's preferences
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.BackupLocation restore_preferences = 25;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRestorePreferences($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\AdminMessage\BackupLocation::class);
+        $this->writeOneof(25, $var);
+
+        return $this;
+    }
+
+    /**
+     * Remove backups of the node's preferences
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.BackupLocation remove_backup_preferences = 26;</code>
+     * @return int
+     */
+    public function getRemoveBackupPreferences()
+    {
+        return $this->readOneof(26);
+    }
+
+    public function hasRemoveBackupPreferences()
+    {
+        return $this->hasOneof(26);
+    }
+
+    /**
+     * Remove backups of the node's preferences
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.BackupLocation remove_backup_preferences = 26;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRemoveBackupPreferences($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\AdminMessage\BackupLocation::class);
+        $this->writeOneof(26, $var);
+
+        return $this;
+    }
+
+    /**
+     * Send an input event to the node.
+     * This is used to trigger physical input events like button presses, touch events, etc.
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.InputEvent send_input_event = 27;</code>
+     * @return \Meshtastic\AdminMessage\InputEvent|null
+     */
+    public function getSendInputEvent()
+    {
+        return $this->readOneof(27);
+    }
+
+    public function hasSendInputEvent()
+    {
+        return $this->hasOneof(27);
+    }
+
+    /**
+     * Send an input event to the node.
+     * This is used to trigger physical input events like button presses, touch events, etc.
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.InputEvent send_input_event = 27;</code>
+     * @param \Meshtastic\AdminMessage\InputEvent $var
+     * @return $this
+     */
+    public function setSendInputEvent($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\AdminMessage\InputEvent::class);
+        $this->writeOneof(27, $var);
+
+        return $this;
+    }
+
+    /**
      * Set the owner for this node
      *
      * Generated from protobuf field <code>.meshtastic.User set_owner = 32;</code>
@@ -1338,6 +1481,68 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Set specified node-num to be ignored on the NodeDB on the device
+     *
+     * Generated from protobuf field <code>uint32 set_ignored_node = 47;</code>
+     * @return int
+     */
+    public function getSetIgnoredNode()
+    {
+        return $this->readOneof(47);
+    }
+
+    public function hasSetIgnoredNode()
+    {
+        return $this->hasOneof(47);
+    }
+
+    /**
+     * Set specified node-num to be ignored on the NodeDB on the device
+     *
+     * Generated from protobuf field <code>uint32 set_ignored_node = 47;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSetIgnoredNode($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->writeOneof(47, $var);
+
+        return $this;
+    }
+
+    /**
+     * Set specified node-num to be un-ignored on the NodeDB on the device
+     *
+     * Generated from protobuf field <code>uint32 remove_ignored_node = 48;</code>
+     * @return int
+     */
+    public function getRemoveIgnoredNode()
+    {
+        return $this->readOneof(48);
+    }
+
+    public function hasRemoveIgnoredNode()
+    {
+        return $this->hasOneof(48);
+    }
+
+    /**
+     * Set specified node-num to be un-ignored on the NodeDB on the device
+     *
+     * Generated from protobuf field <code>uint32 remove_ignored_node = 48;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRemoveIgnoredNode($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->writeOneof(48, $var);
+
+        return $this;
+    }
+
+    /**
      * Begins an edit transaction for config, module config, owner, and channel settings changes
      * This will delay the standard *implicit* save to the file system and subsequent reboot behavior until committed (commit_edit_settings)
      *
@@ -1397,6 +1602,68 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->writeOneof(65, $var);
+
+        return $this;
+    }
+
+    /**
+     * Add a contact (User) to the nodedb
+     *
+     * Generated from protobuf field <code>.meshtastic.SharedContact add_contact = 66;</code>
+     * @return \Meshtastic\SharedContact|null
+     */
+    public function getAddContact()
+    {
+        return $this->readOneof(66);
+    }
+
+    public function hasAddContact()
+    {
+        return $this->hasOneof(66);
+    }
+
+    /**
+     * Add a contact (User) to the nodedb
+     *
+     * Generated from protobuf field <code>.meshtastic.SharedContact add_contact = 66;</code>
+     * @param \Meshtastic\SharedContact $var
+     * @return $this
+     */
+    public function setAddContact($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\SharedContact::class);
+        $this->writeOneof(66, $var);
+
+        return $this;
+    }
+
+    /**
+     * Initiate or respond to a key verification request
+     *
+     * Generated from protobuf field <code>.meshtastic.KeyVerificationAdmin key_verification = 67;</code>
+     * @return \Meshtastic\KeyVerificationAdmin|null
+     */
+    public function getKeyVerification()
+    {
+        return $this->readOneof(67);
+    }
+
+    public function hasKeyVerification()
+    {
+        return $this->hasOneof(67);
+    }
+
+    /**
+     * Initiate or respond to a key verification request
+     *
+     * Generated from protobuf field <code>.meshtastic.KeyVerificationAdmin key_verification = 67;</code>
+     * @param \Meshtastic\KeyVerificationAdmin $var
+     * @return $this
+     */
+    public function setKeyVerification($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\KeyVerificationAdmin::class);
+        $this->writeOneof(67, $var);
 
         return $this;
     }

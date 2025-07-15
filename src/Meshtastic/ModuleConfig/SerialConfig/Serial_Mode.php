@@ -45,6 +45,13 @@ class Serial_Mode
      * Generated from protobuf enum <code>WS85 = 6;</code>
      */
     const WS85 = 6;
+    /**
+     * VE.Direct is a serial protocol used by Victron Energy products
+     * https://beta.ivc.no/wiki/index.php/Victron_VE_Direct_DIY_Cable
+     *
+     * Generated from protobuf enum <code>VE_DIRECT = 7;</code>
+     */
+    const VE_DIRECT = 7;
 
     private static $valueToName = [
         self::PBDEFAULT => 'DEFAULT',
@@ -54,6 +61,7 @@ class Serial_Mode
         self::NMEA => 'NMEA',
         self::CALTOPO => 'CALTOPO',
         self::WS85 => 'WS85',
+        self::VE_DIRECT => 'VE_DIRECT',
     ];
 
     public static function name($value)

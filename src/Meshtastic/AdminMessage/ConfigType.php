@@ -62,6 +62,7 @@ class ConfigType
      */
     const SECURITY_CONFIG = 7;
     /**
+     * Session key config
      *
      * Generated from protobuf enum <code>SESSIONKEY_CONFIG = 8;</code>
      */

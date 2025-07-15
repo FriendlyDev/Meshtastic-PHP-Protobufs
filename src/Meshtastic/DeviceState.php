@@ -63,9 +63,11 @@ class DeviceState extends \Google\Protobuf\Internal\Message
      */
     protected $no_save = false;
     /**
-     * Some GPS receivers seem to have bogus settings from the factory, so we always do one factory reset.
+     * Previously used to manage GPS factory resets.
+     * Deprecated in 2.5.23
      *
-     * Generated from protobuf field <code>bool did_gps_reset = 11;</code>
+     * Generated from protobuf field <code>bool did_gps_reset = 11 [deprecated = true];</code>
+     * @deprecated
      */
     protected $did_gps_reset = false;
     /**
@@ -82,12 +84,6 @@ class DeviceState extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .meshtastic.NodeRemoteHardwarePin node_remote_hardware_pins = 13;</code>
      */
     private $node_remote_hardware_pins;
-    /**
-     * New lite version of NodeDB to decrease memory footprint
-     *
-     * Generated from protobuf field <code>repeated .meshtastic.NodeInfoLite node_db_lite = 14 [(.nanopb) = {</code>
-     */
-    private $node_db_lite;
 
     /**
      * Constructor.
@@ -114,15 +110,14 @@ class DeviceState extends \Google\Protobuf\Internal\Message
      *           Indicates developer is testing and changes should never be saved to flash.
      *           Deprecated in 2.3.1
      *     @type bool $did_gps_reset
-     *           Some GPS receivers seem to have bogus settings from the factory, so we always do one factory reset.
+     *           Previously used to manage GPS factory resets.
+     *           Deprecated in 2.5.23
      *     @type \Meshtastic\MeshPacket $rx_waypoint
      *           We keep the last received waypoint stored in the device flash,
      *           so we can show it on the screen.
      *           Might be null
      *     @type array<\Meshtastic\NodeRemoteHardwarePin>|\Google\Protobuf\Internal\RepeatedField $node_remote_hardware_pins
      *           The mesh's nodes with their available gpio pins for RemoteHardware module
-     *     @type array<\Meshtastic\NodeInfoLite>|\Google\Protobuf\Internal\RepeatedField $node_db_lite
-     *           New lite version of NodeDB to decrease memory footprint
      * }
      */
     public function __construct($data = NULL) {
@@ -333,25 +328,31 @@ class DeviceState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Some GPS receivers seem to have bogus settings from the factory, so we always do one factory reset.
+     * Previously used to manage GPS factory resets.
+     * Deprecated in 2.5.23
      *
-     * Generated from protobuf field <code>bool did_gps_reset = 11;</code>
+     * Generated from protobuf field <code>bool did_gps_reset = 11 [deprecated = true];</code>
      * @return bool
+     * @deprecated
      */
     public function getDidGpsReset()
     {
+        @trigger_error('did_gps_reset is deprecated.', E_USER_DEPRECATED);
         return $this->did_gps_reset;
     }
 
     /**
-     * Some GPS receivers seem to have bogus settings from the factory, so we always do one factory reset.
+     * Previously used to manage GPS factory resets.
+     * Deprecated in 2.5.23
      *
-     * Generated from protobuf field <code>bool did_gps_reset = 11;</code>
+     * Generated from protobuf field <code>bool did_gps_reset = 11 [deprecated = true];</code>
      * @param bool $var
      * @return $this
+     * @deprecated
      */
     public function setDidGpsReset($var)
     {
+        @trigger_error('did_gps_reset is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkBool($var);
         $this->did_gps_reset = $var;
 
@@ -420,32 +421,6 @@ class DeviceState extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Meshtastic\NodeRemoteHardwarePin::class);
         $this->node_remote_hardware_pins = $arr;
-
-        return $this;
-    }
-
-    /**
-     * New lite version of NodeDB to decrease memory footprint
-     *
-     * Generated from protobuf field <code>repeated .meshtastic.NodeInfoLite node_db_lite = 14 [(.nanopb) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
-     */
-    public function getNodeDbLite()
-    {
-        return $this->node_db_lite;
-    }
-
-    /**
-     * New lite version of NodeDB to decrease memory footprint
-     *
-     * Generated from protobuf field <code>repeated .meshtastic.NodeInfoLite node_db_lite = 14 [(.nanopb) = {</code>
-     * @param array<\Meshtastic\NodeInfoLite>|\Google\Protobuf\Internal\RepeatedField $var
-     * @return $this
-     */
-    public function setNodeDbLite($var)
-    {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Meshtastic\NodeInfoLite::class);
-        $this->node_db_lite = $arr;
 
         return $this;
     }

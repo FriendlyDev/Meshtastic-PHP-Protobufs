@@ -98,6 +98,30 @@ class Language
      */
     const GREEK = 13;
     /**
+     * Norwegian
+     *
+     * Generated from protobuf enum <code>NORWEGIAN = 14;</code>
+     */
+    const NORWEGIAN = 14;
+    /**
+     * Slovenian
+     *
+     * Generated from protobuf enum <code>SLOVENIAN = 15;</code>
+     */
+    const SLOVENIAN = 15;
+    /**
+     * Ukrainian
+     *
+     * Generated from protobuf enum <code>UKRAINIAN = 16;</code>
+     */
+    const UKRAINIAN = 16;
+    /**
+     * Bulgarian
+     *
+     * Generated from protobuf enum <code>BULGARIAN = 17;</code>
+     */
+    const BULGARIAN = 17;
+    /**
      * Simplified Chinese (experimental)
      *
      * Generated from protobuf enum <code>SIMPLIFIED_CHINESE = 30;</code>
@@ -125,6 +149,10 @@ class Language
         self::RUSSIAN => 'RUSSIAN',
         self::DUTCH => 'DUTCH',
         self::GREEK => 'GREEK',
+        self::NORWEGIAN => 'NORWEGIAN',
+        self::SLOVENIAN => 'SLOVENIAN',
+        self::UKRAINIAN => 'UKRAINIAN',
+        self::BULGARIAN => 'BULGARIAN',
         self::SIMPLIFIED_CHINESE => 'SIMPLIFIED_CHINESE',
         self::TRADITIONAL_CHINESE => 'TRADITIONAL_CHINESE',
     ];

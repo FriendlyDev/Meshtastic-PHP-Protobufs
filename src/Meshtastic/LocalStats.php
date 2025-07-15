@@ -83,6 +83,18 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 num_tx_relay_canceled = 11;</code>
      */
     protected $num_tx_relay_canceled = 0;
+    /**
+     * Number of bytes used in the heap
+     *
+     * Generated from protobuf field <code>uint32 heap_total_bytes = 12;</code>
+     */
+    protected $heap_total_bytes = 0;
+    /**
+     * Number of bytes free in the heap
+     *
+     * Generated from protobuf field <code>uint32 heap_free_bytes = 13;</code>
+     */
+    protected $heap_free_bytes = 0;
 
     /**
      * Constructor.
@@ -114,6 +126,10 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      *     @type int $num_tx_relay_canceled
      *           Number of times we canceled a packet to be relayed, because someone else did it before us.
      *           This will always be zero for ROUTERs/REPEATERs. If this number is high, some other node(s) is/are relaying faster than you.
+     *     @type int $heap_total_bytes
+     *           Number of bytes used in the heap
+     *     @type int $heap_free_bytes
+     *           Number of bytes free in the heap
      * }
      */
     public function __construct($data = NULL) {
@@ -407,6 +423,58 @@ class LocalStats extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->num_tx_relay_canceled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Number of bytes used in the heap
+     *
+     * Generated from protobuf field <code>uint32 heap_total_bytes = 12;</code>
+     * @return int
+     */
+    public function getHeapTotalBytes()
+    {
+        return $this->heap_total_bytes;
+    }
+
+    /**
+     * Number of bytes used in the heap
+     *
+     * Generated from protobuf field <code>uint32 heap_total_bytes = 12;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setHeapTotalBytes($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->heap_total_bytes = $var;
+
+        return $this;
+    }
+
+    /**
+     * Number of bytes free in the heap
+     *
+     * Generated from protobuf field <code>uint32 heap_free_bytes = 13;</code>
+     * @return int
+     */
+    public function getHeapFreeBytes()
+    {
+        return $this->heap_free_bytes;
+    }
+
+    /**
+     * Number of bytes free in the heap
+     *
+     * Generated from protobuf field <code>uint32 heap_free_bytes = 13;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setHeapFreeBytes($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->heap_free_bytes = $var;
 
         return $this;
     }

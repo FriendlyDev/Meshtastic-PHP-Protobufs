@@ -118,6 +118,18 @@ class PortNum
      */
     const DETECTION_SENSOR_APP = 10;
     /**
+     * Same as Text Message but used for critical alerts.
+     *
+     * Generated from protobuf enum <code>ALERT_APP = 11;</code>
+     */
+    const ALERT_APP = 11;
+    /**
+     * Module/port for handling key verification requests.
+     *
+     * Generated from protobuf enum <code>KEY_VERIFICATION_APP = 12;</code>
+     */
+    const KEY_VERIFICATION_APP = 12;
+    /**
      * Provides a 'ping' service that replies to any packet it receives.
      * Also serves as a small example module.
      * ENCODING: ASCII Plaintext
@@ -228,6 +240,21 @@ class PortNum
      */
     const POWERSTRESS_APP = 74;
     /**
+     * Reticulum Network Stack Tunnel App
+     * ENCODING: Fragmented RNS Packet. Handled by Meshtastic RNS interface
+     *
+     * Generated from protobuf enum <code>RETICULUM_TUNNEL_APP = 76;</code>
+     */
+    const RETICULUM_TUNNEL_APP = 76;
+    /**
+     * App for transporting Cayenne Low Power Payload, popular for LoRaWAN sensor nodes. Offers ability to send
+     * arbitrary telemetry over meshtastic that is not covered by telemetry.proto
+     * ENCODING: CayenneLLP
+     *
+     * Generated from protobuf enum <code>CAYENNE_APP = 77;</code>
+     */
+    const CAYENNE_APP = 77;
+    /**
      * Private applications should use portnums >= 256.
      * To simplify initial development and testing you can use "PRIVATE_APP"
      * in your code without needing to rebuild protobuf files (via [regen-protos.sh](https://github.com/meshtastic/firmware/blob/master/bin/regen-protos.sh))
@@ -261,6 +288,8 @@ class PortNum
         self::WAYPOINT_APP => 'WAYPOINT_APP',
         self::AUDIO_APP => 'AUDIO_APP',
         self::DETECTION_SENSOR_APP => 'DETECTION_SENSOR_APP',
+        self::ALERT_APP => 'ALERT_APP',
+        self::KEY_VERIFICATION_APP => 'KEY_VERIFICATION_APP',
         self::REPLY_APP => 'REPLY_APP',
         self::IP_TUNNEL_APP => 'IP_TUNNEL_APP',
         self::PAXCOUNTER_APP => 'PAXCOUNTER_APP',
@@ -275,6 +304,8 @@ class PortNum
         self::ATAK_PLUGIN => 'ATAK_PLUGIN',
         self::MAP_REPORT_APP => 'MAP_REPORT_APP',
         self::POWERSTRESS_APP => 'POWERSTRESS_APP',
+        self::RETICULUM_TUNNEL_APP => 'RETICULUM_TUNNEL_APP',
+        self::CAYENNE_APP => 'CAYENNE_APP',
         self::PRIVATE_APP => 'PRIVATE_APP',
         self::ATAK_FORWARDER => 'ATAK_FORWARDER',
         self::MAX => 'MAX',

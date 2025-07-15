@@ -8,8 +8,8 @@ use UnexpectedValueException;
 
 /**
  * What operation would we like the UUT to perform.
- *note: senders should probably set want_response in their request packets, so that they can know when the state
- *machine has started processing their request
+ * note: senders should probably set want_response in their request packets, so that they can know when the state
+ * machine has started processing their request
  *
  * Protobuf type <code>meshtastic.PowerStressMessage.Opcode</code>
  */

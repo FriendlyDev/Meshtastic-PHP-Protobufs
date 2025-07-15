@@ -43,6 +43,8 @@ class Telemetry extends \Google\Protobuf\Internal\Message
      *           Local device mesh statistics
      *     @type \Meshtastic\HealthMetrics $health_metrics
      *           Health telemetry metrics
+     *     @type \Meshtastic\HostMetrics $host_metrics
+     *           Linux host metrics
      * }
      */
     public function __construct($data = NULL) {
@@ -258,6 +260,37 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\HealthMetrics::class);
         $this->writeOneof(7, $var);
+
+        return $this;
+    }
+
+    /**
+     * Linux host metrics
+     *
+     * Generated from protobuf field <code>.meshtastic.HostMetrics host_metrics = 8;</code>
+     * @return \Meshtastic\HostMetrics|null
+     */
+    public function getHostMetrics()
+    {
+        return $this->readOneof(8);
+    }
+
+    public function hasHostMetrics()
+    {
+        return $this->hasOneof(8);
+    }
+
+    /**
+     * Linux host metrics
+     *
+     * Generated from protobuf field <code>.meshtastic.HostMetrics host_metrics = 8;</code>
+     * @param \Meshtastic\HostMetrics $var
+     * @return $this
+     */
+    public function setHostMetrics($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\HostMetrics::class);
+        $this->writeOneof(8, $var);
 
         return $this;
     }

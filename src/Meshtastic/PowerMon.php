@@ -10,7 +10,7 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Note: There are no 'PowerMon' messages normally in use (PowerMons are sent only as structured logs - slogs).
- *But we wrap our State enum in this message to effectively nest a namespace (without our linter yelling at us)
+ * But we wrap our State enum in this message to effectively nest a namespace (without our linter yelling at us)
  *
  * Generated from protobuf message <code>meshtastic.PowerMon</code>
  */

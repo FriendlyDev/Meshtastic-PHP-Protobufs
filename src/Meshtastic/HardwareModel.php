@@ -402,7 +402,7 @@ class HardwareModel
      */
     const CDEBYTE_EORA_S3 = 61;
     /**
-     * TWC_MESH_V4 
+     * TWC_MESH_V4
      * Adafruit NRF52840 feather express with SX1262, SSD1306 OLED and NEO6M GPS
      *
      * Generated from protobuf enum <code>TWC_MESH_V4 = 62;</code>
@@ -542,6 +542,156 @@ class HardwareModel
      */
     const TLORA_C6 = 83;
     /**
+     * WisMesh Tap
+     * RAK-4631 w/ TFT in injection modled case
+     *
+     * Generated from protobuf enum <code>WISMESH_TAP = 84;</code>
+     */
+    const WISMESH_TAP = 84;
+    /**
+     * Similar to PORTDUINO but used by Routastic devices, this is not any
+     * particular device and does not run Meshtastic's code but supports
+     * the same frame format.
+     * Runs on linux, see https://github.com/Jorropo/routastic
+     *
+     * Generated from protobuf enum <code>ROUTASTIC = 85;</code>
+     */
+    const ROUTASTIC = 85;
+    /**
+     * Mesh-Tab, esp32 based
+     * https://github.com/valzzu/Mesh-Tab
+     *
+     * Generated from protobuf enum <code>MESH_TAB = 86;</code>
+     */
+    const MESH_TAB = 86;
+    /**
+     * MeshLink board developed by LoraItalia. NRF52840, eByte E22900M22S (Will also come with other frequencies), 25w MPPT solar charger (5v,12v,18v selectable), support for gps, buzzer, oled or e-ink display, 10 gpios, hardware watchdog
+     * https://www.loraitalia.it
+     *
+     * Generated from protobuf enum <code>MESHLINK = 87;</code>
+     */
+    const MESHLINK = 87;
+    /**
+     * Seeed XIAO nRF52840 + Wio SX1262 kit
+     *
+     * Generated from protobuf enum <code>XIAO_NRF52_KIT = 88;</code>
+     */
+    const XIAO_NRF52_KIT = 88;
+    /**
+     * Elecrow ThinkNode M1 & M2
+     * https://www.elecrow.com/wiki/ThinkNode-M1_Transceiver_Device(Meshtastic)_Power_By_nRF52840.html
+     * https://www.elecrow.com/wiki/ThinkNode-M2_Transceiver_Device(Meshtastic)_Power_By_NRF52840.html (this actually uses ESP32-S3)
+     *
+     * Generated from protobuf enum <code>THINKNODE_M1 = 89;</code>
+     */
+    const THINKNODE_M1 = 89;
+    /**
+     * Generated from protobuf enum <code>THINKNODE_M2 = 90;</code>
+     */
+    const THINKNODE_M2 = 90;
+    /**
+     * Lilygo T-ETH-Elite
+     *
+     * Generated from protobuf enum <code>T_ETH_ELITE = 91;</code>
+     */
+    const T_ETH_ELITE = 91;
+    /**
+     * Heltec HRI-3621 industrial probe
+     *
+     * Generated from protobuf enum <code>HELTEC_SENSOR_HUB = 92;</code>
+     */
+    const HELTEC_SENSOR_HUB = 92;
+    /**
+     * Reserved Fried Chicken ID for future use
+     *
+     * Generated from protobuf enum <code>RESERVED_FRIED_CHICKEN = 93;</code>
+     */
+    const RESERVED_FRIED_CHICKEN = 93;
+    /**
+     * Heltec Magnetic Power Bank with Meshtastic compatible
+     *
+     * Generated from protobuf enum <code>HELTEC_MESH_POCKET = 94;</code>
+     */
+    const HELTEC_MESH_POCKET = 94;
+    /**
+     * Seeed Solar Node
+     *
+     * Generated from protobuf enum <code>SEEED_SOLAR_NODE = 95;</code>
+     */
+    const SEEED_SOLAR_NODE = 95;
+    /**
+     * NomadStar Meteor Pro https://nomadstar.ch/
+     *
+     * Generated from protobuf enum <code>NOMADSTAR_METEOR_PRO = 96;</code>
+     */
+    const NOMADSTAR_METEOR_PRO = 96;
+    /**
+     * Elecrow CrowPanel Advance models, ESP32-S3 and TFT with SX1262 radio plugin
+     *
+     * Generated from protobuf enum <code>CROWPANEL = 97;</code>
+     */
+    const CROWPANEL = 97;
+    /**
+     * Lilygo LINK32 board with sensors
+     *
+     * Generated from protobuf enum <code>LINK_32 = 98;</code>
+     */
+    const LINK_32 = 98;
+    /**
+     * Seeed Tracker L1
+     *
+     * Generated from protobuf enum <code>SEEED_WIO_TRACKER_L1 = 99;</code>
+     */
+    const SEEED_WIO_TRACKER_L1 = 99;
+    /**
+     * Seeed Tracker L1 EINK driver
+     *
+     * Generated from protobuf enum <code>SEEED_WIO_TRACKER_L1_EINK = 100;</code>
+     */
+    const SEEED_WIO_TRACKER_L1_EINK = 100;
+    /**
+     * Reserved ID for future and past use
+     *
+     * Generated from protobuf enum <code>QWANTZ_TINY_ARMS = 101;</code>
+     */
+    const QWANTZ_TINY_ARMS = 101;
+    /**
+     * Lilygo T-Deck Pro
+     *
+     * Generated from protobuf enum <code>T_DECK_PRO = 102;</code>
+     */
+    const T_DECK_PRO = 102;
+    /**
+     * Lilygo TLora Pager
+     *
+     * Generated from protobuf enum <code>T_LORA_PAGER = 103;</code>
+     */
+    const T_LORA_PAGER = 103;
+    /**
+     * GAT562 Mesh Trial Tracker
+     *
+     * Generated from protobuf enum <code>GAT562_MESH_TRIAL_TRACKER = 104;</code>
+     */
+    const GAT562_MESH_TRIAL_TRACKER = 104;
+    /**
+     * RAKwireless WisMesh Tag
+     *
+     * Generated from protobuf enum <code>WISMESH_TAG = 105;</code>
+     */
+    const WISMESH_TAG = 105;
+    /**
+     * RAKwireless WisBlock Core RAK3312 https://docs.rakwireless.com/product-categories/wisduo/rak3112-module/overview/
+     *
+     * Generated from protobuf enum <code>RAK3312 = 106;</code>
+     */
+    const RAK3312 = 106;
+    /**
+     * Elecrow ThinkNode M5 https://www.elecrow.com/wiki/ThinkNode_M5_Meshtastic_LoRa_Signal_Transceiver_ESP32-S3.html
+     *
+     * Generated from protobuf enum <code>THINKNODE_M5 = 107;</code>
+     */
+    const THINKNODE_M5 = 107;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -635,6 +785,30 @@ class HardwareModel
         self::SEEED_XIAO_S3 => 'SEEED_XIAO_S3',
         self::MS24SF1 => 'MS24SF1',
         self::TLORA_C6 => 'TLORA_C6',
+        self::WISMESH_TAP => 'WISMESH_TAP',
+        self::ROUTASTIC => 'ROUTASTIC',
+        self::MESH_TAB => 'MESH_TAB',
+        self::MESHLINK => 'MESHLINK',
+        self::XIAO_NRF52_KIT => 'XIAO_NRF52_KIT',
+        self::THINKNODE_M1 => 'THINKNODE_M1',
+        self::THINKNODE_M2 => 'THINKNODE_M2',
+        self::T_ETH_ELITE => 'T_ETH_ELITE',
+        self::HELTEC_SENSOR_HUB => 'HELTEC_SENSOR_HUB',
+        self::RESERVED_FRIED_CHICKEN => 'RESERVED_FRIED_CHICKEN',
+        self::HELTEC_MESH_POCKET => 'HELTEC_MESH_POCKET',
+        self::SEEED_SOLAR_NODE => 'SEEED_SOLAR_NODE',
+        self::NOMADSTAR_METEOR_PRO => 'NOMADSTAR_METEOR_PRO',
+        self::CROWPANEL => 'CROWPANEL',
+        self::LINK_32 => 'LINK_32',
+        self::SEEED_WIO_TRACKER_L1 => 'SEEED_WIO_TRACKER_L1',
+        self::SEEED_WIO_TRACKER_L1_EINK => 'SEEED_WIO_TRACKER_L1_EINK',
+        self::QWANTZ_TINY_ARMS => 'QWANTZ_TINY_ARMS',
+        self::T_DECK_PRO => 'T_DECK_PRO',
+        self::T_LORA_PAGER => 'T_LORA_PAGER',
+        self::GAT562_MESH_TRIAL_TRACKER => 'GAT562_MESH_TRIAL_TRACKER',
+        self::WISMESH_TAG => 'WISMESH_TAG',
+        self::RAK3312 => 'RAK3312',
+        self::THINKNODE_M5 => 'THINKNODE_M5',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

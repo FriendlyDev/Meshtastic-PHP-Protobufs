@@ -95,6 +95,12 @@ class User extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes public_key = 8;</code>
      */
     protected $public_key = '';
+    /**
+     * Whether or not the node can be messaged
+     *
+     * Generated from protobuf field <code>optional bool is_unmessagable = 9;</code>
+     */
+    protected $is_unmessagable = null;
 
     /**
      * Constructor.
@@ -130,6 +136,8 @@ class User extends \Google\Protobuf\Internal\Message
      *     @type string $public_key
      *           The public key of the user's device.
      *           This is sent out to other nodes on the mesh to allow them to compute a shared secret key.
+     *     @type bool $is_unmessagable
+     *           Whether or not the node can be messaged
      * }
      */
     public function __construct($data = NULL) {
@@ -369,6 +377,42 @@ class User extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->public_key = $var;
+
+        return $this;
+    }
+
+    /**
+     * Whether or not the node can be messaged
+     *
+     * Generated from protobuf field <code>optional bool is_unmessagable = 9;</code>
+     * @return bool
+     */
+    public function getIsUnmessagable()
+    {
+        return isset($this->is_unmessagable) ? $this->is_unmessagable : false;
+    }
+
+    public function hasIsUnmessagable()
+    {
+        return isset($this->is_unmessagable);
+    }
+
+    public function clearIsUnmessagable()
+    {
+        unset($this->is_unmessagable);
+    }
+
+    /**
+     * Whether or not the node can be messaged
+     *
+     * Generated from protobuf field <code>optional bool is_unmessagable = 9;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsUnmessagable($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_unmessagable = $var;
 
         return $this;
     }

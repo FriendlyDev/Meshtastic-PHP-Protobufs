@@ -88,11 +88,23 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
      */
     protected $particles_100um = null;
     /**
-     * 10.0um Particle Count
+     * CO2 concentration in ppm
      *
      * Generated from protobuf field <code>optional uint32 co2 = 13;</code>
      */
     protected $co2 = null;
+    /**
+     * CO2 sensor temperature in degC
+     *
+     * Generated from protobuf field <code>optional float co2_temperature = 14;</code>
+     */
+    protected $co2_temperature = null;
+    /**
+     * CO2 sensor relative humidity in %
+     *
+     * Generated from protobuf field <code>optional float co2_humidity = 15;</code>
+     */
+    protected $co2_humidity = null;
 
     /**
      * Constructor.
@@ -125,7 +137,11 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
      *     @type int $particles_100um
      *           10.0um Particle Count
      *     @type int $co2
-     *           10.0um Particle Count
+     *           CO2 concentration in ppm
+     *     @type float $co2_temperature
+     *           CO2 sensor temperature in degC
+     *     @type float $co2_humidity
+     *           CO2 sensor relative humidity in %
      * }
      */
     public function __construct($data = NULL) {
@@ -566,7 +582,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 10.0um Particle Count
+     * CO2 concentration in ppm
      *
      * Generated from protobuf field <code>optional uint32 co2 = 13;</code>
      * @return int
@@ -587,7 +603,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 10.0um Particle Count
+     * CO2 concentration in ppm
      *
      * Generated from protobuf field <code>optional uint32 co2 = 13;</code>
      * @param int $var
@@ -597,6 +613,78 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->co2 = $var;
+
+        return $this;
+    }
+
+    /**
+     * CO2 sensor temperature in degC
+     *
+     * Generated from protobuf field <code>optional float co2_temperature = 14;</code>
+     * @return float
+     */
+    public function getCo2Temperature()
+    {
+        return isset($this->co2_temperature) ? $this->co2_temperature : 0.0;
+    }
+
+    public function hasCo2Temperature()
+    {
+        return isset($this->co2_temperature);
+    }
+
+    public function clearCo2Temperature()
+    {
+        unset($this->co2_temperature);
+    }
+
+    /**
+     * CO2 sensor temperature in degC
+     *
+     * Generated from protobuf field <code>optional float co2_temperature = 14;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCo2Temperature($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->co2_temperature = $var;
+
+        return $this;
+    }
+
+    /**
+     * CO2 sensor relative humidity in %
+     *
+     * Generated from protobuf field <code>optional float co2_humidity = 15;</code>
+     * @return float
+     */
+    public function getCo2Humidity()
+    {
+        return isset($this->co2_humidity) ? $this->co2_humidity : 0.0;
+    }
+
+    public function hasCo2Humidity()
+    {
+        return isset($this->co2_humidity);
+    }
+
+    public function clearCo2Humidity()
+    {
+        unset($this->co2_humidity);
+    }
+
+    /**
+     * CO2 sensor relative humidity in %
+     *
+     * Generated from protobuf field <code>optional float co2_humidity = 15;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setCo2Humidity($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->co2_humidity = $var;
 
         return $this;
     }
