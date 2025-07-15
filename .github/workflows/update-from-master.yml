@@ -2,7 +2,7 @@ name: Create PHP protobufs from latest Meshtastic Protobufs
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 9 * * *"
   workflow_dispatch:
 
 jobs:
