@@ -50,6 +50,19 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string pio_env = 13;</code>
      */
     protected $pio_env = '';
+    /**
+     * The indicator for whether this device is running event firmware and which
+     *
+     * Generated from protobuf field <code>.meshtastic.FirmwareEdition firmware_edition = 14;</code>
+     */
+    protected $firmware_edition = 0;
+    /**
+     * The number of nodes in the nodedb.
+     * This is used by the phone to know how many NodeInfo packets to expect on want_config
+     *
+     * Generated from protobuf field <code>uint32 nodedb_count = 15;</code>
+     */
+    protected $nodedb_count = 0;
 
     /**
      * Constructor.
@@ -70,6 +83,11 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
      *           Unique hardware identifier for this device
      *     @type string $pio_env
      *           The PlatformIO environment used to build this firmware
+     *     @type int $firmware_edition
+     *           The indicator for whether this device is running event firmware and which
+     *     @type int $nodedb_count
+     *           The number of nodes in the nodedb.
+     *           This is used by the phone to know how many NodeInfo packets to expect on want_config
      * }
      */
     public function __construct($data = NULL) {
@@ -209,6 +227,60 @@ class MyNodeInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->pio_env = $var;
+
+        return $this;
+    }
+
+    /**
+     * The indicator for whether this device is running event firmware and which
+     *
+     * Generated from protobuf field <code>.meshtastic.FirmwareEdition firmware_edition = 14;</code>
+     * @return int
+     */
+    public function getFirmwareEdition()
+    {
+        return $this->firmware_edition;
+    }
+
+    /**
+     * The indicator for whether this device is running event firmware and which
+     *
+     * Generated from protobuf field <code>.meshtastic.FirmwareEdition firmware_edition = 14;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setFirmwareEdition($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\FirmwareEdition::class);
+        $this->firmware_edition = $var;
+
+        return $this;
+    }
+
+    /**
+     * The number of nodes in the nodedb.
+     * This is used by the phone to know how many NodeInfo packets to expect on want_config
+     *
+     * Generated from protobuf field <code>uint32 nodedb_count = 15;</code>
+     * @return int
+     */
+    public function getNodedbCount()
+    {
+        return $this->nodedb_count;
+    }
+
+    /**
+     * The number of nodes in the nodedb.
+     * This is used by the phone to know how many NodeInfo packets to expect on want_config
+     *
+     * Generated from protobuf field <code>uint32 nodedb_count = 15;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNodedbCount($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->nodedb_count = $var;
 
         return $this;
     }

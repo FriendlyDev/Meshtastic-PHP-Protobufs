@@ -112,6 +112,13 @@ class Error
      * Generated from protobuf enum <code>ADMIN_PUBLIC_KEY_UNAUTHORIZED = 37;</code>
      */
     const ADMIN_PUBLIC_KEY_UNAUTHORIZED = 37;
+    /**
+     * Airtime fairness rate limit exceeded for a packet
+     * This typically enforced per portnum and is used to prevent a single node from monopolizing airtime
+     *
+     * Generated from protobuf enum <code>RATE_LIMIT_EXCEEDED = 38;</code>
+     */
+    const RATE_LIMIT_EXCEEDED = 38;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -130,6 +137,7 @@ class Error
         self::PKI_UNKNOWN_PUBKEY => 'PKI_UNKNOWN_PUBKEY',
         self::ADMIN_BAD_SESSION_KEY => 'ADMIN_BAD_SESSION_KEY',
         self::ADMIN_PUBLIC_KEY_UNAUTHORIZED => 'ADMIN_PUBLIC_KEY_UNAUTHORIZED',
+        self::RATE_LIMIT_EXCEEDED => 'RATE_LIMIT_EXCEEDED',
     ];
 
     public static function name($value)

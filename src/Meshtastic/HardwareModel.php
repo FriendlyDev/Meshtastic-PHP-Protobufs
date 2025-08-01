@@ -692,6 +692,13 @@ class HardwareModel
      */
     const THINKNODE_M5 = 107;
     /**
+     * MeshSolar is an integrated power management and communication solution designed for outdoor low-power devices.
+     * https://heltec.org/project/meshsolar/
+     *
+     * Generated from protobuf enum <code>HELTEC_MESH_SOLAR = 108;</code>
+     */
+    const HELTEC_MESH_SOLAR = 108;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -809,6 +816,7 @@ class HardwareModel
         self::WISMESH_TAG => 'WISMESH_TAG',
         self::RAK3312 => 'RAK3312',
         self::THINKNODE_M5 => 'THINKNODE_M5',
+        self::HELTEC_MESH_SOLAR => 'HELTEC_MESH_SOLAR',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

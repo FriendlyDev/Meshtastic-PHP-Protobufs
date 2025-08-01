@@ -259,6 +259,24 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>ADS1X15 = 40;</code>
      */
     const ADS1X15 = 40;
+    /**
+     * ADS1X15 ADC_ALT
+     *
+     * Generated from protobuf enum <code>ADS1X15_ALT = 41;</code>
+     */
+    const ADS1X15_ALT = 41;
+    /**
+     * Sensirion SFA30 Formaldehyde sensor
+     *
+     * Generated from protobuf enum <code>SFA30 = 42;</code>
+     */
+    const SFA30 = 42;
+    /**
+     * SEN5X PM SENSORS
+     *
+     * Generated from protobuf enum <code>SEN5X = 43;</code>
+     */
+    const SEN5X = 43;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -302,6 +320,9 @@ class TelemetrySensorType
         self::MAX17261 => 'MAX17261',
         self::PCT2075 => 'PCT2075',
         self::ADS1X15 => 'ADS1X15',
+        self::ADS1X15_ALT => 'ADS1X15_ALT',
+        self::SFA30 => 'SFA30',
+        self::SEN5X => 'SEN5X',
     ];
 
     public static function name($value)

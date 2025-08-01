@@ -16,73 +16,73 @@ use Google\Protobuf\Internal\GPBUtil;
 class AirQualityMetrics extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Concentration Units Standard PM1.0
+     * Concentration Units Standard PM1.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm10_standard = 1;</code>
      */
     protected $pm10_standard = null;
     /**
-     * Concentration Units Standard PM2.5
+     * Concentration Units Standard PM2.5 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm25_standard = 2;</code>
      */
     protected $pm25_standard = null;
     /**
-     * Concentration Units Standard PM10.0
+     * Concentration Units Standard PM10.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm100_standard = 3;</code>
      */
     protected $pm100_standard = null;
     /**
-     * Concentration Units Environmental PM1.0
+     * Concentration Units Environmental PM1.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm10_environmental = 4;</code>
      */
     protected $pm10_environmental = null;
     /**
-     * Concentration Units Environmental PM2.5
+     * Concentration Units Environmental PM2.5 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm25_environmental = 5;</code>
      */
     protected $pm25_environmental = null;
     /**
-     * Concentration Units Environmental PM10.0
+     * Concentration Units Environmental PM10.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm100_environmental = 6;</code>
      */
     protected $pm100_environmental = null;
     /**
-     * 0.3um Particle Count
+     * 0.3um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_03um = 7;</code>
      */
     protected $particles_03um = null;
     /**
-     * 0.5um Particle Count
+     * 0.5um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_05um = 8;</code>
      */
     protected $particles_05um = null;
     /**
-     * 1.0um Particle Count
+     * 1.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_10um = 9;</code>
      */
     protected $particles_10um = null;
     /**
-     * 2.5um Particle Count
+     * 2.5um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_25um = 10;</code>
      */
     protected $particles_25um = null;
     /**
-     * 5.0um Particle Count
+     * 5.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_50um = 11;</code>
      */
     protected $particles_50um = null;
     /**
-     * 10.0um Particle Count
+     * 10.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_100um = 12;</code>
      */
@@ -105,6 +105,66 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional float co2_humidity = 15;</code>
      */
     protected $co2_humidity = null;
+    /**
+     * Formaldehyde sensor formaldehyde concentration in ppb
+     *
+     * Generated from protobuf field <code>optional float form_formaldehyde = 16;</code>
+     */
+    protected $form_formaldehyde = null;
+    /**
+     * Formaldehyde sensor relative humidity in %RH
+     *
+     * Generated from protobuf field <code>optional float form_humidity = 17;</code>
+     */
+    protected $form_humidity = null;
+    /**
+     * Formaldehyde sensor temperature in degrees Celsius
+     *
+     * Generated from protobuf field <code>optional float form_temperature = 18;</code>
+     */
+    protected $form_temperature = null;
+    /**
+     * Concentration Units Standard PM4.0 in ug/m3
+     *
+     * Generated from protobuf field <code>optional uint32 pm40_standard = 19;</code>
+     */
+    protected $pm40_standard = null;
+    /**
+     * 4.0um Particle Count in #/0.1l
+     *
+     * Generated from protobuf field <code>optional uint32 particles_40um = 20;</code>
+     */
+    protected $particles_40um = null;
+    /**
+     * PM Sensor Temperature
+     *
+     * Generated from protobuf field <code>optional float pm_temperature = 21;</code>
+     */
+    protected $pm_temperature = null;
+    /**
+     * PM Sensor humidity
+     *
+     * Generated from protobuf field <code>optional float pm_humidity = 22;</code>
+     */
+    protected $pm_humidity = null;
+    /**
+     * PM Sensor VOC Index
+     *
+     * Generated from protobuf field <code>optional float pm_voc_idx = 23;</code>
+     */
+    protected $pm_voc_idx = null;
+    /**
+     * PM Sensor NOx Index
+     *
+     * Generated from protobuf field <code>optional float pm_nox_idx = 24;</code>
+     */
+    protected $pm_nox_idx = null;
+    /**
+     * Typical Particle Size in um
+     *
+     * Generated from protobuf field <code>optional float particles_tps = 25;</code>
+     */
+    protected $particles_tps = null;
 
     /**
      * Constructor.
@@ -113,35 +173,55 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $pm10_standard
-     *           Concentration Units Standard PM1.0
+     *           Concentration Units Standard PM1.0 in ug/m3
      *     @type int $pm25_standard
-     *           Concentration Units Standard PM2.5
+     *           Concentration Units Standard PM2.5 in ug/m3
      *     @type int $pm100_standard
-     *           Concentration Units Standard PM10.0
+     *           Concentration Units Standard PM10.0 in ug/m3
      *     @type int $pm10_environmental
-     *           Concentration Units Environmental PM1.0
+     *           Concentration Units Environmental PM1.0 in ug/m3
      *     @type int $pm25_environmental
-     *           Concentration Units Environmental PM2.5
+     *           Concentration Units Environmental PM2.5 in ug/m3
      *     @type int $pm100_environmental
-     *           Concentration Units Environmental PM10.0
+     *           Concentration Units Environmental PM10.0 in ug/m3
      *     @type int $particles_03um
-     *           0.3um Particle Count
+     *           0.3um Particle Count in #/0.1l
      *     @type int $particles_05um
-     *           0.5um Particle Count
+     *           0.5um Particle Count in #/0.1l
      *     @type int $particles_10um
-     *           1.0um Particle Count
+     *           1.0um Particle Count in #/0.1l
      *     @type int $particles_25um
-     *           2.5um Particle Count
+     *           2.5um Particle Count in #/0.1l
      *     @type int $particles_50um
-     *           5.0um Particle Count
+     *           5.0um Particle Count in #/0.1l
      *     @type int $particles_100um
-     *           10.0um Particle Count
+     *           10.0um Particle Count in #/0.1l
      *     @type int $co2
      *           CO2 concentration in ppm
      *     @type float $co2_temperature
      *           CO2 sensor temperature in degC
      *     @type float $co2_humidity
      *           CO2 sensor relative humidity in %
+     *     @type float $form_formaldehyde
+     *           Formaldehyde sensor formaldehyde concentration in ppb
+     *     @type float $form_humidity
+     *           Formaldehyde sensor relative humidity in %RH
+     *     @type float $form_temperature
+     *           Formaldehyde sensor temperature in degrees Celsius
+     *     @type int $pm40_standard
+     *           Concentration Units Standard PM4.0 in ug/m3
+     *     @type int $particles_40um
+     *           4.0um Particle Count in #/0.1l
+     *     @type float $pm_temperature
+     *           PM Sensor Temperature
+     *     @type float $pm_humidity
+     *           PM Sensor humidity
+     *     @type float $pm_voc_idx
+     *           PM Sensor VOC Index
+     *     @type float $pm_nox_idx
+     *           PM Sensor NOx Index
+     *     @type float $particles_tps
+     *           Typical Particle Size in um
      * }
      */
     public function __construct($data = NULL) {
@@ -150,7 +230,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Standard PM1.0
+     * Concentration Units Standard PM1.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm10_standard = 1;</code>
      * @return int
@@ -171,7 +251,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Standard PM1.0
+     * Concentration Units Standard PM1.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm10_standard = 1;</code>
      * @param int $var
@@ -186,7 +266,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Standard PM2.5
+     * Concentration Units Standard PM2.5 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm25_standard = 2;</code>
      * @return int
@@ -207,7 +287,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Standard PM2.5
+     * Concentration Units Standard PM2.5 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm25_standard = 2;</code>
      * @param int $var
@@ -222,7 +302,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Standard PM10.0
+     * Concentration Units Standard PM10.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm100_standard = 3;</code>
      * @return int
@@ -243,7 +323,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Standard PM10.0
+     * Concentration Units Standard PM10.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm100_standard = 3;</code>
      * @param int $var
@@ -258,7 +338,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Environmental PM1.0
+     * Concentration Units Environmental PM1.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm10_environmental = 4;</code>
      * @return int
@@ -279,7 +359,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Environmental PM1.0
+     * Concentration Units Environmental PM1.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm10_environmental = 4;</code>
      * @param int $var
@@ -294,7 +374,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Environmental PM2.5
+     * Concentration Units Environmental PM2.5 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm25_environmental = 5;</code>
      * @return int
@@ -315,7 +395,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Environmental PM2.5
+     * Concentration Units Environmental PM2.5 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm25_environmental = 5;</code>
      * @param int $var
@@ -330,7 +410,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Environmental PM10.0
+     * Concentration Units Environmental PM10.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm100_environmental = 6;</code>
      * @return int
@@ -351,7 +431,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Concentration Units Environmental PM10.0
+     * Concentration Units Environmental PM10.0 in ug/m3
      *
      * Generated from protobuf field <code>optional uint32 pm100_environmental = 6;</code>
      * @param int $var
@@ -366,7 +446,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 0.3um Particle Count
+     * 0.3um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_03um = 7;</code>
      * @return int
@@ -387,7 +467,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 0.3um Particle Count
+     * 0.3um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_03um = 7;</code>
      * @param int $var
@@ -402,7 +482,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 0.5um Particle Count
+     * 0.5um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_05um = 8;</code>
      * @return int
@@ -423,7 +503,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 0.5um Particle Count
+     * 0.5um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_05um = 8;</code>
      * @param int $var
@@ -438,7 +518,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 1.0um Particle Count
+     * 1.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_10um = 9;</code>
      * @return int
@@ -459,7 +539,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 1.0um Particle Count
+     * 1.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_10um = 9;</code>
      * @param int $var
@@ -474,7 +554,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 2.5um Particle Count
+     * 2.5um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_25um = 10;</code>
      * @return int
@@ -495,7 +575,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 2.5um Particle Count
+     * 2.5um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_25um = 10;</code>
      * @param int $var
@@ -510,7 +590,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 5.0um Particle Count
+     * 5.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_50um = 11;</code>
      * @return int
@@ -531,7 +611,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 5.0um Particle Count
+     * 5.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_50um = 11;</code>
      * @param int $var
@@ -546,7 +626,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 10.0um Particle Count
+     * 10.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_100um = 12;</code>
      * @return int
@@ -567,7 +647,7 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 10.0um Particle Count
+     * 10.0um Particle Count in #/0.1l
      *
      * Generated from protobuf field <code>optional uint32 particles_100um = 12;</code>
      * @param int $var
@@ -685,6 +765,366 @@ class AirQualityMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->co2_humidity = $var;
+
+        return $this;
+    }
+
+    /**
+     * Formaldehyde sensor formaldehyde concentration in ppb
+     *
+     * Generated from protobuf field <code>optional float form_formaldehyde = 16;</code>
+     * @return float
+     */
+    public function getFormFormaldehyde()
+    {
+        return isset($this->form_formaldehyde) ? $this->form_formaldehyde : 0.0;
+    }
+
+    public function hasFormFormaldehyde()
+    {
+        return isset($this->form_formaldehyde);
+    }
+
+    public function clearFormFormaldehyde()
+    {
+        unset($this->form_formaldehyde);
+    }
+
+    /**
+     * Formaldehyde sensor formaldehyde concentration in ppb
+     *
+     * Generated from protobuf field <code>optional float form_formaldehyde = 16;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setFormFormaldehyde($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->form_formaldehyde = $var;
+
+        return $this;
+    }
+
+    /**
+     * Formaldehyde sensor relative humidity in %RH
+     *
+     * Generated from protobuf field <code>optional float form_humidity = 17;</code>
+     * @return float
+     */
+    public function getFormHumidity()
+    {
+        return isset($this->form_humidity) ? $this->form_humidity : 0.0;
+    }
+
+    public function hasFormHumidity()
+    {
+        return isset($this->form_humidity);
+    }
+
+    public function clearFormHumidity()
+    {
+        unset($this->form_humidity);
+    }
+
+    /**
+     * Formaldehyde sensor relative humidity in %RH
+     *
+     * Generated from protobuf field <code>optional float form_humidity = 17;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setFormHumidity($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->form_humidity = $var;
+
+        return $this;
+    }
+
+    /**
+     * Formaldehyde sensor temperature in degrees Celsius
+     *
+     * Generated from protobuf field <code>optional float form_temperature = 18;</code>
+     * @return float
+     */
+    public function getFormTemperature()
+    {
+        return isset($this->form_temperature) ? $this->form_temperature : 0.0;
+    }
+
+    public function hasFormTemperature()
+    {
+        return isset($this->form_temperature);
+    }
+
+    public function clearFormTemperature()
+    {
+        unset($this->form_temperature);
+    }
+
+    /**
+     * Formaldehyde sensor temperature in degrees Celsius
+     *
+     * Generated from protobuf field <code>optional float form_temperature = 18;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setFormTemperature($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->form_temperature = $var;
+
+        return $this;
+    }
+
+    /**
+     * Concentration Units Standard PM4.0 in ug/m3
+     *
+     * Generated from protobuf field <code>optional uint32 pm40_standard = 19;</code>
+     * @return int
+     */
+    public function getPm40Standard()
+    {
+        return isset($this->pm40_standard) ? $this->pm40_standard : 0;
+    }
+
+    public function hasPm40Standard()
+    {
+        return isset($this->pm40_standard);
+    }
+
+    public function clearPm40Standard()
+    {
+        unset($this->pm40_standard);
+    }
+
+    /**
+     * Concentration Units Standard PM4.0 in ug/m3
+     *
+     * Generated from protobuf field <code>optional uint32 pm40_standard = 19;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPm40Standard($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->pm40_standard = $var;
+
+        return $this;
+    }
+
+    /**
+     * 4.0um Particle Count in #/0.1l
+     *
+     * Generated from protobuf field <code>optional uint32 particles_40um = 20;</code>
+     * @return int
+     */
+    public function getParticles40Um()
+    {
+        return isset($this->particles_40um) ? $this->particles_40um : 0;
+    }
+
+    public function hasParticles40Um()
+    {
+        return isset($this->particles_40um);
+    }
+
+    public function clearParticles40Um()
+    {
+        unset($this->particles_40um);
+    }
+
+    /**
+     * 4.0um Particle Count in #/0.1l
+     *
+     * Generated from protobuf field <code>optional uint32 particles_40um = 20;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setParticles40Um($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->particles_40um = $var;
+
+        return $this;
+    }
+
+    /**
+     * PM Sensor Temperature
+     *
+     * Generated from protobuf field <code>optional float pm_temperature = 21;</code>
+     * @return float
+     */
+    public function getPmTemperature()
+    {
+        return isset($this->pm_temperature) ? $this->pm_temperature : 0.0;
+    }
+
+    public function hasPmTemperature()
+    {
+        return isset($this->pm_temperature);
+    }
+
+    public function clearPmTemperature()
+    {
+        unset($this->pm_temperature);
+    }
+
+    /**
+     * PM Sensor Temperature
+     *
+     * Generated from protobuf field <code>optional float pm_temperature = 21;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setPmTemperature($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->pm_temperature = $var;
+
+        return $this;
+    }
+
+    /**
+     * PM Sensor humidity
+     *
+     * Generated from protobuf field <code>optional float pm_humidity = 22;</code>
+     * @return float
+     */
+    public function getPmHumidity()
+    {
+        return isset($this->pm_humidity) ? $this->pm_humidity : 0.0;
+    }
+
+    public function hasPmHumidity()
+    {
+        return isset($this->pm_humidity);
+    }
+
+    public function clearPmHumidity()
+    {
+        unset($this->pm_humidity);
+    }
+
+    /**
+     * PM Sensor humidity
+     *
+     * Generated from protobuf field <code>optional float pm_humidity = 22;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setPmHumidity($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->pm_humidity = $var;
+
+        return $this;
+    }
+
+    /**
+     * PM Sensor VOC Index
+     *
+     * Generated from protobuf field <code>optional float pm_voc_idx = 23;</code>
+     * @return float
+     */
+    public function getPmVocIdx()
+    {
+        return isset($this->pm_voc_idx) ? $this->pm_voc_idx : 0.0;
+    }
+
+    public function hasPmVocIdx()
+    {
+        return isset($this->pm_voc_idx);
+    }
+
+    public function clearPmVocIdx()
+    {
+        unset($this->pm_voc_idx);
+    }
+
+    /**
+     * PM Sensor VOC Index
+     *
+     * Generated from protobuf field <code>optional float pm_voc_idx = 23;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setPmVocIdx($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->pm_voc_idx = $var;
+
+        return $this;
+    }
+
+    /**
+     * PM Sensor NOx Index
+     *
+     * Generated from protobuf field <code>optional float pm_nox_idx = 24;</code>
+     * @return float
+     */
+    public function getPmNoxIdx()
+    {
+        return isset($this->pm_nox_idx) ? $this->pm_nox_idx : 0.0;
+    }
+
+    public function hasPmNoxIdx()
+    {
+        return isset($this->pm_nox_idx);
+    }
+
+    public function clearPmNoxIdx()
+    {
+        unset($this->pm_nox_idx);
+    }
+
+    /**
+     * PM Sensor NOx Index
+     *
+     * Generated from protobuf field <code>optional float pm_nox_idx = 24;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setPmNoxIdx($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->pm_nox_idx = $var;
+
+        return $this;
+    }
+
+    /**
+     * Typical Particle Size in um
+     *
+     * Generated from protobuf field <code>optional float particles_tps = 25;</code>
+     * @return float
+     */
+    public function getParticlesTps()
+    {
+        return isset($this->particles_tps) ? $this->particles_tps : 0.0;
+    }
+
+    public function hasParticlesTps()
+    {
+        return isset($this->particles_tps);
+    }
+
+    public function clearParticlesTps()
+    {
+        unset($this->particles_tps);
+    }
+
+    /**
+     * Typical Particle Size in um
+     *
+     * Generated from protobuf field <code>optional float particles_tps = 25;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setParticlesTps($var)
+    {
+        GPBUtil::checkFloat($var);
+        $this->particles_tps = $var;
 
         return $this;
     }

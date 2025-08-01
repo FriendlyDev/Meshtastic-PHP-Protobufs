@@ -23,9 +23,11 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      */
     protected $screen_on_secs = 0;
     /**
+     * Deprecated in 2.7.4: Unused
      * How the GPS coordinates are formatted on the OLED screen.
      *
-     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2;</code>
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
+     * @deprecated
      */
     protected $gps_format = 0;
     /**
@@ -39,7 +41,8 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * If this is set, the displayed compass will always point north. if unset, the old behaviour
      * (top of display is heading direction) is used.
      *
-     * Generated from protobuf field <code>bool compass_north_top = 4;</code>
+     * Generated from protobuf field <code>bool compass_north_top = 4 [deprecated = true];</code>
+     * @deprecated
      */
     protected $compass_north_top = false;
     /**
@@ -102,6 +105,7 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      *           Number of seconds the screen stays on after pressing the user button or receiving a message
      *           0 for default of one minute MAXUINT for always on
      *     @type int $gps_format
+     *           Deprecated in 2.7.4: Unused
      *           How the GPS coordinates are formatted on the OLED screen.
      *     @type int $auto_screen_carousel_secs
      *           Automatically toggles to the next page on the screen like a carousel, based the specified interval in seconds.
@@ -162,25 +166,31 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Deprecated in 2.7.4: Unused
      * How the GPS coordinates are formatted on the OLED screen.
      *
-     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2;</code>
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
      * @return int
+     * @deprecated
      */
     public function getGpsFormat()
     {
+        @trigger_error('gps_format is deprecated.', E_USER_DEPRECATED);
         return $this->gps_format;
     }
 
     /**
+     * Deprecated in 2.7.4: Unused
      * How the GPS coordinates are formatted on the OLED screen.
      *
-     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2;</code>
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
      * @param int $var
      * @return $this
+     * @deprecated
      */
     public function setGpsFormat($var)
     {
+        @trigger_error('gps_format is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkEnum($var, \Meshtastic\Config\DisplayConfig\GpsCoordinateFormat::class);
         $this->gps_format = $var;
 
@@ -219,11 +229,13 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * If this is set, the displayed compass will always point north. if unset, the old behaviour
      * (top of display is heading direction) is used.
      *
-     * Generated from protobuf field <code>bool compass_north_top = 4;</code>
+     * Generated from protobuf field <code>bool compass_north_top = 4 [deprecated = true];</code>
      * @return bool
+     * @deprecated
      */
     public function getCompassNorthTop()
     {
+        @trigger_error('compass_north_top is deprecated.', E_USER_DEPRECATED);
         return $this->compass_north_top;
     }
 
@@ -231,12 +243,14 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * If this is set, the displayed compass will always point north. if unset, the old behaviour
      * (top of display is heading direction) is used.
      *
-     * Generated from protobuf field <code>bool compass_north_top = 4;</code>
+     * Generated from protobuf field <code>bool compass_north_top = 4 [deprecated = true];</code>
      * @param bool $var
      * @return $this
+     * @deprecated
      */
     public function setCompassNorthTop($var)
     {
+        @trigger_error('compass_north_top is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkBool($var);
         $this->compass_north_top = $var;
 

@@ -66,14 +66,16 @@ class CannedMessageConfig extends \Google\Protobuf\Internal\Message
     /**
      * Enable/disable CannedMessageModule.
      *
-     * Generated from protobuf field <code>bool enabled = 9;</code>
+     * Generated from protobuf field <code>bool enabled = 9 [deprecated = true];</code>
+     * @deprecated
      */
     protected $enabled = false;
     /**
      * Input event origin accepted by the canned message module.
      * Can be e.g. "rotEnc1", "upDownEnc1", "scanAndSelect", "cardkb", "serialkb", or keyword "_any"
      *
-     * Generated from protobuf field <code>string allow_input_source = 10;</code>
+     * Generated from protobuf field <code>string allow_input_source = 10 [deprecated = true];</code>
+     * @deprecated
      */
     protected $allow_input_source = '';
     /**
@@ -332,23 +334,27 @@ class CannedMessageConfig extends \Google\Protobuf\Internal\Message
     /**
      * Enable/disable CannedMessageModule.
      *
-     * Generated from protobuf field <code>bool enabled = 9;</code>
+     * Generated from protobuf field <code>bool enabled = 9 [deprecated = true];</code>
      * @return bool
+     * @deprecated
      */
     public function getEnabled()
     {
+        @trigger_error('enabled is deprecated.', E_USER_DEPRECATED);
         return $this->enabled;
     }
 
     /**
      * Enable/disable CannedMessageModule.
      *
-     * Generated from protobuf field <code>bool enabled = 9;</code>
+     * Generated from protobuf field <code>bool enabled = 9 [deprecated = true];</code>
      * @param bool $var
      * @return $this
+     * @deprecated
      */
     public function setEnabled($var)
     {
+        @trigger_error('enabled is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkBool($var);
         $this->enabled = $var;
 
@@ -359,11 +365,13 @@ class CannedMessageConfig extends \Google\Protobuf\Internal\Message
      * Input event origin accepted by the canned message module.
      * Can be e.g. "rotEnc1", "upDownEnc1", "scanAndSelect", "cardkb", "serialkb", or keyword "_any"
      *
-     * Generated from protobuf field <code>string allow_input_source = 10;</code>
+     * Generated from protobuf field <code>string allow_input_source = 10 [deprecated = true];</code>
      * @return string
+     * @deprecated
      */
     public function getAllowInputSource()
     {
+        @trigger_error('allow_input_source is deprecated.', E_USER_DEPRECATED);
         return $this->allow_input_source;
     }
 
@@ -371,12 +379,14 @@ class CannedMessageConfig extends \Google\Protobuf\Internal\Message
      * Input event origin accepted by the canned message module.
      * Can be e.g. "rotEnc1", "upDownEnc1", "scanAndSelect", "cardkb", "serialkb", or keyword "_any"
      *
-     * Generated from protobuf field <code>string allow_input_source = 10;</code>
+     * Generated from protobuf field <code>string allow_input_source = 10 [deprecated = true];</code>
      * @param string $var
      * @return $this
+     * @deprecated
      */
     public function setAllowInputSource($var)
     {
+        @trigger_error('allow_input_source is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkString($var, True);
         $this->allow_input_source = $var;
 

@@ -161,6 +161,18 @@ class RegionCode
      * Generated from protobuf enum <code>KZ_863 = 24;</code>
      */
     const KZ_863 = 24;
+    /**
+     * Nepal 865MHz
+     *
+     * Generated from protobuf enum <code>NP_865 = 25;</code>
+     */
+    const NP_865 = 25;
+    /**
+     * Brazil 902MHz
+     *
+     * Generated from protobuf enum <code>BR_902 = 26;</code>
+     */
+    const BR_902 = 26;
 
     private static $valueToName = [
         self::PBUNSET => 'UNSET',
@@ -188,6 +200,8 @@ class RegionCode
         self::ANZ_433 => 'ANZ_433',
         self::KZ_433 => 'KZ_433',
         self::KZ_863 => 'KZ_863',
+        self::NP_865 => 'NP_865',
+        self::BR_902 => 'BR_902',
     ];
 
     public static function name($value)

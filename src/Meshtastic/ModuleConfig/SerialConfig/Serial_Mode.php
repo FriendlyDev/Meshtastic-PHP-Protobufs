@@ -52,6 +52,13 @@ class Serial_Mode
      * Generated from protobuf enum <code>VE_DIRECT = 7;</code>
      */
     const VE_DIRECT = 7;
+    /**
+     *Used to configure and view some parameters of MeshSolar.
+     *https://heltec.org/project/meshsolar/
+     *
+     * Generated from protobuf enum <code>MS_CONFIG = 8;</code>
+     */
+    const MS_CONFIG = 8;
 
     private static $valueToName = [
         self::PBDEFAULT => 'DEFAULT',
@@ -62,6 +69,7 @@ class Serial_Mode
         self::CALTOPO => 'CALTOPO',
         self::WS85 => 'WS85',
         self::VE_DIRECT => 'VE_DIRECT',
+        self::MS_CONFIG => 'MS_CONFIG',
     ];
 
     public static function name($value)
