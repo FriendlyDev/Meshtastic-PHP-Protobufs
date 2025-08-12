@@ -16,6 +16,12 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class Heartbeat extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * The nonce of the heartbeat message
+     *
+     * Generated from protobuf field <code>uint32 nonce = 1;</code>
+     */
+    protected $nonce = 0;
 
     /**
      * Constructor.
@@ -23,11 +29,39 @@ class Heartbeat extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type int $nonce
+     *           The nonce of the heartbeat message
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Meshtastic\Mesh::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * The nonce of the heartbeat message
+     *
+     * Generated from protobuf field <code>uint32 nonce = 1;</code>
+     * @return int
+     */
+    public function getNonce()
+    {
+        return $this->nonce;
+    }
+
+    /**
+     * The nonce of the heartbeat message
+     *
+     * Generated from protobuf field <code>uint32 nonce = 1;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNonce($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->nonce = $var;
+
+        return $this;
     }
 
 }

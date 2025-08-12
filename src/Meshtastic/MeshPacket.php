@@ -163,6 +163,12 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 tx_after = 20;</code>
      */
     protected $tx_after = 0;
+    /**
+     * Indicates which transport mechanism this packet arrived over
+     *
+     * Generated from protobuf field <code>.meshtastic.MeshPacket.TransportMechanism transport_mechanism = 21;</code>
+     */
+    protected $transport_mechanism = 0;
     protected $payload_variant;
 
     /**
@@ -248,6 +254,8 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      *           *Never* sent over the radio links.
      *           Timestamp after which this packet may be sent.
      *           Set by the firmware internally, clients are not supposed to set this.
+     *     @type int $transport_mechanism
+     *           Indicates which transport mechanism this packet arrived over
      * }
      */
     public function __construct($data = NULL) {
@@ -859,6 +867,32 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->tx_after = $var;
+
+        return $this;
+    }
+
+    /**
+     * Indicates which transport mechanism this packet arrived over
+     *
+     * Generated from protobuf field <code>.meshtastic.MeshPacket.TransportMechanism transport_mechanism = 21;</code>
+     * @return int
+     */
+    public function getTransportMechanism()
+    {
+        return $this->transport_mechanism;
+    }
+
+    /**
+     * Indicates which transport mechanism this packet arrived over
+     *
+     * Generated from protobuf field <code>.meshtastic.MeshPacket.TransportMechanism transport_mechanism = 21;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTransportMechanism($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\MeshPacket\TransportMechanism::class);
+        $this->transport_mechanism = $var;
 
         return $this;
     }
