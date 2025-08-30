@@ -699,6 +699,12 @@ class HardwareModel
      */
     const HELTEC_MESH_SOLAR = 108;
     /**
+     * Lilygo T-Echo Lite
+     *
+     * Generated from protobuf enum <code>T_ECHO_LITE = 109;</code>
+     */
+    const T_ECHO_LITE = 109;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -817,6 +823,7 @@ class HardwareModel
         self::RAK3312 => 'RAK3312',
         self::THINKNODE_M5 => 'THINKNODE_M5',
         self::HELTEC_MESH_SOLAR => 'HELTEC_MESH_SOLAR',
+        self::T_ECHO_LITE => 'T_ECHO_LITE',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

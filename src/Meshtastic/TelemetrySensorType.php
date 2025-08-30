@@ -277,6 +277,12 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>SEN5X = 43;</code>
      */
     const SEN5X = 43;
+    /**
+     * TSL2561 light sensor
+     *
+     * Generated from protobuf enum <code>TSL2561 = 44;</code>
+     */
+    const TSL2561 = 44;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -323,6 +329,7 @@ class TelemetrySensorType
         self::ADS1X15_ALT => 'ADS1X15_ALT',
         self::SFA30 => 'SFA30',
         self::SEN5X => 'SEN5X',
+        self::TSL2561 => 'TSL2561',
     ];
 
     public static function name($value)

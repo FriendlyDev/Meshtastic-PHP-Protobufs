@@ -32,24 +32,24 @@ class OledType
      */
     const OLED_SH1106 = 2;
     /**
-     * Can not be auto detected but set by proto. Used for 128x128 screens
+     * Can not be auto detected but set by proto. Used for 128x64 screens
      *
      * Generated from protobuf enum <code>OLED_SH1107 = 3;</code>
      */
     const OLED_SH1107 = 3;
     /**
-     * Can not be auto detected but set by proto. Used for 128x64 screens
+     * Can not be auto detected but set by proto. Used for 128x128 screens
      *
-     * Generated from protobuf enum <code>OLED_SH1107_128_64 = 4;</code>
+     * Generated from protobuf enum <code>OLED_SH1107_128_128 = 4;</code>
      */
-    const OLED_SH1107_128_64 = 4;
+    const OLED_SH1107_128_128 = 4;
 
     private static $valueToName = [
         self::OLED_AUTO => 'OLED_AUTO',
         self::OLED_SSD1306 => 'OLED_SSD1306',
         self::OLED_SH1106 => 'OLED_SH1106',
         self::OLED_SH1107 => 'OLED_SH1107',
-        self::OLED_SH1107_128_64 => 'OLED_SH1107_128_64',
+        self::OLED_SH1107_128_128 => 'OLED_SH1107_128_128',
     ];
 
     public static function name($value)
