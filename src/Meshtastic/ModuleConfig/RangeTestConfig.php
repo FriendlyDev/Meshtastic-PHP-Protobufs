@@ -34,6 +34,13 @@ class RangeTestConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool save = 3;</code>
      */
     protected $save = false;
+    /**
+     * Bool indicating that the node should cleanup / destroy it's RangeTest.csv file.
+     * ESP32 Only
+     *
+     * Generated from protobuf field <code>bool clear_on_reboot = 4;</code>
+     */
+    protected $clear_on_reboot = false;
 
     /**
      * Constructor.
@@ -47,6 +54,9 @@ class RangeTestConfig extends \Google\Protobuf\Internal\Message
      *           Send out range test messages from this node
      *     @type bool $save
      *           Bool value indicating that this node should save a RangeTest.csv file.
+     *           ESP32 Only
+     *     @type bool $clear_on_reboot
+     *           Bool indicating that the node should cleanup / destroy it's RangeTest.csv file.
      *           ESP32 Only
      * }
      */
@@ -131,6 +141,34 @@ class RangeTestConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->save = $var;
+
+        return $this;
+    }
+
+    /**
+     * Bool indicating that the node should cleanup / destroy it's RangeTest.csv file.
+     * ESP32 Only
+     *
+     * Generated from protobuf field <code>bool clear_on_reboot = 4;</code>
+     * @return bool
+     */
+    public function getClearOnReboot()
+    {
+        return $this->clear_on_reboot;
+    }
+
+    /**
+     * Bool indicating that the node should cleanup / destroy it's RangeTest.csv file.
+     * ESP32 Only
+     *
+     * Generated from protobuf field <code>bool clear_on_reboot = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setClearOnReboot($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->clear_on_reboot = $var;
 
         return $this;
     }
