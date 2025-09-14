@@ -122,6 +122,12 @@ class Language
      */
     const BULGARIAN = 17;
     /**
+     * Czech
+     *
+     * Generated from protobuf enum <code>CZECH = 18;</code>
+     */
+    const CZECH = 18;
+    /**
      * Simplified Chinese (experimental)
      *
      * Generated from protobuf enum <code>SIMPLIFIED_CHINESE = 30;</code>
@@ -153,6 +159,7 @@ class Language
         self::SLOVENIAN => 'SLOVENIAN',
         self::UKRAINIAN => 'UKRAINIAN',
         self::BULGARIAN => 'BULGARIAN',
+        self::CZECH => 'CZECH',
         self::SIMPLIFIED_CHINESE => 'SIMPLIFIED_CHINESE',
         self::TRADITIONAL_CHINESE => 'TRADITIONAL_CHINESE',
     ];

@@ -705,6 +705,12 @@ class HardwareModel
      */
     const T_ECHO_LITE = 109;
     /**
+     * New Heltec LoRA32 with ESP32-S3 CPU
+     *
+     * Generated from protobuf enum <code>HELTEC_V4 = 110;</code>
+     */
+    const HELTEC_V4 = 110;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -824,6 +830,7 @@ class HardwareModel
         self::THINKNODE_M5 => 'THINKNODE_M5',
         self::HELTEC_MESH_SOLAR => 'HELTEC_MESH_SOLAR',
         self::T_ECHO_LITE => 'T_ECHO_LITE',
+        self::HELTEC_V4 => 'HELTEC_V4',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

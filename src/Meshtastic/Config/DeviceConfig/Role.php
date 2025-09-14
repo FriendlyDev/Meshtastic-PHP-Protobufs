@@ -112,6 +112,15 @@ class Role
      * Generated from protobuf enum <code>ROUTER_LATE = 11;</code>
      */
     const ROUTER_LATE = 11;
+    /**
+     * Description: Treats packets from or to favorited nodes as ROUTER, and all other packets as CLIENT.
+     * Technical Details: Used for stronger attic/roof nodes to distribute messages more widely
+     *    from weaker, indoor, or less-well-positioned nodes. Recommended for users with multiple nodes
+     *    where one CLIENT_BASE acts as a more powerful base station, such as an attic/roof node.
+     *
+     * Generated from protobuf enum <code>CLIENT_BASE = 12;</code>
+     */
+    const CLIENT_BASE = 12;
 
     private static $valueToName = [
         self::CLIENT => 'CLIENT',
@@ -126,6 +135,7 @@ class Role
         self::LOST_AND_FOUND => 'LOST_AND_FOUND',
         self::TAK_TRACKER => 'TAK_TRACKER',
         self::ROUTER_LATE => 'ROUTER_LATE',
+        self::CLIENT_BASE => 'CLIENT_BASE',
     ];
 
     public static function name($value)
