@@ -98,6 +98,13 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool health_screen_enabled = 13;</code>
      */
     protected $health_screen_enabled = false;
+    /**
+     * Enable/Disable the device telemetry module to send metrics to the mesh
+     * Note: We will still send telemtry to the connected phone / client every minute over the API
+     *
+     * Generated from protobuf field <code>bool device_telemetry_enabled = 14;</code>
+     */
+    protected $device_telemetry_enabled = false;
 
     /**
      * Constructor.
@@ -137,6 +144,9 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      *           health metrics to the mesh
      *     @type bool $health_screen_enabled
      *           Enable/Disable the health telemetry module on-device display
+     *     @type bool $device_telemetry_enabled
+     *           Enable/Disable the device telemetry module to send metrics to the mesh
+     *           Note: We will still send telemtry to the connected phone / client every minute over the API
      * }
      */
     public function __construct($data = NULL) {
@@ -488,6 +498,34 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->health_screen_enabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Enable/Disable the device telemetry module to send metrics to the mesh
+     * Note: We will still send telemtry to the connected phone / client every minute over the API
+     *
+     * Generated from protobuf field <code>bool device_telemetry_enabled = 14;</code>
+     * @return bool
+     */
+    public function getDeviceTelemetryEnabled()
+    {
+        return $this->device_telemetry_enabled;
+    }
+
+    /**
+     * Enable/Disable the device telemetry module to send metrics to the mesh
+     * Note: We will still send telemtry to the connected phone / client every minute over the API
+     *
+     * Generated from protobuf field <code>bool device_telemetry_enabled = 14;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setDeviceTelemetryEnabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->device_telemetry_enabled = $var;
 
         return $this;
     }

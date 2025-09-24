@@ -115,6 +115,12 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool is_clockface_analog = 18;</code>
      */
     protected $is_clockface_analog = false;
+    /**
+     * How the GPS coordinates are formatted on the OLED screen.
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig.GpsCoordinateFormat gps_format = 19;</code>
+     */
+    protected $gps_format = 0;
 
     /**
      * Constructor.
@@ -156,6 +162,8 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
      *     @type bool $is_clockface_analog
      *           Clockface analog style
      *           true for analog clockface, false for digital clockface
+     *     @type int $gps_format
+     *           How the GPS coordinates are formatted on the OLED screen.
      * }
      */
     public function __construct($data = NULL) {
@@ -645,6 +653,32 @@ class DeviceUIConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->is_clockface_analog = $var;
+
+        return $this;
+    }
+
+    /**
+     * How the GPS coordinates are formatted on the OLED screen.
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig.GpsCoordinateFormat gps_format = 19;</code>
+     * @return int
+     */
+    public function getGpsFormat()
+    {
+        return $this->gps_format;
+    }
+
+    /**
+     * How the GPS coordinates are formatted on the OLED screen.
+     *
+     * Generated from protobuf field <code>.meshtastic.DeviceUIConfig.GpsCoordinateFormat gps_format = 19;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setGpsFormat($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\DeviceUIConfig\GpsCoordinateFormat::class);
+        $this->gps_format = $var;
 
         return $this;
     }

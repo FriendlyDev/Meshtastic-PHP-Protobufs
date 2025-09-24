@@ -26,7 +26,7 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * Deprecated in 2.7.4: Unused
      * How the GPS coordinates are formatted on the OLED screen.
      *
-     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.DeprecatedGpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
      * @deprecated
      */
     protected $gps_format = 0;
@@ -94,6 +94,13 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool use_12h_clock = 12;</code>
      */
     protected $use_12h_clock = false;
+    /**
+     * If false (default), the device will use short names for various display screens.
+     * If true, node names will show in long format
+     *
+     * Generated from protobuf field <code>bool use_long_node_name = 13;</code>
+     */
+    protected $use_long_node_name = false;
 
     /**
      * Constructor.
@@ -130,6 +137,9 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      *     @type bool $use_12h_clock
      *           If false (default), the device will display the time in 24-hour format on screen.
      *           If true, the device will display the time in 12-hour format on screen.
+     *     @type bool $use_long_node_name
+     *           If false (default), the device will use short names for various display screens.
+     *           If true, node names will show in long format
      * }
      */
     public function __construct($data = NULL) {
@@ -169,7 +179,7 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * Deprecated in 2.7.4: Unused
      * How the GPS coordinates are formatted on the OLED screen.
      *
-     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.DeprecatedGpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
      * @return int
      * @deprecated
      */
@@ -183,7 +193,7 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * Deprecated in 2.7.4: Unused
      * How the GPS coordinates are formatted on the OLED screen.
      *
-     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.GpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
+     * Generated from protobuf field <code>.meshtastic.Config.DisplayConfig.DeprecatedGpsCoordinateFormat gps_format = 2 [deprecated = true];</code>
      * @param int $var
      * @return $this
      * @deprecated
@@ -191,7 +201,7 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
     public function setGpsFormat($var)
     {
         @trigger_error('gps_format is deprecated.', E_USER_DEPRECATED);
-        GPBUtil::checkEnum($var, \Meshtastic\Config\DisplayConfig\GpsCoordinateFormat::class);
+        GPBUtil::checkEnum($var, \Meshtastic\Config\DisplayConfig\DeprecatedGpsCoordinateFormat::class);
         $this->gps_format = $var;
 
         return $this;
@@ -463,6 +473,34 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->use_12h_clock = $var;
+
+        return $this;
+    }
+
+    /**
+     * If false (default), the device will use short names for various display screens.
+     * If true, node names will show in long format
+     *
+     * Generated from protobuf field <code>bool use_long_node_name = 13;</code>
+     * @return bool
+     */
+    public function getUseLongNodeName()
+    {
+        return $this->use_long_node_name;
+    }
+
+    /**
+     * If false (default), the device will use short names for various display screens.
+     * If true, node names will show in long format
+     *
+     * Generated from protobuf field <code>bool use_long_node_name = 13;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setUseLongNodeName($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->use_long_node_name = $var;
 
         return $this;
     }

@@ -668,11 +668,11 @@ class HardwareModel
      */
     const T_LORA_PAGER = 103;
     /**
-     * GAT562 Mesh Trial Tracker
+     * M5Stack Reserved
      *
-     * Generated from protobuf enum <code>GAT562_MESH_TRIAL_TRACKER = 104;</code>
+     * Generated from protobuf enum <code>M5STACK_RESERVED = 104;</code>
      */
-    const GAT562_MESH_TRIAL_TRACKER = 104;
+    const M5STACK_RESERVED = 104;
     /**
      * RAKwireless WisMesh Tag
      *
@@ -710,6 +710,18 @@ class HardwareModel
      * Generated from protobuf enum <code>HELTEC_V4 = 110;</code>
      */
     const HELTEC_V4 = 110;
+    /**
+     * M5Stack C6L
+     *
+     * Generated from protobuf enum <code>M5STACK_C6L = 111;</code>
+     */
+    const M5STACK_C6L = 111;
+    /**
+     * M5Stack Cardputer Adv
+     *
+     * Generated from protobuf enum <code>M5STACK_CARDPUTER_ADV = 112;</code>
+     */
+    const M5STACK_CARDPUTER_ADV = 112;
     /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
@@ -824,13 +836,15 @@ class HardwareModel
         self::QWANTZ_TINY_ARMS => 'QWANTZ_TINY_ARMS',
         self::T_DECK_PRO => 'T_DECK_PRO',
         self::T_LORA_PAGER => 'T_LORA_PAGER',
-        self::GAT562_MESH_TRIAL_TRACKER => 'GAT562_MESH_TRIAL_TRACKER',
+        self::M5STACK_RESERVED => 'M5STACK_RESERVED',
         self::WISMESH_TAG => 'WISMESH_TAG',
         self::RAK3312 => 'RAK3312',
         self::THINKNODE_M5 => 'THINKNODE_M5',
         self::HELTEC_MESH_SOLAR => 'HELTEC_MESH_SOLAR',
         self::T_ECHO_LITE => 'T_ECHO_LITE',
         self::HELTEC_V4 => 'HELTEC_V4',
+        self::M5STACK_C6L => 'M5STACK_C6L',
+        self::M5STACK_CARDPUTER_ADV => 'M5STACK_CARDPUTER_ADV',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
