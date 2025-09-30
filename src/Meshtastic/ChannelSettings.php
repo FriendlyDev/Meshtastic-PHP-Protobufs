@@ -98,6 +98,12 @@ class ChannelSettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.meshtastic.ModuleSettings module_settings = 7;</code>
      */
     protected $module_settings = null;
+    /**
+     * Whether or not we should receive notifactions / alerts through this channel
+     *
+     * Generated from protobuf field <code>bool mute = 8;</code>
+     */
+    protected $mute = false;
 
     /**
      * Constructor.
@@ -145,6 +151,8 @@ class ChannelSettings extends \Google\Protobuf\Internal\Message
      *           If true, messages seen on the internet will be forwarded to the local mesh.
      *     @type \Meshtastic\ModuleSettings $module_settings
      *           Per-channel module settings.
+     *     @type bool $mute
+     *           Whether or not we should receive notifactions / alerts through this channel
      * }
      */
     public function __construct($data = NULL) {
@@ -396,6 +404,32 @@ class ChannelSettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\ModuleSettings::class);
         $this->module_settings = $var;
+
+        return $this;
+    }
+
+    /**
+     * Whether or not we should receive notifactions / alerts through this channel
+     *
+     * Generated from protobuf field <code>bool mute = 8;</code>
+     * @return bool
+     */
+    public function getMute()
+    {
+        return $this->mute;
+    }
+
+    /**
+     * Whether or not we should receive notifactions / alerts through this channel
+     *
+     * Generated from protobuf field <code>bool mute = 8;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setMute($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->mute = $var;
 
         return $this;
     }

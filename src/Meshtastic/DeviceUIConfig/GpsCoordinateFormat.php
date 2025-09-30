@@ -7,7 +7,6 @@ namespace Meshtastic\DeviceUIConfig;
 use UnexpectedValueException;
 
 /**
- *   
  * How the GPS coordinates are displayed on the OLED screen.
  *
  * Protobuf type <code>meshtastic.DeviceUIConfig.GpsCoordinateFormat</code>
@@ -22,7 +21,6 @@ class GpsCoordinateFormat
      */
     const DEC = 0;
     /**
-     * 
      * GPS coordinates are displayed in the degrees minutes seconds format:
      * DD°MM'SS"C DDD°MM'SS"C, where C is the compass point representing the locations quadrant
      *
