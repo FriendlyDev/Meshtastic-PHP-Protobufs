@@ -650,11 +650,11 @@ class HardwareModel
      */
     const SEEED_WIO_TRACKER_L1_EINK = 100;
     /**
-     * Reserved ID for future and past use
+     * Muzi Works R1 Neo
      *
-     * Generated from protobuf enum <code>QWANTZ_TINY_ARMS = 101;</code>
+     * Generated from protobuf enum <code>MUZI_R1_NEO = 101;</code>
      */
-    const QWANTZ_TINY_ARMS = 101;
+    const MUZI_R1_NEO = 101;
     /**
      * Lilygo T-Deck Pro
      *
@@ -722,6 +722,18 @@ class HardwareModel
      * Generated from protobuf enum <code>M5STACK_CARDPUTER_ADV = 112;</code>
      */
     const M5STACK_CARDPUTER_ADV = 112;
+    /**
+     * ESP32S3 main controller with GPS and TFT screen.
+     *
+     * Generated from protobuf enum <code>HELTEC_WIRELESS_TRACKER_V2 = 113;</code>
+     */
+    const HELTEC_WIRELESS_TRACKER_V2 = 113;
+    /**
+     * LilyGo T-Watch Ultra
+     *
+     * Generated from protobuf enum <code>T_WATCH_ULTRA = 114;</code>
+     */
+    const T_WATCH_ULTRA = 114;
     /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
@@ -833,7 +845,7 @@ class HardwareModel
         self::LINK_32 => 'LINK_32',
         self::SEEED_WIO_TRACKER_L1 => 'SEEED_WIO_TRACKER_L1',
         self::SEEED_WIO_TRACKER_L1_EINK => 'SEEED_WIO_TRACKER_L1_EINK',
-        self::QWANTZ_TINY_ARMS => 'QWANTZ_TINY_ARMS',
+        self::MUZI_R1_NEO => 'MUZI_R1_NEO',
         self::T_DECK_PRO => 'T_DECK_PRO',
         self::T_LORA_PAGER => 'T_LORA_PAGER',
         self::M5STACK_RESERVED => 'M5STACK_RESERVED',
@@ -845,6 +857,8 @@ class HardwareModel
         self::HELTEC_V4 => 'HELTEC_V4',
         self::M5STACK_C6L => 'M5STACK_C6L',
         self::M5STACK_CARDPUTER_ADV => 'M5STACK_CARDPUTER_ADV',
+        self::HELTEC_WIRELESS_TRACKER_V2 => 'HELTEC_WIRELESS_TRACKER_V2',
+        self::T_WATCH_ULTRA => 'T_WATCH_ULTRA',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

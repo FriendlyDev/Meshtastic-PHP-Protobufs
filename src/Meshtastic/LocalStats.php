@@ -95,6 +95,12 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 heap_free_bytes = 13;</code>
      */
     protected $heap_free_bytes = 0;
+    /**
+     * Number of packets that were dropped because the transmit queue was full.
+     *
+     * Generated from protobuf field <code>uint32 num_tx_dropped = 14;</code>
+     */
+    protected $num_tx_dropped = 0;
 
     /**
      * Constructor.
@@ -130,6 +136,8 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      *           Number of bytes used in the heap
      *     @type int $heap_free_bytes
      *           Number of bytes free in the heap
+     *     @type int $num_tx_dropped
+     *           Number of packets that were dropped because the transmit queue was full.
      * }
      */
     public function __construct($data = NULL) {
@@ -475,6 +483,32 @@ class LocalStats extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->heap_free_bytes = $var;
+
+        return $this;
+    }
+
+    /**
+     * Number of packets that were dropped because the transmit queue was full.
+     *
+     * Generated from protobuf field <code>uint32 num_tx_dropped = 14;</code>
+     * @return int
+     */
+    public function getNumTxDropped()
+    {
+        return $this->num_tx_dropped;
+    }
+
+    /**
+     * Number of packets that were dropped because the transmit queue was full.
+     *
+     * Generated from protobuf field <code>uint32 num_tx_dropped = 14;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNumTxDropped($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->num_tx_dropped = $var;
 
         return $this;
     }

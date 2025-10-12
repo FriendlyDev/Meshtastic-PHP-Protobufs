@@ -22,12 +22,12 @@ class ModuleSettings extends \Google\Protobuf\Internal\Message
      */
     protected $position_precision = 0;
     /**
-     * Controls whether or not the phone / clients should mute the current channel
+     * Controls whether or not the client / device should mute the current channel
      * Useful for noisy public channels you don't necessarily want to disable
      *
-     * Generated from protobuf field <code>bool is_client_muted = 2;</code>
+     * Generated from protobuf field <code>bool is_muted = 2;</code>
      */
-    protected $is_client_muted = false;
+    protected $is_muted = false;
 
     /**
      * Constructor.
@@ -37,8 +37,8 @@ class ModuleSettings extends \Google\Protobuf\Internal\Message
      *
      *     @type int $position_precision
      *           Bits of precision for the location sent in position packets.
-     *     @type bool $is_client_muted
-     *           Controls whether or not the phone / clients should mute the current channel
+     *     @type bool $is_muted
+     *           Controls whether or not the client / device should mute the current channel
      *           Useful for noisy public channels you don't necessarily want to disable
      * }
      */
@@ -74,29 +74,29 @@ class ModuleSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Controls whether or not the phone / clients should mute the current channel
+     * Controls whether or not the client / device should mute the current channel
      * Useful for noisy public channels you don't necessarily want to disable
      *
-     * Generated from protobuf field <code>bool is_client_muted = 2;</code>
+     * Generated from protobuf field <code>bool is_muted = 2;</code>
      * @return bool
      */
-    public function getIsClientMuted()
+    public function getIsMuted()
     {
-        return $this->is_client_muted;
+        return $this->is_muted;
     }
 
     /**
-     * Controls whether or not the phone / clients should mute the current channel
+     * Controls whether or not the client / device should mute the current channel
      * Useful for noisy public channels you don't necessarily want to disable
      *
-     * Generated from protobuf field <code>bool is_client_muted = 2;</code>
+     * Generated from protobuf field <code>bool is_muted = 2;</code>
      * @param bool $var
      * @return $this
      */
-    public function setIsClientMuted($var)
+    public function setIsMuted($var)
     {
         GPBUtil::checkBool($var);
-        $this->is_client_muted = $var;
+        $this->is_muted = $var;
 
         return $this;
     }

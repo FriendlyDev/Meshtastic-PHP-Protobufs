@@ -31,6 +31,12 @@ class SharedContact extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool should_ignore = 3;</code>
      */
     protected $should_ignore = false;
+    /**
+     * Set the IS_KEY_MANUALLY_VERIFIED bit
+     *
+     * Generated from protobuf field <code>bool manually_verified = 4;</code>
+     */
+    protected $manually_verified = false;
 
     /**
      * Constructor.
@@ -44,6 +50,8 @@ class SharedContact extends \Google\Protobuf\Internal\Message
      *           The User of the contact
      *     @type bool $should_ignore
      *           Add this contact to the blocked / ignored list
+     *     @type bool $manually_verified
+     *           Set the IS_KEY_MANUALLY_VERIFIED bit
      * }
      */
     public function __construct($data = NULL) {
@@ -135,6 +143,32 @@ class SharedContact extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->should_ignore = $var;
+
+        return $this;
+    }
+
+    /**
+     * Set the IS_KEY_MANUALLY_VERIFIED bit
+     *
+     * Generated from protobuf field <code>bool manually_verified = 4;</code>
+     * @return bool
+     */
+    public function getManuallyVerified()
+    {
+        return $this->manually_verified;
+    }
+
+    /**
+     * Set the IS_KEY_MANUALLY_VERIFIED bit
+     *
+     * Generated from protobuf field <code>bool manually_verified = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setManuallyVerified($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->manually_verified = $var;
 
         return $this;
     }
