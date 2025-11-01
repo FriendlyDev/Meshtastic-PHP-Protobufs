@@ -735,6 +735,24 @@ class HardwareModel
      */
     const T_WATCH_ULTRA = 114;
     /**
+     * Elecrow ThinkNode M3
+     *
+     * Generated from protobuf enum <code>THINKNODE_M3 = 115;</code>
+     */
+    const THINKNODE_M3 = 115;
+    /**
+     * RAK WISMESH_TAP_V2 with ESP32-S3 CPU
+     *
+     * Generated from protobuf enum <code>WISMESH_TAP_V2 = 116;</code>
+     */
+    const WISMESH_TAP_V2 = 116;
+    /**
+     * RAK3401
+     *
+     * Generated from protobuf enum <code>RAK3401 = 117;</code>
+     */
+    const RAK3401 = 117;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -859,6 +877,9 @@ class HardwareModel
         self::M5STACK_CARDPUTER_ADV => 'M5STACK_CARDPUTER_ADV',
         self::HELTEC_WIRELESS_TRACKER_V2 => 'HELTEC_WIRELESS_TRACKER_V2',
         self::T_WATCH_ULTRA => 'T_WATCH_ULTRA',
+        self::THINKNODE_M3 => 'THINKNODE_M3',
+        self::WISMESH_TAP_V2 => 'WISMESH_TAP_V2',
+        self::RAK3401 => 'RAK3401',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
