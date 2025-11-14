@@ -154,8 +154,9 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Tell the node to shutdown in this many seconds (or <0 to cancel shutdown)
      *     @type int $factory_reset_config
      *           Tell the node to factory reset config; all device state and configuration will be returned to factory defaults; BLE bonds will be preserved.
-     *     @type int $nodedb_reset
+     *     @type bool $nodedb_reset
      *           Tell the node to reset the nodedb.
+     *           When true, favorites are preserved through reset.
      * }
      */
     public function __construct($data = NULL) {
@@ -1860,9 +1861,10 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
 
     /**
      * Tell the node to reset the nodedb.
+     * When true, favorites are preserved through reset.
      *
-     * Generated from protobuf field <code>int32 nodedb_reset = 100;</code>
-     * @return int
+     * Generated from protobuf field <code>bool nodedb_reset = 100;</code>
+     * @return bool
      */
     public function getNodedbReset()
     {
@@ -1876,14 +1878,15 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
 
     /**
      * Tell the node to reset the nodedb.
+     * When true, favorites are preserved through reset.
      *
-     * Generated from protobuf field <code>int32 nodedb_reset = 100;</code>
-     * @param int $var
+     * Generated from protobuf field <code>bool nodedb_reset = 100;</code>
+     * @param bool $var
      * @return $this
      */
     public function setNodedbReset($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkBool($var);
         $this->writeOneof(100, $var);
 
         return $this;
