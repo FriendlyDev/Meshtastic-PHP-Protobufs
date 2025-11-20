@@ -27,6 +27,10 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
     protected $from = 0;
     /**
      * The (immediate) destination for this packet
+     * If the value is 4,294,967,295 (maximum value of an unsigned 32bit integer), this indicates that the packet was
+     * not destined for a specific node, but for a channel as indicated by the value of `channel` below.
+     * If the value is another, this indicates that the packet was destined for a specific
+     * node (i.e. a kind of "Direct Message" to this node) and not broadcast on a channel.
      *
      * Generated from protobuf field <code>fixed32 to = 2;</code>
      */
@@ -183,6 +187,10 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
      *           See [crypto](/docs/overview/encryption) for details.
      *     @type int $to
      *           The (immediate) destination for this packet
+     *           If the value is 4,294,967,295 (maximum value of an unsigned 32bit integer), this indicates that the packet was
+     *           not destined for a specific node, but for a channel as indicated by the value of `channel` below.
+     *           If the value is another, this indicates that the packet was destined for a specific
+     *           node (i.e. a kind of "Direct Message" to this node) and not broadcast on a channel.
      *     @type int $channel
      *           (Usually) If set, this indicates the index in the secondary_channels table that this packet was sent/received on.
      *           If unset, packet was on the primary channel.
@@ -295,6 +303,10 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
 
     /**
      * The (immediate) destination for this packet
+     * If the value is 4,294,967,295 (maximum value of an unsigned 32bit integer), this indicates that the packet was
+     * not destined for a specific node, but for a channel as indicated by the value of `channel` below.
+     * If the value is another, this indicates that the packet was destined for a specific
+     * node (i.e. a kind of "Direct Message" to this node) and not broadcast on a channel.
      *
      * Generated from protobuf field <code>fixed32 to = 2;</code>
      * @return int
@@ -306,6 +318,10 @@ class MeshPacket extends \Google\Protobuf\Internal\Message
 
     /**
      * The (immediate) destination for this packet
+     * If the value is 4,294,967,295 (maximum value of an unsigned 32bit integer), this indicates that the packet was
+     * not destined for a specific node, but for a channel as indicated by the value of `channel` below.
+     * If the value is another, this indicates that the packet was destined for a specific
+     * node (i.e. a kind of "Direct Message" to this node) and not broadcast on a channel.
      *
      * Generated from protobuf field <code>fixed32 to = 2;</code>
      * @param int $var

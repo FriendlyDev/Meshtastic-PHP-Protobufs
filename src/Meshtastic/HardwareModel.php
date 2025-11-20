@@ -753,6 +753,12 @@ class HardwareModel
      */
     const RAK3401 = 117;
     /**
+     * RAK6421 Hat+
+     *
+     * Generated from protobuf enum <code>RAK6421 = 118;</code>
+     */
+    const RAK6421 = 118;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -880,6 +886,7 @@ class HardwareModel
         self::THINKNODE_M3 => 'THINKNODE_M3',
         self::WISMESH_TAP_V2 => 'WISMESH_TAP_V2',
         self::RAK3401 => 'RAK3401',
+        self::RAK6421 => 'RAK6421',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
