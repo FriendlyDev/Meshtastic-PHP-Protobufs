@@ -759,6 +759,18 @@ class HardwareModel
      */
     const RAK6421 = 118;
     /**
+     * Elecrow ThinkNode M4
+     *
+     * Generated from protobuf enum <code>THINKNODE_M4 = 119;</code>
+     */
+    const THINKNODE_M4 = 119;
+    /**
+     * Elecrow ThinkNode M6
+     *
+     * Generated from protobuf enum <code>THINKNODE_M6 = 120;</code>
+     */
+    const THINKNODE_M6 = 120;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -887,6 +899,8 @@ class HardwareModel
         self::WISMESH_TAP_V2 => 'WISMESH_TAP_V2',
         self::RAK3401 => 'RAK3401',
         self::RAK6421 => 'RAK6421',
+        self::THINKNODE_M4 => 'THINKNODE_M4',
+        self::THINKNODE_M6 => 'THINKNODE_M6',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
