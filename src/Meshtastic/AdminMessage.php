@@ -140,11 +140,14 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Add a contact (User) to the nodedb
      *     @type \Meshtastic\KeyVerificationAdmin $key_verification
      *           Initiate or respond to a key verification request
+     *     @type int $reboot_ota_mode
+     *           Tell the node to reboot into OTA mode for firmware update via BLE or WiFi (ESP32 only for now)
      *     @type int $factory_reset_device
      *           Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
      *     @type int $reboot_ota_seconds
      *           Tell the node to reboot into the OTA Firmware in this many seconds (or <0 to cancel reboot)
      *           Only Implemented for ESP32 Devices. This needs to be issued to send a new main firmware via bluetooth.
+     *           Deprecated in favor of reboot_ota_mode in 2.7.17
      *     @type bool $exit_simulator
      *           This message is only supported for the simulator Portduino build.
      *           If received the simulator will exit successfully.
@@ -1670,6 +1673,37 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Tell the node to reboot into OTA mode for firmware update via BLE or WiFi (ESP32 only for now)
+     *
+     * Generated from protobuf field <code>.meshtastic.OTAMode reboot_ota_mode = 68;</code>
+     * @return int
+     */
+    public function getRebootOtaMode()
+    {
+        return $this->readOneof(68);
+    }
+
+    public function hasRebootOtaMode()
+    {
+        return $this->hasOneof(68);
+    }
+
+    /**
+     * Tell the node to reboot into OTA mode for firmware update via BLE or WiFi (ESP32 only for now)
+     *
+     * Generated from protobuf field <code>.meshtastic.OTAMode reboot_ota_mode = 68;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRebootOtaMode($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\OTAMode::class);
+        $this->writeOneof(68, $var);
+
+        return $this;
+    }
+
+    /**
      * Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
      *
      * Generated from protobuf field <code>int32 factory_reset_device = 94;</code>
@@ -1703,30 +1737,37 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     /**
      * Tell the node to reboot into the OTA Firmware in this many seconds (or <0 to cancel reboot)
      * Only Implemented for ESP32 Devices. This needs to be issued to send a new main firmware via bluetooth.
+     * Deprecated in favor of reboot_ota_mode in 2.7.17
      *
-     * Generated from protobuf field <code>int32 reboot_ota_seconds = 95;</code>
+     * Generated from protobuf field <code>int32 reboot_ota_seconds = 95 [deprecated = true];</code>
      * @return int
+     * @deprecated
      */
     public function getRebootOtaSeconds()
     {
+        @trigger_error('reboot_ota_seconds is deprecated.', E_USER_DEPRECATED);
         return $this->readOneof(95);
     }
 
     public function hasRebootOtaSeconds()
     {
+        @trigger_error('reboot_ota_seconds is deprecated.', E_USER_DEPRECATED);
         return $this->hasOneof(95);
     }
 
     /**
      * Tell the node to reboot into the OTA Firmware in this many seconds (or <0 to cancel reboot)
      * Only Implemented for ESP32 Devices. This needs to be issued to send a new main firmware via bluetooth.
+     * Deprecated in favor of reboot_ota_mode in 2.7.17
      *
-     * Generated from protobuf field <code>int32 reboot_ota_seconds = 95;</code>
+     * Generated from protobuf field <code>int32 reboot_ota_seconds = 95 [deprecated = true];</code>
      * @param int $var
      * @return $this
+     * @deprecated
      */
     public function setRebootOtaSeconds($var)
     {
+        @trigger_error('reboot_ota_seconds is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkInt32($var);
         $this->writeOneof(95, $var);
 

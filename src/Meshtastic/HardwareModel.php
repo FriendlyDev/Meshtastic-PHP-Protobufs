@@ -602,11 +602,11 @@ class HardwareModel
      */
     const HELTEC_SENSOR_HUB = 92;
     /**
-     * Reserved Fried Chicken ID for future use
+     * Muzi Works Muzi-Base device
      *
-     * Generated from protobuf enum <code>RESERVED_FRIED_CHICKEN = 93;</code>
+     * Generated from protobuf enum <code>MUZI_BASE = 93;</code>
      */
-    const RESERVED_FRIED_CHICKEN = 93;
+    const MUZI_BASE = 93;
     /**
      * Heltec Magnetic Power Bank with Meshtastic compatible
      *
@@ -873,7 +873,7 @@ class HardwareModel
         self::THINKNODE_M2 => 'THINKNODE_M2',
         self::T_ETH_ELITE => 'T_ETH_ELITE',
         self::HELTEC_SENSOR_HUB => 'HELTEC_SENSOR_HUB',
-        self::RESERVED_FRIED_CHICKEN => 'RESERVED_FRIED_CHICKEN',
+        self::MUZI_BASE => 'MUZI_BASE',
         self::HELTEC_MESH_POCKET => 'HELTEC_MESH_POCKET',
         self::SEEED_SOLAR_NODE => 'SEEED_SOLAR_NODE',
         self::NOMADSTAR_METEOR_PRO => 'NOMADSTAR_METEOR_PRO',

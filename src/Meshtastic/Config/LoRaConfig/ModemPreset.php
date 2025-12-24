@@ -22,8 +22,9 @@ class ModemPreset
     const LONG_FAST = 0;
     /**
      * Long Range - Slow
+     * Deprecated in 2.7: Unpopular slow preset.
      *
-     * Generated from protobuf enum <code>LONG_SLOW = 1;</code>
+     * Generated from protobuf enum <code>LONG_SLOW = 1 [deprecated = true];</code>
      */
     const LONG_SLOW = 1;
     /**
@@ -71,6 +72,13 @@ class ModemPreset
      * Generated from protobuf enum <code>SHORT_TURBO = 8;</code>
      */
     const SHORT_TURBO = 8;
+    /**
+     * Long Range - Turbo
+     * This preset performs similarly to LongFast, but with 500Khz bandwidth.
+     *
+     * Generated from protobuf enum <code>LONG_TURBO = 9;</code>
+     */
+    const LONG_TURBO = 9;
 
     private static $valueToName = [
         self::LONG_FAST => 'LONG_FAST',
@@ -82,6 +90,7 @@ class ModemPreset
         self::SHORT_FAST => 'SHORT_FAST',
         self::LONG_MODERATE => 'LONG_MODERATE',
         self::SHORT_TURBO => 'SHORT_TURBO',
+        self::LONG_TURBO => 'LONG_TURBO',
     ];
 
     public static function name($value)
