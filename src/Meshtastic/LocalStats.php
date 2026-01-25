@@ -101,6 +101,12 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 num_tx_dropped = 14;</code>
      */
     protected $num_tx_dropped = 0;
+    /**
+     * Noise floor value measured in dBm
+     *
+     * Generated from protobuf field <code>int32 noise_floor = 15;</code>
+     */
+    protected $noise_floor = 0;
 
     /**
      * Constructor.
@@ -138,6 +144,8 @@ class LocalStats extends \Google\Protobuf\Internal\Message
      *           Number of bytes free in the heap
      *     @type int $num_tx_dropped
      *           Number of packets that were dropped because the transmit queue was full.
+     *     @type int $noise_floor
+     *           Noise floor value measured in dBm
      * }
      */
     public function __construct($data = NULL) {
@@ -509,6 +517,32 @@ class LocalStats extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->num_tx_dropped = $var;
+
+        return $this;
+    }
+
+    /**
+     * Noise floor value measured in dBm
+     *
+     * Generated from protobuf field <code>int32 noise_floor = 15;</code>
+     * @return int
+     */
+    public function getNoiseFloor()
+    {
+        return $this->noise_floor;
+    }
+
+    /**
+     * Noise floor value measured in dBm
+     *
+     * Generated from protobuf field <code>int32 noise_floor = 15;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setNoiseFloor($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->noise_floor = $var;
 
         return $this;
     }

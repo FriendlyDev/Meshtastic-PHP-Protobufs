@@ -53,12 +53,24 @@ class Serial_Mode
      */
     const VE_DIRECT = 7;
     /**
-     *Used to configure and view some parameters of MeshSolar.
-     *https://heltec.org/project/meshsolar/
+     * Used to configure and view some parameters of MeshSolar.
+     * https://heltec.org/project/meshsolar/
      *
      * Generated from protobuf enum <code>MS_CONFIG = 8;</code>
      */
     const MS_CONFIG = 8;
+    /**
+     * Logs mesh traffic to the serial pins, ideal for logging via openLog or similar.
+     *
+     * Generated from protobuf enum <code>LOG = 9;</code>
+     */
+    const LOG = 9;
+    /**
+     * only text (channel & DM)
+     *
+     * Generated from protobuf enum <code>LOGTEXT = 10;</code>
+     */
+    const LOGTEXT = 10;
 
     private static $valueToName = [
         self::PBDEFAULT => 'DEFAULT',
@@ -70,6 +82,8 @@ class Serial_Mode
         self::WS85 => 'WS85',
         self::VE_DIRECT => 'VE_DIRECT',
         self::MS_CONFIG => 'MS_CONFIG',
+        self::LOG => 'LOG',
+        self::LOGTEXT => 'LOGTEXT',
     ];
 
     public static function name($value)

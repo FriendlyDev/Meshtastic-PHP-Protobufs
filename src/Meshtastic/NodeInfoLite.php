@@ -92,6 +92,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     /**
      * Bitfield for storing booleans.
      * LSB 0 is_key_manually_verified
+     * LSB 1 is_muted
      *
      * Generated from protobuf field <code>uint32 bitfield = 13;</code>
      */
@@ -134,6 +135,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
      *     @type int $bitfield
      *           Bitfield for storing booleans.
      *           LSB 0 is_key_manually_verified
+     *           LSB 1 is_muted
      * }
      */
     public function __construct($data = NULL) {
@@ -504,6 +506,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     /**
      * Bitfield for storing booleans.
      * LSB 0 is_key_manually_verified
+     * LSB 1 is_muted
      *
      * Generated from protobuf field <code>uint32 bitfield = 13;</code>
      * @return int
@@ -516,6 +519,7 @@ class NodeInfoLite extends \Google\Protobuf\Internal\Message
     /**
      * Bitfield for storing booleans.
      * LSB 0 is_key_manually_verified
+     * LSB 1 is_muted
      *
      * Generated from protobuf field <code>uint32 bitfield = 13;</code>
      * @param int $var

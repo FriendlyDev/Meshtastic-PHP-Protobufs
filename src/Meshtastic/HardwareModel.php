@@ -219,11 +219,11 @@ class HardwareModel
      */
     const LORA_RELAY_V1 = 32;
     /**
-     * TODO: REPLACE
+     * T-Echo Plus device from LilyGo
      *
-     * Generated from protobuf enum <code>NRF52840DK = 33;</code>
+     * Generated from protobuf enum <code>T_ECHO_PLUS = 33;</code>
      */
-    const NRF52840DK = 33;
+    const T_ECHO_PLUS = 33;
     /**
      * TODO: REPLACE
      *
@@ -771,6 +771,24 @@ class HardwareModel
      */
     const THINKNODE_M6 = 120;
     /**
+     * Elecrow Meshstick 1262
+     *
+     * Generated from protobuf enum <code>MESHSTICK_1262 = 121;</code>
+     */
+    const MESHSTICK_1262 = 121;
+    /**
+     * LilyGo T-Beam 1W
+     *
+     * Generated from protobuf enum <code>TBEAM_1_WATT = 122;</code>
+     */
+    const TBEAM_1_WATT = 122;
+    /**
+     * LilyGo T5 S3 ePaper Pro (V1 and V2)
+     *
+     * Generated from protobuf enum <code>T5_S3_EPAPER_PRO = 123;</code>
+     */
+    const T5_S3_EPAPER_PRO = 123;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -813,7 +831,7 @@ class HardwareModel
         self::RP2040_LORA => 'RP2040_LORA',
         self::STATION_G2 => 'STATION_G2',
         self::LORA_RELAY_V1 => 'LORA_RELAY_V1',
-        self::NRF52840DK => 'NRF52840DK',
+        self::T_ECHO_PLUS => 'T_ECHO_PLUS',
         self::PPR => 'PPR',
         self::GENIEBLOCKS => 'GENIEBLOCKS',
         self::NRF52_UNKNOWN => 'NRF52_UNKNOWN',
@@ -901,6 +919,9 @@ class HardwareModel
         self::RAK6421 => 'RAK6421',
         self::THINKNODE_M4 => 'THINKNODE_M4',
         self::THINKNODE_M6 => 'THINKNODE_M6',
+        self::MESHSTICK_1262 => 'MESHSTICK_1262',
+        self::TBEAM_1_WATT => 'TBEAM_1_WATT',
+        self::T5_S3_EPAPER_PRO => 'T5_S3_EPAPER_PRO',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

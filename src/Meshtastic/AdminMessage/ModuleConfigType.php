@@ -91,6 +91,12 @@ class ModuleConfigType
      * Generated from protobuf enum <code>PAXCOUNTER_CONFIG = 12;</code>
      */
     const PAXCOUNTER_CONFIG = 12;
+    /**
+     * TODO: REPLACE
+     *
+     * Generated from protobuf enum <code>STATUSMESSAGE_CONFIG = 13;</code>
+     */
+    const STATUSMESSAGE_CONFIG = 13;
 
     private static $valueToName = [
         self::MQTT_CONFIG => 'MQTT_CONFIG',
@@ -106,6 +112,7 @@ class ModuleConfigType
         self::AMBIENTLIGHTING_CONFIG => 'AMBIENTLIGHTING_CONFIG',
         self::DETECTIONSENSOR_CONFIG => 'DETECTIONSENSOR_CONFIG',
         self::PAXCOUNTER_CONFIG => 'PAXCOUNTER_CONFIG',
+        self::STATUSMESSAGE_CONFIG => 'STATUSMESSAGE_CONFIG',
     ];
 
     public static function name($value)

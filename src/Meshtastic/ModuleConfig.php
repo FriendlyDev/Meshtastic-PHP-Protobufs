@@ -49,6 +49,8 @@ class ModuleConfig extends \Google\Protobuf\Internal\Message
      *           TODO: REPLACE
      *     @type \Meshtastic\ModuleConfig\PaxcounterConfig $paxcounter
      *           TODO: REPLACE
+     *     @type \Meshtastic\ModuleConfig\StatusMessageConfig $statusmessage
+     *           TODO: REPLACE
      * }
      */
     public function __construct($data = NULL) {
@@ -455,6 +457,37 @@ class ModuleConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\PaxcounterConfig::class);
         $this->writeOneof(13, $var);
+
+        return $this;
+    }
+
+    /**
+     * TODO: REPLACE
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.StatusMessageConfig statusmessage = 14;</code>
+     * @return \Meshtastic\ModuleConfig\StatusMessageConfig|null
+     */
+    public function getStatusmessage()
+    {
+        return $this->readOneof(14);
+    }
+
+    public function hasStatusmessage()
+    {
+        return $this->hasOneof(14);
+    }
+
+    /**
+     * TODO: REPLACE
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.StatusMessageConfig statusmessage = 14;</code>
+     * @param \Meshtastic\ModuleConfig\StatusMessageConfig $var
+     * @return $this
+     */
+    public function setStatusmessage($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\StatusMessageConfig::class);
+        $this->writeOneof(14, $var);
 
         return $this;
     }

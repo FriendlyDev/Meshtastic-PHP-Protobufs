@@ -161,6 +161,15 @@ class PortNum
      */
     const STORE_FORWARD_PLUSPLUS_APP = 35;
     /**
+     * Node Status module
+     * ENCODING: protobuf
+     * This module allows setting an extra string of status for a node.
+     * Broadcasts on change and on a timer, possibly once a day.
+     *
+     * Generated from protobuf enum <code>NODE_STATUS_APP = 36;</code>
+     */
+    const NODE_STATUS_APP = 36;
+    /**
      * Provides a hardware serial interface to send and receive from the Meshtastic network.
      * Connect to the RX/TX pins of a device with 38400 8N1. Packets received from the Meshtastic
      * network is forwarded to the RX pin while sending a packet to TX will go out to the Mesh network.
@@ -303,6 +312,7 @@ class PortNum
         self::IP_TUNNEL_APP => 'IP_TUNNEL_APP',
         self::PAXCOUNTER_APP => 'PAXCOUNTER_APP',
         self::STORE_FORWARD_PLUSPLUS_APP => 'STORE_FORWARD_PLUSPLUS_APP',
+        self::NODE_STATUS_APP => 'NODE_STATUS_APP',
         self::SERIAL_APP => 'SERIAL_APP',
         self::STORE_FORWARD_APP => 'STORE_FORWARD_APP',
         self::RANGE_TEST_APP => 'RANGE_TEST_APP',

@@ -108,6 +108,13 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool is_key_manually_verified = 12;</code>
      */
     protected $is_key_manually_verified = false;
+    /**
+     * True if node has been muted
+     * Persistes between NodeDB internal clean ups
+     *
+     * Generated from protobuf field <code>bool is_muted = 13;</code>
+     */
+    protected $is_muted = false;
 
     /**
      * Constructor.
@@ -145,6 +152,9 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
      *           True if node public key has been verified.
      *           Persists between NodeDB internal clean ups
      *           LSB 0 of the bitfield
+     *     @type bool $is_muted
+     *           True if node has been muted
+     *           Persistes between NodeDB internal clean ups
      * }
      */
     public function __construct($data = NULL) {
@@ -512,6 +522,34 @@ class NodeInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->is_key_manually_verified = $var;
+
+        return $this;
+    }
+
+    /**
+     * True if node has been muted
+     * Persistes between NodeDB internal clean ups
+     *
+     * Generated from protobuf field <code>bool is_muted = 13;</code>
+     * @return bool
+     */
+    public function getIsMuted()
+    {
+        return $this->is_muted;
+    }
+
+    /**
+     * True if node has been muted
+     * Persistes between NodeDB internal clean ups
+     *
+     * Generated from protobuf field <code>bool is_muted = 13;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsMuted($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_muted = $var;
 
         return $this;
     }

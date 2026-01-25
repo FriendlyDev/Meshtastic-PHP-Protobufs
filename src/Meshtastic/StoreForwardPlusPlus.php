@@ -69,6 +69,12 @@ class StoreForwardPlusPlus extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 encapsulated_rxtime = 9;</code>
      */
     protected $encapsulated_rxtime = 0;
+    /**
+     * Used in a LINK_REQUEST to specify the message X spots back from head
+     *
+     * Generated from protobuf field <code>uint32 chain_count = 10;</code>
+     */
+    protected $chain_count = 0;
 
     /**
      * Constructor.
@@ -94,6 +100,8 @@ class StoreForwardPlusPlus extends \Google\Protobuf\Internal\Message
      *           Sender of the contained message
      *     @type int $encapsulated_rxtime
      *           The receive time of the message in question
+     *     @type int $chain_count
+     *           Used in a LINK_REQUEST to specify the message X spots back from head
      * }
      */
     public function __construct($data = NULL) {
@@ -331,6 +339,32 @@ class StoreForwardPlusPlus extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->encapsulated_rxtime = $var;
+
+        return $this;
+    }
+
+    /**
+     * Used in a LINK_REQUEST to specify the message X spots back from head
+     *
+     * Generated from protobuf field <code>uint32 chain_count = 10;</code>
+     * @return int
+     */
+    public function getChainCount()
+    {
+        return $this->chain_count;
+    }
+
+    /**
+     * Used in a LINK_REQUEST to specify the message X spots back from head
+     *
+     * Generated from protobuf field <code>uint32 chain_count = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setChainCount($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->chain_count = $var;
 
         return $this;
     }

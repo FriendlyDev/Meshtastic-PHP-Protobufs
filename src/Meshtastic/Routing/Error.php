@@ -119,6 +119,13 @@ class Error
      * Generated from protobuf enum <code>RATE_LIMIT_EXCEEDED = 38;</code>
      */
     const RATE_LIMIT_EXCEEDED = 38;
+    /**
+     * PKI encryption failed, due to no public key for the remote node
+     * This is different from PKI_UNKNOWN_PUBKEY which indicates a failure upon receiving a packet
+     *
+     * Generated from protobuf enum <code>PKI_SEND_FAIL_PUBLIC_KEY = 39;</code>
+     */
+    const PKI_SEND_FAIL_PUBLIC_KEY = 39;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -138,6 +145,7 @@ class Error
         self::ADMIN_BAD_SESSION_KEY => 'ADMIN_BAD_SESSION_KEY',
         self::ADMIN_PUBLIC_KEY_UNAUTHORIZED => 'ADMIN_PUBLIC_KEY_UNAUTHORIZED',
         self::RATE_LIMIT_EXCEEDED => 'RATE_LIMIT_EXCEEDED',
+        self::PKI_SEND_FAIL_PUBLIC_KEY => 'PKI_SEND_FAIL_PUBLIC_KEY',
     ];
 
     public static function name($value)

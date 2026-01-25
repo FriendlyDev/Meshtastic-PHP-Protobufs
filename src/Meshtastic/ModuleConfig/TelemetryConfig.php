@@ -105,6 +105,12 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool device_telemetry_enabled = 14;</code>
      */
     protected $device_telemetry_enabled = false;
+    /**
+     * Enable/Disable the air quality telemetry measurement module on-device display
+     *
+     * Generated from protobuf field <code>bool air_quality_screen_enabled = 15;</code>
+     */
+    protected $air_quality_screen_enabled = false;
 
     /**
      * Constructor.
@@ -147,6 +153,8 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
      *     @type bool $device_telemetry_enabled
      *           Enable/Disable the device telemetry module to send metrics to the mesh
      *           Note: We will still send telemtry to the connected phone / client every minute over the API
+     *     @type bool $air_quality_screen_enabled
+     *           Enable/Disable the air quality telemetry measurement module on-device display
      * }
      */
     public function __construct($data = NULL) {
@@ -526,6 +534,32 @@ class TelemetryConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->device_telemetry_enabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Enable/Disable the air quality telemetry measurement module on-device display
+     *
+     * Generated from protobuf field <code>bool air_quality_screen_enabled = 15;</code>
+     * @return bool
+     */
+    public function getAirQualityScreenEnabled()
+    {
+        return $this->air_quality_screen_enabled;
+    }
+
+    /**
+     * Enable/Disable the air quality telemetry measurement module on-device display
+     *
+     * Generated from protobuf field <code>bool air_quality_screen_enabled = 15;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setAirQualityScreenEnabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->air_quality_screen_enabled = $var;
 
         return $this;
     }

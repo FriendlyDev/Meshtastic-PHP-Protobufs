@@ -131,6 +131,8 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Set specified node-num to be ignored on the NodeDB on the device
      *     @type int $remove_ignored_node
      *           Set specified node-num to be un-ignored on the NodeDB on the device
+     *     @type int $toggle_muted_node
+     *           Set specified node-num to be muted
      *     @type bool $begin_edit_settings
      *           Begins an edit transaction for config, module config, owner, and channel settings changes
      *           This will delay the standard *implicit* save to the file system and subsequent reboot behavior until committed (commit_edit_settings)
@@ -140,8 +142,6 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Add a contact (User) to the nodedb
      *     @type \Meshtastic\KeyVerificationAdmin $key_verification
      *           Initiate or respond to a key verification request
-     *     @type int $reboot_ota_mode
-     *           Tell the node to reboot into OTA mode for firmware update via BLE or WiFi (ESP32 only for now)
      *     @type int $factory_reset_device
      *           Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
      *     @type int $reboot_ota_seconds
@@ -160,6 +160,8 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *     @type bool $nodedb_reset
      *           Tell the node to reset the nodedb.
      *           When true, favorites are preserved through reset.
+     *     @type \Meshtastic\AdminMessage\OTAEvent $ota_request
+     *           Tell the node to reset into the OTA Loader
      * }
      */
     public function __construct($data = NULL) {
@@ -1547,6 +1549,37 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Set specified node-num to be muted
+     *
+     * Generated from protobuf field <code>uint32 toggle_muted_node = 49;</code>
+     * @return int
+     */
+    public function getToggleMutedNode()
+    {
+        return $this->readOneof(49);
+    }
+
+    public function hasToggleMutedNode()
+    {
+        return $this->hasOneof(49);
+    }
+
+    /**
+     * Set specified node-num to be muted
+     *
+     * Generated from protobuf field <code>uint32 toggle_muted_node = 49;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setToggleMutedNode($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->writeOneof(49, $var);
+
+        return $this;
+    }
+
+    /**
      * Begins an edit transaction for config, module config, owner, and channel settings changes
      * This will delay the standard *implicit* save to the file system and subsequent reboot behavior until committed (commit_edit_settings)
      *
@@ -1668,37 +1701,6 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\KeyVerificationAdmin::class);
         $this->writeOneof(67, $var);
-
-        return $this;
-    }
-
-    /**
-     * Tell the node to reboot into OTA mode for firmware update via BLE or WiFi (ESP32 only for now)
-     *
-     * Generated from protobuf field <code>.meshtastic.OTAMode reboot_ota_mode = 68;</code>
-     * @return int
-     */
-    public function getRebootOtaMode()
-    {
-        return $this->readOneof(68);
-    }
-
-    public function hasRebootOtaMode()
-    {
-        return $this->hasOneof(68);
-    }
-
-    /**
-     * Tell the node to reboot into OTA mode for firmware update via BLE or WiFi (ESP32 only for now)
-     *
-     * Generated from protobuf field <code>.meshtastic.OTAMode reboot_ota_mode = 68;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setRebootOtaMode($var)
-    {
-        GPBUtil::checkEnum($var, \Meshtastic\OTAMode::class);
-        $this->writeOneof(68, $var);
 
         return $this;
     }
@@ -1929,6 +1931,37 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->writeOneof(100, $var);
+
+        return $this;
+    }
+
+    /**
+     * Tell the node to reset into the OTA Loader
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.OTAEvent ota_request = 102;</code>
+     * @return \Meshtastic\AdminMessage\OTAEvent|null
+     */
+    public function getOtaRequest()
+    {
+        return $this->readOneof(102);
+    }
+
+    public function hasOtaRequest()
+    {
+        return $this->hasOneof(102);
+    }
+
+    /**
+     * Tell the node to reset into the OTA Loader
+     *
+     * Generated from protobuf field <code>.meshtastic.AdminMessage.OTAEvent ota_request = 102;</code>
+     * @param \Meshtastic\AdminMessage\OTAEvent $var
+     * @return $this
+     */
+    public function setOtaRequest($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\AdminMessage\OTAEvent::class);
+        $this->writeOneof(102, $var);
 
         return $this;
     }

@@ -92,6 +92,12 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
      */
     protected $paxcounter = null;
     /**
+     * StatusMessage Config
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.StatusMessageConfig statusmessage = 15;</code>
+     */
+    protected $statusmessage = null;
+    /**
      * A version integer used to invalidate old save files when we make
      * incompatible changes This integer is set at build time and is private to
      * NodeDB.cpp in the device code.
@@ -132,6 +138,8 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
      *           The part of the config that is specific to the Detection Sensor module
      *     @type \Meshtastic\ModuleConfig\PaxcounterConfig $paxcounter
      *           Paxcounter Config
+     *     @type \Meshtastic\ModuleConfig\StatusMessageConfig $statusmessage
+     *           StatusMessage Config
      *     @type int $version
      *           A version integer used to invalidate old save files when we make
      *           incompatible changes This integer is set at build time and is private to
@@ -607,6 +615,42 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\PaxcounterConfig::class);
         $this->paxcounter = $var;
+
+        return $this;
+    }
+
+    /**
+     * StatusMessage Config
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.StatusMessageConfig statusmessage = 15;</code>
+     * @return \Meshtastic\ModuleConfig\StatusMessageConfig|null
+     */
+    public function getStatusmessage()
+    {
+        return $this->statusmessage;
+    }
+
+    public function hasStatusmessage()
+    {
+        return isset($this->statusmessage);
+    }
+
+    public function clearStatusmessage()
+    {
+        unset($this->statusmessage);
+    }
+
+    /**
+     * StatusMessage Config
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.StatusMessageConfig statusmessage = 15;</code>
+     * @param \Meshtastic\ModuleConfig\StatusMessageConfig $var
+     * @return $this
+     */
+    public function setStatusmessage($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\StatusMessageConfig::class);
+        $this->statusmessage = $var;
 
         return $this;
     }
