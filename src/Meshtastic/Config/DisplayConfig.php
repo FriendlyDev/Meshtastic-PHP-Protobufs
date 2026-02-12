@@ -101,6 +101,12 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool use_long_node_name = 13;</code>
      */
     protected $use_long_node_name = false;
+    /**
+     * If true, the device will display message bubbles on screen.
+     *
+     * Generated from protobuf field <code>bool enable_message_bubbles = 14;</code>
+     */
+    protected $enable_message_bubbles = false;
 
     /**
      * Constructor.
@@ -140,6 +146,8 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
      *     @type bool $use_long_node_name
      *           If false (default), the device will use short names for various display screens.
      *           If true, node names will show in long format
+     *     @type bool $enable_message_bubbles
+     *           If true, the device will display message bubbles on screen.
      * }
      */
     public function __construct($data = NULL) {
@@ -501,6 +509,32 @@ class DisplayConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->use_long_node_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * If true, the device will display message bubbles on screen.
+     *
+     * Generated from protobuf field <code>bool enable_message_bubbles = 14;</code>
+     * @return bool
+     */
+    public function getEnableMessageBubbles()
+    {
+        return $this->enable_message_bubbles;
+    }
+
+    /**
+     * If true, the device will display message bubbles on screen.
+     *
+     * Generated from protobuf field <code>bool enable_message_bubbles = 14;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setEnableMessageBubbles($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->enable_message_bubbles = $var;
 
         return $this;
     }

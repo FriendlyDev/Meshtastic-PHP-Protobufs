@@ -289,6 +289,24 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>BH1750 = 45;</code>
      */
     const BH1750 = 45;
+    /**
+     * HDC1080 Temperature and Humidity Sensor
+     *
+     * Generated from protobuf enum <code>HDC1080 = 46;</code>
+     */
+    const HDC1080 = 46;
+    /**
+     * STH21 Temperature and R. Humidity sensor
+     *
+     * Generated from protobuf enum <code>SHT21 = 47;</code>
+     */
+    const SHT21 = 47;
+    /**
+     * Sensirion STC31 CO2 sensor
+     *
+     * Generated from protobuf enum <code>STC31 = 48;</code>
+     */
+    const STC31 = 48;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -337,6 +355,9 @@ class TelemetrySensorType
         self::SEN5X => 'SEN5X',
         self::TSL2561 => 'TSL2561',
         self::BH1750 => 'BH1750',
+        self::HDC1080 => 'HDC1080',
+        self::SHT21 => 'SHT21',
+        self::STC31 => 'STC31',
     ];
 
     public static function name($value)

@@ -162,6 +162,8 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           When true, favorites are preserved through reset.
      *     @type \Meshtastic\AdminMessage\OTAEvent $ota_request
      *           Tell the node to reset into the OTA Loader
+     *     @type \Meshtastic\SensorConfig $sensor_config
+     *           Parameters and sensor configuration
      * }
      */
     public function __construct($data = NULL) {
@@ -1962,6 +1964,37 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\AdminMessage\OTAEvent::class);
         $this->writeOneof(102, $var);
+
+        return $this;
+    }
+
+    /**
+     * Parameters and sensor configuration
+     *
+     * Generated from protobuf field <code>.meshtastic.SensorConfig sensor_config = 103;</code>
+     * @return \Meshtastic\SensorConfig|null
+     */
+    public function getSensorConfig()
+    {
+        return $this->readOneof(103);
+    }
+
+    public function hasSensorConfig()
+    {
+        return $this->hasOneof(103);
+    }
+
+    /**
+     * Parameters and sensor configuration
+     *
+     * Generated from protobuf field <code>.meshtastic.SensorConfig sensor_config = 103;</code>
+     * @param \Meshtastic\SensorConfig $var
+     * @return $this
+     */
+    public function setSensorConfig($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\SensorConfig::class);
+        $this->writeOneof(103, $var);
 
         return $this;
     }

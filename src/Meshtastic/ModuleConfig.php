@@ -51,6 +51,8 @@ class ModuleConfig extends \Google\Protobuf\Internal\Message
      *           TODO: REPLACE
      *     @type \Meshtastic\ModuleConfig\StatusMessageConfig $statusmessage
      *           TODO: REPLACE
+     *     @type \Meshtastic\ModuleConfig\TrafficManagementConfig $traffic_management
+     *           Traffic management module config for mesh network optimization
      * }
      */
     public function __construct($data = NULL) {
@@ -488,6 +490,37 @@ class ModuleConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\StatusMessageConfig::class);
         $this->writeOneof(14, $var);
+
+        return $this;
+    }
+
+    /**
+     * Traffic management module config for mesh network optimization
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TrafficManagementConfig traffic_management = 15;</code>
+     * @return \Meshtastic\ModuleConfig\TrafficManagementConfig|null
+     */
+    public function getTrafficManagement()
+    {
+        return $this->readOneof(15);
+    }
+
+    public function hasTrafficManagement()
+    {
+        return $this->hasOneof(15);
+    }
+
+    /**
+     * Traffic management module config for mesh network optimization
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TrafficManagementConfig traffic_management = 15;</code>
+     * @param \Meshtastic\ModuleConfig\TrafficManagementConfig $var
+     * @return $this
+     */
+    public function setTrafficManagement($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\TrafficManagementConfig::class);
+        $this->writeOneof(15, $var);
 
         return $this;
     }

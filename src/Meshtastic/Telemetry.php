@@ -45,6 +45,8 @@ class Telemetry extends \Google\Protobuf\Internal\Message
      *           Health telemetry metrics
      *     @type \Meshtastic\HostMetrics $host_metrics
      *           Linux host metrics
+     *     @type \Meshtastic\TrafficManagementStats $traffic_management_stats
+     *           Traffic management statistics
      * }
      */
     public function __construct($data = NULL) {
@@ -291,6 +293,37 @@ class Telemetry extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\HostMetrics::class);
         $this->writeOneof(8, $var);
+
+        return $this;
+    }
+
+    /**
+     * Traffic management statistics
+     *
+     * Generated from protobuf field <code>.meshtastic.TrafficManagementStats traffic_management_stats = 9;</code>
+     * @return \Meshtastic\TrafficManagementStats|null
+     */
+    public function getTrafficManagementStats()
+    {
+        return $this->readOneof(9);
+    }
+
+    public function hasTrafficManagementStats()
+    {
+        return $this->hasOneof(9);
+    }
+
+    /**
+     * Traffic management statistics
+     *
+     * Generated from protobuf field <code>.meshtastic.TrafficManagementStats traffic_management_stats = 9;</code>
+     * @param \Meshtastic\TrafficManagementStats $var
+     * @return $this
+     */
+    public function setTrafficManagementStats($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\TrafficManagementStats::class);
+        $this->writeOneof(9, $var);
 
         return $this;
     }

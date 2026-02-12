@@ -98,6 +98,12 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
      */
     protected $statusmessage = null;
     /**
+     * The part of the config that is specific to the Traffic Management module
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TrafficManagementConfig traffic_management = 16;</code>
+     */
+    protected $traffic_management = null;
+    /**
      * A version integer used to invalidate old save files when we make
      * incompatible changes This integer is set at build time and is private to
      * NodeDB.cpp in the device code.
@@ -140,6 +146,8 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
      *           Paxcounter Config
      *     @type \Meshtastic\ModuleConfig\StatusMessageConfig $statusmessage
      *           StatusMessage Config
+     *     @type \Meshtastic\ModuleConfig\TrafficManagementConfig $traffic_management
+     *           The part of the config that is specific to the Traffic Management module
      *     @type int $version
      *           A version integer used to invalidate old save files when we make
      *           incompatible changes This integer is set at build time and is private to
@@ -651,6 +659,42 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\StatusMessageConfig::class);
         $this->statusmessage = $var;
+
+        return $this;
+    }
+
+    /**
+     * The part of the config that is specific to the Traffic Management module
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TrafficManagementConfig traffic_management = 16;</code>
+     * @return \Meshtastic\ModuleConfig\TrafficManagementConfig|null
+     */
+    public function getTrafficManagement()
+    {
+        return $this->traffic_management;
+    }
+
+    public function hasTrafficManagement()
+    {
+        return isset($this->traffic_management);
+    }
+
+    public function clearTrafficManagement()
+    {
+        unset($this->traffic_management);
+    }
+
+    /**
+     * The part of the config that is specific to the Traffic Management module
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TrafficManagementConfig traffic_management = 16;</code>
+     * @param \Meshtastic\ModuleConfig\TrafficManagementConfig $var
+     * @return $this
+     */
+    public function setTrafficManagement($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\TrafficManagementConfig::class);
+        $this->traffic_management = $var;
 
         return $this;
     }

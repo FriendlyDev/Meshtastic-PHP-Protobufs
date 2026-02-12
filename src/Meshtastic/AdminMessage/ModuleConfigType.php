@@ -97,6 +97,12 @@ class ModuleConfigType
      * Generated from protobuf enum <code>STATUSMESSAGE_CONFIG = 13;</code>
      */
     const STATUSMESSAGE_CONFIG = 13;
+    /**
+     * Traffic management module config
+     *
+     * Generated from protobuf enum <code>TRAFFICMANAGEMENT_CONFIG = 14;</code>
+     */
+    const TRAFFICMANAGEMENT_CONFIG = 14;
 
     private static $valueToName = [
         self::MQTT_CONFIG => 'MQTT_CONFIG',
@@ -113,6 +119,7 @@ class ModuleConfigType
         self::DETECTIONSENSOR_CONFIG => 'DETECTIONSENSOR_CONFIG',
         self::PAXCOUNTER_CONFIG => 'PAXCOUNTER_CONFIG',
         self::STATUSMESSAGE_CONFIG => 'STATUSMESSAGE_CONFIG',
+        self::TRAFFICMANAGEMENT_CONFIG => 'TRAFFICMANAGEMENT_CONFIG',
     ];
 
     public static function name($value)
