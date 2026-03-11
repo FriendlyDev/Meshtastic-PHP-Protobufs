@@ -103,6 +103,12 @@ class ModuleConfigType
      * Generated from protobuf enum <code>TRAFFICMANAGEMENT_CONFIG = 14;</code>
      */
     const TRAFFICMANAGEMENT_CONFIG = 14;
+    /**
+     * TAK module config
+     *
+     * Generated from protobuf enum <code>TAK_CONFIG = 15;</code>
+     */
+    const TAK_CONFIG = 15;
 
     private static $valueToName = [
         self::MQTT_CONFIG => 'MQTT_CONFIG',
@@ -120,6 +126,7 @@ class ModuleConfigType
         self::PAXCOUNTER_CONFIG => 'PAXCOUNTER_CONFIG',
         self::STATUSMESSAGE_CONFIG => 'STATUSMESSAGE_CONFIG',
         self::TRAFFICMANAGEMENT_CONFIG => 'TRAFFICMANAGEMENT_CONFIG',
+        self::TAK_CONFIG => 'TAK_CONFIG',
     ];
 
     public static function name($value)

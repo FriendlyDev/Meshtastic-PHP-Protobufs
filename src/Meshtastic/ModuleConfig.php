@@ -53,6 +53,8 @@ class ModuleConfig extends \Google\Protobuf\Internal\Message
      *           TODO: REPLACE
      *     @type \Meshtastic\ModuleConfig\TrafficManagementConfig $traffic_management
      *           Traffic management module config for mesh network optimization
+     *     @type \Meshtastic\ModuleConfig\TAKConfig $tak
+     *           TAK team/role configuration for TAK_TRACKER
      * }
      */
     public function __construct($data = NULL) {
@@ -521,6 +523,37 @@ class ModuleConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\TrafficManagementConfig::class);
         $this->writeOneof(15, $var);
+
+        return $this;
+    }
+
+    /**
+     * TAK team/role configuration for TAK_TRACKER
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TAKConfig tak = 16;</code>
+     * @return \Meshtastic\ModuleConfig\TAKConfig|null
+     */
+    public function getTak()
+    {
+        return $this->readOneof(16);
+    }
+
+    public function hasTak()
+    {
+        return $this->hasOneof(16);
+    }
+
+    /**
+     * TAK team/role configuration for TAK_TRACKER
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TAKConfig tak = 16;</code>
+     * @param \Meshtastic\ModuleConfig\TAKConfig $var
+     * @return $this
+     */
+    public function setTak($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\TAKConfig::class);
+        $this->writeOneof(16, $var);
 
         return $this;
     }

@@ -258,6 +258,13 @@ class PortNum
      */
     const POWERSTRESS_APP = 74;
     /**
+     * LoraWAN Payload Transport
+     * ENCODING: compact binary LoRaWAN uplink (10-byte RF metadata + PHY payload) - see LoRaWANBridgeModule
+     *
+     * Generated from protobuf enum <code>LORAWAN_BRIDGE = 75;</code>
+     */
+    const LORAWAN_BRIDGE = 75;
+    /**
      * Reticulum Network Stack Tunnel App
      * ENCODING: Fragmented RNS Packet. Handled by Meshtastic RNS interface
      *
@@ -324,6 +331,7 @@ class PortNum
         self::ATAK_PLUGIN => 'ATAK_PLUGIN',
         self::MAP_REPORT_APP => 'MAP_REPORT_APP',
         self::POWERSTRESS_APP => 'POWERSTRESS_APP',
+        self::LORAWAN_BRIDGE => 'LORAWAN_BRIDGE',
         self::RETICULUM_TUNNEL_APP => 'RETICULUM_TUNNEL_APP',
         self::CAYENNE_APP => 'CAYENNE_APP',
         self::PRIVATE_APP => 'PRIVATE_APP',

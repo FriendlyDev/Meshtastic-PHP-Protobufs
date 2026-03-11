@@ -25,6 +25,12 @@ class SensorConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.meshtastic.SEN5X_config sen5x_config = 2;</code>
      */
     protected $sen5x_config = null;
+    /**
+     * SCD30 CO2 Sensor configuration
+     *
+     * Generated from protobuf field <code>.meshtastic.SCD30_config scd30_config = 3;</code>
+     */
+    protected $scd30_config = null;
 
     /**
      * Constructor.
@@ -36,6 +42,8 @@ class SensorConfig extends \Google\Protobuf\Internal\Message
      *           SCD4X CO2 Sensor configuration
      *     @type \Meshtastic\SEN5X_config $sen5x_config
      *           SEN5X PM Sensor configuration
+     *     @type \Meshtastic\SCD30_config $scd30_config
+     *           SCD30 CO2 Sensor configuration
      * }
      */
     public function __construct($data = NULL) {
@@ -111,6 +119,42 @@ class SensorConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\SEN5X_config::class);
         $this->sen5x_config = $var;
+
+        return $this;
+    }
+
+    /**
+     * SCD30 CO2 Sensor configuration
+     *
+     * Generated from protobuf field <code>.meshtastic.SCD30_config scd30_config = 3;</code>
+     * @return \Meshtastic\SCD30_config|null
+     */
+    public function getScd30Config()
+    {
+        return $this->scd30_config;
+    }
+
+    public function hasScd30Config()
+    {
+        return isset($this->scd30_config);
+    }
+
+    public function clearScd30Config()
+    {
+        unset($this->scd30_config);
+    }
+
+    /**
+     * SCD30 CO2 Sensor configuration
+     *
+     * Generated from protobuf field <code>.meshtastic.SCD30_config scd30_config = 3;</code>
+     * @param \Meshtastic\SCD30_config $var
+     * @return $this
+     */
+    public function setScd30Config($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\SCD30_config::class);
+        $this->scd30_config = $var;
 
         return $this;
     }

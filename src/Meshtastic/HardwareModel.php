@@ -789,6 +789,24 @@ class HardwareModel
      */
     const T5_S3_EPAPER_PRO = 123;
     /**
+     * LilyGo T-Beam BPF (144-148Mhz)
+     *
+     * Generated from protobuf enum <code>TBEAM_BPF = 124;</code>
+     */
+    const TBEAM_BPF = 124;
+    /**
+     * LilyGo T-Mini E-paper S3 Kit
+     *
+     * Generated from protobuf enum <code>MINI_EPAPER_S3 = 125;</code>
+     */
+    const MINI_EPAPER_S3 = 125;
+    /**
+     * LilyGo T-Display S3 Pro LR1121
+     *
+     * Generated from protobuf enum <code>TDISPLAY_S3_PRO = 126;</code>
+     */
+    const TDISPLAY_S3_PRO = 126;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -922,6 +940,9 @@ class HardwareModel
         self::MESHSTICK_1262 => 'MESHSTICK_1262',
         self::TBEAM_1_WATT => 'TBEAM_1_WATT',
         self::T5_S3_EPAPER_PRO => 'T5_S3_EPAPER_PRO',
+        self::TBEAM_BPF => 'TBEAM_BPF',
+        self::MINI_EPAPER_S3 => 'MINI_EPAPER_S3',
+        self::TDISPLAY_S3_PRO => 'TDISPLAY_S3_PRO',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

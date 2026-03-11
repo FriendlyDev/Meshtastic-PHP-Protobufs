@@ -307,6 +307,12 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>STC31 = 48;</code>
      */
     const STC31 = 48;
+    /**
+     * SCD30 CO2, humidity, temperature sensor
+     *
+     * Generated from protobuf enum <code>SCD30 = 49;</code>
+     */
+    const SCD30 = 49;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -358,6 +364,7 @@ class TelemetrySensorType
         self::HDC1080 => 'HDC1080',
         self::SHT21 => 'SHT21',
         self::STC31 => 'STC31',
+        self::SCD30 => 'SCD30',
     ];
 
     public static function name($value)

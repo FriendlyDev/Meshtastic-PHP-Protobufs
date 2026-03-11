@@ -104,6 +104,12 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
      */
     protected $traffic_management = null;
     /**
+     * TAK Config
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TAKConfig tak = 17;</code>
+     */
+    protected $tak = null;
+    /**
      * A version integer used to invalidate old save files when we make
      * incompatible changes This integer is set at build time and is private to
      * NodeDB.cpp in the device code.
@@ -148,6 +154,8 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
      *           StatusMessage Config
      *     @type \Meshtastic\ModuleConfig\TrafficManagementConfig $traffic_management
      *           The part of the config that is specific to the Traffic Management module
+     *     @type \Meshtastic\ModuleConfig\TAKConfig $tak
+     *           TAK Config
      *     @type int $version
      *           A version integer used to invalidate old save files when we make
      *           incompatible changes This integer is set at build time and is private to
@@ -695,6 +703,42 @@ class LocalModuleConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\TrafficManagementConfig::class);
         $this->traffic_management = $var;
+
+        return $this;
+    }
+
+    /**
+     * TAK Config
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TAKConfig tak = 17;</code>
+     * @return \Meshtastic\ModuleConfig\TAKConfig|null
+     */
+    public function getTak()
+    {
+        return $this->tak;
+    }
+
+    public function hasTak()
+    {
+        return isset($this->tak);
+    }
+
+    public function clearTak()
+    {
+        unset($this->tak);
+    }
+
+    /**
+     * TAK Config
+     *
+     * Generated from protobuf field <code>.meshtastic.ModuleConfig.TAKConfig tak = 17;</code>
+     * @param \Meshtastic\ModuleConfig\TAKConfig $var
+     * @return $this
+     */
+    public function setTak($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\ModuleConfig\TAKConfig::class);
+        $this->tak = $var;
 
         return $this;
     }

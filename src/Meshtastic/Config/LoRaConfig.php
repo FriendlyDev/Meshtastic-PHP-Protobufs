@@ -154,6 +154,12 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool config_ok_to_mqtt = 105;</code>
      */
     protected $config_ok_to_mqtt = false;
+    /**
+     * Set where LORA FEM is enabled, disabled, or not present
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.LoRaConfig.FEM_LNA_Mode fem_lna_mode = 106;</code>
+     */
+    protected $fem_lna_mode = 0;
 
     /**
      * Constructor.
@@ -228,6 +234,8 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
      *           If true, the device will not process any packets received via LoRa that passed via MQTT anywhere on the path towards it.
      *     @type bool $config_ok_to_mqtt
      *           Sets the ok_to_mqtt bit on outgoing packets
+     *     @type int $fem_lna_mode
+     *           Set where LORA FEM is enabled, disabled, or not present
      * }
      */
     public function __construct($data = NULL) {
@@ -761,6 +769,32 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->config_ok_to_mqtt = $var;
+
+        return $this;
+    }
+
+    /**
+     * Set where LORA FEM is enabled, disabled, or not present
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.LoRaConfig.FEM_LNA_Mode fem_lna_mode = 106;</code>
+     * @return int
+     */
+    public function getFemLnaMode()
+    {
+        return $this->fem_lna_mode;
+    }
+
+    /**
+     * Set where LORA FEM is enabled, disabled, or not present
+     *
+     * Generated from protobuf field <code>.meshtastic.Config.LoRaConfig.FEM_LNA_Mode fem_lna_mode = 106;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setFemLnaMode($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\Config\LoRaConfig\FEM_LNA_Mode::class);
+        $this->fem_lna_mode = $var;
 
         return $this;
     }
