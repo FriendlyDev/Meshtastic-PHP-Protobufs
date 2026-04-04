@@ -31,6 +31,12 @@ class SensorConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.meshtastic.SCD30_config scd30_config = 3;</code>
      */
     protected $scd30_config = null;
+    /**
+     * SHTXX temperature and relative humidity sensor configuration
+     *
+     * Generated from protobuf field <code>.meshtastic.SHTXX_config shtxx_config = 4;</code>
+     */
+    protected $shtxx_config = null;
 
     /**
      * Constructor.
@@ -44,6 +50,8 @@ class SensorConfig extends \Google\Protobuf\Internal\Message
      *           SEN5X PM Sensor configuration
      *     @type \Meshtastic\SCD30_config $scd30_config
      *           SCD30 CO2 Sensor configuration
+     *     @type \Meshtastic\SHTXX_config $shtxx_config
+     *           SHTXX temperature and relative humidity sensor configuration
      * }
      */
     public function __construct($data = NULL) {
@@ -155,6 +163,42 @@ class SensorConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\SCD30_config::class);
         $this->scd30_config = $var;
+
+        return $this;
+    }
+
+    /**
+     * SHTXX temperature and relative humidity sensor configuration
+     *
+     * Generated from protobuf field <code>.meshtastic.SHTXX_config shtxx_config = 4;</code>
+     * @return \Meshtastic\SHTXX_config|null
+     */
+    public function getShtxxConfig()
+    {
+        return $this->shtxx_config;
+    }
+
+    public function hasShtxxConfig()
+    {
+        return isset($this->shtxx_config);
+    }
+
+    public function clearShtxxConfig()
+    {
+        unset($this->shtxx_config);
+    }
+
+    /**
+     * SHTXX temperature and relative humidity sensor configuration
+     *
+     * Generated from protobuf field <code>.meshtastic.SHTXX_config shtxx_config = 4;</code>
+     * @param \Meshtastic\SHTXX_config $var
+     * @return $this
+     */
+    public function setShtxxConfig($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\SHTXX_config::class);
+        $this->shtxx_config = $var;
 
         return $this;
     }

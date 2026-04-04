@@ -56,7 +56,7 @@ class TelemetrySensorType
      */
     const BMP280 = 6;
     /**
-     * High accuracy temperature and humidity
+     * TODO - REMOVE High accuracy temperature and humidity
      *
      * Generated from protobuf enum <code>SHTC3 = 7;</code>
      */
@@ -86,7 +86,7 @@ class TelemetrySensorType
      */
     const QMC5883L = 11;
     /**
-     * High accuracy temperature and humidity
+     * TODO - REMOVE High accuracy temperature and humidity
      *
      * Generated from protobuf enum <code>SHT31 = 12;</code>
      */
@@ -116,7 +116,7 @@ class TelemetrySensorType
      */
     const RCWL9620 = 16;
     /**
-     * Sensirion High accuracy temperature and humidity
+     * TODO - REMOVE Sensirion High accuracy temperature and humidity
      *
      * Generated from protobuf enum <code>SHT4X = 17;</code>
      */
@@ -296,7 +296,7 @@ class TelemetrySensorType
      */
     const HDC1080 = 46;
     /**
-     * STH21 Temperature and R. Humidity sensor
+     * TODO - REMOVE STH21 Temperature and R. Humidity sensor
      *
      * Generated from protobuf enum <code>SHT21 = 47;</code>
      */
@@ -313,6 +313,12 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>SCD30 = 49;</code>
      */
     const SCD30 = 49;
+    /**
+     * SHT family of sensors for temperature and humidity
+     *
+     * Generated from protobuf enum <code>SHTXX = 50;</code>
+     */
+    const SHTXX = 50;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -365,6 +371,7 @@ class TelemetrySensorType
         self::SHT21 => 'SHT21',
         self::STC31 => 'STC31',
         self::SCD30 => 'SCD30',
+        self::SHTXX => 'SHTXX',
     ];
 
     public static function name($value)

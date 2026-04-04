@@ -807,6 +807,12 @@ class HardwareModel
      */
     const TDISPLAY_S3_PRO = 126;
     /**
+     * Heltec Mesh Node T096 board features an nRF52840 CPU and a TFT screen.
+     *
+     * Generated from protobuf enum <code>HELTEC_MESH_NODE_T096 = 127;</code>
+     */
+    const HELTEC_MESH_NODE_T096 = 127;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -943,6 +949,7 @@ class HardwareModel
         self::TBEAM_BPF => 'TBEAM_BPF',
         self::MINI_EPAPER_S3 => 'MINI_EPAPER_S3',
         self::TDISPLAY_S3_PRO => 'TDISPLAY_S3_PRO',
+        self::HELTEC_MESH_NODE_T096 => 'HELTEC_MESH_NODE_T096',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

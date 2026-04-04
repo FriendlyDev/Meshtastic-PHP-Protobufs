@@ -280,6 +280,14 @@ class PortNum
      */
     const CAYENNE_APP = 77;
     /**
+     * GroupAlarm integration
+     * Used for transporting GroupAlarm-related messages between Meshtastic nodes
+     * and companion applications/services.
+     *
+     * Generated from protobuf enum <code>GROUPALARM_APP = 112;</code>
+     */
+    const GROUPALARM_APP = 112;
+    /**
      * Private applications should use portnums >= 256.
      * To simplify initial development and testing you can use "PRIVATE_APP"
      * in your code without needing to rebuild protobuf files (via [regen-protos.sh](https://github.com/meshtastic/firmware/blob/master/bin/regen-protos.sh))
@@ -334,6 +342,7 @@ class PortNum
         self::LORAWAN_BRIDGE => 'LORAWAN_BRIDGE',
         self::RETICULUM_TUNNEL_APP => 'RETICULUM_TUNNEL_APP',
         self::CAYENNE_APP => 'CAYENNE_APP',
+        self::GROUPALARM_APP => 'GROUPALARM_APP',
         self::PRIVATE_APP => 'PRIVATE_APP',
         self::ATAK_FORWARDER => 'ATAK_FORWARDER',
         self::MAX => 'MAX',
