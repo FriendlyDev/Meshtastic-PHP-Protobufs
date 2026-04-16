@@ -149,6 +149,12 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional float soil_temperature = 22;</code>
      */
     protected $soil_temperature = null;
+    /**
+     * One-wire temperature (*C)
+     *
+     * Generated from protobuf field <code>repeated float one_wire_temperature = 23;</code>
+     */
+    private $one_wire_temperature;
 
     /**
      * Constructor.
@@ -202,6 +208,8 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
      *           Soil moisture measured (% 1-100)
      *     @type float $soil_temperature
      *           Soil temperature measured (*C)
+     *     @type array<float>|\Google\Protobuf\Internal\RepeatedField $one_wire_temperature
+     *           One-wire temperature (*C)
      * }
      */
     public function __construct($data = NULL) {
@@ -1001,6 +1009,32 @@ class EnvironmentMetrics extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->soil_temperature = $var;
+
+        return $this;
+    }
+
+    /**
+     * One-wire temperature (*C)
+     *
+     * Generated from protobuf field <code>repeated float one_wire_temperature = 23;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getOneWireTemperature()
+    {
+        return $this->one_wire_temperature;
+    }
+
+    /**
+     * One-wire temperature (*C)
+     *
+     * Generated from protobuf field <code>repeated float one_wire_temperature = 23;</code>
+     * @param array<float>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setOneWireTemperature($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $this->one_wire_temperature = $arr;
 
         return $this;
     }

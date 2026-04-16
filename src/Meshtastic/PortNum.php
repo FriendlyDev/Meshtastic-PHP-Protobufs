@@ -130,6 +130,12 @@ class PortNum
      */
     const KEY_VERIFICATION_APP = 12;
     /**
+     * Module/port for handling primitive remote shell access.
+     *
+     * Generated from protobuf enum <code>REMOTE_SHELL_APP = 13;</code>
+     */
+    const REMOTE_SHELL_APP = 13;
+    /**
      * Provides a 'ping' service that replies to any packet it receives.
      * Also serves as a small example module.
      * ENCODING: ASCII Plaintext
@@ -280,6 +286,14 @@ class PortNum
      */
     const CAYENNE_APP = 77;
     /**
+     * ATAK Plugin V2
+     * Portnum for payloads from the official Meshtastic ATAK plugin using
+     * TAKPacketV2 with zstd dictionary compression.
+     *
+     * Generated from protobuf enum <code>ATAK_PLUGIN_V2 = 78;</code>
+     */
+    const ATAK_PLUGIN_V2 = 78;
+    /**
      * GroupAlarm integration
      * Used for transporting GroupAlarm-related messages between Meshtastic nodes
      * and companion applications/services.
@@ -323,6 +337,7 @@ class PortNum
         self::DETECTION_SENSOR_APP => 'DETECTION_SENSOR_APP',
         self::ALERT_APP => 'ALERT_APP',
         self::KEY_VERIFICATION_APP => 'KEY_VERIFICATION_APP',
+        self::REMOTE_SHELL_APP => 'REMOTE_SHELL_APP',
         self::REPLY_APP => 'REPLY_APP',
         self::IP_TUNNEL_APP => 'IP_TUNNEL_APP',
         self::PAXCOUNTER_APP => 'PAXCOUNTER_APP',
@@ -342,6 +357,7 @@ class PortNum
         self::LORAWAN_BRIDGE => 'LORAWAN_BRIDGE',
         self::RETICULUM_TUNNEL_APP => 'RETICULUM_TUNNEL_APP',
         self::CAYENNE_APP => 'CAYENNE_APP',
+        self::ATAK_PLUGIN_V2 => 'ATAK_PLUGIN_V2',
         self::GROUPALARM_APP => 'GROUPALARM_APP',
         self::PRIVATE_APP => 'PRIVATE_APP',
         self::ATAK_FORWARDER => 'ATAK_FORWARDER',

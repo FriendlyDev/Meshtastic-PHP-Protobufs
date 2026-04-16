@@ -813,6 +813,27 @@ class HardwareModel
      */
     const HELTEC_MESH_NODE_T096 = 127;
     /**
+     * Seeed studio T1000-E Pro tracker card. NRF52840 w/ LR2021 radio,
+     * GPS, button, buzzer, and sensors.
+     *
+     * Generated from protobuf enum <code>TRACKER_T1000_E_PRO = 128;</code>
+     */
+    const TRACKER_T1000_E_PRO = 128;
+    /**
+     * Elecrow ThinkNode M7, M8 and M9
+     *
+     * Generated from protobuf enum <code>THINKNODE_M7 = 129;</code>
+     */
+    const THINKNODE_M7 = 129;
+    /**
+     * Generated from protobuf enum <code>THINKNODE_M8 = 130;</code>
+     */
+    const THINKNODE_M8 = 130;
+    /**
+     * Generated from protobuf enum <code>THINKNODE_M9 = 131;</code>
+     */
+    const THINKNODE_M9 = 131;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -950,6 +971,10 @@ class HardwareModel
         self::MINI_EPAPER_S3 => 'MINI_EPAPER_S3',
         self::TDISPLAY_S3_PRO => 'TDISPLAY_S3_PRO',
         self::HELTEC_MESH_NODE_T096 => 'HELTEC_MESH_NODE_T096',
+        self::TRACKER_T1000_E_PRO => 'TRACKER_T1000_E_PRO',
+        self::THINKNODE_M7 => 'THINKNODE_M7',
+        self::THINKNODE_M8 => 'THINKNODE_M8',
+        self::THINKNODE_M9 => 'THINKNODE_M9',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

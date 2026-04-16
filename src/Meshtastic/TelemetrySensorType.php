@@ -319,6 +319,12 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>SHTXX = 50;</code>
      */
     const SHTXX = 50;
+    /**
+     * DS248X Bridge for one-wire temperature sensors
+     *
+     * Generated from protobuf enum <code>DS248X = 51;</code>
+     */
+    const DS248X = 51;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -372,6 +378,7 @@ class TelemetrySensorType
         self::STC31 => 'STC31',
         self::SCD30 => 'SCD30',
         self::SHTXX => 'SHTXX',
+        self::DS248X => 'DS248X',
     ];
 
     public static function name($value)

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GeoChat extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The text message
+     * The text message. Empty for receipts.
      *
      * Generated from protobuf field <code>string message = 1;</code>
      */
@@ -33,6 +33,22 @@ class GeoChat extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string to_callsign = 3;</code>
      */
     protected $to_callsign = null;
+    /**
+     * UID of the chat message this event is acknowledging. Empty for a
+     * normal chat message; set for delivered / read receipts. Paired with
+     * receipt_type so receivers can match the ack back to the original
+     * outbound GeoChat by its event uid.
+     *
+     * Generated from protobuf field <code>string receipt_for_uid = 4;</code>
+     */
+    protected $receipt_for_uid = '';
+    /**
+     * Receipt kind discriminator. See ReceiptType doc. Default ReceiptType_None
+     * means this is a regular chat message, not a receipt.
+     *
+     * Generated from protobuf field <code>.meshtastic.GeoChat.ReceiptType receipt_type = 5;</code>
+     */
+    protected $receipt_type = 0;
 
     /**
      * Constructor.
@@ -41,11 +57,19 @@ class GeoChat extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $message
-     *           The text message
+     *           The text message. Empty for receipts.
      *     @type string $to
      *           Uid recipient of the message
      *     @type string $to_callsign
      *           Callsign of the recipient for the message
+     *     @type string $receipt_for_uid
+     *           UID of the chat message this event is acknowledging. Empty for a
+     *           normal chat message; set for delivered / read receipts. Paired with
+     *           receipt_type so receivers can match the ack back to the original
+     *           outbound GeoChat by its event uid.
+     *     @type int $receipt_type
+     *           Receipt kind discriminator. See ReceiptType doc. Default ReceiptType_None
+     *           means this is a regular chat message, not a receipt.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +78,7 @@ class GeoChat extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The text message
+     * The text message. Empty for receipts.
      *
      * Generated from protobuf field <code>string message = 1;</code>
      * @return string
@@ -65,7 +89,7 @@ class GeoChat extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The text message
+     * The text message. Empty for receipts.
      *
      * Generated from protobuf field <code>string message = 1;</code>
      * @param string $var
@@ -147,6 +171,66 @@ class GeoChat extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->to_callsign = $var;
+
+        return $this;
+    }
+
+    /**
+     * UID of the chat message this event is acknowledging. Empty for a
+     * normal chat message; set for delivered / read receipts. Paired with
+     * receipt_type so receivers can match the ack back to the original
+     * outbound GeoChat by its event uid.
+     *
+     * Generated from protobuf field <code>string receipt_for_uid = 4;</code>
+     * @return string
+     */
+    public function getReceiptForUid()
+    {
+        return $this->receipt_for_uid;
+    }
+
+    /**
+     * UID of the chat message this event is acknowledging. Empty for a
+     * normal chat message; set for delivered / read receipts. Paired with
+     * receipt_type so receivers can match the ack back to the original
+     * outbound GeoChat by its event uid.
+     *
+     * Generated from protobuf field <code>string receipt_for_uid = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setReceiptForUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->receipt_for_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     * Receipt kind discriminator. See ReceiptType doc. Default ReceiptType_None
+     * means this is a regular chat message, not a receipt.
+     *
+     * Generated from protobuf field <code>.meshtastic.GeoChat.ReceiptType receipt_type = 5;</code>
+     * @return int
+     */
+    public function getReceiptType()
+    {
+        return $this->receipt_type;
+    }
+
+    /**
+     * Receipt kind discriminator. See ReceiptType doc. Default ReceiptType_None
+     * means this is a regular chat message, not a receipt.
+     *
+     * Generated from protobuf field <code>.meshtastic.GeoChat.ReceiptType receipt_type = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setReceiptType($var)
+    {
+        GPBUtil::checkEnum($var, \Meshtastic\GeoChat\ReceiptType::class);
+        $this->receipt_type = $var;
 
         return $this;
     }
