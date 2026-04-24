@@ -79,6 +79,39 @@ class ModemPreset
      * Generated from protobuf enum <code>LONG_TURBO = 9;</code>
      */
     const LONG_TURBO = 9;
+    /**
+     * Lite Fast
+     * Medium range preset optimized for EU 866MHz SRD band with 125kHz bandwidth.
+     * Comparable link budget to MEDIUM_FAST but compliant with Band no. 47b of 2006/771/EC.
+     *
+     * Generated from protobuf enum <code>LITE_FAST = 10;</code>
+     */
+    const LITE_FAST = 10;
+    /**
+     * Lite Slow
+     * Medium-to-moderate range preset optimized for EU 866MHz SRD band with 125kHz bandwidth.
+     * Comparable link budget to LONG_FAST but compliant with Band no. 47b of 2006/771/EC.
+     *
+     * Generated from protobuf enum <code>LITE_SLOW = 11;</code>
+     */
+    const LITE_SLOW = 11;
+    /**
+     * Narrow Fast
+     * Medium-to-moderate range preset optimized for EU 868MHz band with 62.5kHz bandwidth.
+     * Comparable link budget to SHORT_SLOW, but with half the data rate.
+     * Intended to avoid interference with other devices.
+     *
+     * Generated from protobuf enum <code>NARROW_FAST = 12;</code>
+     */
+    const NARROW_FAST = 12;
+    /**
+     * Narrow Slow
+     * Moderate range preset optimized for EU 868MHz band with 62.5kHz bandwidth.
+     * Comparable link budget and data rate to LONG_FAST.
+     *
+     * Generated from protobuf enum <code>NARROW_SLOW = 13;</code>
+     */
+    const NARROW_SLOW = 13;
 
     private static $valueToName = [
         self::LONG_FAST => 'LONG_FAST',
@@ -91,6 +124,10 @@ class ModemPreset
         self::LONG_MODERATE => 'LONG_MODERATE',
         self::SHORT_TURBO => 'SHORT_TURBO',
         self::LONG_TURBO => 'LONG_TURBO',
+        self::LITE_FAST => 'LITE_FAST',
+        self::LITE_SLOW => 'LITE_SLOW',
+        self::NARROW_FAST => 'NARROW_FAST',
+        self::NARROW_SLOW => 'NARROW_SLOW',
     ];
 
     public static function name($value)

@@ -167,6 +167,20 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string remarks = 24;</code>
      */
     protected $remarks = '';
+    /**
+     * Observed weather conditions (temperature, wind). From <environment>.
+     * Type is `TAKEnvironment`, not `Environment`, to avoid colliding with
+     * SwiftUI's `&#64;Environment` property wrapper in iOS consumers.
+     *
+     * Generated from protobuf field <code>optional .meshtastic.TAKEnvironment environment = 25;</code>
+     */
+    protected $environment = null;
+    /**
+     * Sensor field-of-view cone (camera, FLIR, laser, etc.). From <sensor>.
+     *
+     * Generated from protobuf field <code>optional .meshtastic.SensorFov sensor_fov = 26;</code>
+     */
+    protected $sensor_fov = null;
     protected $payload_variant;
 
     /**
@@ -228,6 +242,12 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
      *           when the original CoT event carried non-empty remarks text.
      *           GeoChat messages carry their text in GeoChat.message instead.
      *           Empty string (proto3 default) means no remarks were present.
+     *     @type \Meshtastic\TAKEnvironment $environment
+     *           Observed weather conditions (temperature, wind). From <environment>.
+     *           Type is `TAKEnvironment`, not `Environment`, to avoid colliding with
+     *           SwiftUI's `&#64;Environment` property wrapper in iOS consumers.
+     *     @type \Meshtastic\SensorFov $sensor_fov
+     *           Sensor field-of-view cone (camera, FLIR, laser, etc.). From <sensor>.
      *     @type bool $pli
      *           Position report (true = PLI, no extra fields beyond the common ones above)
      *     @type \Meshtastic\GeoChat $chat
@@ -891,6 +911,82 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->remarks = $var;
+
+        return $this;
+    }
+
+    /**
+     * Observed weather conditions (temperature, wind). From <environment>.
+     * Type is `TAKEnvironment`, not `Environment`, to avoid colliding with
+     * SwiftUI's `&#64;Environment` property wrapper in iOS consumers.
+     *
+     * Generated from protobuf field <code>optional .meshtastic.TAKEnvironment environment = 25;</code>
+     * @return \Meshtastic\TAKEnvironment|null
+     */
+    public function getEnvironment()
+    {
+        return $this->environment;
+    }
+
+    public function hasEnvironment()
+    {
+        return isset($this->environment);
+    }
+
+    public function clearEnvironment()
+    {
+        unset($this->environment);
+    }
+
+    /**
+     * Observed weather conditions (temperature, wind). From <environment>.
+     * Type is `TAKEnvironment`, not `Environment`, to avoid colliding with
+     * SwiftUI's `&#64;Environment` property wrapper in iOS consumers.
+     *
+     * Generated from protobuf field <code>optional .meshtastic.TAKEnvironment environment = 25;</code>
+     * @param \Meshtastic\TAKEnvironment $var
+     * @return $this
+     */
+    public function setEnvironment($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\TAKEnvironment::class);
+        $this->environment = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sensor field-of-view cone (camera, FLIR, laser, etc.). From <sensor>.
+     *
+     * Generated from protobuf field <code>optional .meshtastic.SensorFov sensor_fov = 26;</code>
+     * @return \Meshtastic\SensorFov|null
+     */
+    public function getSensorFov()
+    {
+        return $this->sensor_fov;
+    }
+
+    public function hasSensorFov()
+    {
+        return isset($this->sensor_fov);
+    }
+
+    public function clearSensorFov()
+    {
+        unset($this->sensor_fov);
+    }
+
+    /**
+     * Sensor field-of-view cone (camera, FLIR, laser, etc.). From <sensor>.
+     *
+     * Generated from protobuf field <code>optional .meshtastic.SensorFov sensor_fov = 26;</code>
+     * @param \Meshtastic\SensorFov $var
+     * @return $this
+     */
+    public function setSensorFov($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\SensorFov::class);
+        $this->sensor_fov = $var;
 
         return $this;
     }

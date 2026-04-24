@@ -63,6 +63,18 @@ class RemoteShell extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 flags = 8;</code>
      */
     protected $flags = 0;
+    /**
+     * The last sequence number TX'd.
+     *
+     * Generated from protobuf field <code>uint32 last_tx_seq = 9;</code>
+     */
+    protected $last_tx_seq = 0;
+    /**
+     * The last sequence number RX'd.
+     *
+     * Generated from protobuf field <code>uint32 last_rx_seq = 10;</code>
+     */
+    protected $last_rx_seq = 0;
 
     /**
      * Constructor.
@@ -86,6 +98,10 @@ class RemoteShell extends \Google\Protobuf\Internal\Message
      *           Terminal size rows used for OPEN/RESIZE signaling.
      *     @type int $flags
      *           Bit flags for protocol extensions.
+     *     @type int $last_tx_seq
+     *           The last sequence number TX'd.
+     *     @type int $last_rx_seq
+     *           The last sequence number RX'd.
      * }
      */
     public function __construct($data = NULL) {
@@ -297,6 +313,58 @@ class RemoteShell extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->flags = $var;
+
+        return $this;
+    }
+
+    /**
+     * The last sequence number TX'd.
+     *
+     * Generated from protobuf field <code>uint32 last_tx_seq = 9;</code>
+     * @return int
+     */
+    public function getLastTxSeq()
+    {
+        return $this->last_tx_seq;
+    }
+
+    /**
+     * The last sequence number TX'd.
+     *
+     * Generated from protobuf field <code>uint32 last_tx_seq = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLastTxSeq($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->last_tx_seq = $var;
+
+        return $this;
+    }
+
+    /**
+     * The last sequence number RX'd.
+     *
+     * Generated from protobuf field <code>uint32 last_rx_seq = 10;</code>
+     * @return int
+     */
+    public function getLastRxSeq()
+    {
+        return $this->last_rx_seq;
+    }
+
+    /**
+     * The last sequence number RX'd.
+     *
+     * Generated from protobuf field <code>uint32 last_rx_seq = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLastRxSeq($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->last_rx_seq = $var;
 
         return $this;
     }

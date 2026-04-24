@@ -173,6 +173,40 @@ class RegionCode
      * Generated from protobuf enum <code>BR_902 = 26;</code>
      */
     const BR_902 = 26;
+    /**
+     * ITU Region 1 Amateur Radio 2m band (144-146 MHz)
+     *
+     * Generated from protobuf enum <code>ITU1_2M = 27;</code>
+     */
+    const ITU1_2M = 27;
+    /**
+     * ITU Region 2 / 3 Amateur Radio 2m band (144-148 MHz)
+     *
+     * Generated from protobuf enum <code>ITU23_2M = 28;</code>
+     */
+    const ITU23_2M = 28;
+    /**
+     * EU 866MHz band (Band no. 47b of 2006/771/EC and subsequent amendments) for Non-specific short-range devices (SRD)
+     *
+     * Generated from protobuf enum <code>EU_866 = 29;</code>
+     */
+    const EU_866 = 29;
+    /**
+     * EU 874MHz and 917MHz bands (Band no. 1 and 4 of 2022/172/EC and subsequent amendments) for Non-specific short-range devices (SRD)
+     *
+     * Generated from protobuf enum <code>EU_874 = 30;</code>
+     */
+    const EU_874 = 30;
+    /**
+     * Generated from protobuf enum <code>EU_917 = 31;</code>
+     */
+    const EU_917 = 31;
+    /**
+     * EU 868MHz band, with narrow presets
+     *
+     * Generated from protobuf enum <code>EU_N_868 = 32;</code>
+     */
+    const EU_N_868 = 32;
 
     private static $valueToName = [
         self::PBUNSET => 'UNSET',
@@ -202,6 +236,12 @@ class RegionCode
         self::KZ_863 => 'KZ_863',
         self::NP_865 => 'NP_865',
         self::BR_902 => 'BR_902',
+        self::ITU1_2M => 'ITU1_2M',
+        self::ITU23_2M => 'ITU23_2M',
+        self::EU_866 => 'EU_866',
+        self::EU_874 => 'EU_874',
+        self::EU_917 => 'EU_917',
+        self::EU_N_868 => 'EU_N_868',
     ];
 
     public static function name($value)

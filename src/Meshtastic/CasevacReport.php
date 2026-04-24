@@ -116,6 +116,129 @@ class CasevacReport extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string frequency = 15;</code>
      */
     protected $frequency = '';
+    /**
+     * Short title / MEDEVAC identifier (e.g. "EAGLE.15.181230"). Usually the
+     * same as the envelope callsign but ATAK sometimes carries a distinct
+     * ops-number here.
+     *
+     * Generated from protobuf field <code>string title = 16;</code>
+     */
+    protected $title = '';
+    /**
+     * Primary medline free-text — the single most clinically important line
+     * on a MEDLINE form (e.g. "2 urgent litter patients, smoke on approach").
+     * MUST be preserved under MTU pressure as long as any casevac is sent.
+     *
+     * Generated from protobuf field <code>string medline_remarks = 17;</code>
+     */
+    protected $medline_remarks = '';
+    /**
+     * Line 3 (newer ATAK format): patient counts by precedence level.
+     * Coexists with the enum-style `precedence` field (tag 1) — older ATAK
+     * emits a single enum, newer ATAK emits these counts, and both can be
+     * set simultaneously. Senders populate whichever style(s) the source
+     * XML had; receivers prefer counts when non-zero.
+     *
+     * Generated from protobuf field <code>uint32 urgent_count = 18;</code>
+     */
+    protected $urgent_count = 0;
+    /**
+     * Generated from protobuf field <code>uint32 urgent_surgical_count = 19;</code>
+     */
+    protected $urgent_surgical_count = 0;
+    /**
+     * Generated from protobuf field <code>uint32 priority_count = 20;</code>
+     */
+    protected $priority_count = 0;
+    /**
+     * Generated from protobuf field <code>uint32 routine_count = 21;</code>
+     */
+    protected $routine_count = 0;
+    /**
+     * Generated from protobuf field <code>uint32 convenience_count = 22;</code>
+     */
+    protected $convenience_count = 0;
+    /**
+     * Line 4 supplementary: free-text description of non-standard equipment
+     * (e.g. "Blood warmer"). Pairs with the `equipment_flags` bitfield.
+     *
+     * Generated from protobuf field <code>string equipment_detail = 23;</code>
+     */
+    protected $equipment_detail = '';
+    /**
+     * Line 1 override: MGRS grid when distinct from the event anchor point
+     * (e.g. "34T CQ 12345 67890"). Event lat/lon/hae still carries the
+     * numeric location; this field preserves the exact MGRS string the
+     * medic entered.
+     *
+     * Generated from protobuf field <code>string zone_protected_coord = 24;</code>
+     */
+    protected $zone_protected_coord = '';
+    /**
+     * Line 9 supplementary: slope direction (e.g. "N", "NE", "SSW") when
+     * `terrain_flags` bit 0 (slope) is set.
+     *
+     * Generated from protobuf field <code>string terrain_slope_dir = 25;</code>
+     */
+    protected $terrain_slope_dir = '';
+    /**
+     * Line 9 supplementary: free-text description of "other" terrain hazards
+     * (e.g. "Loose debris on west edge") when `terrain_flags` bit 5 (other)
+     * is set. Tier-2 strippable under MTU pressure.
+     *
+     * Generated from protobuf field <code>string terrain_other_detail = 26;</code>
+     */
+    protected $terrain_other_detail = '';
+    /**
+     * Line 7 supplementary: how the zone is being marked right now
+     * (e.g. "Orange smoke", "VS-17 panel"). Complements the structured
+     * `hlz_marking` enum with a specific human-readable description.
+     *
+     * Generated from protobuf field <code>string marked_by = 27;</code>
+     */
+    protected $marked_by = '';
+    /**
+     * Nearby obstacles on the approach (e.g. "Power lines north of HLZ").
+     *
+     * Generated from protobuf field <code>string obstacles = 28;</code>
+     */
+    protected $obstacles = '';
+    /**
+     * Wind direction and speed (e.g. "270 at 12 kts").
+     *
+     * Generated from protobuf field <code>string winds_are_from = 29;</code>
+     */
+    protected $winds_are_from = '';
+    /**
+     * Friendly forces posture near the pickup zone
+     * (e.g. "Squad east of HLZ").
+     *
+     * Generated from protobuf field <code>string friendlies = 30;</code>
+     */
+    protected $friendlies = '';
+    /**
+     * Known or suspected enemy positions near the pickup zone
+     * (e.g. "Possible enemy on south ridge").
+     *
+     * Generated from protobuf field <code>string enemy = 31;</code>
+     */
+    protected $enemy = '';
+    /**
+     * Free-text description of the HLZ itself
+     * (e.g. "Primary HLZ is soccer field").
+     *
+     * Generated from protobuf field <code>string hlz_remarks = 32;</code>
+     */
+    protected $hlz_remarks = '';
+    /**
+     * Per-patient clinical records. Each entry is one patient's ZMIST card
+     * (Zap number / Mechanism / Injuries / Signs / Treatment). Repeatable —
+     * a mass-casualty event can carry 1-6 entries in practice, limited by
+     * the 237 B LoRa MTU.
+     *
+     * Generated from protobuf field <code>repeated .meshtastic.ZMistEntry zmist = 33;</code>
+     */
+    private $zmist;
 
     /**
      * Constructor.
@@ -162,6 +285,61 @@ class CasevacReport extends \Google\Protobuf\Internal\Message
      *     @type string $frequency
      *           Line 2: radio frequency / callsign metadata (e.g. "38.90 Mhz" or
      *           "Victor 6"). Capped tight in options.
+     *     @type string $title
+     *           Short title / MEDEVAC identifier (e.g. "EAGLE.15.181230"). Usually the
+     *           same as the envelope callsign but ATAK sometimes carries a distinct
+     *           ops-number here.
+     *     @type string $medline_remarks
+     *           Primary medline free-text — the single most clinically important line
+     *           on a MEDLINE form (e.g. "2 urgent litter patients, smoke on approach").
+     *           MUST be preserved under MTU pressure as long as any casevac is sent.
+     *     @type int $urgent_count
+     *           Line 3 (newer ATAK format): patient counts by precedence level.
+     *           Coexists with the enum-style `precedence` field (tag 1) — older ATAK
+     *           emits a single enum, newer ATAK emits these counts, and both can be
+     *           set simultaneously. Senders populate whichever style(s) the source
+     *           XML had; receivers prefer counts when non-zero.
+     *     @type int $urgent_surgical_count
+     *     @type int $priority_count
+     *     @type int $routine_count
+     *     @type int $convenience_count
+     *     @type string $equipment_detail
+     *           Line 4 supplementary: free-text description of non-standard equipment
+     *           (e.g. "Blood warmer"). Pairs with the `equipment_flags` bitfield.
+     *     @type string $zone_protected_coord
+     *           Line 1 override: MGRS grid when distinct from the event anchor point
+     *           (e.g. "34T CQ 12345 67890"). Event lat/lon/hae still carries the
+     *           numeric location; this field preserves the exact MGRS string the
+     *           medic entered.
+     *     @type string $terrain_slope_dir
+     *           Line 9 supplementary: slope direction (e.g. "N", "NE", "SSW") when
+     *           `terrain_flags` bit 0 (slope) is set.
+     *     @type string $terrain_other_detail
+     *           Line 9 supplementary: free-text description of "other" terrain hazards
+     *           (e.g. "Loose debris on west edge") when `terrain_flags` bit 5 (other)
+     *           is set. Tier-2 strippable under MTU pressure.
+     *     @type string $marked_by
+     *           Line 7 supplementary: how the zone is being marked right now
+     *           (e.g. "Orange smoke", "VS-17 panel"). Complements the structured
+     *           `hlz_marking` enum with a specific human-readable description.
+     *     @type string $obstacles
+     *           Nearby obstacles on the approach (e.g. "Power lines north of HLZ").
+     *     @type string $winds_are_from
+     *           Wind direction and speed (e.g. "270 at 12 kts").
+     *     @type string $friendlies
+     *           Friendly forces posture near the pickup zone
+     *           (e.g. "Squad east of HLZ").
+     *     @type string $enemy
+     *           Known or suspected enemy positions near the pickup zone
+     *           (e.g. "Possible enemy on south ridge").
+     *     @type string $hlz_remarks
+     *           Free-text description of the HLZ itself
+     *           (e.g. "Primary HLZ is soccer field").
+     *     @type array<\Meshtastic\ZMistEntry>|\Google\Protobuf\Internal\RepeatedField $zmist
+     *           Per-patient clinical records. Each entry is one patient's ZMIST card
+     *           (Zap number / Mechanism / Injuries / Signs / Treatment). Repeatable —
+     *           a mass-casualty event can carry 1-6 entries in practice, limited by
+     *           the 237 B LoRa MTU.
      * }
      */
     public function __construct($data = NULL) {
@@ -565,6 +743,504 @@ class CasevacReport extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->frequency = $var;
+
+        return $this;
+    }
+
+    /**
+     * Short title / MEDEVAC identifier (e.g. "EAGLE.15.181230"). Usually the
+     * same as the envelope callsign but ATAK sometimes carries a distinct
+     * ops-number here.
+     *
+     * Generated from protobuf field <code>string title = 16;</code>
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Short title / MEDEVAC identifier (e.g. "EAGLE.15.181230"). Usually the
+     * same as the envelope callsign but ATAK sometimes carries a distinct
+     * ops-number here.
+     *
+     * Generated from protobuf field <code>string title = 16;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTitle($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->title = $var;
+
+        return $this;
+    }
+
+    /**
+     * Primary medline free-text — the single most clinically important line
+     * on a MEDLINE form (e.g. "2 urgent litter patients, smoke on approach").
+     * MUST be preserved under MTU pressure as long as any casevac is sent.
+     *
+     * Generated from protobuf field <code>string medline_remarks = 17;</code>
+     * @return string
+     */
+    public function getMedlineRemarks()
+    {
+        return $this->medline_remarks;
+    }
+
+    /**
+     * Primary medline free-text — the single most clinically important line
+     * on a MEDLINE form (e.g. "2 urgent litter patients, smoke on approach").
+     * MUST be preserved under MTU pressure as long as any casevac is sent.
+     *
+     * Generated from protobuf field <code>string medline_remarks = 17;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMedlineRemarks($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->medline_remarks = $var;
+
+        return $this;
+    }
+
+    /**
+     * Line 3 (newer ATAK format): patient counts by precedence level.
+     * Coexists with the enum-style `precedence` field (tag 1) — older ATAK
+     * emits a single enum, newer ATAK emits these counts, and both can be
+     * set simultaneously. Senders populate whichever style(s) the source
+     * XML had; receivers prefer counts when non-zero.
+     *
+     * Generated from protobuf field <code>uint32 urgent_count = 18;</code>
+     * @return int
+     */
+    public function getUrgentCount()
+    {
+        return $this->urgent_count;
+    }
+
+    /**
+     * Line 3 (newer ATAK format): patient counts by precedence level.
+     * Coexists with the enum-style `precedence` field (tag 1) — older ATAK
+     * emits a single enum, newer ATAK emits these counts, and both can be
+     * set simultaneously. Senders populate whichever style(s) the source
+     * XML had; receivers prefer counts when non-zero.
+     *
+     * Generated from protobuf field <code>uint32 urgent_count = 18;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setUrgentCount($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->urgent_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 urgent_surgical_count = 19;</code>
+     * @return int
+     */
+    public function getUrgentSurgicalCount()
+    {
+        return $this->urgent_surgical_count;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 urgent_surgical_count = 19;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setUrgentSurgicalCount($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->urgent_surgical_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 priority_count = 20;</code>
+     * @return int
+     */
+    public function getPriorityCount()
+    {
+        return $this->priority_count;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 priority_count = 20;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPriorityCount($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->priority_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 routine_count = 21;</code>
+     * @return int
+     */
+    public function getRoutineCount()
+    {
+        return $this->routine_count;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 routine_count = 21;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRoutineCount($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->routine_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 convenience_count = 22;</code>
+     * @return int
+     */
+    public function getConvenienceCount()
+    {
+        return $this->convenience_count;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 convenience_count = 22;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setConvenienceCount($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->convenience_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Line 4 supplementary: free-text description of non-standard equipment
+     * (e.g. "Blood warmer"). Pairs with the `equipment_flags` bitfield.
+     *
+     * Generated from protobuf field <code>string equipment_detail = 23;</code>
+     * @return string
+     */
+    public function getEquipmentDetail()
+    {
+        return $this->equipment_detail;
+    }
+
+    /**
+     * Line 4 supplementary: free-text description of non-standard equipment
+     * (e.g. "Blood warmer"). Pairs with the `equipment_flags` bitfield.
+     *
+     * Generated from protobuf field <code>string equipment_detail = 23;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setEquipmentDetail($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->equipment_detail = $var;
+
+        return $this;
+    }
+
+    /**
+     * Line 1 override: MGRS grid when distinct from the event anchor point
+     * (e.g. "34T CQ 12345 67890"). Event lat/lon/hae still carries the
+     * numeric location; this field preserves the exact MGRS string the
+     * medic entered.
+     *
+     * Generated from protobuf field <code>string zone_protected_coord = 24;</code>
+     * @return string
+     */
+    public function getZoneProtectedCoord()
+    {
+        return $this->zone_protected_coord;
+    }
+
+    /**
+     * Line 1 override: MGRS grid when distinct from the event anchor point
+     * (e.g. "34T CQ 12345 67890"). Event lat/lon/hae still carries the
+     * numeric location; this field preserves the exact MGRS string the
+     * medic entered.
+     *
+     * Generated from protobuf field <code>string zone_protected_coord = 24;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setZoneProtectedCoord($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->zone_protected_coord = $var;
+
+        return $this;
+    }
+
+    /**
+     * Line 9 supplementary: slope direction (e.g. "N", "NE", "SSW") when
+     * `terrain_flags` bit 0 (slope) is set.
+     *
+     * Generated from protobuf field <code>string terrain_slope_dir = 25;</code>
+     * @return string
+     */
+    public function getTerrainSlopeDir()
+    {
+        return $this->terrain_slope_dir;
+    }
+
+    /**
+     * Line 9 supplementary: slope direction (e.g. "N", "NE", "SSW") when
+     * `terrain_flags` bit 0 (slope) is set.
+     *
+     * Generated from protobuf field <code>string terrain_slope_dir = 25;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTerrainSlopeDir($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->terrain_slope_dir = $var;
+
+        return $this;
+    }
+
+    /**
+     * Line 9 supplementary: free-text description of "other" terrain hazards
+     * (e.g. "Loose debris on west edge") when `terrain_flags` bit 5 (other)
+     * is set. Tier-2 strippable under MTU pressure.
+     *
+     * Generated from protobuf field <code>string terrain_other_detail = 26;</code>
+     * @return string
+     */
+    public function getTerrainOtherDetail()
+    {
+        return $this->terrain_other_detail;
+    }
+
+    /**
+     * Line 9 supplementary: free-text description of "other" terrain hazards
+     * (e.g. "Loose debris on west edge") when `terrain_flags` bit 5 (other)
+     * is set. Tier-2 strippable under MTU pressure.
+     *
+     * Generated from protobuf field <code>string terrain_other_detail = 26;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTerrainOtherDetail($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->terrain_other_detail = $var;
+
+        return $this;
+    }
+
+    /**
+     * Line 7 supplementary: how the zone is being marked right now
+     * (e.g. "Orange smoke", "VS-17 panel"). Complements the structured
+     * `hlz_marking` enum with a specific human-readable description.
+     *
+     * Generated from protobuf field <code>string marked_by = 27;</code>
+     * @return string
+     */
+    public function getMarkedBy()
+    {
+        return $this->marked_by;
+    }
+
+    /**
+     * Line 7 supplementary: how the zone is being marked right now
+     * (e.g. "Orange smoke", "VS-17 panel"). Complements the structured
+     * `hlz_marking` enum with a specific human-readable description.
+     *
+     * Generated from protobuf field <code>string marked_by = 27;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMarkedBy($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->marked_by = $var;
+
+        return $this;
+    }
+
+    /**
+     * Nearby obstacles on the approach (e.g. "Power lines north of HLZ").
+     *
+     * Generated from protobuf field <code>string obstacles = 28;</code>
+     * @return string
+     */
+    public function getObstacles()
+    {
+        return $this->obstacles;
+    }
+
+    /**
+     * Nearby obstacles on the approach (e.g. "Power lines north of HLZ").
+     *
+     * Generated from protobuf field <code>string obstacles = 28;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setObstacles($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->obstacles = $var;
+
+        return $this;
+    }
+
+    /**
+     * Wind direction and speed (e.g. "270 at 12 kts").
+     *
+     * Generated from protobuf field <code>string winds_are_from = 29;</code>
+     * @return string
+     */
+    public function getWindsAreFrom()
+    {
+        return $this->winds_are_from;
+    }
+
+    /**
+     * Wind direction and speed (e.g. "270 at 12 kts").
+     *
+     * Generated from protobuf field <code>string winds_are_from = 29;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setWindsAreFrom($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->winds_are_from = $var;
+
+        return $this;
+    }
+
+    /**
+     * Friendly forces posture near the pickup zone
+     * (e.g. "Squad east of HLZ").
+     *
+     * Generated from protobuf field <code>string friendlies = 30;</code>
+     * @return string
+     */
+    public function getFriendlies()
+    {
+        return $this->friendlies;
+    }
+
+    /**
+     * Friendly forces posture near the pickup zone
+     * (e.g. "Squad east of HLZ").
+     *
+     * Generated from protobuf field <code>string friendlies = 30;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFriendlies($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->friendlies = $var;
+
+        return $this;
+    }
+
+    /**
+     * Known or suspected enemy positions near the pickup zone
+     * (e.g. "Possible enemy on south ridge").
+     *
+     * Generated from protobuf field <code>string enemy = 31;</code>
+     * @return string
+     */
+    public function getEnemy()
+    {
+        return $this->enemy;
+    }
+
+    /**
+     * Known or suspected enemy positions near the pickup zone
+     * (e.g. "Possible enemy on south ridge").
+     *
+     * Generated from protobuf field <code>string enemy = 31;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setEnemy($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->enemy = $var;
+
+        return $this;
+    }
+
+    /**
+     * Free-text description of the HLZ itself
+     * (e.g. "Primary HLZ is soccer field").
+     *
+     * Generated from protobuf field <code>string hlz_remarks = 32;</code>
+     * @return string
+     */
+    public function getHlzRemarks()
+    {
+        return $this->hlz_remarks;
+    }
+
+    /**
+     * Free-text description of the HLZ itself
+     * (e.g. "Primary HLZ is soccer field").
+     *
+     * Generated from protobuf field <code>string hlz_remarks = 32;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setHlzRemarks($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->hlz_remarks = $var;
+
+        return $this;
+    }
+
+    /**
+     * Per-patient clinical records. Each entry is one patient's ZMIST card
+     * (Zap number / Mechanism / Injuries / Signs / Treatment). Repeatable —
+     * a mass-casualty event can carry 1-6 entries in practice, limited by
+     * the 237 B LoRa MTU.
+     *
+     * Generated from protobuf field <code>repeated .meshtastic.ZMistEntry zmist = 33;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getZmist()
+    {
+        return $this->zmist;
+    }
+
+    /**
+     * Per-patient clinical records. Each entry is one patient's ZMIST card
+     * (Zap number / Mechanism / Injuries / Signs / Treatment). Repeatable —
+     * a mass-casualty event can carry 1-6 entries in practice, limited by
+     * the 237 B LoRa MTU.
+     *
+     * Generated from protobuf field <code>repeated .meshtastic.ZMistEntry zmist = 33;</code>
+     * @param array<\Meshtastic\ZMistEntry>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setZmist($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Meshtastic\ZMistEntry::class);
+        $this->zmist = $arr;
 
         return $this;
     }
