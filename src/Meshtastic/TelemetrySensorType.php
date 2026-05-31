@@ -325,6 +325,18 @@ class TelemetrySensorType
      * Generated from protobuf enum <code>DS248X = 51;</code>
      */
     const DS248X = 51;
+    /**
+     * MMC5983MA 3-Axis Digital Magnetic Sensor
+     *
+     * Generated from protobuf enum <code>MMC5983MA = 52;</code>
+     */
+    const MMC5983MA = 52;
+    /**
+     * ICM-42607-P 6‑Axis IMU
+     *
+     * Generated from protobuf enum <code>ICM42607P = 53;</code>
+     */
+    const ICM42607P = 53;
 
     private static $valueToName = [
         self::SENSOR_UNSET => 'SENSOR_UNSET',
@@ -379,6 +391,8 @@ class TelemetrySensorType
         self::SCD30 => 'SCD30',
         self::SHTXX => 'SHTXX',
         self::DS248X => 'DS248X',
+        self::MMC5983MA => 'MMC5983MA',
+        self::ICM42607P => 'ICM42607P',
     ];
 
     public static function name($value)

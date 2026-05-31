@@ -160,6 +160,12 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.meshtastic.Config.LoRaConfig.FEM_LNA_Mode fem_lna_mode = 106;</code>
      */
     protected $fem_lna_mode = 0;
+    /**
+     * Don't use radiolib to initialize the radio, instead listen for a serialHal connection
+     *
+     * Generated from protobuf field <code>bool serial_hal_only = 107;</code>
+     */
+    protected $serial_hal_only = false;
 
     /**
      * Constructor.
@@ -236,6 +242,8 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
      *           Sets the ok_to_mqtt bit on outgoing packets
      *     @type int $fem_lna_mode
      *           Set where LORA FEM is enabled, disabled, or not present
+     *     @type bool $serial_hal_only
+     *           Don't use radiolib to initialize the radio, instead listen for a serialHal connection
      * }
      */
     public function __construct($data = NULL) {
@@ -795,6 +803,32 @@ class LoRaConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Meshtastic\Config\LoRaConfig\FEM_LNA_Mode::class);
         $this->fem_lna_mode = $var;
+
+        return $this;
+    }
+
+    /**
+     * Don't use radiolib to initialize the radio, instead listen for a serialHal connection
+     *
+     * Generated from protobuf field <code>bool serial_hal_only = 107;</code>
+     * @return bool
+     */
+    public function getSerialHalOnly()
+    {
+        return $this->serial_hal_only;
+    }
+
+    /**
+     * Don't use radiolib to initialize the radio, instead listen for a serialHal connection
+     *
+     * Generated from protobuf field <code>bool serial_hal_only = 107;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSerialHalOnly($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->serial_hal_only = $var;
 
         return $this;
     }

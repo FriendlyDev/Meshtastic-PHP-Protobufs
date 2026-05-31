@@ -164,6 +164,14 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
      *           Tell the node to reset into the OTA Loader
      *     @type \Meshtastic\SensorConfig $sensor_config
      *           Parameters and sensor configuration
+     *     @type \Meshtastic\LockdownAuth $lockdown_auth
+     *           Lockdown passphrase delivery / unlock / lock-now command for hardened
+     *           firmware builds (see MESHTASTIC_LOCKDOWN). Used to provision the
+     *           passphrase on first boot, unlock encrypted storage on subsequent
+     *           reboots, re-verify on already-unlocked devices to authorize a new
+     *           client connection, or immediately re-lock the device.
+     *           Replaces the earlier scheme that repurposed SecurityConfig.private_key
+     *           to carry passphrase bytes; that hack is retired.
      * }
      */
     public function __construct($data = NULL) {
@@ -1995,6 +2003,49 @@ class AdminMessage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\SensorConfig::class);
         $this->writeOneof(103, $var);
+
+        return $this;
+    }
+
+    /**
+     * Lockdown passphrase delivery / unlock / lock-now command for hardened
+     * firmware builds (see MESHTASTIC_LOCKDOWN). Used to provision the
+     * passphrase on first boot, unlock encrypted storage on subsequent
+     * reboots, re-verify on already-unlocked devices to authorize a new
+     * client connection, or immediately re-lock the device.
+     * Replaces the earlier scheme that repurposed SecurityConfig.private_key
+     * to carry passphrase bytes; that hack is retired.
+     *
+     * Generated from protobuf field <code>.meshtastic.LockdownAuth lockdown_auth = 104;</code>
+     * @return \Meshtastic\LockdownAuth|null
+     */
+    public function getLockdownAuth()
+    {
+        return $this->readOneof(104);
+    }
+
+    public function hasLockdownAuth()
+    {
+        return $this->hasOneof(104);
+    }
+
+    /**
+     * Lockdown passphrase delivery / unlock / lock-now command for hardened
+     * firmware builds (see MESHTASTIC_LOCKDOWN). Used to provision the
+     * passphrase on first boot, unlock encrypted storage on subsequent
+     * reboots, re-verify on already-unlocked devices to authorize a new
+     * client connection, or immediately re-lock the device.
+     * Replaces the earlier scheme that repurposed SecurityConfig.private_key
+     * to carry passphrase bytes; that hack is retired.
+     *
+     * Generated from protobuf field <code>.meshtastic.LockdownAuth lockdown_auth = 104;</code>
+     * @param \Meshtastic\LockdownAuth $var
+     * @return $this
+     */
+    public function setLockdownAuth($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\LockdownAuth::class);
+        $this->writeOneof(104, $var);
 
         return $this;
     }

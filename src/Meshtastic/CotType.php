@@ -730,6 +730,22 @@ class CotType
      * Generated from protobuf enum <code>CotType_t_s = 124;</code>
      */
     const CotType_t_s = 124;
+    /**
+     * m-t-t: TAKTALK voice/text chat message. Payload carried via the
+     * TakTalkMessage typed variant (text, chatroom_id, lang, from_voice).
+     *
+     * Generated from protobuf enum <code>CotType_m_t_t = 125;</code>
+     */
+    const CotType_m_t_t = 125;
+    /**
+     * y-: TAKTALK room/membership broadcast. Payload carried via the
+     * TakTalkRoomData typed variant (sender_callsign, room_id, room_name,
+     * participants). The CoT type literally has a trailing dash and no
+     * second atom — not a typo.
+     *
+     * Generated from protobuf enum <code>CotType_y = 126;</code>
+     */
+    const CotType_y = 126;
 
     private static $valueToName = [
         self::CotType_Other => 'CotType_Other',
@@ -857,6 +873,8 @@ class CotType
         self::CotType_b_t_f_r => 'CotType_b_t_f_r',
         self::CotType_b_a_o_c => 'CotType_b_a_o_c',
         self::CotType_t_s => 'CotType_t_s',
+        self::CotType_m_t_t => 'CotType_m_t_t',
+        self::CotType_y => 'CotType_y',
     ];
 
     public static function name($value)

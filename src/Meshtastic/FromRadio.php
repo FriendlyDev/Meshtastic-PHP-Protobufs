@@ -76,6 +76,12 @@ class FromRadio extends \Google\Protobuf\Internal\Message
      *           Notification message to the client
      *     @type \Meshtastic\DeviceUIConfig $deviceuiConfig
      *           Persistent data for device-ui
+     *     @type \Meshtastic\LockdownStatus $lockdown_status
+     *           Lockdown state notification for hardened firmware builds.
+     *           Sent post-config (so unauthorized clients learn they must
+     *           provision/unlock) and after each LockdownAuth admin command
+     *           to report success or failure. Replaces the earlier scheme of
+     *           encoding state as magic-string prefixes inside ClientNotification.
      * }
      */
     public function __construct($data = NULL) {
@@ -619,6 +625,45 @@ class FromRadio extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\DeviceUIConfig::class);
         $this->writeOneof(17, $var);
+
+        return $this;
+    }
+
+    /**
+     * Lockdown state notification for hardened firmware builds.
+     * Sent post-config (so unauthorized clients learn they must
+     * provision/unlock) and after each LockdownAuth admin command
+     * to report success or failure. Replaces the earlier scheme of
+     * encoding state as magic-string prefixes inside ClientNotification.
+     *
+     * Generated from protobuf field <code>.meshtastic.LockdownStatus lockdown_status = 18;</code>
+     * @return \Meshtastic\LockdownStatus|null
+     */
+    public function getLockdownStatus()
+    {
+        return $this->readOneof(18);
+    }
+
+    public function hasLockdownStatus()
+    {
+        return $this->hasOneof(18);
+    }
+
+    /**
+     * Lockdown state notification for hardened firmware builds.
+     * Sent post-config (so unauthorized clients learn they must
+     * provision/unlock) and after each LockdownAuth admin command
+     * to report success or failure. Replaces the earlier scheme of
+     * encoding state as magic-string prefixes inside ClientNotification.
+     *
+     * Generated from protobuf field <code>.meshtastic.LockdownStatus lockdown_status = 18;</code>
+     * @param \Meshtastic\LockdownStatus $var
+     * @return $this
+     */
+    public function setLockdownStatus($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\LockdownStatus::class);
+        $this->writeOneof(18, $var);
 
         return $this;
     }

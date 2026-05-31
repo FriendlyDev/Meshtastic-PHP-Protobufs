@@ -55,9 +55,10 @@ class MQTTConfig extends \Google\Protobuf\Internal\Message
      */
     protected $encryption_enabled = false;
     /**
-     * Whether to send / consume json packets on MQTT
+     * Deprecated: JSON packet support on MQTT was removed, and this field is ignored.
      *
-     * Generated from protobuf field <code>bool json_enabled = 6;</code>
+     * Generated from protobuf field <code>bool json_enabled = 6 [deprecated = true];</code>
+     * @deprecated
      */
     protected $json_enabled = false;
     /**
@@ -118,7 +119,7 @@ class MQTTConfig extends \Google\Protobuf\Internal\Message
      *           (the default official mqtt.meshtastic.org server can handle encrypted packets)
      *           Decrypted packets may be useful for external systems that want to consume meshtastic packets
      *     @type bool $json_enabled
-     *           Whether to send / consume json packets on MQTT
+     *           Deprecated: JSON packet support on MQTT was removed, and this field is ignored.
      *     @type bool $tls_enabled
      *           If true, we attempt to establish a secure connection using TLS
      *     @type string $root
@@ -286,25 +287,29 @@ class MQTTConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Whether to send / consume json packets on MQTT
+     * Deprecated: JSON packet support on MQTT was removed, and this field is ignored.
      *
-     * Generated from protobuf field <code>bool json_enabled = 6;</code>
+     * Generated from protobuf field <code>bool json_enabled = 6 [deprecated = true];</code>
      * @return bool
+     * @deprecated
      */
     public function getJsonEnabled()
     {
+        @trigger_error('json_enabled is deprecated.', E_USER_DEPRECATED);
         return $this->json_enabled;
     }
 
     /**
-     * Whether to send / consume json packets on MQTT
+     * Deprecated: JSON packet support on MQTT was removed, and this field is ignored.
      *
-     * Generated from protobuf field <code>bool json_enabled = 6;</code>
+     * Generated from protobuf field <code>bool json_enabled = 6 [deprecated = true];</code>
      * @param bool $var
      * @return $this
+     * @deprecated
      */
     public function setJsonEnabled($var)
     {
+        @trigger_error('json_enabled is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkBool($var);
         $this->json_enabled = $var;
 

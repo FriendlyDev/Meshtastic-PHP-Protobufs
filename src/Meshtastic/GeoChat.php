@@ -49,6 +49,30 @@ class GeoChat extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.meshtastic.GeoChat.ReceiptType receipt_type = 5;</code>
      */
     protected $receipt_type = 0;
+    /**
+     * BCP-47-ish language tag or human-readable name (e.g. "en", "English")
+     * that the originator's TAKTALK plugin recorded for the message.
+     *
+     * Generated from protobuf field <code>optional string lang = 6;</code>
+     */
+    protected $lang = null;
+    /**
+     * TAKTALK chatroom UUID (e.g. "30b2755c-c547-44ef-a0cc-cdbd8a15616f") that
+     * the receiver's TAKTALK plugin uses to thread the message under the
+     * right room. Resolved to a friendly name via TakTalkRoomData broadcasts.
+     *
+     * Generated from protobuf field <code>optional string room_id = 7;</code>
+     */
+    protected $room_id = null;
+    /**
+     * TAKTALK voice profile pointer. Often empty in practice (the empty
+     * marker `<voice_profile_id/>` still signals TAKTALK origination), so
+     * receivers should treat empty-but-present as the equivalent of the
+     * marker rather than a missing field.
+     *
+     * Generated from protobuf field <code>optional string voice_profile_id = 8;</code>
+     */
+    protected $voice_profile_id = null;
 
     /**
      * Constructor.
@@ -70,6 +94,18 @@ class GeoChat extends \Google\Protobuf\Internal\Message
      *     @type int $receipt_type
      *           Receipt kind discriminator. See ReceiptType doc. Default ReceiptType_None
      *           means this is a regular chat message, not a receipt.
+     *     @type string $lang
+     *           BCP-47-ish language tag or human-readable name (e.g. "en", "English")
+     *           that the originator's TAKTALK plugin recorded for the message.
+     *     @type string $room_id
+     *           TAKTALK chatroom UUID (e.g. "30b2755c-c547-44ef-a0cc-cdbd8a15616f") that
+     *           the receiver's TAKTALK plugin uses to thread the message under the
+     *           right room. Resolved to a friendly name via TakTalkRoomData broadcasts.
+     *     @type string $voice_profile_id
+     *           TAKTALK voice profile pointer. Often empty in practice (the empty
+     *           marker `<voice_profile_id/>` still signals TAKTALK origination), so
+     *           receivers should treat empty-but-present as the equivalent of the
+     *           marker rather than a missing field.
      * }
      */
     public function __construct($data = NULL) {
@@ -231,6 +267,126 @@ class GeoChat extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Meshtastic\GeoChat\ReceiptType::class);
         $this->receipt_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * BCP-47-ish language tag or human-readable name (e.g. "en", "English")
+     * that the originator's TAKTALK plugin recorded for the message.
+     *
+     * Generated from protobuf field <code>optional string lang = 6;</code>
+     * @return string
+     */
+    public function getLang()
+    {
+        return isset($this->lang) ? $this->lang : '';
+    }
+
+    public function hasLang()
+    {
+        return isset($this->lang);
+    }
+
+    public function clearLang()
+    {
+        unset($this->lang);
+    }
+
+    /**
+     * BCP-47-ish language tag or human-readable name (e.g. "en", "English")
+     * that the originator's TAKTALK plugin recorded for the message.
+     *
+     * Generated from protobuf field <code>optional string lang = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setLang($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->lang = $var;
+
+        return $this;
+    }
+
+    /**
+     * TAKTALK chatroom UUID (e.g. "30b2755c-c547-44ef-a0cc-cdbd8a15616f") that
+     * the receiver's TAKTALK plugin uses to thread the message under the
+     * right room. Resolved to a friendly name via TakTalkRoomData broadcasts.
+     *
+     * Generated from protobuf field <code>optional string room_id = 7;</code>
+     * @return string
+     */
+    public function getRoomId()
+    {
+        return isset($this->room_id) ? $this->room_id : '';
+    }
+
+    public function hasRoomId()
+    {
+        return isset($this->room_id);
+    }
+
+    public function clearRoomId()
+    {
+        unset($this->room_id);
+    }
+
+    /**
+     * TAKTALK chatroom UUID (e.g. "30b2755c-c547-44ef-a0cc-cdbd8a15616f") that
+     * the receiver's TAKTALK plugin uses to thread the message under the
+     * right room. Resolved to a friendly name via TakTalkRoomData broadcasts.
+     *
+     * Generated from protobuf field <code>optional string room_id = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRoomId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->room_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * TAKTALK voice profile pointer. Often empty in practice (the empty
+     * marker `<voice_profile_id/>` still signals TAKTALK origination), so
+     * receivers should treat empty-but-present as the equivalent of the
+     * marker rather than a missing field.
+     *
+     * Generated from protobuf field <code>optional string voice_profile_id = 8;</code>
+     * @return string
+     */
+    public function getVoiceProfileId()
+    {
+        return isset($this->voice_profile_id) ? $this->voice_profile_id : '';
+    }
+
+    public function hasVoiceProfileId()
+    {
+        return isset($this->voice_profile_id);
+    }
+
+    public function clearVoiceProfileId()
+    {
+        unset($this->voice_profile_id);
+    }
+
+    /**
+     * TAKTALK voice profile pointer. Often empty in practice (the empty
+     * marker `<voice_profile_id/>` still signals TAKTALK origination), so
+     * receivers should treat empty-but-present as the equivalent of the
+     * marker rather than a missing field.
+     *
+     * Generated from protobuf field <code>optional string voice_profile_id = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setVoiceProfileId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->voice_profile_id = $var;
 
         return $this;
     }

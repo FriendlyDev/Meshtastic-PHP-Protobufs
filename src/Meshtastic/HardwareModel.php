@@ -834,6 +834,36 @@ class HardwareModel
      */
     const THINKNODE_M9 = 131;
     /**
+     * The Heltec-V4-R8 uses an ESP32S3R8 chip, plus an SX1262.
+     *
+     * Generated from protobuf enum <code>HELTEC_V4_R8 = 132;</code>
+     */
+    const HELTEC_V4_R8 = 132;
+    /**
+     * The HELTEC_MESH_NODE_T1 uses an NRF52840 chip, plus an SX1262.
+     *
+     * Generated from protobuf enum <code>HELTEC_MESH_NODE_T1 = 133;</code>
+     */
+    const HELTEC_MESH_NODE_T1 = 133;
+    /**
+     * B&Q Consulting Station G3: TBD
+     *
+     * Generated from protobuf enum <code>STATION_G3 = 134;</code>
+     */
+    const STATION_G3 = 134;
+    /**
+     * Lilygo T-Impulse-Plus
+     *
+     * Generated from protobuf enum <code>T_IMPULSE_PLUS = 135;</code>
+     */
+    const T_IMPULSE_PLUS = 135;
+    /**
+     * Lilygo T-Echo Card
+     *
+     * Generated from protobuf enum <code>T_ECHO_CARD = 136;</code>
+     */
+    const T_ECHO_CARD = 136;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -975,6 +1005,11 @@ class HardwareModel
         self::THINKNODE_M7 => 'THINKNODE_M7',
         self::THINKNODE_M8 => 'THINKNODE_M8',
         self::THINKNODE_M9 => 'THINKNODE_M9',
+        self::HELTEC_V4_R8 => 'HELTEC_V4_R8',
+        self::HELTEC_MESH_NODE_T1 => 'HELTEC_MESH_NODE_T1',
+        self::STATION_G3 => 'STATION_G3',
+        self::T_IMPULSE_PLUS => 'T_IMPULSE_PLUS',
+        self::T_ECHO_CARD => 'T_ECHO_CARD',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 

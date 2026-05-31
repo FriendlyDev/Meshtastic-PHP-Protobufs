@@ -99,15 +99,15 @@ class DrawnShape extends \Google\Protobuf\Internal\Message
      */
     protected $labels_on = false;
     /**
-     * Vertex list for polyline/polygon/rectangle shapes. Capped at 32 by
-     * the nanopb pool; senders MUST truncate longer inputs and set
-     * `truncated = true`.
-     *
-     * Generated from protobuf field <code>repeated .meshtastic.CotGeoPoint vertices = 12;</code>
+     * Generated from protobuf field <code>repeated sint32 vertex_lat_deltas = 18;</code>
      */
-    private $vertices;
+    private $vertex_lat_deltas;
     /**
-     * True if the sender truncated `vertices` to fit the pool.
+     * Generated from protobuf field <code>repeated sint32 vertex_lon_deltas = 19;</code>
+     */
+    private $vertex_lon_deltas;
+    /**
+     * True if the sender truncated the vertex columns to fit the pool.
      *
      * Generated from protobuf field <code>bool truncated = 13;</code>
      */
@@ -178,12 +178,10 @@ class DrawnShape extends \Google\Protobuf\Internal\Message
      *           Fill color exact ARGB fallback. See stroke_argb docs.
      *     @type bool $labels_on
      *           Whether labels are rendered on this shape.
-     *     @type array<\Meshtastic\CotGeoPoint>|\Google\Protobuf\Internal\RepeatedField $vertices
-     *           Vertex list for polyline/polygon/rectangle shapes. Capped at 32 by
-     *           the nanopb pool; senders MUST truncate longer inputs and set
-     *           `truncated = true`.
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $vertex_lat_deltas
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $vertex_lon_deltas
      *     @type bool $truncated
-     *           True if the sender truncated `vertices` to fit the pool.
+     *           True if the sender truncated the vertex columns to fit the pool.
      *     @type int $bullseye_distance_dm
      *           Bullseye distance in meters * 10 (e.g. 3285 = 328.5 m). 0 = unset.
      *     @type int $bullseye_bearing_ref
@@ -508,37 +506,51 @@ class DrawnShape extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Vertex list for polyline/polygon/rectangle shapes. Capped at 32 by
-     * the nanopb pool; senders MUST truncate longer inputs and set
-     * `truncated = true`.
-     *
-     * Generated from protobuf field <code>repeated .meshtastic.CotGeoPoint vertices = 12;</code>
+     * Generated from protobuf field <code>repeated sint32 vertex_lat_deltas = 18;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getVertices()
+    public function getVertexLatDeltas()
     {
-        return $this->vertices;
+        return $this->vertex_lat_deltas;
     }
 
     /**
-     * Vertex list for polyline/polygon/rectangle shapes. Capped at 32 by
-     * the nanopb pool; senders MUST truncate longer inputs and set
-     * `truncated = true`.
-     *
-     * Generated from protobuf field <code>repeated .meshtastic.CotGeoPoint vertices = 12;</code>
-     * @param array<\Meshtastic\CotGeoPoint>|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>repeated sint32 vertex_lat_deltas = 18;</code>
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setVertices($var)
+    public function setVertexLatDeltas($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Meshtastic\CotGeoPoint::class);
-        $this->vertices = $arr;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::SINT32);
+        $this->vertex_lat_deltas = $arr;
 
         return $this;
     }
 
     /**
-     * True if the sender truncated `vertices` to fit the pool.
+     * Generated from protobuf field <code>repeated sint32 vertex_lon_deltas = 19;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getVertexLonDeltas()
+    {
+        return $this->vertex_lon_deltas;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated sint32 vertex_lon_deltas = 19;</code>
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setVertexLonDeltas($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::SINT32);
+        $this->vertex_lon_deltas = $arr;
+
+        return $this;
+    }
+
+    /**
+     * True if the sender truncated the vertex columns to fit the pool.
      *
      * Generated from protobuf field <code>bool truncated = 13;</code>
      * @return bool
@@ -549,7 +561,7 @@ class DrawnShape extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * True if the sender truncated `vertices` to fit the pool.
+     * True if the sender truncated the vertex columns to fit the pool.
      *
      * Generated from protobuf field <code>bool truncated = 13;</code>
      * @param bool $var

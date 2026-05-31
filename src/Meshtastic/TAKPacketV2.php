@@ -62,7 +62,13 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
      */
     protected $longitude_i = 0;
     /**
-     * Altitude in meters (HAE)
+     * Altitude in meters (HAE). ATAK's "no altitude" sentinel is hae=9999999.0.
+     * NOTE: an earlier v0.4.0 attempt made this `optional` to omit the 9999999
+     * sentinel from the wire, but measurement showed it was net-negative: the
+     * zstd dictionary already compresses the literal 9999999 to ~nothing, while
+     * proto3 `optional` forces a genuine 0 m HAE (common on routes/drawings that
+     * carry hae="0.0" or omit hae → parsed as 0) to encode explicitly (+2 bytes),
+     * which REGRESSED the worst-case route fixture. Kept as a plain field.
      *
      * Generated from protobuf field <code>sint32 altitude = 8;</code>
      */
@@ -181,6 +187,18 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional .meshtastic.SensorFov sensor_fov = 26;</code>
      */
     protected $sensor_fov = null;
+    /**
+     * Directed-routing recipient list (CoT <marti><dest callsign='X'/>…</marti>).
+     * Empty / unset = broadcast to all peers (the default for situational-awareness
+     * events). Populated for TAKTALK m-t-t, directed b-t-f DMs, and any other CoT
+     * shape that ATAK addresses to specific recipients. TAKTALK gates voice TTS
+     * playback on this element matching the receiver's callsign, so dropping it
+     * silently breaks voice messaging end-to-end.
+     * See Marti.
+     *
+     * Generated from protobuf field <code>optional .meshtastic.Marti marti = 29;</code>
+     */
+    protected $marti = null;
     protected $payload_variant;
 
     /**
@@ -205,7 +223,13 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
      *     @type int $longitude_i
      *           Longitude, multiply by 1e-7 to get degrees in floating point
      *     @type int $altitude
-     *           Altitude in meters (HAE)
+     *           Altitude in meters (HAE). ATAK's "no altitude" sentinel is hae=9999999.0.
+     *           NOTE: an earlier v0.4.0 attempt made this `optional` to omit the 9999999
+     *           sentinel from the wire, but measurement showed it was net-negative: the
+     *           zstd dictionary already compresses the literal 9999999 to ~nothing, while
+     *           proto3 `optional` forces a genuine 0 m HAE (common on routes/drawings that
+     *           carry hae="0.0" or omit hae → parsed as 0) to encode explicitly (+2 bytes),
+     *           which REGRESSED the worst-case route fixture. Kept as a plain field.
      *     @type int $speed
      *           Speed in cm/s
      *     @type int $course
@@ -248,8 +272,14 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
      *           SwiftUI's `&#64;Environment` property wrapper in iOS consumers.
      *     @type \Meshtastic\SensorFov $sensor_fov
      *           Sensor field-of-view cone (camera, FLIR, laser, etc.). From <sensor>.
-     *     @type bool $pli
-     *           Position report (true = PLI, no extra fields beyond the common ones above)
+     *     @type \Meshtastic\Marti $marti
+     *           Directed-routing recipient list (CoT <marti><dest callsign='X'/>…</marti>).
+     *           Empty / unset = broadcast to all peers (the default for situational-awareness
+     *           events). Populated for TAKTALK m-t-t, directed b-t-f DMs, and any other CoT
+     *           shape that ATAK addresses to specific recipients. TAKTALK gates voice TTS
+     *           playback on this element matching the receiver's callsign, so dropping it
+     *           silently breaks voice messaging end-to-end.
+     *           See Marti.
      *     @type \Meshtastic\GeoChat $chat
      *           ATAK GeoChat message
      *     @type \Meshtastic\AircraftTrack $aircraft
@@ -274,6 +304,14 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
      *           Emergency beacon / 911 alert. See EmergencyAlert.
      *     @type \Meshtastic\TaskRequest $task
      *           Task / engage request. See TaskRequest.
+     *     @type \Meshtastic\TakTalkMessage $taktalk
+     *           TAKTALK chat message (CoT type m-t-t). See TakTalkMessage.
+     *           Voice audio itself rides UDP/RTP outside the mesh; this carries the
+     *           text envelope plus a from_voice marker for receiver UX.
+     *     @type \Meshtastic\TakTalkRoomData $taktalk_room
+     *           TAKTALK room/membership broadcast (CoT type y-). See TakTalkRoomData.
+     *           Resolves room UUIDs (used in TakTalkMessage.chatroom_id and
+     *           GeoChat.room_id) to display name + roster on receivers.
      * }
      */
     public function __construct($data = NULL) {
@@ -466,7 +504,13 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Altitude in meters (HAE)
+     * Altitude in meters (HAE). ATAK's "no altitude" sentinel is hae=9999999.0.
+     * NOTE: an earlier v0.4.0 attempt made this `optional` to omit the 9999999
+     * sentinel from the wire, but measurement showed it was net-negative: the
+     * zstd dictionary already compresses the literal 9999999 to ~nothing, while
+     * proto3 `optional` forces a genuine 0 m HAE (common on routes/drawings that
+     * carry hae="0.0" or omit hae → parsed as 0) to encode explicitly (+2 bytes),
+     * which REGRESSED the worst-case route fixture. Kept as a plain field.
      *
      * Generated from protobuf field <code>sint32 altitude = 8;</code>
      * @return int
@@ -477,7 +521,13 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Altitude in meters (HAE)
+     * Altitude in meters (HAE). ATAK's "no altitude" sentinel is hae=9999999.0.
+     * NOTE: an earlier v0.4.0 attempt made this `optional` to omit the 9999999
+     * sentinel from the wire, but measurement showed it was net-negative: the
+     * zstd dictionary already compresses the literal 9999999 to ~nothing, while
+     * proto3 `optional` forces a genuine 0 m HAE (common on routes/drawings that
+     * carry hae="0.0" or omit hae → parsed as 0) to encode explicitly (+2 bytes),
+     * which REGRESSED the worst-case route fixture. Kept as a plain field.
      *
      * Generated from protobuf field <code>sint32 altitude = 8;</code>
      * @param int $var
@@ -992,32 +1042,49 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Position report (true = PLI, no extra fields beyond the common ones above)
+     * Directed-routing recipient list (CoT <marti><dest callsign='X'/>…</marti>).
+     * Empty / unset = broadcast to all peers (the default for situational-awareness
+     * events). Populated for TAKTALK m-t-t, directed b-t-f DMs, and any other CoT
+     * shape that ATAK addresses to specific recipients. TAKTALK gates voice TTS
+     * playback on this element matching the receiver's callsign, so dropping it
+     * silently breaks voice messaging end-to-end.
+     * See Marti.
      *
-     * Generated from protobuf field <code>bool pli = 30;</code>
-     * @return bool
+     * Generated from protobuf field <code>optional .meshtastic.Marti marti = 29;</code>
+     * @return \Meshtastic\Marti|null
      */
-    public function getPli()
+    public function getMarti()
     {
-        return $this->readOneof(30);
+        return $this->marti;
     }
 
-    public function hasPli()
+    public function hasMarti()
     {
-        return $this->hasOneof(30);
+        return isset($this->marti);
+    }
+
+    public function clearMarti()
+    {
+        unset($this->marti);
     }
 
     /**
-     * Position report (true = PLI, no extra fields beyond the common ones above)
+     * Directed-routing recipient list (CoT <marti><dest callsign='X'/>…</marti>).
+     * Empty / unset = broadcast to all peers (the default for situational-awareness
+     * events). Populated for TAKTALK m-t-t, directed b-t-f DMs, and any other CoT
+     * shape that ATAK addresses to specific recipients. TAKTALK gates voice TTS
+     * playback on this element matching the receiver's callsign, so dropping it
+     * silently breaks voice messaging end-to-end.
+     * See Marti.
      *
-     * Generated from protobuf field <code>bool pli = 30;</code>
-     * @param bool $var
+     * Generated from protobuf field <code>optional .meshtastic.Marti marti = 29;</code>
+     * @param \Meshtastic\Marti $var
      * @return $this
      */
-    public function setPli($var)
+    public function setMarti($var)
     {
-        GPBUtil::checkBool($var);
-        $this->writeOneof(30, $var);
+        GPBUtil::checkMessage($var, \Meshtastic\Marti::class);
+        $this->marti = $var;
 
         return $this;
     }
@@ -1336,6 +1403,76 @@ class TAKPacketV2 extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Meshtastic\TaskRequest::class);
         $this->writeOneof(40, $var);
+
+        return $this;
+    }
+
+    /**
+     * TAKTALK chat message (CoT type m-t-t). See TakTalkMessage.
+     * Voice audio itself rides UDP/RTP outside the mesh; this carries the
+     * text envelope plus a from_voice marker for receiver UX.
+     *
+     * Generated from protobuf field <code>.meshtastic.TakTalkMessage taktalk = 41;</code>
+     * @return \Meshtastic\TakTalkMessage|null
+     */
+    public function getTaktalk()
+    {
+        return $this->readOneof(41);
+    }
+
+    public function hasTaktalk()
+    {
+        return $this->hasOneof(41);
+    }
+
+    /**
+     * TAKTALK chat message (CoT type m-t-t). See TakTalkMessage.
+     * Voice audio itself rides UDP/RTP outside the mesh; this carries the
+     * text envelope plus a from_voice marker for receiver UX.
+     *
+     * Generated from protobuf field <code>.meshtastic.TakTalkMessage taktalk = 41;</code>
+     * @param \Meshtastic\TakTalkMessage $var
+     * @return $this
+     */
+    public function setTaktalk($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\TakTalkMessage::class);
+        $this->writeOneof(41, $var);
+
+        return $this;
+    }
+
+    /**
+     * TAKTALK room/membership broadcast (CoT type y-). See TakTalkRoomData.
+     * Resolves room UUIDs (used in TakTalkMessage.chatroom_id and
+     * GeoChat.room_id) to display name + roster on receivers.
+     *
+     * Generated from protobuf field <code>.meshtastic.TakTalkRoomData taktalk_room = 42;</code>
+     * @return \Meshtastic\TakTalkRoomData|null
+     */
+    public function getTaktalkRoom()
+    {
+        return $this->readOneof(42);
+    }
+
+    public function hasTaktalkRoom()
+    {
+        return $this->hasOneof(42);
+    }
+
+    /**
+     * TAKTALK room/membership broadcast (CoT type y-). See TakTalkRoomData.
+     * Resolves room UUIDs (used in TakTalkMessage.chatroom_id and
+     * GeoChat.room_id) to display name + roster on receivers.
+     *
+     * Generated from protobuf field <code>.meshtastic.TakTalkRoomData taktalk_room = 42;</code>
+     * @param \Meshtastic\TakTalkRoomData $var
+     * @return $this
+     */
+    public function setTaktalkRoom($var)
+    {
+        GPBUtil::checkMessage($var, \Meshtastic\TakTalkRoomData::class);
+        $this->writeOneof(42, $var);
 
         return $this;
     }

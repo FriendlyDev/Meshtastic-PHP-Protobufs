@@ -43,6 +43,12 @@ class OledType
      * Generated from protobuf enum <code>OLED_SH1107_128_128 = 4;</code>
      */
     const OLED_SH1107_128_128 = 4;
+    /**
+     * Can not be auto detected but set by proto. Used for 64x128 rotated screens
+     *
+     * Generated from protobuf enum <code>OLED_SH1107_ROTATED = 5;</code>
+     */
+    const OLED_SH1107_ROTATED = 5;
 
     private static $valueToName = [
         self::OLED_AUTO => 'OLED_AUTO',
@@ -50,6 +56,7 @@ class OledType
         self::OLED_SH1106 => 'OLED_SH1106',
         self::OLED_SH1107 => 'OLED_SH1107',
         self::OLED_SH1107_128_128 => 'OLED_SH1107_128_128',
+        self::OLED_SH1107_ROTATED => 'OLED_SH1107_ROTATED',
     ];
 
     public static function name($value)
