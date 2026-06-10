@@ -864,6 +864,18 @@ class HardwareModel
      */
     const T_ECHO_CARD = 136;
     /**
+     * Seeed Tracker L2
+     *
+     * Generated from protobuf enum <code>SEEED_WIO_TRACKER_L2 = 137;</code>
+     */
+    const SEEED_WIO_TRACKER_L2 = 137;
+    /**
+     * Elecrow CrowPanel Advance P4 models, ESP32-P4 and TFT with SX1262 radio plugin
+     *
+     * Generated from protobuf enum <code>CROWPANEL_P4 = 138;</code>
+     */
+    const CROWPANEL_P4 = 138;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -1010,6 +1022,8 @@ class HardwareModel
         self::STATION_G3 => 'STATION_G3',
         self::T_IMPULSE_PLUS => 'T_IMPULSE_PLUS',
         self::T_ECHO_CARD => 'T_ECHO_CARD',
+        self::SEEED_WIO_TRACKER_L2 => 'SEEED_WIO_TRACKER_L2',
+        self::CROWPANEL_P4 => 'CROWPANEL_P4',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
