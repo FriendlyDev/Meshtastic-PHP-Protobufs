@@ -876,6 +876,18 @@ class HardwareModel
      */
     const CROWPANEL_P4 = 138;
     /**
+     * Heltec Mesh Tower V2
+     *
+     * Generated from protobuf enum <code>HELTEC_MESH_TOWER_V2 = 139;</code>
+     */
+    const HELTEC_MESH_TOWER_V2 = 139;
+    /**
+     * Meshnology W10
+     *
+     * Generated from protobuf enum <code>MESHNOLOGY_W10 = 140;</code>
+     */
+    const MESHNOLOGY_W10 = 140;
+    /**
      * ------------------------------------------------------------------------------------------------------------------------------------------
      * Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
      * ------------------------------------------------------------------------------------------------------------------------------------------
@@ -1024,6 +1036,8 @@ class HardwareModel
         self::T_ECHO_CARD => 'T_ECHO_CARD',
         self::SEEED_WIO_TRACKER_L2 => 'SEEED_WIO_TRACKER_L2',
         self::CROWPANEL_P4 => 'CROWPANEL_P4',
+        self::HELTEC_MESH_TOWER_V2 => 'HELTEC_MESH_TOWER_V2',
+        self::MESHNOLOGY_W10 => 'MESHNOLOGY_W10',
         self::PRIVATE_HW => 'PRIVATE_HW',
     ];
 
